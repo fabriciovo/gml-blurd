@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_player",
-    "path": "sprites/spr_player/spr_player.yy",
+    "name": "spr_blurd",
+    "path": "sprites/spr_blurd/spr_blurd.yy",
   },
   "solid": false,
   "visible": true,

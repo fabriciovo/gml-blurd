@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_gameOver","path":"sprites/spr_gameOver/spr_gameOver.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "spr_gameOver",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "btn",
-    "path": "folders/Sprites/btn.yy",
+    "path": "folders/Sprites/UI/btn.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_gameOver",

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_player_death",
-    "path": "sprites/spr_player_death/spr_player_death.yy",
+    "name": "spr_blurd_death",
+    "path": "sprites/spr_blurd_death/spr_blurd_death.yy",
   },
   "solid": false,
   "visible": true,

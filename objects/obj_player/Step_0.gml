@@ -5,7 +5,7 @@ touchPressed = device_mouse_check_button_pressed(0, mb_left);
 
 vsp += grav;
 
-if (touch && action != undefined){
+if (touchPressed && action != undefined){
     action();
 }
 

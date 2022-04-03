@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "level",
-    "path": "folders/Objects/level.yy",
+    "name": "Generic",
+    "path": "folders/Objects/level/Generic.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_coin",
