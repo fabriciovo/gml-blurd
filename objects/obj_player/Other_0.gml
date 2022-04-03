@@ -1,3 +1,3 @@
 
-instance_change(obj_player_death,true);
+instance_change(death_object,true);
 
