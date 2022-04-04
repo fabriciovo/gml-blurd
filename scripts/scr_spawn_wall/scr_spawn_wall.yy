@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Sapwns.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_spawn_spike",
+  "name": "scr_spawn_wall",
   "tags": [],
   "resourceType": "GMScript",
 }
