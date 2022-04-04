@@ -1,3 +1,5 @@
+event_user(_state);
+
 
 //Keys
 touch = device_mouse_check_button(0, mb_left);
