@@ -14,6 +14,5 @@ image_speed = .1;
 action = undefined
 death_object = obj_player_death;
 hit = false;
-hp = 3;
-
 _state = player_state.normal;
+_power = undefined;

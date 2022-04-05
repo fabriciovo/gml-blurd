@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "buttons",
-    "path": "folders/Objects/buttons.yy",
+    "path": "folders/Objects/UI/buttons.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ok",

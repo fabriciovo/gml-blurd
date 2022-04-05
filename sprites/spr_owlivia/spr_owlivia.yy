@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Owlivia",
-    "path": "folders/Sprites/player/Owlivia.yy",
+    "path": "folders/Sprites/Blurd/Owlivia.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_owlivia",

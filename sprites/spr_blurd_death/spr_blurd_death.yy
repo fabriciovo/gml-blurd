@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "player",
-    "path": "folders/Sprites/player.yy",
+    "name": "Blurd",
+    "path": "folders/Sprites/Blurd.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_blurd_death",
