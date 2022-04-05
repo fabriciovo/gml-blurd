@@ -1,3 +1,2 @@
-
-instance_change(death_object,true);
+obj_player_stats.hp = 0;
 

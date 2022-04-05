@@ -25,3 +25,13 @@ grounded = false;
 
 
 y += vsp;
+
+
+if(obj_player_stats.hp <= 0){
+	with(_power){
+		instance_destroy()
+	}
+	instance_change(death_object,true);
+}
+
+
