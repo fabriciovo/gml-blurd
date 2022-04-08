@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_heart",
-    "path": "sprites/spr_heart/spr_heart.yy",
+    "name": "spr_energy",
+    "path": "sprites/spr_energy/spr_energy.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,8 +10,8 @@
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
-  "physicsShape": 1,
-  "physicsGroup": 1,
+  "physicsShape": 0,
+  "physicsGroup": 0,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -21,16 +21,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "name": "Generic",
+    "path": "folders/Objects/level/Generic.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_life",
+  "name": "obj_drink",
   "tags": [],
   "resourceType": "GMObject",
 }

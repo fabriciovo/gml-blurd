@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Sapwns.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_spawn_enemy_rolling20",
+  "name": "scr_spawn_drink",
   "tags": [],
   "resourceType": "GMScript",
 }

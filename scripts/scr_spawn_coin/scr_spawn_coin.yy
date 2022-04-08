@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Heroes",
-    "path": "folders/Scripts/Player/Heroes.yy",
+    "name": "Sapwns",
+    "path": "folders/Scripts/Sapwns.yy",
   },
   "resourceVersion": "1.0",
-  "name": "src_blurd_action",
+  "name": "scr_spawn_coin",
   "tags": [],
   "resourceType": "GMScript",
 }
