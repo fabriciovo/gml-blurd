@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Player/Heroes.yy",
   },
   "resourceVersion": "1.0",
-  "name": "src_blurd_action",
+  "name": "src_jump_action",
   "tags": [],
   "resourceType": "GMScript",
 }

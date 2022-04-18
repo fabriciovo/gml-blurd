@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-script_execute(scr_player_power)
+scr_create_button(40,40, 300,100,"teste", on_click);

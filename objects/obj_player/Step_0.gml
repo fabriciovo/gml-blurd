@@ -1,4 +1,5 @@
-event_user(_state);vsp += grav;
+event_user(_state);
+vsp += grav;
 if(place_meeting(x,y+vsp,obj_floor)){
 	
 	while(!place_meeting(x,y+ sign(vsp), obj_floor )){

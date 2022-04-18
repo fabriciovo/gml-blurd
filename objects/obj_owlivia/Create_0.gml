@@ -3,5 +3,6 @@
 
 // Inherit the parent event
 event_inherited();
-action = src_blurd_action;
+action = src_jump_action;
 death_object = obj_blurd_death;
+_power = obj_owlivia_barrier;

@@ -3,6 +3,9 @@
 
 // Inherit the parent event
 event_inherited();
-action = src_jump_action;
-death_object = obj_blurd_death;
-_power = obj_barrier;
+if(!grounded){
+	image_index = 3
+}
+if(grounded){
+	image_index = 0
+}

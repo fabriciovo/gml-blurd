@@ -4,4 +4,5 @@
 // Inherit the parent event
 event_inherited();
 hspeed =-1;
-image_speed = .1;
+image_speed = 0;
+alarm[0] = random_range(0,60);
