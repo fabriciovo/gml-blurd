@@ -10,7 +10,7 @@
   "option_windows_icon": "${options_dir}/windows/runner_icon.ico",
   "option_windows_save_location": 0,
   "option_windows_splash_screen": "${options_dir}/windows/splash.png",
-  "option_windows_use_splash": true,
+  "option_windows_use_splash": false,
   "option_windows_start_fullscreen": true,
   "option_windows_allow_fullscreen_switching": true,
   "option_windows_interpolate_pixels": false,

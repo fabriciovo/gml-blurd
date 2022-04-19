@@ -1,4 +1,5 @@
 /// @description  Draw the stats
+
 switch(room){
     case rm_menu:
         draw_set_halign(fa_center);

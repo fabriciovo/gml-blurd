@@ -1,0 +1,9 @@
+
+#macro Firebase_WebAPIKey "AIzaSyCVJkljnyqSfafFWrrA9UyX4DDQ1Ut59W0"
+
+
+#macro FirebaseAuthentication_LibraryOptions_SDKOnly "SDKs_Only"
+#macro FirebaseAuthentication_LibraryOptions_SDKWhenAvailable "SDKs_When_Available"
+#macro FirebaseAuthentication_LibraryOptions_RESTOnly "REST_API_Only"
+
+#macro FirebaseAuthentication_Library FirebaseAuthentication_LibraryOptions_SDKWhenAvailable

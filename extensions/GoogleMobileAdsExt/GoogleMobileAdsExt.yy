@@ -89,7 +89,7 @@
   "tvosCocoaPodDependencies": "",
   "parent": {
     "name": "Extensions",
-    "path": "folders/Extensions.yy",
+    "path": "folders/Plugins/Google ads/Extensions.yy",
   },
   "resourceVersion": "1.2",
   "name": "GoogleMobileAdsExt",
