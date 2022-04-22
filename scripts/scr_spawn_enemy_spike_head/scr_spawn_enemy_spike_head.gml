@@ -1,2 +1,3 @@
-function scr_spawn_enemy_spike_head(){	instance_create(x,y,obj_spike_head);
+function scr_spawn_enemy_spike_head(){	
+	instance_create_layer(x,y,"Instances",obj_spike_head);
 }

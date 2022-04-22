@@ -12,15 +12,11 @@ grounded = false;
 }
 
 
-
-y += vsp;
-
-
-if(obj_player_stats.hp <= 0){
-	with(_power){
-		instance_destroy()
-	}
-	instance_change(death_object,true);
+if(place_meeting(x,y+vsp,obj_solid)){
+	vsp = 0;
 }
 
+
+
+y += vsp;
 

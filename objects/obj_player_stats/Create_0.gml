@@ -1,21 +1,7 @@
-/// @description Initialize the stats player
-display_set_gui_size(__view_get( e__VW.WView, 0 ),__view_get( e__VW.HView, 0 ));
-//initialize var
+/// @description Insert description here
+// You can write your code in this editor
+instance_create_layer(x,y,"Instances",obj_blurd);
 
-score = 0;
-points = 0;
-highscore = 0;
-
-__view_set( e__VW.XView, 0, 0 );
-__view_set( e__VW.YView, 0, 0 );
-
-selected_player = obj_blurd;
-
-
-gameScore = 0;
-
-
-hp = 3;
-max_hp = 3;
-energy = 3;
-max_energy = 3;
+coins = 0;
+coins_out_game = 0;
+coins_per_second = 0;

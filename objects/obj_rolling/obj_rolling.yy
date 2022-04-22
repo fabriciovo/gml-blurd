@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_damage",
-    "path": "objects/obj_damage/obj_damage.yy",
+    "name": "obj_monster",
+    "path": "objects/obj_monster/obj_monster.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Monsters",
-    "path": "folders/Objects/level/Monsters.yy",
+    "path": "folders/Objects/Monsters.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_rolling",
