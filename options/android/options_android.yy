@@ -6,7 +6,7 @@
   "option_android_build_tools": "",
   "option_android_support_lib": "30.0.0",
   "option_android_target_sdk": "30",
-  "option_android_minimum_sdk": "16",
+  "option_android_minimum_sdk": "19",
   "option_android_compile_sdk": "30",
   "option_android_package_domain": "com",
   "option_android_package_company": "fabriciovo",
