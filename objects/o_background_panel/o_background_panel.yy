@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_square_buttons",
-    "path": "sprites/spr_square_buttons/spr_square_buttons.yy",
+    "name": "spr_backgound_panel",
+    "path": "sprites/spr_backgound_panel/spr_backgound_panel.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,9 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":32,"eventType":5,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -32,7 +30,7 @@
     "path": "folders/Objects/UI/Shop.yy",
   },
   "resourceVersion": "1.0",
-  "name": "btn_shop",
+  "name": "o_background_panel",
   "tags": [],
   "resourceType": "GMObject",
 }

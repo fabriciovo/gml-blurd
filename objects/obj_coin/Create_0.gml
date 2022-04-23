@@ -1,1 +1,1 @@
-action_move("000100000", 1);
+hspeed = -1;

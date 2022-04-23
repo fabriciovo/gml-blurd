@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Heroes",
-    "path": "folders/Scripts/Player/Heroes.yy",
+    "name": "Player",
+    "path": "folders/Scripts/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "src_jump_action",

@@ -1,4 +1,4 @@
-event_user(_state);
+
 vsp += grav;
 if(place_meeting(x,y+vsp,obj_floor)){
 	

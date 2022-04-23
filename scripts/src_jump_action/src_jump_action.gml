@@ -4,5 +4,5 @@ function src_jump_action(){
     vsp = -jump;
     audio_play_sound(snd_jump,9,false);
     image_index = 0;
-    instance_create(x,y,obj_jump_effect);
+    instance_create_layer(x,y,"Effects",obj_jump_effect);
 }
