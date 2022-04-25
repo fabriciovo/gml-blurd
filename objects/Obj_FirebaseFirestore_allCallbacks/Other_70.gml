@@ -36,6 +36,11 @@ switch(async_load[?"type"])
 	case "FirebaseFirestore_Document_Read":
 		var path = async_load[?"path"]
 		value = async_load[?"value"]
+		var json = json_decode(value);
+
+		global.coins =  real(json[? "coins"]);
+		global.coins_per_second = real(json[? "coins_per_second"]);
+		
 	break
 	
 	case "FirebaseFirestore_Document_Listener":
@@ -54,6 +59,7 @@ switch(async_load[?"type"])
 	case "FirebaseFirestore_Collection_Read":
 		var path = async_load[?"path"]
 		value = async_load[?"value"]
+		
 	break
 	
 	case "FirebaseFirestore_Collection_Listener":

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 draw_self();
-if(obj_player_stats.coins >= cost) {
+if(global.coins >= cost) {
 	draw_sprite_ext(spr_shop_container, 0, x / 2 - 1, y, 0.5, 0.5,0,c_green,1);
 } else {
 	draw_sprite_ext(spr_shop_container, 0, x / 2 - 1, y, 0.5, 0.5,0,c_white,1);

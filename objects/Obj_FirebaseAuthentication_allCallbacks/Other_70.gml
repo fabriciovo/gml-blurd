@@ -24,16 +24,21 @@ if(async_load[?"status"] == 200)//400 is error
 switch(async_load[?"type"])
 {
 	case "FirebaseAuthentication_SignInWithCustomToken":
-		var user_raw = async_load[?"value"]
+		var user_raw = ds_map_find_value(async_load,"value");
 	break
 			
 	case "FirebaseAuthentication_SignIn_Email":
-		var user_raw = async_load[?"value"]
+		FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Read()
 		room_goto(rm_game);
 	break
 	
 	case "FirebaseAuthentication_SignUp_Email":
-		var user_raw = async_load[?"value"]
+		var map = ds_map_create();
+		map[?"coins"] = 0;
+		map[?"coins_per_second"] = 0;
+		var json = json_encode(map)
+		ds_map_destroy(map)
+		FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Set(json)
 		room_goto(rm_game);
 	break
 		
