@@ -1,9 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-item_image = spr_icons;
-item_index = 3;
-item_name = "Name";
-cost = 1;
-coins_per_second = 1;
-image_yscale = 0.6041666;
-image_xscale =  2.791667;
+name = "";
+coins = 0;
+coins_per_second = 0;
+sprite = spr_energy;
+index = 0;
+image_xscale = 2.8;
+image_yscale = 0.7;
+

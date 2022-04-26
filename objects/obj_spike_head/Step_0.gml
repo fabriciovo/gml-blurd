@@ -9,3 +9,4 @@ if(!grounded){
 if(grounded){
 	image_index = 0
 }
+

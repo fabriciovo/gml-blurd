@@ -3,8 +3,5 @@
 
 // Inherit the parent event
 event_inherited();
-image_speed = .5
-hp = 1;
-
-monster_hsp = random_range(-3,-5);
-hsp = monster_hsp;
+jump = true;
+hsp = -1;

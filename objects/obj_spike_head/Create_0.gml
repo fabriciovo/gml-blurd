@@ -3,6 +3,8 @@
 
 // Inherit the parent event
 event_inherited();
-hspeed =-1;
 image_speed = 0;
-alarm[0] = random_range(0,60);
+alarm[1] = random_range(0,60);
+monster_hsp = random_range(-1,-2);
+hsp = monster_hsp;
+hp = 1;

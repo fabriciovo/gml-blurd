@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+
+event_user(state);
 
 vsp += grav;
 
@@ -17,7 +17,4 @@ grounded = false;
 
 
 y += vsp;
-
-if(x <= -sprite_width){
-	instance_destroy();
-}
+x += hsp;
