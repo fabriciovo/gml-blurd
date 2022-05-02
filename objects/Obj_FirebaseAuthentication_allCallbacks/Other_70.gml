@@ -28,18 +28,29 @@ switch(async_load[?"type"])
 	break
 			
 	case "FirebaseAuthentication_SignIn_Email":
-		FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Read()
-		room_goto(rm_game);
+		var _user_raw = async_load[?"value"]
+		Firebase_Load();
+		room_goto(rm_firebase_load);
 	break
 	
 	case "FirebaseAuthentication_SignUp_Email":
-		var map = ds_map_create();
-		map[?"coins"] = 0;
-		map[?"coins_per_second"] = 0;
-		var json = json_encode(map)
-		ds_map_destroy(map)
-		FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Set(json)
-		room_goto(rm_game);
+		var _level_items = ds_map_create();
+		var _map = ds_map_create();
+		ds_map_add(_level_items, "bottled_drinks_level", 1);
+		ds_map_add(_level_items, "cake_level", 1);
+		_map[?"coins"] = 0;
+		_map[?"coins_per_second"] = 0;
+		_map[?"level_items"] = json_encode(_level_items)
+		global.coins = _map[?"coins"];
+		global.coins_per_second = _map[?"coins"];
+		global.level_items = _map[?"level_items"];
+		
+		var _json = json_encode(_map)
+		show_message(_json);
+		ds_map_destroy(_map)
+		ds_map_destroy(_level_items)
+		FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Set(_json)
+		room_goto(rm_firebase_load);
 	break
 		
 			

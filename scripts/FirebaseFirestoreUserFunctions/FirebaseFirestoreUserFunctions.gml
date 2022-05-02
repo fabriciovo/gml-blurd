@@ -218,6 +218,18 @@ function Firebase_Firestore_builder(path) constructor
 			return RESTFirebaseFirestore_Collection_Read(_path)
     }
 	
+	/// @function ReadOnLoad()
+    static ReadOnLoad = function()
+    {
+		_action = "ReadOnLoad"
+		if(FirebaseFirestore_Library_useSDK)
+			return FirebaseFirestore_SDK(json_stringify(self))
+		if(FirebaseREST_Firestore_path_isDocument(_path))
+			return RESTFirebaseFirestore_Document_Read(_path)
+		else
+			return RESTFirebaseFirestore_Collection_Read(_path)
+    }
+	
 	/// @function Query()
 	static Query = function()
 	{

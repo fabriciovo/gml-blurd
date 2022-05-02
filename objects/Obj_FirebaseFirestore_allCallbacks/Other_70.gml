@@ -34,13 +34,14 @@ switch(async_load[?"type"])
 	break
 
 	case "FirebaseFirestore_Document_Read":
-		var path = async_load[?"path"]
-		value = async_load[?"value"]
-		var json = json_decode(value);
-
-		global.coins =  real(json[? "coins"]);
-		global.coins_per_second = real(json[? "coins_per_second"]);
-		
+		var _path = async_load[?"path"]
+		var _value = async_load[?"value"]
+		var _json = json_decode(_value);
+		show_message(global.level_items);
+		global.level_items = json_decode(_json[? "level_items"]);
+		global.coins =  real(_json[? "coins"]);
+		global.coins_per_second = real(_json[? "coins_per_second"]);
+		show_message(global.level_items);
 	break
 	
 	case "FirebaseFirestore_Document_Listener":

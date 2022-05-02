@@ -1,8 +1,9 @@
 
 function Item() constructor {
-	name = "";
-	cost = 0;
-	coins_per_second = 0;
-	sprite = noone;
-	index  = 0;
+	name_ = "";
+	cost_ = 0;
+	coins_per_second_ = 0;
+	sprite_ = noone;
+	index_  = 0;
+	key_ = "";
 }
