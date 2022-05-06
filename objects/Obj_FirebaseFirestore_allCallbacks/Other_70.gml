@@ -26,27 +26,46 @@ if(async_load[?"status"] == 200)//400: general error; 404: document not found; 4
 switch(async_load[?"type"])
 {
 	case "FirebaseFirestore_Document_Set":
+	show_message("FirebaseFirestore_Document_Set");
 		var path = async_load[?"path"]
 	break
 
 	case "FirebaseFirestore_Document_Update":
+	show_message("FirebaseFirestore_Document_Update");
 		var path = async_load[?"path"]
 	break
 
 	case "FirebaseFirestore_Document_Read":
+		show_message("FirebaseFirestore_Document_Read");
+		global.level_items = ds_map_create();
 		var _path = async_load[?"path"]
 		var _value = async_load[?"value"]
 		var _json = json_decode(_value);
-		show_message(global.level_items);
-		global.level_items = json_decode(_json[? "level_items"]);
+	
+		var _level_items = json_parse(_json[? "level_items"]);
+			show_message(_level_items);
+
 		global.coins =  real(_json[? "coins"]);
 		global.coins_per_second = real(_json[? "coins_per_second"]);
-		show_message(global.level_items);
+		
+		
+		var str = "";
+		var array = variable_struct_get_names(_level_items);
+		show_message("Variables for struct: " + string(array));
+		for (var i = 0; i < array_length(array); i++;)
+		{
+		    str = array[i] + ":" + string(variable_struct_get(_level_items, array[i]));
+			show_message(array[i]);
+			show_message( string(variable_struct_get(_level_items, array[i])));
+		    show_message(str);
+			ds_map_add(global.level_items,string(array[i]),real(variable_struct_get(_level_items, array[i])))
+		}
+			
 	break
 	
 	case "FirebaseFirestore_Document_Listener":
 		var path = async_load[?"path"]
-		value = async_load[?"value"]
+		//value = async_load[?"value"]
 	break
 
 	case "FirebaseFirestore_Document_Delete":
@@ -59,17 +78,18 @@ switch(async_load[?"type"])
 				
 	case "FirebaseFirestore_Collection_Read":
 		var path = async_load[?"path"]
-		value = async_load[?"value"]
+		//value = async_load[?"value"]
+		show_message("FirebaseFirestore_Collection_Read");
 		
 	break
 	
 	case "FirebaseFirestore_Collection_Listener":
 		var path = async_load[?"path"]
-		value = async_load[?"value"]
+		//value = async_load[?"value"]
 	break
 			
 	case "FirebaseFirestore_Collection_Query":
 		var path = async_load[?"path"]
-		value = async_load[?"value"]
+		//value = async_load[?"value"]
 	break
 }
