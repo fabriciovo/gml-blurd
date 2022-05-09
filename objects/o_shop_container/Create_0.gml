@@ -7,6 +7,7 @@ sprite_ = s_energy;
 index_ = 0;
 level_ = 1;
 key_ = "";
+cost_ = 0;
 image_xscale = 2.8;
 image_yscale = 0.7;
 

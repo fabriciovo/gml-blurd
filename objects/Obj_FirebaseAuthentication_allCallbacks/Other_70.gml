@@ -29,7 +29,6 @@ switch(async_load[?"type"])
 			
 	case "FirebaseAuthentication_SignIn_Email":
 		var _user_raw = async_load[?"value"]
-		show_message("FirebaseAuthentication_SignIn_Email")
 		Firebase_Load();
 		room_goto(rm_firebase_load);
 	break
@@ -44,11 +43,7 @@ switch(async_load[?"type"])
 		_map[?"level_items"] = json_encode(global.level_items );
 		global.coins = _map[?"coins"];
 		global.coins_per_second = _map[?"coins"];
-
-		var _json = json_encode(_map)
-		
-		show_message(global.level_items)
-		
+		var _json = json_encode(_map)		
 		ds_map_destroy(_map)
 		FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Set(_json)
 		room_goto(rm_firebase_load);

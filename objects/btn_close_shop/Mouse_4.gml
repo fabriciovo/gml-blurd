@@ -9,3 +9,4 @@ image_index = 1;
 
 
 layer_set_visible("Shop",false);
+layer_set_visible("Coins",false);

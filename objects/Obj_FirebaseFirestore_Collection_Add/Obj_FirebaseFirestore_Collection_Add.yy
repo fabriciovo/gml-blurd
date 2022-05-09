@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "CRUD",
-    "path": "folders/Firebase Firestore/Testing/CRUD.yy",
+    "path": "folders/Firebase Authentication/Firebase Firestore/Testing/CRUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_FirebaseFirestore_Collection_Add",

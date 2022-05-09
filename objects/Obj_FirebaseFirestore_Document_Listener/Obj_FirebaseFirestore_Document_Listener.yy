@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "Spr_YoYo_button",
-    "path": "sprites/Spr_YoYo_button/Spr_YoYo_button.yy",
+    "name": "",
+    "path": "",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "Obj_YoYo_button",
-    "path": "objects/Obj_YoYo_button/Obj_YoYo_button.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 0,
@@ -31,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "CRUD",
-    "path": "folders/Firebase Firestore/Testing/CRUD.yy",
+    "path": "folders/Firebase Authentication/Firebase Firestore/Testing/CRUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_FirebaseFirestore_Document_Listener",

@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Testing",
-    "path": "folders/Firebase Firestore/Testing.yy",
+    "path": "folders/Firebase Authentication/Firebase Firestore/Testing.yy",
   },
   "resourceVersion": "1.0",
   "name": "Obj_Debug_FallText_Firestore",
