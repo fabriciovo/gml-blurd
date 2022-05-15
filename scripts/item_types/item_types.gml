@@ -6,7 +6,7 @@ function Cake(): Item() constructor {
 	sprite_ = s_cake;
 	index_ = 0;
 	level_ = 1;
-	key_ = "cake_level"
+	key_ = "cake"
 }
 
 
@@ -17,7 +17,7 @@ function Bottled_Drinks(): Item() constructor {
 	sprite_ = s_bottled_drinks;
 	index_ = 0;
 	level_ = 1;
-	key_ = "bottled_drinks_level"
+	key_ = "bottled_drinks"
 }
 
 function Burger(): Item() constructor {

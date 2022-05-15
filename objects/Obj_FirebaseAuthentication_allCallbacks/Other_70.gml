@@ -34,18 +34,17 @@ switch(async_load[?"type"])
 	break
 	
 	case "FirebaseAuthentication_SignUp_Email":
-		global.level_items = ds_map_create();
-		var _map = ds_map_create();
-		ds_map_add(global.level_items , "bottled_drinks_level", 1);
-		ds_map_add(global.level_items , "cake_level", 1);
+		/*var _map = ds_map_create();
 		_map[?"coins"] = 0;
 		_map[?"coins_per_second"] = 0;
-		_map[?"level_items"] = json_encode(global.level_items );
+		_map[?"coins_items"] = json_encode(global.coin_items);
+		_map[?"coins_teste_stringify"] = json_stringify(global.coin_items);
 		global.coins = _map[?"coins"];
 		global.coins_per_second = _map[?"coins"];
 		var _json = json_encode(_map)		
-		ds_map_destroy(_map)
-		FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Set(_json)
+		ds_map_destroy(_map)*/
+		Firebase_Create();
+
 		room_goto(rm_firebase_load);
 	break
 		

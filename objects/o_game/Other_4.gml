@@ -6,6 +6,7 @@ switch(room){
 		room_goto_next();
 	break;
 	case rm_firebase_load:
+		
 		alarm[1] = 500;
 	break;
 	case rm_game:
