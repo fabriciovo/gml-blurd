@@ -11,6 +11,7 @@ switch(room){
 	break;
 	case rm_game:
 		instance_create_layer(x,y,"Instances",o_player_stats);
+		instance_create_layer(x,y,"Stage",o_stage);
 		alarm[0] = 500;
 	break;
 }

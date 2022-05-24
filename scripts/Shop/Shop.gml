@@ -11,8 +11,8 @@ function Shop(_layer, _container, _global_list) {
 		_obj.name_ = _item.name_;
 		_obj.key_ = _item.key_;
 		_obj.level_ = _item.level_;
-		_obj.cost_ = _item.cost_  * _item.level_ * 3.3
-		_obj.coins_per_second_ = _item.cost_ / 35;
+		_obj.cost_ = _item.cost_ 
+		_obj.coins_per_second_ = _item.coins_per_second_;
 	}
 	layer_set_visible(_layer,false); 
 }

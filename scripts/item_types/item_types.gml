@@ -47,3 +47,23 @@ function Ice_Cream(): Item() constructor {
 	level_ = 1;
 }
 
+
+function Speed_Drink(): Upgrade() constructor {
+	name_ = "Speed Drink";
+	cost_ = 50;
+	coins_per_second_ = 3;
+	sprite_ = s_bottled_drinks;
+	index_ = 0;
+	level_ = 0;
+	key_ = "Speed Drink"
+	disable_ = true;
+	instantiate_ = false;
+	
+	static create_method = function(){
+		hspeed = -1;
+	}
+	
+	static collision_method = function(){
+		o_player_stats.state_ = player_state.speed_drink
+	}
+}
