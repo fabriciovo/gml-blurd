@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Generic",
-    "path": "folders/Objects/level/Generic.yy",
+    "path": "folders/Objects/Level/Generic.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_coin",

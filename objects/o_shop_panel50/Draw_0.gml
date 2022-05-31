@@ -1,5 +1,0 @@
-/// @description
-
-draw_self();
-
-

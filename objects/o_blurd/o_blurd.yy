@@ -37,7 +37,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Blurd",
-    "path": "folders/Objects/player/Blurd.yy",
+    "path": "folders/Objects/Player/Blurd.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_blurd",

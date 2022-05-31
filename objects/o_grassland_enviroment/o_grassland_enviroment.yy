@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Grassland",
-    "path": "folders/Objects/level/Grassland.yy",
+    "path": "folders/Objects/Level/Grassland.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_grassland_enviroment",

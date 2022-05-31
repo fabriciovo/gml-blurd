@@ -3,7 +3,7 @@
     "name": "s_floor",
     "path": "sprites/s_floor/s_floor.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Generic",
-    "path": "folders/Objects/level/Generic.yy",
+    "path": "folders/Objects/Level/Generic.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_floor",
