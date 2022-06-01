@@ -14,6 +14,9 @@ function Stage(name,background, platform , enviroment) constructor {
 
 		layer_background_sprite(_back_id, _background);
 		instance_create_layer(0,0,"Enviroment",o_grassland_enviroment);
+		
+		instance_create_layer(0,224,"Enviroment",o_floor);
+		instance_create_layer(180,224,"Enviroment",o_floor);
 	 }
 	
 	 static step_method = function() {
