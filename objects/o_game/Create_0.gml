@@ -21,10 +21,4 @@ global.characters = {
 blurd: o_blurd,
 }
 
-global.stage = {
-	 grass_land: function() {
-		speed_ = 1 * global.one_second;
-		sprite_ = noone;
-		instances_ = o_grassland_enviroment
-	 }
-}
+

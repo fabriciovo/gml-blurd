@@ -58,12 +58,21 @@ function Speed_Drink(): Upgrade() constructor {
 	key_ = "Speed Drink"
 	disable_ = true;
 	instantiate_ = false;
-	
+	speed_time_ = 120;
 	static create_method = function(){
-		hspeed = -1;
+		hspeed = global.game_speed;
 	}
 	
 	static collision_method = function(){
-		o_player_stats.state_ = player_state.speed_drink
+		global.game_speed = -2;
+	}
+	
+	static start_alarm0 = function() {
+		global.game_speed = -1;
+	}
+	
+	static alarm0 = function(){
+		alarm[0] = speed_time_;
+	
 	}
 }

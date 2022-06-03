@@ -1,1 +1,1 @@
-hspeed = -1;
+hspeed = global.game_speed;
