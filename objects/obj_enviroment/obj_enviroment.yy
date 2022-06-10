@@ -2,6 +2,7 @@
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -25,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shop",
-    "path": "folders/Objects/UI/Shop.yy",
+    "path": "folders/Objects/Shop.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_enviroment",

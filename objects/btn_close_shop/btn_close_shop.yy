@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -29,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shop",
-    "path": "folders/Objects/UI/Shop.yy",
+    "path": "folders/Objects/Shop.yy",
   },
   "resourceVersion": "1.0",
   "name": "btn_close_shop",

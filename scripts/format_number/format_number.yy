@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Items",
-    "path": "folders/Scripts/Items.yy",
+    "name": "Format Number",
+    "path": "folders/Scripts/Format Number.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Item_class",
+  "name": "Format_Number",
   "tags": [],
   "resourceType": "GMScript",
 }

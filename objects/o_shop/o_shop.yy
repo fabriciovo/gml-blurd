@@ -18,10 +18,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -29,7 +26,7 @@
     "path": "folders/Objects/Game Controllers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_stage",
+  "name": "o_shop",
   "tags": [],
   "resourceType": "GMObject",
 }

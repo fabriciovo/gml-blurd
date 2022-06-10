@@ -7,4 +7,3 @@ for (var _i = array_length(_keys)-1; _i >= 0; --_i) {
 	var _item = variable_struct_get(_characters, _k);
 	var _obj = instance_create_layer(x,y ,"Instances", _item);
 }
-

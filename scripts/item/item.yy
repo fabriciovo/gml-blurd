@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "item_types",
+  "name": "Item",
   "tags": [],
   "resourceType": "GMScript",
 }

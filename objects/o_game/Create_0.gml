@@ -6,6 +6,7 @@ global.game_speed = -1;
 global.coins = 0;
 global.coins_per_second = 0;
 
+
 global.coin_items = {
 	cake: new Cake(),
 	bottled_drinks : new Bottled_Drinks(),
@@ -22,3 +23,9 @@ blurd: o_blurd,
 }
 
 
+coins_out_game_ = 0;
+coins_delay_ = 1;
+
+
+
+alarm[2] = global.one_second * coins_delay_;

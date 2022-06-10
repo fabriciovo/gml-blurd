@@ -11,7 +11,6 @@ function Firebase_Create(){
 		coins : _coins,
 		coins_per_second : _coins_per_second,
 	}
-	show_message(_player_stats);
 	var _json = json_stringify(_player_stats);
 	FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Set(_json)
 }

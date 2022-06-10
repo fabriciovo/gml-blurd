@@ -6,11 +6,10 @@ switch(room){
 		room_goto_next();
 	break;
 	case rm_firebase_load:
-		
-		alarm[1] = 500;
+		room_goto(rm_game)
 	break;
 	case rm_game:
-		instance_create_layer(x,y,"Instances",o_player_stats);
+		instance_create_layer(x,y,"Instances",o_character_spawn);
 		instance_create_layer(x,y,"Stage",o_stage);
 		alarm[0] = 500;
 	break;

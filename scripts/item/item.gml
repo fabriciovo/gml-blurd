@@ -1,7 +1,26 @@
+/// @function    Item(_name, _base_cost, _cost, _coins_per_second, _sprite, _index, _key)
+/// @desc Desc           
+/// @arg Name 
+/// @arg Base_Cost  
+/// @arg Cost    
+/// @arg Coins_Per_Second 
+/// @arg Sprite   
+/// @arg Index  
+/// @arg Key  
+function Item(_name, _base_cost, _cost, _coins_per_second, _sprite, _index, _key) constructor {
+	name_ =_name;
+	base_cost_ = _base_cost;
+	cost_ = _cost;
+	coins_per_second_ = _coins_per_second;
+	sprite_ = _sprite;
+	index_  = _index;
+	key_ = _key;
+}
 
 function Cake(): Item() constructor {
 	name_ = "Cake";
 	cost_ = 10;
+	base_cost_ = 10;
 	coins_per_second_ = 1;
 	sprite_ = s_cake;
 	index_ = 0;
@@ -13,6 +32,7 @@ function Cake(): Item() constructor {
 function Bottled_Drinks(): Item() constructor {
 	name_ = "Bottled Drinks";
 	cost_ = 50;
+	base_cost_ = 50;
 	coins_per_second_ = 3;
 	sprite_ = s_bottled_drinks;
 	index_ = 0;
@@ -48,31 +68,4 @@ function Ice_Cream(): Item() constructor {
 }
 
 
-function Speed_Drink(): Upgrade() constructor {
-	name_ = "Speed Drink";
-	cost_ = 50;
-	coins_per_second_ = 3;
-	sprite_ = s_bottled_drinks;
-	index_ = 0;
-	level_ = 0;
-	key_ = "Speed Drink"
-	disable_ = true;
-	instantiate_ = false;
-	speed_time_ = 120;
-	static create_method = function(){
-		hspeed = global.game_speed;
-	}
-	
-	static collision_method = function(){
-		global.game_speed = -2;
-	}
-	
-	static start_alarm0 = function() {
-		global.game_speed = -1;
-	}
-	
-	static alarm0 = function(){
-		alarm[0] = speed_time_;
-	
-	}
-}
+
