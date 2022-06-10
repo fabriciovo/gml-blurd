@@ -13,6 +13,7 @@ function Shop(_layer, _container, _global_list) {
 		_obj.level_ = _item.level_;
 		_obj.cost_ = _item.cost_ 
 		_obj.coins_per_second_ = _item.coins_per_second_;
+		_obj.base_cost_ = _item.base_cost_;
 	}
 	layer_set_visible(_layer,false); 
 }
