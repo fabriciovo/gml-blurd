@@ -8,7 +8,7 @@ if(global.coins >= cost_) {
 	draw_sprite_ext(s_shop_container, 0, x / 2 - 1, y, 0.5, 0.5,0,c_white,1);
 }
 
-draw_sprite(sprite_, index_,x / 2 - 9, y - 10);
+draw_sprite(sprite_, index_,x / 2 - 12, y - 10);
 draw_text( x / 2 + 14, y - 14,name_);
 draw_text( x / 2 + 14, y ,"cost " + string(cost_));
 draw_text( x / 2 + 54, y,"CpS " + string(coins_per_second_));

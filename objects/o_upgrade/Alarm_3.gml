@@ -1,0 +1,1 @@
+/// @description Reset attract coins

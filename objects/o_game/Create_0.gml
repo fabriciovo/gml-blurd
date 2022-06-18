@@ -6,20 +6,23 @@ global.game_speed = -1;
 global.coins = 0;
 global.coins_per_second = 0;
 
-
 global.coin_items = {
-	cake: new Cake(),
-	bottled_drinks : new Bottled_Drinks(),
+	cake: new Item("Cake",1,1,1,1,s_cake,0,"cake"),
+	bottled_drinks : new Item("Bottled Drinks",10,10,3,1,s_bottled_drinks,0,"bottled_drinks"),
 }
-
 
 global.upgrade_items = {
 	speed_drink: new Speed_Drink(),
-	
+}
+
+global.upgrade_stages = {
+	grass_land:{
+		tree: 0,
+	},
 }
 
 global.characters = {
-blurd: o_blurd,
+	blurd: o_blurd,
 }
 
 

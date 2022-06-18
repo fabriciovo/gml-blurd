@@ -30,6 +30,6 @@ function format_number(_number){
 		
 	}
 		
-	show_message(_text)
+
 	return _text;
 }

@@ -7,7 +7,7 @@
 /// @arg Sprite   
 /// @arg Index  
 /// @arg Key  
-function Item(_name, _base_cost, _cost, _coins_per_second, _sprite, _index, _key) constructor {
+function Item(_name, _base_cost, _cost, _coins_per_second,_level, _sprite, _index, _key) constructor {
 	name_ =_name;
 	base_cost_ = _base_cost;
 	cost_ = _cost;
@@ -15,17 +15,21 @@ function Item(_name, _base_cost, _cost, _coins_per_second, _sprite, _index, _key
 	sprite_ = _sprite;
 	index_  = _index;
 	key_ = _key;
+	level=_level;
 }
 
 function Cake(): Item() constructor {
 	name_ = "Cake";
-	cost_ = 10;
-	base_cost_ = 10;
+	cost_ = 1;
+	base_cost_ = 1;
 	coins_per_second_ = 1;
 	sprite_ = s_cake;
 	index_ = 0;
 	level_ = 1;
-	key_ = "cake"
+	key_ = "cake";
+	unlock_upgrade_ = function(){
+		return
+	}
 }
 
 
@@ -37,34 +41,10 @@ function Bottled_Drinks(): Item() constructor {
 	sprite_ = s_bottled_drinks;
 	index_ = 0;
 	level_ = 1;
-	key_ = "bottled_drinks"
-}
-
-function Burger(): Item() constructor {
-	name_ = "Burger";
-	cost_ = 100;
-	coins_per_second_ = 6;
-	sprite_ = s_energy;
-	index_ = 0;
-	level_ = 1;
-}
-
-function Chocolate(): Item() constructor {
-	name_ = "Chocolate";
-	cost_ = 200;
-	coins_per_second_ = 12;
-	sprite_ = s_energy;
-	index_ = 0;
-	level_ = 1;
-}
-
-function Ice_Cream(): Item() constructor {
-	name_ = "Ice_Cream";
-	cost_ = 300;
-	coins_per_second_ = 24;
-	sprite_ = s_energy;
-	index_ = 0;
-	level_ = 1;
+	key_ = "bottled_drinks";
+	unlock_upgrade_ = function(){
+		return
+	}
 }
 
 
