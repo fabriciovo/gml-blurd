@@ -1,7 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-// Inherit the parent event
-event_inherited();
-action_ = src_jump_action;
-
+hero.step_method();

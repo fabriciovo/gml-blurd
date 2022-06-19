@@ -15,7 +15,7 @@ function Item(_name, _base_cost, _cost, _coins_per_second,_level, _sprite, _inde
 	sprite_ = _sprite;
 	index_  = _index;
 	key_ = _key;
-	level=_level;
+	level_ =_level;
 }
 
 function Cake(): Item() constructor {
