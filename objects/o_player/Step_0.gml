@@ -1,4 +1,3 @@
-
 vsp_ += grav_;
 if(place_meeting(x,y+vsp_,o_solid)){
 	
@@ -16,7 +15,4 @@ if(place_meeting(x,y+vsp_,o_solid)){
 	vsp_ = 0;
 }
 
-
-
 y += vsp_;
-

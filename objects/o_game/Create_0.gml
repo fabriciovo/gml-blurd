@@ -7,8 +7,8 @@ global.coins = 0;
 global.coins_per_second = 0;
 
 global.coin_items = {
-	cake: new Item("Cake",1,1,1,1,s_cake,0,"cake"),
-	bottled_drinks : new Item("Bottled Drinks",10,10,3,1,s_bottled_drinks,0,"bottled_drinks"),
+	cake: new Cake(),
+	bottled_drinks : new Bottled_Drinks(),
 }
 
 global.upgrade_items = {

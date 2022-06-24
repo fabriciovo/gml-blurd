@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+if level_ <= 0 exit;
 draw_self();
 
 if(global.coins >= cost_) {

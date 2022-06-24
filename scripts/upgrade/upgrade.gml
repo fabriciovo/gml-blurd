@@ -10,6 +10,9 @@ function Upgrade() constructor {
 	disable_ = true;
 	instantiate_ = false;
 	base_cost_ = 50;
+	unlock_upgrade_ = function() {
+		
+	}
 }
 
 
@@ -26,4 +29,7 @@ function Speed_Drink(): Upgrade() constructor {
 	instantiate_ = false;
 	speed_time_ = 120;
 	base_cost_ = 50;
+	unlock_upgrade_ = function() {
+		
+	}
 }

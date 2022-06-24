@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if not visible exit;
+if not visible or level_ <= 0 exit;
 if(global.coins >= cost_){
 	var _item = global.coin_items[$ key_];
 	global.coins -= cost_;
@@ -11,4 +11,5 @@ if(global.coins >= cost_){
 	_item.coins_per_second_ = coins_per_second_;
 	_item.cost_ = cost_;
 	_item.level_ = level_;
+	_item.unlock_upgrade_();
 } 
