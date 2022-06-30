@@ -34,9 +34,10 @@ function Cake(): Item() constructor {
 	
 	unlock_upgrade_ = function(){
 
-		if( level_ > 5){
-
+		if( self.level_ > 5){
 			global.coin_items.bottled_drinks.level_++;
+			show_message(global.coin_items.bottled_drinks.level_);
+			show_message("asdsadasda")
 		}
 	}
 }
