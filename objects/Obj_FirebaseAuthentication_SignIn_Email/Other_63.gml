@@ -5,7 +5,7 @@ if(async_load[?"result"] != "")
 	if(async_load[?"id"] == request_email)
 	{
 		email = async_load[?"result"]
-		request_password = get_string_async("Password:","MyPassword123")
+		request_password = get_string_async("Password:","")
 	}
 	
 	if(async_load[?"id"] == request_password)

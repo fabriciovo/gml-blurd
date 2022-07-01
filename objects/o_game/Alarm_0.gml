@@ -2,7 +2,7 @@
 
 if(room == rm_game){
 
-//Firebase_Update();
+Firebase_Update();
 alarm[0] = 500;
 
 }
