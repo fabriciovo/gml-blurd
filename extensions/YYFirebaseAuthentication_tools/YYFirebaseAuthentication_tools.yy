@@ -11,9 +11,9 @@
   "license": "",
   "description": "",
   "helpfile": "",
-  "iosProps": true,
+  "iosProps": false,
   "tvosProps": false,
-  "androidProps": true,
+  "androidProps": false,
   "installdir": "",
   "files": [
     {"filename":"FirebaseAuthentication_tools.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
@@ -61,7 +61,7 @@
   "tvosThirdPartyFrameworkEntries": [],
   "IncludedResources": [],
   "androidPermissions": [],
-  "copyToTargets": 9007199254741102,
+  "copyToTargets": 0,
   "iosCocoaPods": "",
   "tvosCocoaPods": "",
   "iosCocoaPodDependencies": "",

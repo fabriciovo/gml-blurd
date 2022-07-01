@@ -11,16 +11,16 @@
   "license": "",
   "description": "",
   "helpfile": "",
-  "iosProps": true,
+  "iosProps": false,
   "tvosProps": false,
-  "androidProps": true,
+  "androidProps": false,
   "installdir": "",
   "files": [
     {"filename":"FirebaseFirestore.ext","origname":"","init":"","final":"","kind":4,"uncompress":false,"functions":[
         {"externalName":"FirebaseFirestore_SDK","kind":4,"help":"FirebaseFirestore_SDK(fluent_json)","hidden":false,"returnType":2,"argCount":0,"args":[
             1,
           ],"resourceVersion":"1.0","name":"FirebaseFirestore_SDK","tags":[],"resourceType":"GMExtensionFunction",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"order":[
+      ],"constants":[],"ProxyFiles":[],"copyToTargets":0,"order":[
         {"name":"FirebaseFirestore_SDK","path":"extensions/YYFirebaseFirestore/YYFirebaseFirestore.yy",},
       ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
     {"filename":"FirebaseFirestore.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
@@ -61,7 +61,7 @@
   "tvosThirdPartyFrameworkEntries": [],
   "IncludedResources": [],
   "androidPermissions": [],
-  "copyToTargets": 17179869292,
+  "copyToTargets": 0,
   "iosCocoaPods": "\r\npod 'Firebase/Firestore','8.4.0'\r\n",
   "tvosCocoaPods": "",
   "iosCocoaPodDependencies": "",

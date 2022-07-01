@@ -11,9 +11,9 @@
   "license": "",
   "description": "",
   "helpfile": "",
-  "iosProps": true,
+  "iosProps": false,
   "tvosProps": false,
-  "androidProps": true,
+  "androidProps": false,
   "installdir": "",
   "files": [
     {"filename":"FirebaseAuthentication.ext","origname":"","init":"","final":"","kind":4,"uncompress":false,"functions":[
@@ -536,7 +536,7 @@
   "tvosThirdPartyFrameworkEntries": [],
   "IncludedResources": [],
   "androidPermissions": [],
-  "copyToTargets": 108,
+  "copyToTargets": 0,
   "iosCocoaPods": "\r\npod 'Firebase/Auth','8.4.0'\r\n",
   "tvosCocoaPods": "",
   "iosCocoaPodDependencies": "",
