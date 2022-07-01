@@ -61,7 +61,7 @@
   "tvosThirdPartyFrameworkEntries": [],
   "IncludedResources": [],
   "androidPermissions": [],
-  "copyToTargets": 17179869292,
+  "copyToTargets": 17179869228,
   "iosCocoaPods": "\r\npod 'Firebase/Firestore','8.4.0'\r\n",
   "tvosCocoaPods": "",
   "iosCocoaPodDependencies": "",

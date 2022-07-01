@@ -6,4 +6,3 @@ layer_set_visible("Coins",false);
 layer_set_visible("Upgrades",false);
 o_player_input_area.disable_ = false;
 image_index = 1;
-

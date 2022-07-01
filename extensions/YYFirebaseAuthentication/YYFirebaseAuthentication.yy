@@ -110,7 +110,7 @@
         {"externalName":"SDKFirebaseAuthentication_ReauthenticateWithGameCenter","kind":4,"help":"SDKFirebaseAuthentication_ReauthenticateWithGameCenter()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"SDKFirebaseAuthentication_ReauthenticateWithGameCenter","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"SDKFirebaseAuthentication_IdTokenListener","kind":4,"help":"SDKFirebaseAuthentication_IdTokenListener()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"SDKFirebaseAuthentication_IdTokenListener","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"SDKFirebaseAuthentication_IdTokenListener_Remove","kind":4,"help":"SDKFirebaseAuthentication_IdTokenListener_Remove()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"SDKFirebaseAuthentication_IdTokenListener_Remove","tags":[],"resourceType":"GMExtensionFunction",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"order":[
+      ],"constants":[],"ProxyFiles":[],"copyToTargets":3035461389054378158,"order":[
         {"name":"SDKFirebaseAuthentication_GetUserData","path":"extensions/YYFirebaseAuthentication/YYFirebaseAuthentication.yy",},
         {"name":"SDKFirebaseAuthentication_SignInWithCustomToken","path":"extensions/YYFirebaseAuthentication/YYFirebaseAuthentication.yy",},
         {"name":"SDKFirebaseAuthentication_SignIn_Email","path":"extensions/YYFirebaseAuthentication/YYFirebaseAuthentication.yy",},
@@ -536,7 +536,7 @@
   "tvosThirdPartyFrameworkEntries": [],
   "IncludedResources": [],
   "androidPermissions": [],
-  "copyToTargets": 108,
+  "copyToTargets": 44,
   "iosCocoaPods": "\r\npod 'Firebase/Auth','8.4.0'\r\n",
   "tvosCocoaPods": "",
   "iosCocoaPodDependencies": "",

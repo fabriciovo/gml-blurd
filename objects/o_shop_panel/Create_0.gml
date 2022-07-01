@@ -8,4 +8,3 @@ upgrade_shop_ = new Shop_Upgrade(x,y,"Upgrades", o_shop_container_upgrade ,globa
 upgrade_shop_.create_shop()
 
 layer_set_visible("Shop",false);
-

@@ -7,6 +7,7 @@ index_ = 0;
 level_ = 0;
 key_ = "";
 cost_ = 0;
+disable_ = false;
 image_xscale = 2.8;
 image_yscale = 0.7;
 

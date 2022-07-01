@@ -42,6 +42,7 @@ switch(async_load[?"type"])
 		var _json = json_decode(_value);
 
 		global.coin_items = json_parse(_json[? "coins_items"]);
+		global.upgrade_items = json_parse(_json[? "upgrade_items"]);
 		global.coins =  real(_json[? "coins"]);
 		global.coins_per_second = real(_json[? "coins_per_second"]);
 			

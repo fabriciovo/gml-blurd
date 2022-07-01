@@ -8,9 +8,9 @@
 /// @arg Sprite   
 /// @arg Index  
 /// @arg Key  
-/// @arg Upgrade Key  
-/// @arg Upgrade Key  
-/// @arg Is Upgrade  
+/// @arg Upgrade_Key  
+/// @arg Upgrade_Level  
+/// @arg Is_Upgrade  
 function Item(_name, _base_cost, _cost, _coins_per_second,_level, _sprite, _index, _key, _upgrade_key, _upgrade_level, _is_upgrade) constructor {
 	name_ =_name;
 	base_cost_ = _base_cost;
@@ -24,11 +24,13 @@ function Item(_name, _base_cost, _cost, _coins_per_second,_level, _sprite, _inde
 	upgrade_level_ =_upgrade_level
 	is_upgrade_ = _is_upgrade
 	unlock_upgrade_ = function() {
+		if(upgrade_key_=="") exit;
 		if(level_ == upgrade_level_){
 			if(not is_upgrade_){
 				global.coin_items[$ upgrade_key_].level_++;						
 			}else{
 				global.upgrade_items[$ upgrade_key_].level_++;	
+				global.coin_items[$ upgrade_key_].level_++
 			}
 		}
 	}
