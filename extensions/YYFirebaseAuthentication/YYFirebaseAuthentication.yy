@@ -536,7 +536,7 @@
   "tvosThirdPartyFrameworkEntries": [],
   "IncludedResources": [],
   "androidPermissions": [],
-  "copyToTargets": 44,
+  "copyToTargets": 108,
   "iosCocoaPods": "\r\npod 'Firebase/Auth','8.4.0'\r\n",
   "tvosCocoaPods": "",
   "iosCocoaPodDependencies": "",

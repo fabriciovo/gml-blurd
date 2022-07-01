@@ -32,6 +32,7 @@
     {"id":{"name":"_2___Hills","path":"sprites/_2___Hills/_2___Hills.yy",},"order":7,},
     {"id":{"name":"scr_spawn_enviroment","path":"scripts/scr_spawn_enviroment/scr_spawn_enviroment.yy",},"order":6,},
     {"id":{"name":"Item","path":"scripts/Item/Item.yy",},"order":0,},
+    {"id":{"name":"o_shop_container_upgrade","path":"objects/o_shop_container_upgrade/o_shop_container_upgrade.yy",},"order":11,},
     {"id":{"name":"Format_Number","path":"scripts/Format_Number/Format_Number.yy",},"order":0,},
     {"id":{"name":"s_coin","path":"sprites/s_coin/s_coin.yy",},"order":4,},
     {"id":{"name":"_4___Cloud_cover_2","path":"sprites/_4___Cloud_cover_2/_4___Cloud_cover_2.yy",},"order":9,},
@@ -289,7 +290,7 @@
     {"CopyToMask":0,"filePath":"datafiles","resourceVersion":"1.0","name":"Firebase_Firestore_Documentation.pdf","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.5.1.16",
+    "IDEVersion": "2022.6.0.23",
   },
   "resourceVersion": "1.5",
   "name": "Blurd",

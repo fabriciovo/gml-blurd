@@ -8,7 +8,10 @@
 /// @arg Sprite   
 /// @arg Index  
 /// @arg Key  
-function Item(_name, _base_cost, _cost, _coins_per_second,_level, _sprite, _index, _key) constructor {
+/// @arg Upgrade Key  
+/// @arg Upgrade Key  
+/// @arg Is Upgrade  
+function Item(_name, _base_cost, _cost, _coins_per_second,_level, _sprite, _index, _key, _upgrade_key, _upgrade_level, _is_upgrade) constructor {
 	name_ =_name;
 	base_cost_ = _base_cost;
 	cost_ = _cost;
@@ -17,11 +20,21 @@ function Item(_name, _base_cost, _cost, _coins_per_second,_level, _sprite, _inde
 	index_  = _index;
 	key_ = _key;
 	level_ =_level;
+	upgrade_key_ =_upgrade_key
+	upgrade_level_ =_upgrade_level
+	is_upgrade_ = _is_upgrade
 	unlock_upgrade_ = function() {
-		
+		if(level_ == upgrade_level_){
+			if(not is_upgrade_){
+				global.coin_items[$ upgrade_key_].level_++;						
+			}else{
+				global.upgrade_items[$ upgrade_key_].level_++;	
+			}
+		}
 	}
 }
 
+/*
 function Cake(): Item() constructor {
 	name_ = "Cake";
 	cost_ = 1;
@@ -33,11 +46,8 @@ function Cake(): Item() constructor {
 	key_ = "cake";
 	
 	unlock_upgrade_ = function(){
-
-		if( self.level_ > 5){
+		if(level_ == 5){
 			global.coin_items.bottled_drinks.level_++;
-			show_message(global.coin_items.bottled_drinks.level_);
-			show_message("asdsadasda")
 		}
 	}
 }
@@ -53,9 +63,9 @@ function Bottled_Drinks(): Item() constructor {
 	level_ = 0;
 	key_ = "bottled_drinks";
 	unlock_upgrade_ = function(){
-		
+		if( level_ == 2){
+			global.upgrade_items.speed_drink.level_++;
+		}
 	}
 }
-
-
-
+*/

@@ -1,0 +1,9 @@
+{
+  "extensionId": {
+    "name": "YYFirebaseAuthentication_tools",
+    "path": "extensions/YYFirebaseAuthentication_tools/YYFirebaseAuthentication_tools.yy"
+  },
+  "resourceVersion": "1.0",
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": null
+}
