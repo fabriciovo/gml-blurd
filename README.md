@@ -1,5 +1,3 @@
-![prints](./doc/Blurd.png)
-
 # [Blurd](https://github.com/fabriciovo/GML-Blurd)
 Flappy Bird like
 
