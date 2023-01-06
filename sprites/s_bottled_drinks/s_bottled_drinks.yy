@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_bottled_drinks",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 16,
   "height": 16,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a816e65f-3e5c-498b-b3bb-a7e9af6367ca","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a816e65f-3e5c-498b-b3bb-a7e9af6367ca","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"LayerId":{"name":"0fc07caa-1e41-460f-9111-170c602f45a1","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_bottled_drinks","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","name":"a816e65f-3e5c-498b-b3bb-a7e9af6367ca","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6b6ac29c-729d-4a07-a67b-82f4bfe03a18","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6b6ac29c-729d-4a07-a67b-82f4bfe03a18","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"LayerId":{"name":"0fc07caa-1e41-460f-9111-170c602f45a1","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_bottled_drinks","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","name":"6b6ac29c-729d-4a07-a67b-82f4bfe03a18","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bf76a46a-01f0-4572-be71-eb8d3e7ae875","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bf76a46a-01f0-4572-be71-eb8d3e7ae875","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"LayerId":{"name":"0fc07caa-1e41-460f-9111-170c602f45a1","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_bottled_drinks","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","name":"bf76a46a-01f0-4572-be71-eb8d3e7ae875","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9c2a02bc-fdd1-401d-b7e7-95f9fb5eebf5","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9c2a02bc-fdd1-401d-b7e7-95f9fb5eebf5","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"LayerId":{"name":"0fc07caa-1e41-460f-9111-170c602f45a1","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_bottled_drinks","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","name":"9c2a02bc-fdd1-401d-b7e7-95f9fb5eebf5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a816e65f-3e5c-498b-b3bb-a7e9af6367ca",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b6ac29c-729d-4a07-a67b-82f4bfe03a18",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bf76a46a-01f0-4572-be71-eb8d3e7ae875",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9c2a02bc-fdd1-401d-b7e7-95f9fb5eebf5",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_bottled_drinks","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_bottled_drinks",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"0609c881-a53f-4dfb-9f0b-605d290711eb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a816e65f-3e5c-498b-b3bb-a7e9af6367ca","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9ce860d9-5b61-4465-a8f9-0581c2e39f53","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b6ac29c-729d-4a07-a67b-82f4bfe03a18","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"aedcf7e3-64fc-4e77-9110-f5e0e52a3ad1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bf76a46a-01f0-4572-be71-eb8d3e7ae875","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"41a9e7c2-b1da-425d-a7b8-4f45ee7fe1e0","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9c2a02bc-fdd1-401d-b7e7-95f9fb5eebf5","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_bottled_drinks","path":"sprites/s_bottled_drinks/s_bottled_drinks.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_bottled_drinks",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0fc07caa-1e41-460f-9111-170c602f45a1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0fc07caa-1e41-460f-9111-170c602f45a1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Food Items",
     "path": "folders/Sprites/UI/Food Items.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_bottled_drinks",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

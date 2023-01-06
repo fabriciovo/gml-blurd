@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_rectangle_buttons",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 48,
   "height": 16,
   "textureGroupId": {
@@ -24,75 +28,33 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a5c26c3c-20e5-4e87-8fe1-ec8e17f152ac","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a5c26c3c-20e5-4e87-8fe1-ec8e17f152ac","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"a5c26c3c-20e5-4e87-8fe1-ec8e17f152ac","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f1428496-6c59-4181-9840-e44e19ad4605","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f1428496-6c59-4181-9840-e44e19ad4605","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"f1428496-6c59-4181-9840-e44e19ad4605","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f4035c50-230a-40d4-8f79-063c6775d697","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f4035c50-230a-40d4-8f79-063c6775d697","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"f4035c50-230a-40d4-8f79-063c6775d697","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e0aa9851-d891-48cb-aad7-1f1917605669","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e0aa9851-d891-48cb-aad7-1f1917605669","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"e0aa9851-d891-48cb-aad7-1f1917605669","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e34d1351-5a90-4d97-acc1-b8a9eef51189","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e34d1351-5a90-4d97-acc1-b8a9eef51189","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"e34d1351-5a90-4d97-acc1-b8a9eef51189","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b53b6d2e-8d33-4849-818a-7035d82e7e3f","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b53b6d2e-8d33-4849-818a-7035d82e7e3f","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"b53b6d2e-8d33-4849-818a-7035d82e7e3f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b9ce62b6-8489-49b5-90df-2863c41e192a","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b9ce62b6-8489-49b5-90df-2863c41e192a","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"b9ce62b6-8489-49b5-90df-2863c41e192a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"121f43b6-f5d7-413f-82b0-881945b2a9df","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"121f43b6-f5d7-413f-82b0-881945b2a9df","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"121f43b6-f5d7-413f-82b0-881945b2a9df","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"34476477-1977-4b0c-ba4b-ec9395559d31","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"34476477-1977-4b0c-ba4b-ec9395559d31","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"34476477-1977-4b0c-ba4b-ec9395559d31","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"284be33a-2f42-4798-a34c-bd376450df6c","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"284be33a-2f42-4798-a34c-bd376450df6c","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"284be33a-2f42-4798-a34c-bd376450df6c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"78be0f50-485e-4456-911d-3c931041ef04","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"78be0f50-485e-4456-911d-3c931041ef04","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"78be0f50-485e-4456-911d-3c931041ef04","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2a724bf3-803e-4aa4-a561-5af2efbd4d2b","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2a724bf3-803e-4aa4-a561-5af2efbd4d2b","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"2a724bf3-803e-4aa4-a561-5af2efbd4d2b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"79ebf782-1af8-46e0-9c30-dc1aa1950095","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"79ebf782-1af8-46e0-9c30-dc1aa1950095","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"79ebf782-1af8-46e0-9c30-dc1aa1950095","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b92e53d1-fa73-436b-a0ea-3dc6d262758e","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b92e53d1-fa73-436b-a0ea-3dc6d262758e","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"b92e53d1-fa73-436b-a0ea-3dc6d262758e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2115b075-4053-42ec-9c41-474b81dc5750","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2115b075-4053-42ec-9c41-474b81dc5750","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"2115b075-4053-42ec-9c41-474b81dc5750","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"16a298cb-c11b-4865-806d-a620e9e8d2f7","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"16a298cb-c11b-4865-806d-a620e9e8d2f7","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"16a298cb-c11b-4865-806d-a620e9e8d2f7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7a989756-f392-4ae8-baf7-010910d3be90","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7a989756-f392-4ae8-baf7-010910d3be90","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"7a989756-f392-4ae8-baf7-010910d3be90","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7c096831-c5d1-4afe-a282-31ba12963ee1","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7c096831-c5d1-4afe-a282-31ba12963ee1","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"7c096831-c5d1-4afe-a282-31ba12963ee1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3a8de4c4-f7f2-48ab-b4f8-74c59928d4be","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3a8de4c4-f7f2-48ab-b4f8-74c59928d4be","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"3a8de4c4-f7f2-48ab-b4f8-74c59928d4be","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"eae52c39-06e3-45bf-bd45-834122a19993","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"eae52c39-06e3-45bf-bd45-834122a19993","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"eae52c39-06e3-45bf-bd45-834122a19993","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7b95c0c8-5206-4146-ab48-6592b85da358","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7b95c0c8-5206-4146-ab48-6592b85da358","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"7b95c0c8-5206-4146-ab48-6592b85da358","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c90a8aa3-bdde-4065-9d8d-2996e69c4db4","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c90a8aa3-bdde-4065-9d8d-2996e69c4db4","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"LayerId":{"name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","name":"c90a8aa3-bdde-4065-9d8d-2996e69c4db4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a5c26c3c-20e5-4e87-8fe1-ec8e17f152ac",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f1428496-6c59-4181-9840-e44e19ad4605",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4035c50-230a-40d4-8f79-063c6775d697",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e0aa9851-d891-48cb-aad7-1f1917605669",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e34d1351-5a90-4d97-acc1-b8a9eef51189",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b53b6d2e-8d33-4849-818a-7035d82e7e3f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9ce62b6-8489-49b5-90df-2863c41e192a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"121f43b6-f5d7-413f-82b0-881945b2a9df",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"34476477-1977-4b0c-ba4b-ec9395559d31",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"284be33a-2f42-4798-a34c-bd376450df6c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"78be0f50-485e-4456-911d-3c931041ef04",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a724bf3-803e-4aa4-a561-5af2efbd4d2b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"79ebf782-1af8-46e0-9c30-dc1aa1950095",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b92e53d1-fa73-436b-a0ea-3dc6d262758e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2115b075-4053-42ec-9c41-474b81dc5750",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"16a298cb-c11b-4865-806d-a620e9e8d2f7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7a989756-f392-4ae8-baf7-010910d3be90",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c096831-c5d1-4afe-a282-31ba12963ee1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a8de4c4-f7f2-48ab-b4f8-74c59928d4be",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eae52c39-06e3-45bf-bd45-834122a19993",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7b95c0c8-5206-4146-ab48-6592b85da358",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c90a8aa3-bdde-4065-9d8d-2996e69c4db4",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_rectangle_buttons",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -103,7 +65,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b5f80c36-2352-43c5-9274-b73b1993d348","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a5c26c3c-20e5-4e87-8fe1-ec8e17f152ac","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c3203efd-692a-4628-b991-4fe3ef876075","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f1428496-6c59-4181-9840-e44e19ad4605","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d202ffdc-77e3-4efb-afa1-4ac68e4d985e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4035c50-230a-40d4-8f79-063c6775d697","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -126,7 +88,7 @@
             {"id":"61757c15-6934-439a-8a83-5568d35fb176","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eae52c39-06e3-45bf-bd45-834122a19993","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b94be4aa-74da-4cb0-8f7c-74aa7b3606bb","Key":20.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7b95c0c8-5206-4146-ab48-6592b85da358","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0d8e83ec-536f-42a5-93f1-162818575199","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c90a8aa3-bdde-4065-9d8d-2996e69c4db4","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -142,22 +104,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_rectangle_buttons","path":"sprites/spr_rectangle_buttons/spr_rectangle_buttons.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_rectangle_buttons",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d9dee5b3-20e2-49e5-9dcc-59979831d7c3","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "btn",
     "path": "folders/Sprites/UI/btn.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_rectangle_buttons",
-  "tags": [],
-  "resourceType": "GMSprite",
 }
