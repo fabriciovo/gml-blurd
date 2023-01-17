@@ -1,7 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-
-if room == rm_init {
-	room_goto_next()
-}
+o_player_status.coins += other.coin_value 
+instance_destroy(other)

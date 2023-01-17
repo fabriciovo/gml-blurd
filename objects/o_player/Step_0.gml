@@ -1,28 +1,28 @@
 /// @description Insert description here
 // You can write your code in this editor
-vsp_ += grav_
+vsp += grav
 
 var _touch = device_mouse_check_button_pressed(0, mb_left)
 
 if(_touch){
-	vsp_ = jump_
+	vsp = jump
 }
 
-if(place_meeting(x,y+vsp_,o_solid)){
+if(place_meeting(x,y+vsp,o_solid)){
 	
-	while(!place_meeting(x,y+ sign(vsp_), o_solid )){
-		y = y + sign(vsp_);
+	while(!place_meeting(x,y+ sign(vsp), o_solid )){
+		y = y + sign(vsp);
 	}
-	grounded_ = true
-	vsp_ = 0
+	grounded = true
+	vsp = 0
 }else{
-grounded_ = false
+grounded = false
 }
 
 
-if(place_meeting(x,y+vsp_,o_solid)){
-	vsp_ = 0;
+if(place_meeting(x,y+vsp,o_solid)){
+	vsp = 0;
 }
 
-y += vsp_
+y += vsp
 

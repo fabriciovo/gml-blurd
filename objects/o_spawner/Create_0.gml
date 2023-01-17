@@ -1,7 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-
-if room == rm_init {
-	room_goto_next()
-}
+coin_timer = global.one_second
+alarm[0] = coin_timer
