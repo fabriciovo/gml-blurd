@@ -14,6 +14,7 @@
     {"id":{"name":"Sprite_0002","path":"sprites/Sprite_0002/Sprite_0002.yy",},"order":1,},
     {"id":{"name":"on_click_signup","path":"scripts/on_click_signup/on_click_signup.yy",},"order":0,},
     {"id":{"name":"o_spawner","path":"objects/o_spawner/o_spawner.yy",},"order":8,},
+    {"id":{"name":"on_click_open_shop","path":"scripts/on_click_open_shop/on_click_open_shop.yy",},"order":4,},
     {"id":{"name":"s_btn","path":"sprites/s_btn/s_btn.yy",},"order":0,},
     {"id":{"name":"o_shop_buy_item","path":"objects/o_shop_buy_item/o_shop_buy_item.yy",},"order":2,},
     {"id":{"name":"s_shop_background","path":"sprites/s_shop_background/s_shop_background.yy",},"order":0,},
