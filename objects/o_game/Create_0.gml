@@ -2,5 +2,3 @@
 // You can write your code in this editor
 global.game_speed = game_get_speed(gamespeed_fps);
 global.one_second = game_get_speed(gamespeed_fps);
-
-

@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_shop_buy_item",
-  "spriteId": {
-    "name": "s_btn",
-    "path": "sprites/s_btn/s_btn.yy",
-  },
+  "name": "o_player_controll",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -26,12 +23,14 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Shop",
-    "path": "folders/Objects/Shop.yy",
+    "name": "Game",
+    "path": "folders/Objects/Game.yy",
   },
 }
