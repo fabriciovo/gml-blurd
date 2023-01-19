@@ -7,11 +7,18 @@ function Shop_Item(_name, _type, _price, _coins_per_second, _level, _spr) constr
 		coins_per_second_ = _coins_per_second
 		level_ = _level
 		spr_ = _spr
-		image_xscale = 12
-		image_yscale =4
-		depth = -100
-	
+		disabled_ = true
+		image_xscale = 18
+		image_yscale = 6
+
+	step_method = function() {
+		var _shop = layer_get_id("Shop")
+		if(layer_get_visible(_shop)) disabled_ = false
+		else disabled_ = true
+	}
+
 	buy_method = function(){
+		if	(disabled_) exit
 		if(o_player_controll.player.coins < price_) exit
 		o_player_controll.player.coins -= price_
 		o_player_controll.player.coins_per_second += coins_per_second_
@@ -22,11 +29,11 @@ function Shop_Item(_name, _type, _price, _coins_per_second, _level, _spr) constr
 	
 	draw_method = function(){
 		draw_self()
-		draw_text(x, y, name_)
-		draw_text(x, y, price_)
-		draw_text(x, y, level_)
-		draw_text(x, y, coins_per_second_)
-		draw_sprite(spr_,level_,x,y)
+		draw_text(x-70, y-60,name_)
+		draw_text(x+70, y-30,"$: " + string(price_))
+		draw_text(x-120, y,"level: " + string(level_))
+		draw_text(x+30, y,"CPS:" + string(coins_per_second_))
+		draw_sprite(spr_,level_,x+150,y-49)
 	}
 	
 }

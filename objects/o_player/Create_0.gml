@@ -1,6 +1,6 @@
 /// @description Variaveis
-grav =0.1
+grav =0.3
 vsp = 0
-jump = -3
+jump = -7
 grounded = false
 image_speed = .1
