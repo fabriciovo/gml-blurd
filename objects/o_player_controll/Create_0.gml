@@ -6,7 +6,9 @@ player = {
 	coins:0,
 	coins_per_second: 0,
 	coins_timer: 10,
-	main_character: "Blurd"
+	main_character: "Blurd",
+	main_hat: "hat",
+	main_weapon: ""
 }
 
 
