@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
 
 xhr_post("https://localhost:7156/auth/login", new StructBody({
 		username:"sss",
