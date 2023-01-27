@@ -8,21 +8,7 @@ if(_touch){
 	vsp = jump
 }
 
-if(place_meeting(x,y+vsp,o_solid)){
-	
-	while(!place_meeting(x,y+ sign(vsp), o_solid )){
-		y = y + sign(vsp);
-	}
-	grounded = true
-	vsp = 0
-}else{
-grounded = false
-}
-
-
-if(place_meeting(x,y+vsp,o_solid)){
-	vsp = 0;
-}
+Apply_Gravity()
 
 y += vsp
 
