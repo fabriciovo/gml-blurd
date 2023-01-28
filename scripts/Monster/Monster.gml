@@ -2,16 +2,18 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Monster() constructor {
 
+	grav = 0.3
+	vsp = 0
+	jump = -7
+	grounded = false
 	
 	create_method = function(){
-		grav = 0.3
-		vsp = 0
-		jump = -7
-		grounded = false
+
 		
 	}
 	step_method = function(){
 		Apply_Gravity()
+		hspeed = -3
 	}
 	destroy_method = function(){
 	
@@ -26,7 +28,7 @@ function Monster() constructor {
 }
 
 function SpikeHead() : Monster() constructor {
-	//sprite_index = s_spike_head
+	sprite_index = s_spike_head
 	
 	create_method = function(){
 	

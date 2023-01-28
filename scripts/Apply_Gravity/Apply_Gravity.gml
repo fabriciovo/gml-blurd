@@ -1,4 +1,5 @@
 function Apply_Gravity(){
+	vsp += grav
 	if(place_meeting(x,y+vsp,o_solid)){
 	
 		while(!place_meeting(x,y+ sign(vsp), o_solid )){
@@ -10,4 +11,5 @@ function Apply_Gravity(){
 		grounded = false
 	}
 
+	y += vsp
 }
