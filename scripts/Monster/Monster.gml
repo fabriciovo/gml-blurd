@@ -16,7 +16,7 @@ function Monster() constructor {
 		hspeed = -3
 	}
 	destroy_method = function(){
-	
+		instance_create_layer(x,y,"Instances",o_particle, new Particles(s_effect_placeholder))
 	}
 	event_method = function(){
 	
