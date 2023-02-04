@@ -97,26 +97,23 @@ function Snail() : Monster() constructor {
 		}
 	}
 }
-function Brog() : Monster() constructor {
-	sprite_index = s_spike_head
+function Fly() : Monster() constructor {
+	sprite_index = s_fly
 	image_speed = 0
 	create_method = function(){
 		grav = 0.3
-		jump = -10
+		jump = -7
 		image_index = 0
-		alarm[0] = random(2) * (global.one_second / 2)
+		alarm[0] = (global.one_second / 6)
 	}
 	
 	alarm_method = function(){
 		vsp = jump
+		alarm[0] = 45
 	}
 	
 	event_method = function(){
-		if grounded {
-			image_index = 0
-		}else{ 
-			image_index = 1	
-		}
+
 	}
 }
 
