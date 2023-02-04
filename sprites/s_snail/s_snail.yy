@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "s_spike_head",
+  "name": "s_snail",
   "bbox_bottom": 15,
   "bbox_left": 0,
   "bbox_right": 15,
@@ -14,7 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0b7c93ad-cab7-4269-bf8a-389fe63bdc7f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1aba44c3-fb56-416e-8937-281a02cdf11e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3ec331ae-6252-4720-9dd4-318cd04da807",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -33,7 +33,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "s_spike_head",
+    "name": "s_snail",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0b7c93ad-cab7-4269-bf8a-389fe63bdc7f","path":"sprites/s_spike_head/s_spike_head.yy",},},},"Disabled":false,"id":"bb256edf-92a9-4405-a653-38e3ed084e7b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1aba44c3-fb56-416e-8937-281a02cdf11e","path":"sprites/s_spike_head/s_spike_head.yy",},},},"Disabled":false,"id":"6008a041-4948-4b8d-ada2-2e92a9086d45","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0b7c93ad-cab7-4269-bf8a-389fe63bdc7f","path":"sprites/s_snail/s_snail.yy",},},},"Disabled":false,"id":"e280933d-f468-49ff-bada-9ad50dedc626","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3ec331ae-6252-4720-9dd4-318cd04da807","path":"sprites/s_snail/s_snail.yy",},},},"Disabled":false,"id":"ea09b296-c5fb-401c-9650-cb87e4bc2099","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
