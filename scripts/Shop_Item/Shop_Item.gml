@@ -9,7 +9,7 @@ function Shop_Item(_name, _type, _price, _coins_per_second, _level, _spr) constr
 		spr_ = _spr
 		disabled_ = true
 		image_xscale = 18
-		image_yscale = 6
+		image_yscale = 4
 
 	step_method = function() {
 		var _shop = layer_get_id("Shop")
@@ -29,11 +29,10 @@ function Shop_Item(_name, _type, _price, _coins_per_second, _level, _spr) constr
 	
 	draw_method = function(){
 		draw_self()
-		draw_text(x-70, y-60,name_)
-		draw_text(x+70, y-30,"$: " + string(price_))
-		draw_text(x-120, y,"level: " + string(level_))
-		draw_text(x+30, y,"CPS:" + string(coins_per_second_))
-		draw_sprite(spr_,level_,x+150,y-49)
+ 		draw_sprite(s_shop_icon_placeholder, 0, x-120, y)
+		draw_text_ext_transformed(x - 100, y - 30, "Lv." + string(level_),10, 300, .6,.6, image_angle)
+		draw_text_ext_transformed(x - 100, y - 8, name_, 10, 300, .6,.6, image_angle)
+		draw_text_ext_transformed(x + 4, y - 28 , "+"+string(coins_per_second_)+"\n\n\n cps", 10, 300, .6,.6, image_angle)
 	}
 	
 }
