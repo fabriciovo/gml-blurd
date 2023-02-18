@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Upgrade",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Upgrades",
     "path": "folders/Scripts/Upgrades.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "Upgrade",
-  "tags": [],
-  "resourceType": "GMScript",
 }

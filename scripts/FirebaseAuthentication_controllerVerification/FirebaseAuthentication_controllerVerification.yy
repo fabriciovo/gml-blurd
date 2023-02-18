@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "FirebaseAuthentication_controllerVerification",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Tools",
     "path": "folders/Firebase Authentication/Extensions/Firebase REST API Library (Don't Touch)/Tools.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "FirebaseAuthentication_controllerVerification",
-  "tags": [],
-  "resourceType": "GMScript",
 }

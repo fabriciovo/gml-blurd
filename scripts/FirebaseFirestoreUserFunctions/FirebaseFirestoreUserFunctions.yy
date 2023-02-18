@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "FirebaseFirestoreUserFunctions",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Firebase Firestore",
     "path": "folders/Firebase Authentication/Firebase Firestore/Extensions/Firebase REST API Library (Don't Touch)/Firebase Firestore.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "FirebaseFirestoreUserFunctions",
-  "tags": [],
-  "resourceType": "GMScript",
 }

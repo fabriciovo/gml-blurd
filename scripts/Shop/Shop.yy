@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Shop",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Shop",
     "path": "folders/Scripts/Shop.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "Shop",
-  "tags": [],
-  "resourceType": "GMScript",
 }

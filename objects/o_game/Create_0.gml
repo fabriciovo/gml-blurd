@@ -6,6 +6,26 @@ global.game_speed = -1;
 global.coins = 0;
 global.coins_per_second = 0;
 
+player_controller = {
+	coins: 0,
+	coins_per_second: 0,
+	characters:[],
+	selected_character: "blurd"
+	coins_items: {
+		cake: {
+			level:1,
+		},
+		bottled_drink: {
+			level:1,
+		},
+	}
+	upgrade_items: {
+		bottled_drink: false
+	}
+	
+
+}
+
 
 global.coin_items = {
 	cake: new Item("Cake",1,1,1,1,s_cake,0,"cake","bottled_drink", 5, false),
