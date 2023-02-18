@@ -8,7 +8,12 @@ player = {
 	coins_timer: 10,
 	main_character: "Blurd",
 	main_hat: "hat",
-	main_weapon: ""
+	shop_items_levels: {
+		cake_level:0,
+	},
+	achivments: {
+		test: false,
+	},
 }
 
 
