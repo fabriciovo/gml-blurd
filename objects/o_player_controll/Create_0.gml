@@ -9,6 +9,28 @@ player = {
 	main_character: "Blurd",
 	characters: [],
 	main_hat: "hat",
+	upgrades: [
+		{
+			name: "item_1",
+			level: 0,
+			number: 0
+	    },
+				{
+			name: "item_1",
+			level: 0,
+			number: 1
+	    },
+				{
+			name: "item_1",
+			level: 0,
+			number: 2
+	    },
+				{
+			name: "item_1",
+			level: 0,
+			number: 3
+	    },
+	],
 	shop_items: [
 	    {
 			name: "item_1",

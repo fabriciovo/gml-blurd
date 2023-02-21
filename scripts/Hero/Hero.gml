@@ -39,7 +39,11 @@ function Hero() constructor {
 			image_speed = .6
 			state = hero_sprite_state.jump
 		}
-			
+		
+		for (var _i = 0; _i <= 3; _i++) {
+			event_user(o_player_controll.player.upgrades[_i].number)
+		}
+		
 		sprite_index = sprite_[state]
 	}
 	
@@ -55,9 +59,9 @@ function Hero() constructor {
 	monster_collision_method = function() {
 		attack_index = choose(0,1,2,3)
 		attack = true
-		alarm[0] = global.one_second / 4;
-		
+		alarm[0] = global.one_second / 4;	
 	} 
+	
 }
 
 function Blurd() : Hero() constructor  {

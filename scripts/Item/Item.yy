@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Shop_Item",
+  "name": "Item",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
