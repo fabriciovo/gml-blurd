@@ -11,6 +11,11 @@ function Shop_Item(_name, _type, _price, _coins_per_second, _level, _spr) constr
 		image_xscale = 18
 		image_yscale = 4
 
+	create_method = function(){
+		price_ = price_ * level_
+		coins_per_second_ = coins_per_second_ * level_
+	}
+
 	step_method = function() {
 		var _shop = layer_get_id("Shop")
 		if(layer_get_visible(_shop)) disabled_ = false

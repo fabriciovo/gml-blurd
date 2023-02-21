@@ -7,7 +7,7 @@ instance_create_layer(view_width, random(view_height),"Instances", o_monster, ne
 
 //instance_create_layer(view_width, y,"Instances", o_monster, new Snail())
 
-alarm[1] = global.one_second * 2
+alarm[1] = global.one_second
 
 
 
