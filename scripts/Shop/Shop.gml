@@ -67,9 +67,11 @@ upgrades_items = [
 	create_method = function(_x, _y, _container, _player_controll){
 		x = _x
 		y = _y
+		open_panel = "Items"
+		title = "Items"
 		//Items
 		for(var i = 0; i < 5; i++){
-			instance_create_layer(x,y-155+i*65,"Shop",_container, 
+			instance_create_layer(x,y-155+i*65,"Items",_container, 
 			new Item(shop_items[i].name, 0, 
 			shop_items[i].price, 
 			shop_items[i].coins_per_second,
@@ -79,13 +81,17 @@ upgrades_items = [
 		
 		//Upgrades
 		for(var i = 0; i <= 3; i++){
-			instance_create_layer(x,y-155+i*65,"Shop",_container, 
+			instance_create_layer(x,y-155+i*65,"Upgrades",_container, 
 			new Item(upgrades_items[i].name, 0, 
 			upgrades_items[i].price, 
 			upgrades_items[i].number,
 			_player_controll.player.upgrades[i].level,
 			asset_get_index(shop_items[i].sprite)))
 		}
+	}
+	
+	draw_end_method = function(){
+		draw_text(x,y,title)
 	}
 	
 
