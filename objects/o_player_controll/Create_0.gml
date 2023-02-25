@@ -9,10 +9,18 @@ player = {
 	main_character: "Blurd",
 	characters: [],
 	main_hat: "hat",
+	stage_upgrades: {
+		grass_land: [
+			{
+				name:"Trees",
+				level: 0
+			}
+		]
+	},
 	upgrades: [
 		{
-			name: "item_1",
-			level: 0,
+			name: "Energy Drink",
+			level: 2,
 			number: 0
 	    },
 				{
@@ -54,5 +62,4 @@ player = {
 	    }
 	],
 }
-
 

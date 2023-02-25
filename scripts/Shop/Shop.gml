@@ -68,7 +68,7 @@ upgrades_items = [
 		x = _x
 		y = _y
 		open_panel = "Items"
-		title = "Items"
+		title = ""
 		//Items
 		for(var i = 0; i < 5; i++){
 			instance_create_layer(x,y-155+i*65,"Items",_container, 
@@ -82,9 +82,8 @@ upgrades_items = [
 		//Upgrades
 		for(var i = 0; i <= 3; i++){
 			instance_create_layer(x,y-155+i*65,"Upgrades",_container, 
-			new Item(upgrades_items[i].name, 0, 
+			new Upgrade(upgrades_items[i].name, 0, 
 			upgrades_items[i].price, 
-			upgrades_items[i].number,
 			_player_controll.player.upgrades[i].level,
 			asset_get_index(shop_items[i].sprite)))
 		}
