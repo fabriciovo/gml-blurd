@@ -3,3 +3,4 @@
 coin_timer = global.one_second
 alarm[0] = coin_timer
 alarm[1] = coin_timer
+alarm[3] = coin_timer

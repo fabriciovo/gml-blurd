@@ -1,8 +1,14 @@
-var _spawn_timer = global.one_second
-var speed_up_timer = global.one_second
-var _spawn_timer_count = _spawn_timer
-_spawn_timer_count -= speed_up_timer
-if _spawn_timer <= 0 {
-	_spawn_timer =  global.one_second
-	instance_create_layer(global.Spawn_VH, random(global.Spawn_VW),"Instances", o_powerup, new Energy_Drink())
+if(upgrade_states_.speed_drink.activate) {
+	global.game_speed = global.game_speed * 2;
+	alarm[0] += global.one_second * 3
+	upgrade_states_.speed_drink.activate = false;
+	upgrade_states_.speed_drink.reset_speed = false;
+}
+
+if(upgrade_states_.speed_drink.reset_speed) {
+
+	global.game_speed += 0.01;
+	if(global.game_speed == -1){
+		upgrade_states_.speed_drink.reset_speed = false;
+	}
 }
