@@ -20,23 +20,9 @@ player = {
 	upgrades: [
 		{
 			name: "Energy Drink",
-			level: 2,
-			number: 0
-	    },
-				{
-			name: "item_1",
 			level: 0,
-			number: 1
-	    },
-				{
-			name: "item_1",
-			level: 0,
-			number: 2
-	    },
-				{
-			name: "item_1",
-			level: 0,
-			number: 3
+			number: 0,
+			base_price: 20
 	    },
 	],
 	shop_items: [

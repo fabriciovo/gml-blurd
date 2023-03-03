@@ -9,7 +9,7 @@ function Monster() constructor {
 	}
 	step_method = function(){
 		Apply_Gravity()
-		x -= global.one_second * 0.05  
+		x += global.game_speed
 	}
 	end_step_method = function(){
 		if(x <= -sprite_width){
@@ -71,8 +71,8 @@ function Snail() : Monster() constructor {
 	
 	player_collision = function() {
 		if shield {
-			hp -= global.game_speed * 0.05
-			hsp += random_range(3,9)
+			hp -= 1
+			hsp += random_range(global.game_speed,global.game_speed*3)
 			vsp = random_range(-3,-9)
 		}else{
 			instance_destroy()

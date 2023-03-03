@@ -3,7 +3,7 @@
 function Powerup() constructor{
 
 	step_method = function(){
-		x -= global.game_speed * 0.05
+		x += global.game_speed
 	}
 	
 	player_collision_method = function(){
@@ -11,10 +11,11 @@ function Powerup() constructor{
 	}
 }
 
-function Energy_Drink() : Powerup() constructor {
+function Speed_Drink() : Powerup() constructor {
 	sprite_index = s_solid
 	player_collision_method = function(){
-		o_upgrade.upgrade_states_.speed_drink.activate = true;
+		o_powerup_controll.powerup_states.speed_drink.activate = true;
+		instance_destroy()
 	
 	}
 

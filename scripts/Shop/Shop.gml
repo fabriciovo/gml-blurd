@@ -42,25 +42,6 @@ upgrades_items = [
 		number: 1,
 	    sprite: s_item
 	},
-	{
-	    name:"upgrades_1",
-	    price: 1,
-		number: 1,
-	    sprite: s_item
-	},
-
-	{
-	    name:"upgrades_2",
-	    price: 1,
-		number: 1,
-	    sprite: s_item
-	},
-	{
-	    name:"upgrades_3",
-	    price: 1,
-		number: 1,
-	    sprite: s_item
-	},
 ]
 
 	
@@ -80,10 +61,10 @@ upgrades_items = [
 		}
 		
 		//Upgrades
-		for(var i = 0; i <= 3; i++){
+		for(var i = 0; i < 1; i++){
 			instance_create_layer(x,y-155+i*65,"Upgrades",_container, 
-			new Upgrade(upgrades_items[i].name, 0, 
-			upgrades_items[i].price, 
+			new Upgrade(_player_controll.player.upgrades[i].name, 0, 
+			_player_controll.player.upgrades[i].base_price, 
 			_player_controll.player.upgrades[i].level,
 			asset_get_index(shop_items[i].sprite)))
 		}
