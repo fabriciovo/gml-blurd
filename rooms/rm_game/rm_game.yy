@@ -9,13 +9,13 @@
   "instanceCreationOrder": [
     {"name":"inst_31878E6A_1","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_636F1CED_1","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"inst_6CFE3C43_1","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_4DAFE13E","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_4F0EEEC6","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_6BD9DD49","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_2E704AFE","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_1B5A73E6","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_5F296C87","path":"rooms/rm_game/rm_game.yy",},
+    {"name":"inst_6CFE3C43_1","path":"rooms/rm_game/rm_game.yy",},
   ],
   "isDnd": false,
   "layers": [

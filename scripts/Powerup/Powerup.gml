@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function Powerup() constructor{
+function Powerup_Controll() constructor{
 
 	step_method = function(){
 		x += global.game_speed
@@ -16,7 +16,6 @@ function Speed_Drink() : Powerup() constructor {
 	player_collision_method = function(){
 		o_powerup_controll.powerup_states.speed_drink.activate = true;
 		instance_destroy()
-	
 	}
 
 }

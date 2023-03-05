@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Upgrade",
+  "name": "tracker_controller",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Scripts/Shop.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }

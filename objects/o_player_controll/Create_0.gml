@@ -18,34 +18,12 @@ player = {
 		]
 	},
 	upgrades: [
-		{
-			name: "Energy Drink",
-			level: 0,
-			number: 0,
-			base_price: 20
-	    },
+
 	],
 	shop_items: [
-	    {
-			name: "item_1",
-			level: 6,
-	    },
-	    {
-	        name: "item_2",
-	        level: 1,
-	    },
-	    {
-			name: "item_3",
-	        level: 1,
-	    },
-	    {
-	        name: "item_4",
-	       level: 1,
-	    },
-	    {
-	        name: "item_5",
-	        level: 20,
-	    }
+
 	],
 }
 
+global.shop_items_size = array_length(player.shop_items)
+global.upgrades_size = array_length(player.upgrades)

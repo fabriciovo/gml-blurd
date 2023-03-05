@@ -49,6 +49,7 @@ function Hero() constructor {
 	
 	coin_collision_method = function() {
 		o_player_controll.player.coins += other.coin_value 
+		o_player_controll.player.total_coins += other.coin_value 
 		instance_destroy(other)
 	} 
 
