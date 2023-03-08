@@ -15,12 +15,10 @@
     {"name":"inst_2E704AFE","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_1B5A73E6","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_5F296C87","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"inst_6CFE3C43_1","path":"rooms/rm_game/rm_game.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Shop","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6CFE3C43_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_shop","path":"objects/o_shop/o_shop.yy",},"properties":[],"rotation":0.0,"scaleX":10.0,"scaleY":14.0,"x":176.0,"y":304.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2E704AFE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"propertyId":{"name":"layer_name","path":"objects/o_btn_item/o_btn_item.yy",},"value":"Items",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":448.0,},

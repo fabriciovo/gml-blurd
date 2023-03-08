@@ -24,6 +24,3 @@ player = {
 
 	],
 }
-
-global.shop_items_size = array_length(player.shop_items)
-global.upgrades_size = array_length(player.upgrades)

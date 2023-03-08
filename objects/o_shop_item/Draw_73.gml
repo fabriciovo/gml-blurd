@@ -1,3 +1,0 @@
-draw_method()
-
-

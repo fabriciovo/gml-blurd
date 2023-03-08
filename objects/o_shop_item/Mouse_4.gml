@@ -1,4 +1,0 @@
-buy_method()
-
-
-

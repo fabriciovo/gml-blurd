@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function Powerup_Controll() constructor{
+function Powerup() constructor{
 
 	step_method = function(){
 		x += global.game_speed
