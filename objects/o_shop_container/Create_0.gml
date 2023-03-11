@@ -10,4 +10,3 @@ key_ = "";
 cost_ = 0;
 image_xscale = 2.8;
 image_yscale = 0.7;
-

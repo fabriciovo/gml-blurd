@@ -1,9 +1,6 @@
 {
   "resourceType": "GMExtensionConfigSet",
   "configurables": null,
-  "extensionId": {
-    "name": "YYFirebaseFirestore",
-    "path": "extensions/YYFirebaseFirestore/YYFirebaseFirestore.yy"
-  },
+  "extensionId": null,
   "resourceVersion": "1.0"
 }

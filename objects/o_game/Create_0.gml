@@ -10,7 +10,7 @@ player_controller = {
 	coins: 0,
 	coins_per_second: 0,
 	characters:[],
-	selected_character: "blurd"
+	selected_character: "blurd",
 	coins_items: {
 		cake: {
 			level:1,
@@ -18,7 +18,7 @@ player_controller = {
 		bottled_drink: {
 			level:1,
 		},
-	}
+	},
 	upgrade_items: {
 		bottled_drink: false
 	}
@@ -29,7 +29,7 @@ player_controller = {
 
 global.coin_items = {
 	cake: new Item("Cake",1,1,1,1,s_cake,0,"cake","bottled_drink", 5, false),
-	bottled_drink : new Item("Bottled Drink",50,50,3,0,s_bottled_drinks,0,"bottled_drink","speed_drink",2, true),
+	bottled_drink : new Item("Bottled Drink",50,50,3,0,s_bottled_drinks,0,"bottled_drink","speed_drink",2, false),
 }
 
 global.upgrade_items = {

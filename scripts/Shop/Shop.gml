@@ -19,7 +19,8 @@ function Shop(_x,_y, _layer, _container, _global_list) constructor {
 				_obj.cost_ = _shop_item.cost_ 
 				_obj.coins_per_second_ = _shop_item.coins_per_second_;
 				_obj.base_cost_ = _shop_item.base_cost_;
-				_obj.unlock_upgrade_ = _shop_item.unlock_upgrade_;
+				_obj.unlock_upgrade_ = function() {}
+
 		}
 		layer_set_visible(layer_,false);
 

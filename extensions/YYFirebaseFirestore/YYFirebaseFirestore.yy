@@ -38,6 +38,8 @@
   "gradleinject": "\r\n        implementation platform('com.google.firebase:firebase-bom:29.3.1')\r\n        implementation 'com.google.firebase:firebase-firestore'\r\n",
   "hasConvertedCodeInjection": true,
   "helpfile": "",
+  "HTML5CodeInjection": "",
+  "html5Props": false,
   "IncludedResources": [],
   "installdir": "",
   "iosCocoaPodDependencies": "",

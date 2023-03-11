@@ -23,15 +23,7 @@ function Item(_name, _base_cost, _cost, _coins_per_second,_level, _sprite, _inde
 	upgrade_key_ =_upgrade_key
 	upgrade_level_ =_upgrade_level
 	is_upgrade_ = _is_upgrade
-	unlock_upgrade_ = function() {
-		if(level_ == upgrade_level_){
-			if(not is_upgrade_){
-				global.coin_items[$ upgrade_key_].level_++;						
-			}else{
-				global.upgrade_items[$ upgrade_key_].level_++;	
-			}
-		}
-	}
+
 }
 
 /*
