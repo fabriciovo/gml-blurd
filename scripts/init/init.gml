@@ -11,7 +11,8 @@ function init(){
 			price: 1,
 			coins_per_second: 0.1,
 			total_coins:1,
-			equiped: false
+			equiped: false,
+			sprite: s_coin
 		}
 	}
 

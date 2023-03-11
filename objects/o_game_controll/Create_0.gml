@@ -5,4 +5,3 @@ global.VW = camera_get_view_width(view_camera[0])
 global.VH = camera_get_view_height(view_camera[0])
 global.Spawn_VH = view_hport[3]
 global.Spawn_VW = view_wport[3]
-
