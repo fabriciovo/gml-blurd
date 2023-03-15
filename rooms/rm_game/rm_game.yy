@@ -14,7 +14,6 @@
     {"name":"inst_6BD9DD49","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_2E704AFE","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_1B5A73E6","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"inst_5F296C87","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_CB9F8CF","path":"rooms/rm_game/rm_game.yy",},
   ],
   "isDnd": false,
@@ -22,13 +21,12 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Shop","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2E704AFE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"propertyId":{"name":"layer_name","path":"objects/o_btn_item/o_btn_item.yy",},"value":"Items",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"propertyId":{"name":"create_shop_func","path":"objects/o_btn_item/o_btn_item.yy",},"value":"create_itens_shop",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":448.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1B5A73E6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"propertyId":{"name":"layer_name","path":"objects/o_btn_item/o_btn_item.yy",},"value":"Upgrades",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"propertyId":{"name":"create_shop_func","path":"objects/o_btn_item/o_btn_item.yy",},"value":"create_upgrade_shop",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":448.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5F296C87","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"properties":[
-            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_btn_item","path":"objects/o_btn_item/o_btn_item.yy",},"propertyId":{"name":"layer_name","path":"objects/o_btn_item/o_btn_item.yy",},"value":"Stage_Upgrades",},
-          ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":448.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_CB9F8CF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_shop","path":"objects/o_shop/o_shop.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":176.0,},
       ],"layers":[
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Upgrades","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},

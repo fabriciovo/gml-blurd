@@ -3,7 +3,7 @@ powerup_states = {
 		activate: false,
 		reset_speed: false,
 		can_spawn_item: true,
-		spawn_timer: 5,
+		spawn_timer: 1,
 		duration_timer: 3
 	},
 }
