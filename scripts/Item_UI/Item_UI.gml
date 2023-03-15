@@ -4,7 +4,6 @@ function Item_UI(_item,_index, _width, _height) constructor {
 	item = _item
 	index = _index;
 	hover = 0
-	r_click = 0
 	l_click = 0
 	open_panel = false
 	color = c_green

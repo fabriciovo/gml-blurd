@@ -1,7 +1,8 @@
 function on_click_open_shop(){
 	
-var _shop = layer_get_id("Shop")
-var _value = layer_get_visible(_shop)
+var _items_layer = layer_get_id("Items")	
+var _shop_layer = layer_get_id("Shop")
+var _value = layer_get_visible(_shop_layer)
 
 if _value == false {
 	#region Create Shop
@@ -20,12 +21,12 @@ if _value == false {
 	var _list_size = array_length(o_player_controll.player.shop_items)
 	for (var _i = 0; _i < _list_size; _i++) {
 		var _item = o_player_controll.player.shop_items[_i]
-		instance_create_layer(_x,_y,_shop,o_shop_item, new Item_UI(_item,_i,_w,_h));
+		instance_create_layer(_x,_y,_items_layer,o_shop_item, new Item_UI(_item,_i,_w,_h));
 
 		_y += (_h + _sep);
 		
 	}
-
+	layer_set_visible(_items_layer, true)
 
 	#endregion
 }else{
@@ -33,6 +34,6 @@ if _value == false {
 	
 }
 	
-layer_set_visible(_shop, !_value)
+layer_set_visible(_shop_layer, !_value)
 
 }

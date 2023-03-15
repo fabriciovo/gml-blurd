@@ -19,7 +19,7 @@ player = {
 	},
 	upgrades: [
 		{
-			name:"Cake",
+			name:"Energy Drink",
 			level:0,
 			sprite_key: "s_item",
 			price: 1,
