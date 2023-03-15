@@ -1,8 +1,8 @@
-function Item_UI(_item, _width, _height) constructor {
+function Item_UI(_item,_index, _width, _height) constructor {
 	width = _width;
 	height = _height;
 	item = _item
-	
+	index = _index;
 	hover = 0
 	r_click = 0
 	l_click = 0
@@ -13,16 +13,23 @@ function Item_UI(_item, _width, _height) constructor {
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
 
-		if o_player_controll.player.coins > item.price {
-			color = c_green
+		if o_player_controll.player.coins >= item.price {
+			color = hover ? c_green : c_blue
+			if hover and l_click {
+				o_player_controll.player.coins -= item.price
+				o_player_controll.player.shop_items[index].level++
+				o_player_controll.player.shop_items[index].price = item.price * 2
+				item = o_player_controll.player.shop_items[index]
+				show_message(item.level)
+				show_message(o_player_controll.player.shop_items[index].level)
+			}
+			
 		}else {
 			color = c_red	
 		}
 
 
-		if l_click {
-	
-		}
+
 	}
 	end_step_method = function(){
 		var _mouse_x = device_mouse_x_to_gui(0);
@@ -30,10 +37,8 @@ function Item_UI(_item, _width, _height) constructor {
 
 
 		hover = point_in_rectangle(_mouse_x, _mouse_y, x,y , x + width, y + height);
-
-
-		l_click = mouse_check_button(mb_left);
-		r_click = mouse_check_button(mb_right);
+		
+		l_click = mouse_check_button_pressed(mb_left)
 	}
 	
 	draw_gui_method = function(){

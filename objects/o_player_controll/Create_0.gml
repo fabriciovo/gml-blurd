@@ -24,7 +24,6 @@ player = {
 			sprite_key: "s_item",
 			price: 1,
 			coins_per_second: 0.1,
-			total_coins:1,
 			equiped: false,
 			sprite: s_coin
 		},
@@ -32,11 +31,10 @@ player = {
 	shop_items: [
 		{
 			name:"Cake",
-			level:0,
+			level:1,
 			sprite_key: "s_item",
 			price: 1,
 			coins_per_second: 0.1,
-			total_coins:1,
 			equiped: false,
 			sprite: s_coin
 		},

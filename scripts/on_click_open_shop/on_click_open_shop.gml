@@ -20,7 +20,7 @@ if _value == false {
 	var _list_size = array_length(o_player_controll.player.shop_items)
 	for (var _i = 0; _i < _list_size; _i++) {
 		var _item = o_player_controll.player.shop_items[_i]
-		var _inst = instance_create_layer(_x,_y,_shop,o_shop_item, new Item_UI(_item,_w,_h));
+		instance_create_layer(_x,_y,_shop,o_shop_item, new Item_UI(_item,_i,_w,_h));
 
 		_y += (_h + _sep);
 		
