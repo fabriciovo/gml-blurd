@@ -52,7 +52,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.0.71",
+    "IDEVersion": "2023.2.1.75",
   },
   "resources": [
     {"id":{"name":"o_hat","path":"objects/o_hat/o_hat.yy",},},
@@ -68,7 +68,7 @@
     {"id":{"name":"Sprite_0002","path":"sprites/Sprite_0002/Sprite_0002.yy",},},
     {"id":{"name":"on_click_signup","path":"scripts/on_click_signup/on_click_signup.yy",},},
     {"id":{"name":"s_hat","path":"sprites/s_hat/s_hat.yy",},},
-    {"id":{"name":"o_spawner","path":"objects/o_spawner/o_spawner.yy",},},
+    {"id":{"name":"o_monster_spawn","path":"objects/o_monster_spawn/o_monster_spawn.yy",},},
     {"id":{"name":"on_click_open_shop","path":"scripts/on_click_open_shop/on_click_open_shop.yy",},},
     {"id":{"name":"s_btn","path":"sprites/s_btn/s_btn.yy",},},
     {"id":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},},

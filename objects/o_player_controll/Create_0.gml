@@ -6,23 +6,6 @@ player = {
 	coins:0,
 	coins_per_second: 0,
 	coins_timer: 1,
-	main_character: "Blurd",
-	characters: [],
-	main_hat: "hat",
-	achivments: 
-	[{
-		name:"Collect Coins",
-		value: 1,
-		has: false,
-	}],
-	stage_upgrades: {
-		grass_land: [
-			{
-				name:"Trees",
-				level: 0
-			}
-		]
-	},
 	upgrades: [
 		{
 			name:"Speed Drink",
@@ -43,4 +26,12 @@ player = {
 			sprite: s_coin
 		},
 	],
+	monsters: [
+		{
+			name:"Spike Head",
+			level:4,
+			price:1,
+			number:0
+		}	
+	]
 }

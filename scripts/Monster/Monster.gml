@@ -3,13 +3,14 @@ function Monster() constructor {
 	grav = 0
 	vsp = 0
 	jump = 0
+	hsp = global.game_speed
 	grounded = false
 	create_method = function(){
 		show_error("METHOD NOT IMPLEMENTED",true)
 	}
 	step_method = function(){
 		Apply_Gravity()
-		x += global.game_speed
+		x += hsp
 	}
 	end_step_method = function(){
 		if(x <= -sprite_width){
@@ -32,9 +33,10 @@ function Monster() constructor {
 	}
 
 }
-function SpikeHead() : Monster() constructor {
+function Spike_Head() : Monster() constructor {
 	sprite_index = s_spike_head
 	image_speed = 0
+
 	create_method = function(){
 		grav = 0.3
 		jump = -10
@@ -72,7 +74,7 @@ function Snail() : Monster() constructor {
 	player_collision = function() {
 		if shield {
 			hp -= 1
-			hsp += random_range(global.game_speed,global.game_speed*3)
+			hsp -= random_range(global.game_speed,global.game_speed*3)
 			vsp = random_range(-3,-9)
 		}else{
 			instance_destroy()
@@ -87,7 +89,7 @@ function Snail() : Monster() constructor {
 		}
 		
 		if grounded {
-			hsp = -global.game_speed * 0.05
+			hsp = global.game_speed 
 		}
 		
 		
