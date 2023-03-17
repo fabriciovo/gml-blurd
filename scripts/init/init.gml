@@ -3,6 +3,35 @@
 function init(){
 	gml_pragma("global", "init()");
 	
+	
+	global.achivments = {
+		five_coins: {
+			name:"Five Coins",
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			reward_key: "cake",
+			reward_type: "shop_items"
+		},
+		first_enemy: {
+			name:"Five Coins",
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			reward_key: "spike_head",
+			reward_type: "upgrade_items"
+		},
+		gotta_go_fast: {
+			name:"Gotta go fast!",
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			reward_key: "speed_drink",
+			reward_type: "upgrade_items"
+		},
+	
+	}
+	
 	global.shop_items = {
 		cake: {
 			name:"Cake",

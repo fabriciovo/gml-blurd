@@ -6,6 +6,8 @@ player = {
 	coins:0,
 	coins_per_second: 0,
 	coins_timer: 1,
+	achivments: [
+	],
 	upgrades: [
 		{
 			name:"Speed Drink",
