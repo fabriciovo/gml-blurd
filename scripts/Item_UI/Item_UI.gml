@@ -138,6 +138,7 @@ function Item_Upgrade_UI(_item,_index, _width, _height) constructor {
 		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _name);
 		draw_text(x + _margin * 19 + _size_new, y + _margin + 2, "Lvl: " + string(item.level));
 		draw_text(x + _margin * 2 + _size_new, y + _margin + 20, "Price: " + string(item.price));
+		draw_text(x + _margin * 26 + _size_new, y + _margin + 20, "Price: " + string(item.type));
 	}
 
 }

@@ -9,3 +9,7 @@ powerup_states = {
 }
 
 instance_create_layer(x,y,"Instances",o_powerup_spawn)
+
+find_type = function(_val, _index) {
+	return _val == "Power Up"
+}

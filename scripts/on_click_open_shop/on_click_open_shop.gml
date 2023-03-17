@@ -42,7 +42,7 @@ function create_itens_shop(){
 
 function create_upgrade_shop(){
 	var _upgrade_layer = layer_get_id("Upgrades")
-	var _sep = 4;
+	var _sep = 6;
 
 	var _x = 0;
 	var _y = 120;

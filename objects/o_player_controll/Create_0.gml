@@ -12,8 +12,17 @@ player = {
 			level:0,
 			sprite: s_coin,
 			price: 5,
-			number:0
+			number:0,
+			type: "Power Up"
 		},
+		{
+			name:"Spike Head",
+			level:4,
+			price:1,
+			number:0,
+			type:"Monster",
+			sprite: s_coin,
+		}	
 	],
 	shop_items: [
 		{
@@ -26,12 +35,4 @@ player = {
 			sprite: s_coin
 		},
 	],
-	monsters: [
-		{
-			name:"Spike Head",
-			level:4,
-			price:1,
-			number:0
-		}	
-	]
 }

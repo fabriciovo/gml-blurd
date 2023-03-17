@@ -25,7 +25,31 @@ function init(){
 			number:0,
 			price: 10,
 			type:"Power Up"
-		}
+		},
+		spike_head: {
+			name:"Spike Head",
+			level:0,
+			sprite_key: "s_item",
+			number:0,
+			price: 10,
+			type:"Monster"
+		},
+		snail: {
+			name:"Snail",
+			level:0,
+			sprite_key: "s_item",
+			number:1,
+			price: 10,
+			type:"Monster"
+		},
+		angry_bird: {
+			name:"Angry Bird",
+			level:0,
+			sprite_key: "s_item",
+			number:2,
+			price: 10,
+			type:"Monster"
+		},
 	}
 
 	
