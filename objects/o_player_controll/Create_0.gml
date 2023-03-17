@@ -22,7 +22,23 @@ player = {
 			number:0,
 			type:"Monster",
 			sprite: s_coin,
-		}	
+		},
+		{
+			name:"Snail",
+			level:4,
+			sprite: s_coin,
+			number:1,
+			price: 10,
+			type:"Monster"
+		},
+		{
+			name:"Angry Bird",
+			level:4,
+			sprite: s_coin,
+			number:2,
+			price: 10,
+			type:"Monster"
+		},
 	],
 	shop_items: [
 		{

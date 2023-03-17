@@ -42,6 +42,7 @@
     {"name":"o_player","order":1,"path":"objects/o_player/o_player.yy",},
     {"name":"o_powerup_controll","order":2,"path":"objects/o_powerup_controll/o_powerup_controll.yy",},
     {"name":"s_effect_placeholder","order":9,"path":"sprites/s_effect_placeholder/s_effect_placeholder.yy",},
+    {"name":"o_coin_spawn","order":23,"path":"objects/o_coin_spawn/o_coin_spawn.yy",},
     {"name":"rm_init","order":1,"path":"rooms/rm_init/rm_init.yy",},
     {"name":"o_coin","order":9,"path":"objects/o_coin/o_coin.yy",},
     {"name":"o_powerup_spawn","order":1,"path":"objects/o_powerup_spawn/o_powerup_spawn.yy",},

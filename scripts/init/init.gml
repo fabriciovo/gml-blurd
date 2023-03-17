@@ -7,7 +7,6 @@ function init(){
 		cake: {
 			name:"Cake",
 			level:0,
-			sprite_key: "s_item",
 			price: 1,
 			coins_per_second: 0.1,
 			total_coins:1,
@@ -21,7 +20,7 @@ function init(){
 		speed_drink: {
 			name:"Speed Drink",
 			level:0,
-			sprite_key: "s_item",
+			sprite: s_item,
 			number:0,
 			price: 10,
 			type:"Power Up"
@@ -29,7 +28,7 @@ function init(){
 		spike_head: {
 			name:"Spike Head",
 			level:0,
-			sprite_key: "s_item",
+			sprite: s_item,
 			number:0,
 			price: 10,
 			type:"Monster"
@@ -37,7 +36,7 @@ function init(){
 		snail: {
 			name:"Snail",
 			level:0,
-			sprite_key: "s_item",
+			sprite: s_item,
 			number:1,
 			price: 10,
 			type:"Monster"
@@ -45,7 +44,7 @@ function init(){
 		angry_bird: {
 			name:"Angry Bird",
 			level:0,
-			sprite_key: "s_item",
+			sprite: s_item,
 			number:2,
 			price: 10,
 			type:"Monster"

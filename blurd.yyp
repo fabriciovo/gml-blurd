@@ -61,6 +61,7 @@
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},},
     {"id":{"name":"o_powerup_controll","path":"objects/o_powerup_controll/o_powerup_controll.yy",},},
     {"id":{"name":"s_effect_placeholder","path":"sprites/s_effect_placeholder/s_effect_placeholder.yy",},},
+    {"id":{"name":"o_coin_spawn","path":"objects/o_coin_spawn/o_coin_spawn.yy",},},
     {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"id":{"name":"o_coin","path":"objects/o_coin/o_coin.yy",},},
     {"id":{"name":"o_solid","path":"objects/o_solid/o_solid.yy",},},
