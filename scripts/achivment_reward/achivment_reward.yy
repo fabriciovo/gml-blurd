@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "tracker_controller",
+  "name": "achivment_reward",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

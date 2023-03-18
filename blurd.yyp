@@ -92,7 +92,7 @@
     {"id":{"name":"Apply_Gravity","path":"scripts/Apply_Gravity/Apply_Gravity.yy",},},
     {"id":{"name":"s_coin","path":"sprites/s_coin/s_coin.yy",},},
     {"id":{"name":"JSON_read","path":"scripts/JSON_read/JSON_read.yy",},},
-    {"id":{"name":"tracker_controller","path":"scripts/tracker_controller/tracker_controller.yy",},},
+    {"id":{"name":"achivment_reward","path":"scripts/achivment_reward/achivment_reward.yy",},},
     {"id":{"name":"Item_UI","path":"scripts/Item_UI/Item_UI.yy",},},
     {"id":{"name":"o_login_controll","path":"objects/o_login_controll/o_login_controll.yy",},},
     {"id":{"name":"rm_signin","path":"rooms/rm_signin/rm_signin.yy",},},

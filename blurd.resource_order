@@ -61,7 +61,7 @@
     {"name":"s_blurd_attack","order":1,"path":"sprites/s_blurd_attack/s_blurd_attack.yy",},
     {"name":"s_coin","order":5,"path":"sprites/s_coin/s_coin.yy",},
     {"name":"JSON_read","order":1,"path":"scripts/JSON_read/JSON_read.yy",},
-    {"name":"tracker_controller","order":12,"path":"scripts/tracker_controller/tracker_controller.yy",},
+    {"name":"achivment_reward","order":15,"path":"scripts/achivment_reward/achivment_reward.yy",},
     {"name":"o_login_controll","order":2,"path":"objects/o_login_controll/o_login_controll.yy",},
     {"name":"rm_signin","order":3,"path":"rooms/rm_signin/rm_signin.yy",},
     {"name":"s_shop_achivments","order":3,"path":"sprites/s_shop_achivments/s_shop_achivments.yy",},
