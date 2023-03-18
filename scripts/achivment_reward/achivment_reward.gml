@@ -3,6 +3,12 @@
 function achivment_reward(_player_array, _reward, _achivment){
 	var _array_achivments = o_player_controll.player.achivments;
 	_achivment.unlocked = true
+	var _achivment_for_player = {
+		name: _achivment.name,
+		description: _achivment.description,
+		sprtie: _achivment.sprite,
+		unlocked: _achivment.unlocked,
+	}
 	array_push(_player_array, _reward)
-	array_push(_array_achivments,_achivment)
+	array_push(_array_achivments,_achivment_for_player)
 }

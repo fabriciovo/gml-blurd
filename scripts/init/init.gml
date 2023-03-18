@@ -3,7 +3,6 @@
 function init(){
 	gml_pragma("global", "init()");
 	
-	
 		global.shop_items = {
 		cake: {
 			name:"Cake",
@@ -57,9 +56,17 @@ function init(){
 			description: "",
 			sprite: s_item,
 			unlocked: false,
+			condition: function(){
+				if o_player_controll.player.total_coins >= 5 {
+					achivment_reward(
+					o_player_controll.player.shop_items,
+					global.shop_items.cake,
+					global.achivments.five_coins)
+				}
+			}
 		}
 	}
 	
-
-
+	global.achivments_list = ds_list_create()
+	ds_list_add(global.achivments_list, global.achivments.five_coins)
 }

@@ -1,14 +1,14 @@
 ///// @description Insert description here
 // You can write your code in this editor
-if o_player_controll.player.total_coins > 5 && !global.achivments.five_coins.unlocked {
-	achivment_reward(o_player_controll.player.shop_items,global.shop_items.cake,global.achivments.five_coins)
-}
-
-if o_player_controll.player.total_coins > 5 && !global.achivments.five_coins.unlocked {
-	achivment_reward(o_player_controll.player.shop_items,global.shop_items.cake,global.achivments.five_coins)
-}
 
 
-for (var _i = 0; _i < _array_achivments_size; _i++){
-	
+var _array_achivments_size = variable_struct_names_count(global.achivments)
+var _keys = variable_struct_get_names(global.achivments);
+for (var _i = array_length(_keys)-1; _i >= 0; --_i) {
+	var _k = _keys[_i];
+	var _achivment = variable_struct_get(global.achivments, _k);
+	for(var _n = 0; _n < _array_achivments_size; _n++){
+		if _achivment.unlocked continue
+		_achivment.condition()
+	}
 }
