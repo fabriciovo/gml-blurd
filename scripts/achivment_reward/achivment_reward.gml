@@ -11,4 +11,5 @@ function achivment_reward(_player_array, _reward, _achivment){
 	}
 	array_push(_player_array, _reward)
 	array_push(_array_achivments,_achivment_for_player)
+	instance_create_layer(50,50,"Instances", o_achviment_ui, new achivment_ui("sdasdasas", s_item))
 }

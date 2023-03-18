@@ -66,7 +66,4 @@ function init(){
 			}
 		}
 	}
-	
-	global.achivments_list = ds_list_create()
-	ds_list_add(global.achivments_list, global.achivments.five_coins)
 }

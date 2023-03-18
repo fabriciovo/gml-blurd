@@ -45,6 +45,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Achivments","folderPath":"folders/Scripts/Achivments.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"shop_items.json","CopyToMask":-1,"filePath":"datafiles",},
@@ -56,6 +57,7 @@
   },
   "resources": [
     {"id":{"name":"o_hat","path":"objects/o_hat/o_hat.yy",},},
+    {"id":{"name":"o_achviment_ui","path":"objects/o_achviment_ui/o_achviment_ui.yy",},},
     {"id":{"name":"s_blurd_run","path":"sprites/s_blurd_run/s_blurd_run.yy",},},
     {"id":{"name":"o_signup","path":"objects/o_signup/o_signup.yy",},},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},},
@@ -77,6 +79,7 @@
     {"id":{"name":"s_snail","path":"sprites/s_snail/s_snail.yy",},},
     {"id":{"name":"s_shop_icon_placeholder","path":"sprites/s_shop_icon_placeholder/s_shop_icon_placeholder.yy",},},
     {"id":{"name":"o_tracker_controll","path":"objects/o_tracker_controll/o_tracker_controll.yy",},},
+    {"id":{"name":"achivment_ui","path":"scripts/achivment_ui/achivment_ui.yy",},},
     {"id":{"name":"s_shop_background","path":"sprites/s_shop_background/s_shop_background.yy",},},
     {"id":{"name":"s_blurd_jump","path":"sprites/s_blurd_jump/s_blurd_jump.yy",},},
     {"id":{"name":"o_shop","path":"objects/o_shop/o_shop.yy",},},
