@@ -2,16 +2,11 @@ function achivment_ui(_name, _sprite) constructor{
 	name = _name
 	sprite_index = _sprite
 	
-	
-	
 	create_method = function(){
 		alarm[0] = global.one_second * 2	
 	}
 
-	
-
-
-	draw_gui_method = function(){
+	draw_gui_end_method = function(){
 		var _margin = 4;
 		var _scale = 2;
 		var _size = 4;
