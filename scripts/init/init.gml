@@ -3,7 +3,7 @@
 function init(){
 	gml_pragma("global", "init()");
 	
-		global.shop_items = {
+	global.shop_items = {
 		cake: {
 			name:"Cake",
 			level:1,

@@ -131,7 +131,6 @@ function Item_Upgrade_UI(_item,_index, _width, _height) constructor {
 
 		draw_rectangle(x , y , x + width, y + height,1);
 
-
 		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 3 - 10, y + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
 
 		draw_set_font(fnt_shop_item);
