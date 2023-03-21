@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "On Clicks",
-    "path": "folders/Scripts/On Clicks.yy",
+    "path": "folders/Scripts/Button Functions/On Clicks.yy",
   },
 }

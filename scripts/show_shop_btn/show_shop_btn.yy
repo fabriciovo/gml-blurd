@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "on_click_back_to_title",
+  "name": "show_shop_btn",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "On Clicks",
-    "path": "folders/Scripts/Button Functions/On Clicks.yy",
+    "name": "Steps",
+    "path": "folders/Scripts/Button Functions/Steps.yy",
   },
 }

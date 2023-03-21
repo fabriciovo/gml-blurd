@@ -37,6 +37,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6BD9DD49","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_btn","path":"objects/o_btn/o_btn.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_btn","path":"objects/o_btn/o_btn.yy",},"propertyId":{"name":"on_click","path":"objects/o_btn/o_btn.yy",},"value":"on_click_open_shop",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_btn","path":"objects/o_btn/o_btn.yy",},"propertyId":{"name":"text","path":"objects/o_btn/o_btn.yy",},"value":"",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"o_btn","path":"objects/o_btn/o_btn.yy",},"propertyId":{"name":"step_method","path":"objects/o_btn/o_btn.yy",},"value":"show_shop_btn",},
           ],"rotation":0.0,"scaleX":4.3125,"scaleY":3.75,"x":316.0,"y":605.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRLayer","resourceVersion":"1.0","name":"Background","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[

@@ -14,7 +14,6 @@ function init(){
 		}
 	}
 
-
 	global.upgrade_items = {
 		speed_drink: {
 			name:"Speed Drink",
@@ -26,7 +25,7 @@ function init(){
 		},
 		spike_head: {
 			name:"Spike Head",
-			level:4,
+			level:0,
 			price:1,
 			number:0,
 			type:"Monster",
@@ -34,7 +33,7 @@ function init(){
 		},
 		snail: {
 			name:"Snail",
-			level:4,
+			level:0,
 			sprite: s_coin,
 			number:1,
 			price: 10,
@@ -42,7 +41,7 @@ function init(){
 		},
 		angry_bird: {
 			name:"Angry Bird",
-			level:4,
+			level:0,
 			sprite: s_coin,
 			number:2,
 			price: 10,
@@ -62,6 +61,62 @@ function init(){
 					o_player_controll.player.shop_items,
 					global.shop_items.cake,
 					global.achivments.five_coins)
+				}
+			}
+		},
+		new_challenge: {
+			name:"New Challenges",
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			condition: function(){
+				if o_player_controll.player.total_coins >= 10 {
+					achivment_reward(
+					o_player_controll.player.upgrades,
+					global.upgrade_items.spike_head,
+					global.achivments.new_challenge)
+				}
+			}
+		},
+		new_challenge_2: {
+			name:"New Challenges",
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			condition: function(){
+				if o_player_controll.player.total_coins >= 50 {
+					achivment_reward(
+					o_player_controll.player.upgrades,
+					global.upgrade_items.snail,
+					global.achivments.new_challenge_2)
+				}
+			}
+		},
+		new_challenge_3: {
+			name:"New Challenges",
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			condition: function(){
+				if o_player_controll.player.total_coins >= 100 {
+					achivment_reward(
+					o_player_controll.player.upgrades,
+					global.upgrade_items.angry_bird,
+					global.achivments.new_challenge_3)
+				}
+			}
+		},
+		new_challenge_4: {
+			name:"New Challenges",
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			condition: function(){
+				if o_player_controll.player.total_coins >= 200 {
+					achivment_reward(
+					o_player_controll.player.upgrades,
+					global.upgrade_items.speed_drink,
+					global.achivments.new_challenge_4)
 				}
 			}
 		}

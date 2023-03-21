@@ -8,5 +8,15 @@ player = {
 	upgrades: [],
 	shop_items: [],
 	achivments: [],
+	track:{
+		monsters:{
+			spike_head:0,
+			snail:0,
+			angry_bird:0
+		},
+		powerups:{
+			speed_drink:0
+		}
+	}
 }
 

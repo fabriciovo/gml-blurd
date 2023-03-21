@@ -29,6 +29,7 @@ function Monster() constructor {
 	}
 	
 	player_collision = function(){
+		instance_create_layer(x,y,"Instances",o_pickup, new Apple())
 		instance_destroy()
 	}
 
