@@ -1,4 +1,3 @@
-/// @description Insert description here
 var _player_achivments = array_length(o_player_controll.player.achivments)
 if _player_achivments == 0 exit
 

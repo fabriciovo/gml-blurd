@@ -1,7 +1,3 @@
-///// @description Insert description here
-// You can write your code in this editor
-
-
 var _array_achivments_size = variable_struct_names_count(global.achivments)
 var _keys = variable_struct_get_names(global.achivments);
 for (var _i = array_length(_keys)-1; _i >= 0; --_i) {

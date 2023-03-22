@@ -5,6 +5,7 @@ function Monster() constructor {
 	jump = 0
 	hsp = global.game_speed
 	grounded = false
+	_track_key = ""
 	create_method = function(){
 		show_error("METHOD NOT IMPLEMENTED",true)
 	}
@@ -29,6 +30,8 @@ function Monster() constructor {
 	}
 	
 	player_collision = function(){
+		var _monster = variable_struct_get(o_player_controll.player.track.monsters,_track_key)
+		_monster.value++
 		instance_create_layer(x,y,"Instances",o_pickup, new Apple())
 		instance_destroy()
 	}
@@ -37,7 +40,7 @@ function Monster() constructor {
 function Spike_Head() : Monster() constructor {
 	sprite_index = s_spike_head
 	image_speed = 0
-
+	_track_key = "spike_head"
 	create_method = function(){
 		grav = 0.3
 		jump = -10
@@ -48,7 +51,7 @@ function Spike_Head() : Monster() constructor {
 	alarm_method = function(){
 		vsp = jump
 	}
-	
+		
 	event_method = function(){
 		if grounded {
 			image_index = 0
@@ -59,6 +62,7 @@ function Spike_Head() : Monster() constructor {
 }
 function Snail() : Monster() constructor {
 	sprite_index = s_snail
+	_track_key = "snail"
 	create_method = function(){
 		hp = 3
 		grav = 0.3
@@ -98,11 +102,13 @@ function Snail() : Monster() constructor {
 			instance_destroy()
 		}
 	}
+	
 }
 function Fly() : Monster() constructor {
 	sprite_index = s_fly
 	image_speed = 0
 	hsp_ = -global.game_speed * 0.05
+	_track_key = "angry_bird"
 	create_method = function(){
 		grav = 0.3
 		jump = -7

@@ -16,6 +16,8 @@
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
     {"name":"Scripts","order":5,"path":"folders/Scripts.yy",},
     {"name":"Achivments","order":7,"path":"folders/Scripts/Achivments.yy",},
+    {"name":"Button Functions","order":9,"path":"folders/Scripts/Button Functions.yy",},
+    {"name":"Steps","order":1,"path":"folders/Scripts/Button Functions/Steps.yy",},
     {"name":"Firebase","order":4,"path":"folders/Scripts/Firebase.yy",},
     {"name":"Hat","order":1,"path":"folders/Scripts/Hat.yy",},
     {"name":"Heroes","order":2,"path":"folders/Scripts/Heroes.yy",},
@@ -34,8 +36,6 @@
     {"name":"UI","order":4,"path":"folders/Sprites/UI.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Button Functions","order":9,"path":"folders/Scripts/Button Functions.yy",},
-    {"name":"Steps","order":1,"path":"folders/Scripts/Button Functions/Steps.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"o_hat","order":16,"path":"objects/o_hat/o_hat.yy",},

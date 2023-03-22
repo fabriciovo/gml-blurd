@@ -10,12 +10,20 @@ player = {
 	achivments: [],
 	track:{
 		monsters:{
-			spike_head:0,
-			snail:0,
-			angry_bird:0
+			spike_head:{
+				value:0
+			},
+			snail:{
+				value:0
+			},
+			angry_bird:{
+				value:0
+			},
 		},
 		powerups:{
-			speed_drink:0
+			speed_drink:{
+				value:0
+			},
 		}
 	}
 }
