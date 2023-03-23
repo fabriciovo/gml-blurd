@@ -9,6 +9,7 @@ if _value == false {
 	layer_set_visible("Items", true)
 }else{
 	instance_destroy(o_shop_item)
+	
 }
 	
 layer_set_visible(_shop_layer, !_value)

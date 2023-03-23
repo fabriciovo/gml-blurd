@@ -5,7 +5,6 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -33,8 +32,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "s_shop_item",
-    "path": "sprites/s_shop_item/s_shop_item.yy",
+    "name": "s_shop_icon_placeholder",
+    "path": "sprites/s_shop_icon_placeholder/s_shop_icon_placeholder.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -10,7 +10,6 @@ for (var _i = array_length(_keys)-1; _i >= 0; --_i) {
 		if(_player_achivments[_n].name == _achivment.name ){
 			_achivment.unlocked = true
 		}
-		
 	}
 }
 	

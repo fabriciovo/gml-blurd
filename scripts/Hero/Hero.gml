@@ -12,9 +12,9 @@ function Hero() constructor {
 	sprite_[hero_sprite_state.attack] =  noone
 
 	create_method = function(){
-		grav = 0.3
+		grav = 0.2
 		vsp = 0
-		jump = -7
+		jump = -4
 		grounded = false
 		attack = false
 		state = hero_sprite_state.walk
@@ -67,9 +67,9 @@ function Hero() constructor {
 }
 
 function Blurd() : Hero() constructor  {
-	sprite_[hero_sprite_state.walk] = s_blurd_walk
-	sprite_[hero_sprite_state.run] = s_blurd_run
-	sprite_[hero_sprite_state.jump] = s_blurd_jump
-	sprite_[hero_sprite_state.attack] = s_blurd_attack
+	sprite_[hero_sprite_state.walk] = s_blurd
+	sprite_[hero_sprite_state.run] = s_blurd
+	sprite_[hero_sprite_state.jump] = s_blurd
+	sprite_[hero_sprite_state.attack] = s_blurd
 
 }

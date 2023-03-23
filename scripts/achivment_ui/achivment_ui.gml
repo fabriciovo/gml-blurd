@@ -1,6 +1,6 @@
 function achivment_ui(_name, _sprite) constructor{
 	name = _name
-	sprite_index = _sprite
+	sprite_ = _sprite
 	
 	create_method = function(){
 		alarm[0] = global.one_second * 2	
@@ -25,7 +25,8 @@ function achivment_ui(_name, _sprite) constructor{
 		draw_rectangle(50 , 50 , 50 + _width, 50 + _height,1);
 
 
-		draw_sprite_ext(sprite_index, 0, 50 + _margin + _size_new / 3 - 10, 50 + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
+		draw_sprite_ext(sprite_, 0, 50 + _margin + _size_new / 3 - 10, 50 + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
+		
 
 		draw_set_font(fnt_shop_item);
 		draw_text(50 + _margin * 2 + _size_new, 50 + _margin + 2, name);
