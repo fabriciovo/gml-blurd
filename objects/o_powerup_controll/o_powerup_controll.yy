@@ -35,5 +35,5 @@
     "path": "sprites/s_shop_icon_placeholder/s_shop_icon_placeholder.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

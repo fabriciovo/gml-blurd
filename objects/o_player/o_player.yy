@@ -39,6 +39,9 @@
     "name": "s_blurd_walk",
     "path": "sprites/s_blurd_walk/s_blurd_walk.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_hero_collision",
+    "path": "sprites/s_hero_collision/s_hero_collision.yy",
+  },
   "visible": true,
 }

@@ -25,8 +25,9 @@ function Hero() constructor {
 		var _touch = device_mouse_check_button_pressed(0, mb_left)
 		var _space  = keyboard_check_pressed(ord("W"))
 		
-		if(_touch || _space) vsp = jump
-		Apply_Gravity()
+		if(_touch || _space) vsp = jump {
+			Apply_Gravity()
+		}
 		
 		if attack {
 			image_speed = 0
@@ -34,10 +35,10 @@ function Hero() constructor {
 			image_index = attack_index
 		
 		}else if grounded {
-			image_speed = .6
+			image_speed = .1
 			state = hero_sprite_state.walk
 		}else if !grounded {
-			image_speed = .6
+			image_speed = .1
 			state = hero_sprite_state.jump
 		}
 		
@@ -67,9 +68,10 @@ function Hero() constructor {
 }
 
 function Blurd() : Hero() constructor  {
-	sprite_[hero_sprite_state.walk] = s_blurd
-	sprite_[hero_sprite_state.run] = s_blurd
-	sprite_[hero_sprite_state.jump] = s_blurd
-	sprite_[hero_sprite_state.attack] = s_blurd
+
+	sprite_[hero_sprite_state.walk] = s_blurd_walk
+	sprite_[hero_sprite_state.run] = s_blurd_run
+	sprite_[hero_sprite_state.jump] = s_blurd_jump
+	sprite_[hero_sprite_state.attack] = s_blurd_attack
 
 }

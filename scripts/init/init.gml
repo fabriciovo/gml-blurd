@@ -84,7 +84,7 @@ function init(){
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				if o_player_controll.player.total_coins >= 50 {
+				if o_player_controll.player.track.monsters.spike_head.value >= 50 {
 					achivment_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.snail,

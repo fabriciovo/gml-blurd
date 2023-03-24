@@ -1,4 +1,4 @@
-global.game_speed = -3
+global.game_speed = -1
 global.max_game_speed = -9
 global.one_second = game_get_speed(gamespeed_fps)
 global.VW = camera_get_view_width(view_camera[0])

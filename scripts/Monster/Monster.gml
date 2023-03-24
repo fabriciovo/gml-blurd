@@ -42,10 +42,10 @@ function Spike_Head() : Monster() constructor {
 	image_speed = 0
 	_track_key = "spike_head"
 	create_method = function(){
-		grav = 0.3
-		jump = -10
+		grav = 0.1
+		jump = -6
 		image_index = 0
-		alarm[0] = random(2) * (global.one_second / 2)
+		alarm[0] = random(3) * (global.one_second / 2)
 	}
 	
 	alarm_method = function(){
@@ -65,7 +65,7 @@ function Snail() : Monster() constructor {
 	_track_key = "snail"
 	create_method = function(){
 		hp = 3
-		grav = 0.3
+		grav = 0.2
 		jump = 0
 		shield = false
 		image_index = 0
@@ -79,8 +79,8 @@ function Snail() : Monster() constructor {
 	player_collision = function() {
 		if shield {
 			hp -= 1
-			hsp -= random_range(global.game_speed,global.game_speed*3)
-			vsp = random_range(-3,-9)
+			hsp = random_range(1,3)
+			vsp = random_range(-3,-6)
 		}else{
 			hp = 0
 		}
@@ -97,6 +97,11 @@ function Snail() : Monster() constructor {
 			hsp = global.game_speed 
 		}
 		
+		if vsp < 0 {
+			image_angle -= 33
+		}else {
+			image_angle = 0
+		}
 		
 		if hp <= 0 {
 			var _monster = variable_struct_get(o_player_controll.player.track.monsters,_track_key)

@@ -13,20 +13,20 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"77102187-9a83-4336-a947-f9d0ccd376f1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"057d810f-b172-409b-84b9-849b57a76e9c",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 32,
+  "height": 16,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0494864f-92ad-450d-88bf-20fdb7713ab5","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a8f9a175-2166-4c92-8275-2be4fed5cd62","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Characters",
-    "path": "folders/Sprites/Characters.yy",
+    "name": "Blurd",
+    "path": "folders/Sprites/Heroes/Blurd.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,13 +54,13 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"77102187-9a83-4336-a947-f9d0ccd376f1","path":"sprites/s_blurd_run/s_blurd_run.yy",},},},"Disabled":false,"id":"8ec6c810-854d-4dbc-8180-7dbc3e5b128c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"057d810f-b172-409b-84b9-849b57a76e9c","path":"sprites/s_blurd_run/s_blurd_run.yy",},},},"Disabled":false,"id":"bf795acc-8eca-4655-8df8-6b99258ca41a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 16,
-    "yorigin": 16,
+    "xorigin": 8,
+    "yorigin": 8,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 32,
+  "width": 16,
 }
