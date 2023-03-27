@@ -10,7 +10,7 @@ function achivment_ui(_name, _sprite) constructor{
 		var _margin = 4;
 		var _scale = 2;
 		var _size = 4;
-		var _height = 40
+		var _height = 60
 		var _width = 300
 		var _size_new = _height - _margin * _size;
 		
@@ -29,7 +29,9 @@ function achivment_ui(_name, _sprite) constructor{
 		
 
 		draw_set_font(fnt_shop_item);
-		draw_text(50 + _margin * 2 + _size_new, 50 + _margin + 2, name);
+		draw_text_ext_color(50 + _margin * 2 + _size_new, 50 + _margin + 2, "Achivement Unlocked!",5,_width,c_gray, c_gray, c_navy, c_navy, .5);
+		draw_set_font(fnt_shop_item);
+		draw_text(50 + _margin * 2 + _size_new, 70 + _margin + 2, name);
 	
 	}
 	

@@ -68,7 +68,8 @@ function Hero() constructor {
 }
 
 function Blurd() : Hero() constructor  {
-
+	image_xscale = 1.3
+	image_yscale = 1.3
 	sprite_[hero_sprite_state.walk] = s_blurd_walk
 	sprite_[hero_sprite_state.run] = s_blurd_run
 	sprite_[hero_sprite_state.jump] = s_blurd_jump
