@@ -203,7 +203,7 @@ function Item_Inventory_UI(_item,_index, _width, _height) constructor {
 	hover = 0
 	l_click = 0
 	open_panel = false
-	color = c_green
+	color = c_white
 
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
