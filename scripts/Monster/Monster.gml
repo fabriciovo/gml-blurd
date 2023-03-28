@@ -32,7 +32,7 @@ function Monster() constructor {
 	player_collision = function(){
 		var _monster = variable_struct_get(o_player_controll.player.track.monsters,_track_key)
 		_monster.value++
-		instance_create_layer(x,y,"Instances",o_pickup, new Apple())
+		//instance_create_layer(x,y,"Instances",o_pickup, new Apple())
 		instance_destroy()
 	}
 

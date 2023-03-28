@@ -49,7 +49,7 @@ function init(){
 		},
 	}
 	
-	global.achivments = {
+	global.achievements = {
 		five_coins: {
 			name:"Five Coins",
 			description: "",
@@ -60,7 +60,7 @@ function init(){
 					achivment_reward(
 					o_player_controll.player.shop_items,
 					global.shop_items.cake,
-					global.achivments.five_coins)
+					global.achievements.five_coins)
 				}
 			}
 		},
@@ -74,7 +74,7 @@ function init(){
 					achivment_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.spike_head,
-					global.achivments.new_challenge)
+					global.achievements.new_challenge)
 				}
 			}
 		},
@@ -88,7 +88,7 @@ function init(){
 					achivment_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.snail,
-					global.achivments.new_challenge_2)
+					global.achievements.new_challenge_2)
 				}
 			}
 		},
@@ -102,7 +102,7 @@ function init(){
 					achivment_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.angry_bird,
-					global.achivments.new_challenge_3)
+					global.achievements.new_challenge_3)
 				}
 			}
 		},
@@ -116,7 +116,7 @@ function init(){
 					achivment_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.speed_drink,
-					global.achivments.new_challenge_4)
+					global.achievements.new_challenge_4)
 				}
 			}
 		}

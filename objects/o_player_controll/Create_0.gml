@@ -16,7 +16,7 @@ player = {
 			sprite: s_coin
 	}
 	],
-	achivments: [],
+	achievements: [],
 	track:{
 		monsters:{
 			spike_head:{
