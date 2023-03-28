@@ -68,8 +68,8 @@ function create_achievement_shop(){
 	
 }
 
-function create_inventory(){
-	var _upgrade_layer = layer_get_id("Achievements")
+function create_craft_bag(){
+	var _layer = layer_get_id("Craft_Bag")
 		var _margin = 24;
 		var _sep = 6;
 		var _cell_size = 40;
@@ -87,7 +87,7 @@ function create_inventory(){
 		var _button_x = _inv_x + (_sep + _cell_size) * _x;
 		var _button_y = _inv_y + (_sep + _cell_size) * _y;
 
-		var _button = instance_create_depth(_button_x, _button_y, 0, o_shop_item, new Item_Inventory_UI({name:"item"},_i,40,40) );
+		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Craftbag_UI({name:"item"},_i,40,40) );
 		
 		_x++;
 	
@@ -95,10 +95,40 @@ function create_inventory(){
 			_x = 0;
 			_y++;
 		}
-	}
-
-	
+	}	
 }
+
+function create_inventory(){
+	var _layer = layer_get_id("Inventory")
+		var _margin = 24;
+		var _sep = 32;
+		var _cell_size = 60;
+
+		var _size_x = 3;
+		var _size_y = 2;
+
+		var _inv_x = _margin + 24;
+		var _inv_y = 118;
+
+		var _x = 0;
+		var _y = 0;
+
+	for (var _i = 0; _i < 3; _i++ ){
+		var _button_x = _inv_x + (_sep + _cell_size) * _x;
+		var _button_y = _inv_y + (_sep + _cell_size) * _y;
+
+		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Inventory_UI({name:"item", sprite: s_item},_i,80,80) );
+		
+		_x++;
+	
+		if (_x == _size_x) {
+			_x = 0;
+			_y++;
+		}
+	}	
+}
+
+
 
 
 function on_click_open_shop(){
@@ -113,7 +143,8 @@ if _value == false {
 	instance_create_depth(70,global.VH - 150,0,o_btn_item, new btn_tab("Items", s_shop_icon_placeholder, create_itens_shop))
 	instance_create_depth(110,global.VH - 150,0,o_btn_item, new btn_tab("Upgrades", s_shop_icon_placeholder,create_upgrade_shop))
 	instance_create_depth(150,global.VH - 150,0,o_btn_item, new btn_tab("Achievements", s_shop_icon_placeholder, create_achievement_shop))
-	instance_create_depth(190,global.VH - 150,0,o_btn_item, new btn_tab("Inventory", s_shop_icon_placeholder, create_inventory))
+	instance_create_depth(190,global.VH - 150,0,o_btn_item, new btn_tab("Craft_Bag", s_shop_icon_placeholder, create_craft_bag))
+	instance_create_depth(230,global.VH - 150,0,o_btn_item, new btn_tab("Inventory", s_shop_icon_placeholder, create_inventory))
 }else{
 	instance_destroy(o_shop_item)
 	instance_destroy(o_btn_item)

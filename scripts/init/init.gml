@@ -13,6 +13,14 @@ function init(){
 			sprite: s_coin
 		}
 	}
+	
+	global.inventory = {
+		first_bonus_stage: {
+			name:"Bonus Stage",
+			stage_name:"rm_bonus_stage_1",
+			description: "When you use it, you unlock a portal to a bonus stage"
+		}
+	}
 
 	global.upgrade_items = {
 		speed_drink: {
