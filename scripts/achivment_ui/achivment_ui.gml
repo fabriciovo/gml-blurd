@@ -34,7 +34,7 @@ function achivment_ui(_name, _sprite) constructor{
 		draw_set_font(fnt_shop_item);
 		draw_text_ext_color(_x + _margin * 2 + _size_new, 50 + _margin + 2, "Achivement Unlocked!",5,_width,c_gray, c_gray, c_navy, c_navy, .5);
 		draw_set_font(fnt_shop_item);
-		draw_text(50 + _margin * 2 + _size_new, 70 + _margin + 2, name);
+		draw_text(_x + _margin * 2 + _size_new, 70 + _margin + 2, name);
 	
 	}
 	
