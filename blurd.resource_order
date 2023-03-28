@@ -63,6 +63,7 @@
     {"name":"o_player_controll","order":1,"path":"objects/o_player_controll/o_player_controll.yy",},
     {"name":"s_shop_background","order":1,"path":"sprites/s_shop_background/s_shop_background.yy",},
     {"name":"rm_signup","order":4,"path":"rooms/rm_signup/rm_signup.yy",},
+    {"name":"btn_tab","order":1,"path":"scripts/btn_tab/btn_tab.yy",},
     {"name":"s_blurd_walk","order":3,"path":"sprites/s_blurd_walk/s_blurd_walk.yy",},
     {"name":"o_pickup","order":24,"path":"objects/o_pickup/o_pickup.yy",},
     {"name":"s_dark_square","order":14,"path":"sprites/s_dark_square/s_dark_square.yy",},

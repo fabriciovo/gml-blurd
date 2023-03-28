@@ -95,6 +95,7 @@
     {"id":{"name":"s_shop_background","path":"sprites/s_shop_background/s_shop_background.yy",},},
     {"id":{"name":"rm_signup","path":"rooms/rm_signup/rm_signup.yy",},},
     {"id":{"name":"o_game_controll","path":"objects/o_game_controll/o_game_controll.yy",},},
+    {"id":{"name":"btn_tab","path":"scripts/btn_tab/btn_tab.yy",},},
     {"id":{"name":"s_blurd_attack","path":"sprites/s_blurd_attack/s_blurd_attack.yy",},},
     {"id":{"name":"s_blurd_walk","path":"sprites/s_blurd_walk/s_blurd_walk.yy",},},
     {"id":{"name":"o_pickup","path":"objects/o_pickup/o_pickup.yy",},},

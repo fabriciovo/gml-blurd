@@ -1,22 +1,3 @@
-function on_click_open_shop(){
-var _shop_layer = layer_get_id("Shop")
-
-
-var _value = layer_get_visible(_shop_layer)
-
-if _value == false {
-	create_itens_shop()
-	layer_set_visible("Items", true)
-}else{
-	instance_destroy(o_shop_item)
-	
-}
-	
-layer_set_visible(_shop_layer, !_value)
-
-}
-
-
 function create_itens_shop(){
 	var _items_layer = layer_get_id("Items")	
 	var _sep = 4;
@@ -38,7 +19,7 @@ function create_itens_shop(){
 		_y += (_h + _sep);
 		
 	}
-
+	
 }
 
 function create_upgrade_shop(){
@@ -64,3 +45,25 @@ function create_upgrade_shop(){
 
 
 }
+
+function on_click_open_shop(){
+var _shop_layer = layer_get_id("Shop")
+
+
+var _value = layer_get_visible(_shop_layer)
+
+if _value == false {
+	create_itens_shop()
+	layer_set_visible("Items", true)
+	instance_create_depth(80,220,-1,o_btn_item, new btn_tab("Items",create_itens_shop))
+	instance_create_depth(170,220,-100,o_btn_item, new btn_tab("Upgrades",create_upgrade_shop))
+}else{
+	instance_destroy(o_shop_item)
+	instance_destroy(o_btn_item)
+}
+	
+layer_set_visible(_shop_layer, !_value)
+
+}
+
+
