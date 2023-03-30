@@ -60,6 +60,11 @@ function init(){
 	global.achievements = {
 		five_coins: {
 			name:"Five Coins",
+			progress: {
+				text: "Collect Coins: ",
+				count:0,
+				max_count:5
+			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
@@ -74,6 +79,11 @@ function init(){
 		},
 		new_challenge: {
 			name:"New Challenges",
+			progress: {
+				text: "Collect Coins: ",
+				count:0,
+				max_count:5
+			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
@@ -88,6 +98,11 @@ function init(){
 		},
 		new_challenge_2: {
 			name:"New Challenges",
+			progress: {
+				text: "Collect Coins: ",
+				count:0,
+				max_count:5
+			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
@@ -102,6 +117,11 @@ function init(){
 		},
 		new_challenge_3: {
 			name:"New Challenges",
+			progress: {
+				text: "Collect Coins: ",
+				count:0,
+				max_count:5
+			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
@@ -116,6 +136,11 @@ function init(){
 		},
 		new_challenge_4: {
 			name:"New Challenges",
+			progress: {
+				text: "Collect Coins: ",
+				count:0,
+				max_count:5
+			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,

@@ -14,11 +14,9 @@ function achivment_ui(_name, _sprite) constructor{
 		var _width = 300
 		var _x = 30
 		var _size_new = _height - _margin * _size
-	
 		
-		
-		draw_set_color(c_green);
-		draw_set_alpha(0.4);
+		draw_set_color(c_black);
+		draw_set_alpha(1);
 
 		draw_rectangle(_x,50,_x + _width, 50 + _height, 0);
 
@@ -32,7 +30,7 @@ function achivment_ui(_name, _sprite) constructor{
 		
 
 		draw_set_font(fnt_shop_item);
-		draw_text_ext_color(_x + _margin * 2 + _size_new, 50 + _margin + 2, "Achivement Unlocked!",5,_width,c_gray, c_gray, c_navy, c_navy, .5);
+		draw_text_ext_color(_x + _margin * 2 + _size_new, 50 + _margin + 2, "Quest Completed!",5,_width,c_gray, c_gray, c_navy, c_navy, .5);
 		draw_set_font(fnt_shop_item);
 		draw_text(_x + _margin * 2 + _size_new, 70 + _margin + 2, name);
 	

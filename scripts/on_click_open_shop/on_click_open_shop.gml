@@ -117,7 +117,7 @@ function create_inventory(){
 		var _button_x = _inv_x + (_sep + _cell_size) * _x;
 		var _button_y = _inv_y + (_sep + _cell_size) * _y;
 
-		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Inventory_UI({name:"item", sprite: s_item},_i,80,80) );
+		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Inventory_UI({name:"item", sprite: s_item, count:1},_i,80,80) );
 		
 		_x++;
 	
