@@ -18,6 +18,11 @@ player = {
 	],
 	achievements: [],
 	track:{
+		collectables: {
+			coins:{
+				value:0
+			}
+		},
 		monsters:{
 			spike_head:{
 				value:0

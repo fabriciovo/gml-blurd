@@ -69,7 +69,9 @@ function init(){
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				if o_player_controll.player.total_coins >= 5 {
+				var _track_value = o_player_controll.player.track.collectables.coins.value
+				progress.count = _track_value
+				if _track_value >= progress.max_count {
 					achivment_reward(
 					o_player_controll.player.shop_items,
 					global.shop_items.cake,
@@ -78,17 +80,19 @@ function init(){
 			}
 		},
 		new_challenge: {
-			name:"New Challenges",
+			name:"Ten Coins",
 			progress: {
-				text: "Collect Coins: ",
+				text: "Collected Coins:",
 				count:0,
-				max_count:5
+				max_count:10
 			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				if o_player_controll.player.total_coins >= 10 {
+				var _track_value = o_player_controll.player.track.collectables.coins.value
+				progress.count = _track_value
+				if _track_value >= progress.max_count {
 					achivment_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.spike_head,
@@ -97,17 +101,19 @@ function init(){
 			}
 		},
 		new_challenge_2: {
-			name:"New Challenges",
+			name:"Kill this Spikes",
 			progress: {
-				text: "Collect Coins: ",
+				text: "Spike Heads: ",
 				count:0,
-				max_count:5
+				max_count:10
 			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				if o_player_controll.player.track.monsters.spike_head.value >= 50 {
+				var _track_value = o_player_controll.player.track.monsters.spike_head.value
+				progress.count = _track_value
+				if _track_value >= progress.max_count {
 					achivment_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.snail,
@@ -118,15 +124,17 @@ function init(){
 		new_challenge_3: {
 			name:"New Challenges",
 			progress: {
-				text: "Collect Coins: ",
+				text: "Spike Heads: ",
 				count:0,
-				max_count:5
+				max_count:50,
 			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				if o_player_controll.player.track.monsters.spike_head.value >= 10 {
+				var _track_value = o_player_controll.player.track.monsters.spike_head.value
+				progress.count = _track_value
+				if _track_value >= progress.max_count {
 					achivment_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.angry_bird,
@@ -135,17 +143,19 @@ function init(){
 			}
 		},
 		new_challenge_4: {
-			name:"New Challenges",
+			name:"More Speed",
 			progress: {
 				text: "Collect Coins: ",
 				count:0,
-				max_count:5
+				max_count: 200
 			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				if o_player_controll.player.total_coins >= 200 {
+				var _track_value = o_player_controll.player.track.collectables.coins.value
+				progress.count = _track_value
+				if _track_value >= progress.max_count {
 					achivment_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.speed_drink,
