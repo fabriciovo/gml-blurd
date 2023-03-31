@@ -124,6 +124,7 @@
     {"id":{"name":"Particles","path":"scripts/Particles/Particles.yy",},},
     {"id":{"name":"o_signin","path":"objects/o_signin/o_signin.yy",},},
     {"id":{"name":"s_solid","path":"sprites/s_solid/s_solid.yy",},},
+    {"id":{"name":"s_triple_red_guy","path":"sprites/s_triple_red_guy/s_triple_red_guy.yy",},},
     {"id":{"name":"fnt_shop_item","path":"fonts/fnt_shop_item/fnt_shop_item.yy",},},
     {"id":{"name":"on_click_guest","path":"scripts/on_click_guest/on_click_guest.yy",},},
     {"id":{"name":"on_click_back_to_title","path":"scripts/on_click_back_to_title/on_click_back_to_title.yy",},},
