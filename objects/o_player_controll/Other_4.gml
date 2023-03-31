@@ -6,5 +6,6 @@ if room == rm_game {
 	instance_create_layer(172,260,"Instances", o_monster_spawn)
 	instance_create_layer(x,y,"Instances", o_coin_spawn)
 	instance_create_layer(x,y,"Instances", o_tracker_controll)
+	instance_create_layer(x,y,"Instances", o_secret_item_controll)
 	//instance_create_layer(x,y,"Instances",o_hat, new Hat("hat",0,s_hat))
 }

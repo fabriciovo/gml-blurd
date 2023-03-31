@@ -264,6 +264,13 @@ function Item_Inventory_UI (_item,_index, _width, _height) constructor {
 		}else{
 			sprite_color = c_black
 		}
+		
+		if hover and l_click {
+			if item.count > 0 {
+				item.count--;
+				item.func()
+			}
+		}
 	}
 	end_step_method = function(){
 		var _mouse_x = device_mouse_x_to_gui(0);
@@ -272,6 +279,7 @@ function Item_Inventory_UI (_item,_index, _width, _height) constructor {
 		hover = point_in_rectangle(_mouse_x, _mouse_y, x,y , x + width, y + height);
 		
 		l_click = mouse_check_button_pressed(mb_left)
+		
 	}
 	
 	draw_gui_method = function(){
@@ -296,7 +304,7 @@ function Item_Inventory_UI (_item,_index, _width, _height) constructor {
 		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 4 - 2, y + _size_new / 4,_scale,_scale,0,sprite_color,1);
 
 		draw_set_font(fnt_shop_item);
-		draw_text(x + _margin * 2 + _size_new, y , "0");
+		draw_text(x + _margin * 2 + _size_new, y , string(item.count));
 	}
 	
 	draw_gui_end_method = function(){

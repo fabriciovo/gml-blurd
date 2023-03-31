@@ -69,6 +69,7 @@
     {"name":"o_player_controll","order":1,"path":"objects/o_player_controll/o_player_controll.yy",},
     {"name":"s_shop_background","order":1,"path":"sprites/s_shop_background/s_shop_background.yy",},
     {"name":"o_spawn_point","order":1,"path":"objects/o_spawn_point/o_spawn_point.yy",},
+    {"name":"o_secret_item_controll","order":4,"path":"objects/o_secret_item_controll/o_secret_item_controll.yy",},
     {"name":"rm_signup","order":4,"path":"rooms/rm_signup/rm_signup.yy",},
     {"name":"btn_tab","order":1,"path":"scripts/btn_tab/btn_tab.yy",},
     {"name":"s_blurd_walk","order":3,"path":"sprites/s_blurd_walk/s_blurd_walk.yy",},

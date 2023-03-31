@@ -99,7 +99,8 @@ function create_craft_bag(){
 }
 
 function create_inventory(){
-	var _layer = layer_get_id("Inventory")
+		var _layer = layer_get_id("Inventory")
+		var _size = array_length(global.secret_items)
 		var _margin = 24;
 		var _sep = 32;
 		var _cell_size = 60;
@@ -112,12 +113,14 @@ function create_inventory(){
 
 		var _x = 0;
 		var _y = 0;
+		
 
-	for (var _i = 0; _i < 3; _i++ ){
+
+	for (var _i = 0; _i < _size; _i++ ){
 		var _button_x = _inv_x + (_sep + _cell_size) * _x;
 		var _button_y = _inv_y + (_sep + _cell_size) * _y;
 
-		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Inventory_UI({name:"item", sprite: s_item, count:1},_i,80,80) );
+		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Inventory_UI(global.secret_items[_i],_i,80,80) );
 		
 		_x++;
 	

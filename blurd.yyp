@@ -104,6 +104,7 @@
     {"id":{"name":"o_player_controll","path":"objects/o_player_controll/o_player_controll.yy",},},
     {"id":{"name":"s_shop_background","path":"sprites/s_shop_background/s_shop_background.yy",},},
     {"id":{"name":"o_spawn_point","path":"objects/o_spawn_point/o_spawn_point.yy",},},
+    {"id":{"name":"o_secret_item_controll","path":"objects/o_secret_item_controll/o_secret_item_controll.yy",},},
     {"id":{"name":"rm_signup","path":"rooms/rm_signup/rm_signup.yy",},},
     {"id":{"name":"o_game_controll","path":"objects/o_game_controll/o_game_controll.yy",},},
     {"id":{"name":"btn_tab","path":"scripts/btn_tab/btn_tab.yy",},},

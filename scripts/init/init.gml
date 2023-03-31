@@ -164,4 +164,22 @@ function init(){
 			}
 		}
 	}
+		
+	global.secret_items = [
+		{
+			name:"Sky Stone",
+			description:"Open a portal to teleport you for bonus Stage",
+			count: 0,
+			sprite: s_item,
+			craft_items: {
+				spikes: 5,
+				feather: 5,
+				shelled: 5
+			},
+			func: function(){
+				room_goto(rm_bonus_stage_1)
+			}
+		}
+	]
+		
 }
