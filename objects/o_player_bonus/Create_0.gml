@@ -1,5 +1,5 @@
 grav = 0.3
 vsp = 0
-jump = -7
+jump = -5
 grounded = false
 lose = false

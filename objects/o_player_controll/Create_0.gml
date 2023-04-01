@@ -6,18 +6,10 @@ player = {
 	coins:0,
 	coins_per_second: 0,
 	upgrades: [],
-	shop_items: [
-	{
-		name:"Cake",
-		level:1,
-		sprite_key: "s_item",
-		price: 1,
-		coins_per_second: 0.1,
-		sprite: s_coin
-	}
-	],
+	shop_items: [],
+	craft_items:[],
 	achievements: [],
-	secret_items: [1],
+	secret_items: [],
 	track:{
 		collectables: {
 			coins:{

@@ -1,16 +1,20 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function btn_tab(_layer_name,_sprite, _func) constructor {
+function btn_tab(_layer_name,_sprite, _func, _list) constructor {
 	layer_name = _layer_name
 	func = _func
 	sprite = _sprite
+	list = _list
+	
 	height = 40
 	width = 40
 	hover = 0
 	l_click = 0
 	color = c_white
 	scale = 1
+	
 	left_click_method = function(){
+		if (array_length(list) == 0) exit
 		if !layer_get_visible("Shop") exit
 		instance_destroy(o_shop_item)
 		layer_set_visible(o_shop.open_panel, false)
@@ -20,13 +24,18 @@ function btn_tab(_layer_name,_sprite, _func) constructor {
 	}
 	
 	step_method = function(){ 
-			color = hover ? c_green : c_white
-			if hover and l_click {
-				left_click_method()
-			}
+		if (array_length(list) == 0) { 
+			color = c_black
+			exit
+		}
+		color = hover ? c_green : c_white
+		if hover and l_click {
+			left_click_method()
+		}
 	}	
 	
 	end_step_method = function(){
+		if (array_length(list) == 0) exit
 		var _mouse_x = device_mouse_x_to_gui(0);
 		var _mouse_y = device_mouse_y_to_gui(0);
 		var _spr_width = sprite_get_width(sprite) * scale;
