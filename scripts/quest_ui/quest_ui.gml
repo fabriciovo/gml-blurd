@@ -1,4 +1,4 @@
-function achivment_ui(_name, _sprite) constructor{
+function quest_ui(_name, _sprite) constructor{
 	name = _name
 	sprite_ = _sprite
 	

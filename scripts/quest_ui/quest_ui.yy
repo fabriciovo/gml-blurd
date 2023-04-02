@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "achivment_reward",
+  "name": "quest_ui",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Achivments",
-    "path": "folders/Scripts/Achivments.yy",
+    "name": "Quest",
+    "path": "folders/Scripts/Quest.yy",
   },
 }

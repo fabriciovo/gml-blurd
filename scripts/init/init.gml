@@ -14,14 +14,6 @@ function init(){
 		}
 	}
 	
-	global.inventory = {
-		first_bonus_stage: {
-			name:"Bonus Stage",
-			stage_name:"rm_bonus_stage_1",
-			description: "When you use it, you unlock a portal to a bonus stage"
-		}
-	}
-
 	global.upgrade_items = {
 		speed_drink: {
 			name:"Speed Drink",
@@ -57,7 +49,7 @@ function init(){
 		},
 	}
 	
-	global.achievements = {
+	global.quests = {
 		five_coins: {
 			name:"Five Coins",
 			progress: {
@@ -72,10 +64,10 @@ function init(){
 				var _track_value = o_player_controll.player.track.collectables.coins.value
 				progress.count = _track_value
 				if _track_value >= progress.max_count {
-					achivment_reward(
+					quest_reward(
 					o_player_controll.player.shop_items,
 					global.shop_items.cake,
-					global.achievements.five_coins)
+					global.quests.five_coins)
 				}
 			}
 		},
@@ -93,10 +85,10 @@ function init(){
 				var _track_value = o_player_controll.player.track.collectables.coins.value
 				progress.count = _track_value
 				if _track_value >= progress.max_count {
-					achivment_reward(
+					quest_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.spike_head,
-					global.achievements.new_challenge)
+					global.quests.new_challenge)
 				}
 			}
 		},
@@ -114,10 +106,10 @@ function init(){
 				var _track_value = o_player_controll.player.track.monsters.spike_head.value
 				progress.count = _track_value
 				if _track_value >= progress.max_count {
-					achivment_reward(
+					quest_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.snail,
-					global.achievements.new_challenge_2)
+					global.quests.new_challenge_2)
 				}
 			}
 		},
@@ -135,10 +127,10 @@ function init(){
 				var _track_value = o_player_controll.player.track.monsters.spike_head.value
 				progress.count = _track_value
 				if _track_value >= progress.max_count {
-					achivment_reward(
+					quest_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.angry_bird,
-					global.achievements.new_challenge_3)
+					global.quests.new_challenge_3)
 				}
 			}
 		},
@@ -156,10 +148,10 @@ function init(){
 				var _track_value = o_player_controll.player.track.collectables.coins.value
 				progress.count = _track_value
 				if _track_value >= progress.max_count {
-					achivment_reward(
+					quest_reward(
 					o_player_controll.player.upgrades,
 					global.upgrade_items.speed_drink,
-					global.achievements.new_challenge_4)
+					global.quests.new_challenge_4)
 				}
 			}
 		}
@@ -182,4 +174,25 @@ function init(){
 		}
 	]
 		
+	global.craft_bag = [
+		{
+			name:"Spike",
+			description: "",
+			sprite: s_item,
+			count: 0,
+		},
+		{
+			name:"Bird Feather",
+			description: "",
+			sprite: s_item,
+			count: 0,
+		},
+		{
+			name:"Snail Hull",
+			description: "",
+			sprite: s_item,
+			count: 0,
+		}
+	
+	]
 }

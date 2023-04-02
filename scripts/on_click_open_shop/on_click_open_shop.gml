@@ -45,7 +45,7 @@ function create_upgrade_shop(){
 }
 
 function create_achievement_shop(){
-	var _upgrade_layer = layer_get_id("Achievements")
+	var _upgrade_layer = layer_get_id("Quest")
 	var _sep = 6;
 
 	var _x = 0;
@@ -56,20 +56,21 @@ function create_achievement_shop(){
 	var _x = 54;
 	
 	var _y = _y + _sep;
-	var _player_achivments = o_player_controll.player.achievements
-	var _array_achivments_size = variable_struct_names_count(global.achievements)
-	var _keys = variable_struct_get_names(global.achievements);
+	var _player_quests = o_player_controll.player.quests
+	var _array_quest_size = variable_struct_names_count(global.quests)
+	var _keys = variable_struct_get_names(global.quests);
 	for (var _i = array_length(_keys)-1; _i >= 0; --_i) {
 		var _k = _keys[_i];
-		var _achivment = variable_struct_get(global.achievements, _k);
-		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new Item_Achievement_UI(_achivment,_i,_w,_h));
+		var _quest = variable_struct_get(global.quests, _k);
+		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new Item_Quest_UI(_quest,_i,_w,_h));
 		_y += (_h + _sep);
 	}
 	
 }
 
 function create_craft_bag(){
-	var _layer = layer_get_id("Craft_Bag")
+		var _layer = layer_get_id("Craft_Bag")
+		var _size = array_length(o_player_controll.player.craft_items)
 		var _margin = 24;
 		var _sep = 6;
 		var _cell_size = 40;
@@ -82,12 +83,14 @@ function create_craft_bag(){
 
 		var _x = 0;
 		var _y = 0;
+		
+		
 
-	for (var _i = 0; _i < 42; _i++ ){
+	for (var _i = 0; _i < _size; _i++ ){
 		var _button_x = _inv_x + (_sep + _cell_size) * _x;
 		var _button_y = _inv_y + (_sep + _cell_size) * _y;
 
-		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Craftbag_UI({name:"item"},_i,40,40) );
+		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Craftbag_UI(global.craft_bag[_i] ,_i,40,40) );
 		
 		_x++;
 	
@@ -98,7 +101,7 @@ function create_craft_bag(){
 	}	
 }
 
-function create_inventory(){
+function create_secret_items(){
 		var _layer = layer_get_id("Inventory")
 		var _size = array_length(global.secret_items)
 		var _margin = 24;
@@ -117,10 +120,10 @@ function create_inventory(){
 
 
 	for (var _i = 0; _i < _size; _i++ ){
-		var _button_x = _inv_x + (_sep + _cell_size) * _x;
-		var _button_y = _inv_y + (_sep + _cell_size) * _y;
+		var _x = _inv_x + (_sep + _cell_size) * _x;
+		var _y = _inv_y + (_sep + _cell_size) * _y;
 
-		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Inventory_UI(global.secret_items[_i],_i,80,80) );
+		instance_create_layer(_x, _y, _layer, o_shop_item, new Item_Secret_UI(global.secret_items[_i],_i,80,80) );
 		
 		_x++;
 	
@@ -143,9 +146,9 @@ if _value == false {
 	layer_set_visible("Items", true)
 	instance_create_depth(70,global.VH - 150,0,o_btn_item, new btn_tab("Items", s_shop_icon_placeholder, create_itens_shop,o_player_controll.player.shop_items))
 	instance_create_depth(110,global.VH - 150,0,o_btn_item, new btn_tab("Upgrades", s_shop_icon_placeholder,create_upgrade_shop,o_player_controll.player.upgrades))
-	instance_create_depth(150,global.VH - 150,0,o_btn_item, new btn_tab("Achievements", s_shop_icon_placeholder, create_achievement_shop,o_player_controll.player.achievements))
+	instance_create_depth(150,global.VH - 150,0,o_btn_item, new btn_tab("Quest", s_shop_icon_placeholder, create_achievement_shop,o_player_controll.player.quests))
 	instance_create_depth(190,global.VH - 150,0,o_btn_item, new btn_tab("Craft_Bag", s_shop_icon_placeholder, create_craft_bag,o_player_controll.player.craft_items))
-	instance_create_depth(230,global.VH - 150,0,o_btn_item, new btn_tab("Inventory", s_shop_icon_placeholder, create_inventory,o_player_controll.player.secret_items))
+	instance_create_depth(230,global.VH - 150,0,o_btn_item, new btn_tab("Inventory", s_shop_icon_placeholder, create_secret_items,o_player_controll.player.secret_items))
 }else{
 	instance_destroy(o_shop_item)
 	instance_destroy(o_btn_item)
