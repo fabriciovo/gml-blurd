@@ -23,7 +23,7 @@ function Hero() constructor {
 	
 	step_method = function() {
 		var _touch = device_mouse_check_button_pressed(0, mb_left)
-		var _space  = keyboard_check_pressed(ord("J"))
+		var _space  = keyboard_check_pressed(vk_space)
 		
 		if(_touch || _space) vsp = jump {
 			Apply_Gravity()
