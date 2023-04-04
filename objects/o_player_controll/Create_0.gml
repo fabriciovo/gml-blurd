@@ -7,7 +7,7 @@ player = {
 	coins_per_second: 0,
 	upgrades: [],
 	shop_items: [],
-	craft_items:[1,1],
+	craft_items:[],
 	quests: [],
 	secret_items: [],
 	track:{

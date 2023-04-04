@@ -15,13 +15,13 @@ function Item_UI(_item,_index, _width, _height) constructor {
 		if o_player_controll.player.coins >= item.price {
 			color = hover ? c_green : c_blue
 			if hover and l_click {
-				o_player_controll.player.coins -= item.price
-				item.coins_per_second = item.coins_per_second * item.level
-				o_player_controll.player.coins_per_second += item.coins_per_second
-				o_player_controll.player.shop_items[index].level++
-				o_player_controll.player.shop_items[index].price = item.price * 2
-				o_player_controll.player.shop_items[index].coins_per_second = item.coins_per_second
-				item = o_player_controll.player.shop_items[index]
+				var _player = o_player_controll.player;
+				_player.coins -= item.price
+				_player.coins_per_second += item.coins_per_second
+				_player.shop_items[index].level++
+				_player.shop_items[index].price = item.price * 2
+				_player.shop_items[index].coins_per_second = item.coins_per_second
+				item = _player.shop_items[index]
 			}
 			
 		}else {
@@ -136,7 +136,7 @@ function Item_Upgrade_UI(_item,_index, _width, _height) constructor {
 		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _name);
 		draw_text(x + _margin * 19 + _size_new, y + _margin + 2, "Lvl: " + string(item.level));
 		draw_text(x + _margin * 2 + _size_new, y + _margin + 20, "Price: " + string(item.price));
-		draw_text(x + _margin * 26 + _size_new, y + _margin + 20, "Price: " + string(item.type));
+		draw_text(x + _margin * 26 + _size_new, y + _margin + 20, "Type: " + string(item.type));
 	}
 	draw_gui_end_method = function(){}
 
@@ -246,7 +246,7 @@ function Item_Craftbag_UI(_item,_index, _width, _height) constructor {
 		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 3 - 10, y + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
 
 		draw_set_font(fnt_shop_item);
-		//draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _name);
+		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, item.count);
 	}
 	draw_gui_end_method = function(){}
 }

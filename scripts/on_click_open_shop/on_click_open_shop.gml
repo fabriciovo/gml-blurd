@@ -86,7 +86,7 @@ function create_craft_bag(){
 		
 		
 
-	for (var _i = 0; _i < _size; _i++ ){
+	for (var _i = 0; _i < 3; _i++ ){
 		var _button_x = _inv_x + (_sep + _cell_size) * _x;
 		var _button_y = _inv_y + (_sep + _cell_size) * _y;
 
