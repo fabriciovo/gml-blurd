@@ -28,6 +28,7 @@ function init(){
 			level:0,
 			price:1,
 			number:0,
+			spawn_timer: 1,
 			type:"Monster",
 			sprite: s_coin,
 		},
@@ -195,4 +196,15 @@ function init(){
 		}
 	
 	]
+	
+	global.monsters = {
+		spike_head: {
+			name:"Spike Head",
+			description:"description",
+			spawn_timer: 1,
+			can_spawn: true,
+			level: 0,
+			number: -1
+		}
+	}
 }

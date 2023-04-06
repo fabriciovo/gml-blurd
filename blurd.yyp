@@ -87,6 +87,7 @@
     {"id":{"name":"s_hat","path":"sprites/s_hat/s_hat.yy",},},
     {"id":{"name":"o_bonus_stage_controller","path":"objects/o_bonus_stage_controller/o_bonus_stage_controller.yy",},},
     {"id":{"name":"o_monster_spawn","path":"objects/o_monster_spawn/o_monster_spawn.yy",},},
+    {"id":{"name":"spawn_monster","path":"scripts/spawn_monster/spawn_monster.yy",},},
     {"id":{"name":"on_click_open_shop","path":"scripts/on_click_open_shop/on_click_open_shop.yy",},},
     {"id":{"name":"s_btn","path":"sprites/s_btn/s_btn.yy",},},
     {"id":{"name":"s_blurd_run","path":"sprites/s_blurd_run/s_blurd_run.yy",},},

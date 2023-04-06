@@ -1,11 +1,15 @@
-function Monster() constructor {
-	image_speed = 0
+function Monster(_lvl) constructor {	
+	lvl = _lvl
+	
 	grav = 0
 	vsp = 0
 	jump = 0
 	hsp = global.game_speed
 	grounded = false
 	_track_key = ""
+	
+	image_speed = 0
+	
 	create_method = function(){
 		show_error("METHOD NOT IMPLEMENTED",true)
 	}
@@ -37,7 +41,7 @@ function Monster() constructor {
 	}
 
 }
-function Spike_Head() : Monster() constructor {
+function Spike_Head(_lvl) : Monster(_lvl) constructor {
 	sprite_index = s_spike_head
 	image_speed = 0
 	_track_key = "spike_head"
@@ -60,7 +64,7 @@ function Spike_Head() : Monster() constructor {
 		}
 	}
 }
-function Snail() : Monster() constructor {
+function Snail(_lvl) : Monster(_lvl) constructor {
 	sprite_index = s_snail
 	_track_key = "snail"
 	create_method = function(){
@@ -112,7 +116,7 @@ function Snail() : Monster() constructor {
 	}
 	
 }
-function Fly() : Monster() constructor {
+function Angry_Bird(_lvl) : Monster(_lvl) constructor {
 	sprite_index = s_fly
 	image_speed = 0
 	hsp = global.game_speed

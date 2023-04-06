@@ -58,6 +58,7 @@
     {"name":"o_btn_shop","order":6,"path":"objects/o_btn_shop/o_btn_shop.yy",},
     {"name":"o_powerup_spawn","order":1,"path":"objects/o_powerup_spawn/o_powerup_spawn.yy",},
     {"name":"o_monster_spawn","order":1,"path":"objects/o_monster_spawn/o_monster_spawn.yy",},
+    {"name":"spawn_monster","order":1,"path":"scripts/spawn_monster/spawn_monster.yy",},
     {"name":"on_click_open_shop","order":4,"path":"scripts/on_click_open_shop/on_click_open_shop.yy",},
     {"name":"s_blurd_run","order":2,"path":"sprites/s_blurd_run/s_blurd_run.yy",},
     {"name":"fnt_ui","order":1,"path":"fonts/fnt_ui/fnt_ui.yy",},
