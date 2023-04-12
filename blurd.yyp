@@ -92,7 +92,7 @@
     {"id":{"name":"s_btn","path":"sprites/s_btn/s_btn.yy",},},
     {"id":{"name":"s_blurd_run","path":"sprites/s_blurd_run/s_blurd_run.yy",},},
     {"id":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},},
-    {"id":{"name":"Monster","path":"scripts/Monster/Monster.yy",},},
+    {"id":{"name":"constructor_monster","path":"scripts/constructor_monster/constructor_monster.yy",},},
     {"id":{"name":"s_snail","path":"sprites/s_snail/s_snail.yy",},},
     {"id":{"name":"s_shop_icon_placeholder","path":"sprites/s_shop_icon_placeholder/s_shop_icon_placeholder.yy",},},
     {"id":{"name":"s_bkg_grass_land","path":"sprites/s_bkg_grass_land/s_bkg_grass_land.yy",},},

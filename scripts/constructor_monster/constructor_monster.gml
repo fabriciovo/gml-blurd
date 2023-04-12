@@ -1,4 +1,4 @@
-function Monster(_level) constructor {	
+function constructor_monster(_level) constructor {	
 	level = _level
 	drop = []
 	grav = 0
@@ -47,7 +47,7 @@ function Monster(_level) constructor {
 	}
 
 }
-function Spike_Head(_level) : Monster(_level) constructor {
+function constructor_monster_spike_head(_level) : constructor_monster(_level) constructor {
 	sprite_index = s_spike_head
 	image_speed = 0
 	_track_key = "spike_head"
@@ -79,7 +79,7 @@ function Spike_Head(_level) : Monster(_level) constructor {
 		}
 	}
 }
-function Snail(_level) : Monster(_level) constructor {
+function constructor_monster_snail(_level) : constructor_monster(_level) constructor {
 	sprite_index = s_snail
 	_track_key = "snail"
 	create_method = function(){
@@ -131,7 +131,7 @@ function Snail(_level) : Monster(_level) constructor {
 	}
 	
 }
-function Angry_Bird(_level) : Monster(_level) constructor {
+function constructor_monster_angry_bird(_level) : constructor_monster(_level) constructor {
 	sprite_index = s_fly
 	image_speed = 0
 	hsp = global.game_speed

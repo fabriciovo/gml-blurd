@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Monster",
+  "name": "constructor_monster",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
