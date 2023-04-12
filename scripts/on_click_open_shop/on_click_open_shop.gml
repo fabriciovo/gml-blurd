@@ -123,7 +123,7 @@ function create_secret_items(){
 		var _x = _inv_x + (_sep + _cell_size) * _x;
 		var _y = _inv_y + (_sep + _cell_size) * _y;
 
-		instance_create_layer(_x, _y, _layer, o_shop_item, new Item_Secret_UI(global.secret_items[_i],_i,80,80) );
+		instance_create_layer(_x, _y, _layer, o_shop_item, new Item_Secret_UI(_i,80,80) );
 		
 		_x++;
 	

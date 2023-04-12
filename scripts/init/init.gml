@@ -184,6 +184,20 @@ function init(){
 			},
 			func: function(){
 				room_goto(rm_bonus_stage_1)
+			},
+			craft: function() {
+				var _player_craft_items = o_player_controll.player.craft_items
+				var _player_secret_items = o_player_controll.player.secret_items
+				if _player_craft_items[0] >= craft_items.spikes  
+				and _player_craft_items[1] >= craft_items.feather  
+				and _player_craft_items[2] >= craft_items.shelled {
+					_player_craft_items[0] -= craft_items.spikes
+					_player_craft_items[1] -= craft_items.feather
+					_player_craft_items[2] -= craft_items.shelled
+					_player_secret_items[0] += 1
+					
+				
+				}
 			}
 		}
 	]
