@@ -1,6 +1,6 @@
 function Monster(_level) constructor {	
 	level = _level
-	
+	drop = []
 	grav = 0
 	vsp = 0
 	jump = 0
@@ -23,7 +23,6 @@ function Monster(_level) constructor {
 		}
 	}
 	destroy_method = function(){
-		show_message(level)
 		instance_create_layer(x,y,"Instances",o_particle, new Particles(s_effect_placeholder))
 	}
 	event_method = function(){
@@ -37,7 +36,13 @@ function Monster(_level) constructor {
 	player_collision = function(){
 		var _monster = variable_struct_get(o_player_controll.player.track.monsters,_track_key)
 		_monster.value++
-		//instance_create_layer(x,y,"Instances",o_pickup, new Apple())
+		
+		if level > 3 {
+			var _drop_size = array_length(drop);
+			var _drop_index = random_range(0, _drop_size);
+			instance_create_layer(x,y,"Instances",o_pickup,new drop[_drop_index]())
+		}
+		
 		instance_destroy()
 	}
 
@@ -51,6 +56,15 @@ function Spike_Head(_level) : Monster(_level) constructor {
 		jump = -6
 		image_index = 0
 		alarm[0] = random(3) * (global.one_second / 2)
+		
+		
+		if level > 3 {
+			array_push(drop, constructor_pickup_spike);
+		}
+		if level > 5 {
+			array_push(drop, constructor_pickup_spike);
+		}
+
 	}
 	
 	alarm_method = function(){

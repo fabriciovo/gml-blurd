@@ -10,7 +10,6 @@ for(var _i = 0; _i < _size_secret_items; _i++){
 
 
 var _size_craft_bag = array_length(global.craft_bag);
-show_message(_size_craft_bag)
 for(var _i = 0; _i < _size_craft_bag; _i++){
 	var _player_array = o_player_controll.player.craft_items
 	if not array_get_index(_player_array, _i) {

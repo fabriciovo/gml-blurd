@@ -146,7 +146,7 @@
     {"id":{"name":"s_fly","path":"sprites/s_fly/s_fly.yy",},},
     {"id":{"name":"fnt_title","path":"fonts/fnt_title/fnt_title.yy",},},
     {"id":{"name":"init","path":"scripts/init/init.yy",},},
-    {"id":{"name":"Pickup","path":"scripts/Pickup/Pickup.yy",},},
+    {"id":{"name":"constructor_pickup","path":"scripts/constructor_pickup/constructor_pickup.yy",},},
     {"id":{"name":"s_shop_upgrades","path":"sprites/s_shop_upgrades/s_shop_upgrades.yy",},},
     {"id":{"name":"Hero","path":"scripts/Hero/Hero.yy",},},
     {"id":{"name":"o_particle","path":"objects/o_particle/o_particle.yy",},},

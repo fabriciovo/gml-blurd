@@ -90,7 +90,7 @@ function create_craft_bag(){
 		var _button_x = _inv_x + (_sep + _cell_size) * _x;
 		var _button_y = _inv_y + (_sep + _cell_size) * _y;
 
-		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Craftbag_UI(global.craft_bag[_i] ,_i,40,40) );
+		var _button = instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new Item_Craftbag_UI(_i,40,40) );
 		
 		_x++;
 	
