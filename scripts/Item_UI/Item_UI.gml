@@ -16,12 +16,16 @@ function Item_UI(_item,_index, _width, _height) constructor {
 			color = hover ? c_green : c_blue
 			if hover and l_click {
 				var _player = o_player_controll.player;
+				var _key = _player.shop_items[index].key
 				_player.coins -= item.price
 				_player.coins_per_second += item.coins_per_second
 				_player.shop_items[index].level++
 				_player.shop_items[index].price = item.price * 2
 				_player.shop_items[index].coins_per_second = item.coins_per_second
 				item = _player.shop_items[index]
+				var struct = variable_struct_get(global.shop_items, _key)
+				struct.level = item.level 
+							
 			}
 			
 		}else {
@@ -90,10 +94,15 @@ function Item_Upgrade_UI(_item,_index, _width, _height) constructor {
 		if o_player_controll.player.coins >= item.price {
 			color = hover ? c_green : c_blue
 			if hover and l_click {
-				o_player_controll.player.coins -= item.price
-				o_player_controll.player.upgrades[index].level++
-				o_player_controll.player.upgrades[index].price = item.price * 2
-				item = o_player_controll.player.upgrades[index]
+				var _player = o_player_controll.player
+				var _key = _player.upgrades[index].key
+				_player.coins -= item.price
+				_player.upgrades[index].level++
+				_player.upgrades[index].price = item.price * 2
+				item = _player.upgrades[index]
+				var struct = variable_struct_get(global.upgrade_items, _key)
+				struct.level = item.level 
+							
 			}
 			
 		}else {

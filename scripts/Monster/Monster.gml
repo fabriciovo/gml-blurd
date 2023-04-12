@@ -1,5 +1,5 @@
-function Monster(_lvl) constructor {	
-	lvl = _lvl
+function Monster(_level) constructor {	
+	level = _level
 	
 	grav = 0
 	vsp = 0
@@ -23,6 +23,7 @@ function Monster(_lvl) constructor {
 		}
 	}
 	destroy_method = function(){
+		show_message(level)
 		instance_create_layer(x,y,"Instances",o_particle, new Particles(s_effect_placeholder))
 	}
 	event_method = function(){
@@ -41,7 +42,7 @@ function Monster(_lvl) constructor {
 	}
 
 }
-function Spike_Head(_lvl) : Monster(_lvl) constructor {
+function Spike_Head(_level) : Monster(_level) constructor {
 	sprite_index = s_spike_head
 	image_speed = 0
 	_track_key = "spike_head"
@@ -64,7 +65,7 @@ function Spike_Head(_lvl) : Monster(_lvl) constructor {
 		}
 	}
 }
-function Snail(_lvl) : Monster(_lvl) constructor {
+function Snail(_level) : Monster(_level) constructor {
 	sprite_index = s_snail
 	_track_key = "snail"
 	create_method = function(){
@@ -116,7 +117,7 @@ function Snail(_lvl) : Monster(_lvl) constructor {
 	}
 	
 }
-function Angry_Bird(_lvl) : Monster(_lvl) constructor {
+function Angry_Bird(_level) : Monster(_level) constructor {
 	sprite_index = s_fly
 	image_speed = 0
 	hsp = global.game_speed

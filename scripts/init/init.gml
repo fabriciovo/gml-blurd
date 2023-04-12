@@ -5,48 +5,61 @@ function init(){
 	
 	global.shop_items = {
 		cake: {
+			key:"cake",
 			name:"Cake",
 			level:1,
 			sprite_key: "s_item",
 			price: 1,
 			coins_per_second: 0.1,
-			sprite: s_coin
+			sprite: s_coin,
 		}
 	}
 	
 	global.upgrade_items = {
 		speed_drink: {
+			key:"speed_drink",
 			name:"Speed Drink",
 			level:0,
 			sprite: s_coin,
 			price: 5,
+			can_spawn: true,
+			spawn_timer: 1,
 			number:0,
-			type: "Power Up"
+			type: "Power Up",
 		},
 		spike_head: {
+			key:"spike_head",
 			name:"Spike Head",
 			level:0,
 			price:1,
 			number:0,
+			can_spawn: true,
 			spawn_timer: 1,
 			type:"Monster",
 			sprite: s_coin,
 		},
 		snail: {
+			key:"snail",
 			name:"Snail",
 			level:0,
 			sprite: s_coin,
 			number:1,
 			price: 10,
-			type:"Monster"
+			type:"Monster",
+			can_spawn: true,
+			spawn_timer: 1,
 		},
 		angry_bird: {
+			key:"angry_bird",
 			name:"Angry Bird",
 			level:0,
 			sprite: s_coin,
 			number:2,
 			price: 10,
-			type:"Monster"
+			type:"Monster",
+			can_spawn: true,
+			spawn_timer: 1,
+
 		},
 	}
 	
