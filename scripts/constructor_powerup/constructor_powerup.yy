@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Item",
+  "name": "constructor_powerup",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Scripts/Shop.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }

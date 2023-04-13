@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "spawn_monster",
+  "name": "_init",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Monsters",
-    "path": "folders/Scripts/Monsters.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }

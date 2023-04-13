@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Hero",
+  "name": "constructor_hero",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Heroes",
-    "path": "folders/Scripts/Heroes.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }

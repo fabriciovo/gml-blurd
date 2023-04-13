@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "init",
+  "name": "constructor_hat",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

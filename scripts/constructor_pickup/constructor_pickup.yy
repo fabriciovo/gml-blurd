@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Pickup",
-    "path": "folders/Scripts/Pickup.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }
