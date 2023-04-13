@@ -3,7 +3,7 @@ if room == rm_game {
 	
 	//TODO - Change objects for functions
 	
-	instance_create_layer(x-70,y,"Instances",o_player, new Blurd())
+	instance_create_layer(x-70,y,"Instances",o_player, new constrtuctor_hero_blurd())
 	instance_create_layer(x,y,"Instances", o_powerup_controll)
 	instance_create_layer(172,260,"Instances", o_monster_spawn)
 	instance_create_layer(x,y,"Instances", o_coin_spawn)

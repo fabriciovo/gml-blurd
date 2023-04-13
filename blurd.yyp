@@ -59,9 +59,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
   ],
-  "IncludedFiles": [
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"shop_items.json","CopyToMask":-1,"filePath":"datafiles",},
-  ],
+  "IncludedFiles": [],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
@@ -118,7 +116,7 @@
     {"id":{"name":"Apply_Gravity","path":"scripts/Apply_Gravity/Apply_Gravity.yy",},},
     {"id":{"name":"JSON_read","path":"scripts/JSON_read/JSON_read.yy",},},
     {"id":{"name":"quest_reward","path":"scripts/quest_reward/quest_reward.yy",},},
-    {"id":{"name":"Item_UI","path":"scripts/Item_UI/Item_UI.yy",},},
+    {"id":{"name":"Item","path":"scripts/Item/Item.yy",},},
     {"id":{"name":"o_login_controll","path":"objects/o_login_controll/o_login_controll.yy",},},
     {"id":{"name":"rm_signin","path":"rooms/rm_signin/rm_signin.yy",},},
     {"id":{"name":"s_shop_achivments","path":"sprites/s_shop_achivments/s_shop_achivments.yy",},},
