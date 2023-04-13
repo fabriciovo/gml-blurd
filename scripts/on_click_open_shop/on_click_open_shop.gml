@@ -56,10 +56,10 @@ function create_quest_panel(){
 	var _x = 54;
 	
 	var _y = _y + _sep;
-	var _keys = variable_struct_get_names(global.quests);
+	var _keys = variable_struct_get_names(global.struct_quests);
 	for (var _i = array_length(_keys)-1; _i >= 0; --_i) {
 		var _k = _keys[_i];
-		var _quest = variable_struct_get(global.quests, _k);
+		var _quest = variable_struct_get(global.struct_quests, _k);
 		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_quest_item(_quest,_i,_w,_h));
 		_y += (_h + _sep);
 	}
@@ -100,7 +100,7 @@ function create_craft_bag(){
 
 function create_secret_items(){
 		var _layer = layer_get_id("Inventory")
-		var _size = array_length(global.secret_items)
+		var _size = array_length(global.array_secret_items)
 		var _margin = 24;
 		var _sep = 32;
 		var _cell_size = 60;

@@ -23,7 +23,7 @@ function constructor_shop_item(_item,_index, _width, _height) constructor {
 				_player.shop_items[index].price = item.price * 2
 				_player.shop_items[index].coins_per_second = item.coins_per_second
 				item = _player.shop_items[index]
-				var struct = variable_struct_get(global.shop_items, _key)
+				var struct = variable_struct_get(global.struct_shop_items, _key)
 				struct.level = item.level 
 							
 			}
@@ -99,7 +99,7 @@ function constructor_upgrade_item(_item,_index, _width, _height) constructor {
 				_player.upgrades[index].level++
 				_player.upgrades[index].price = item.price * 2
 				item = _player.upgrades[index]
-				var struct = variable_struct_get(global.upgrade_items, _key)
+				var struct = variable_struct_get(global.struct_upgrade_items, _key)
 				struct.level = item.level 
 							
 			}
@@ -237,8 +237,8 @@ function constructor_craft_bag_item(_index, _width, _height) constructor {
 		var _size = 4;
 		var _size_new = height - _margin * _size;
 
-		var _spr = global.craft_bag[index].sprite;
-		var _name = global.craft_bag[index].name;
+		var _spr = global.array_craft_bag[index].sprite;
+		var _name = global.array_craft_bag[index].name;
 		var _count = o_player_controll.player.craft_items[index];
 
 		draw_set_color(color);
@@ -273,7 +273,7 @@ function constructor_secret_item (_index, _width, _height) constructor {
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
 		var _count = o_player_controll.player.secret_items[index];
-		var _item = global.secret_items[index];
+		var _item = global.array_secret_items[index];
 		if _count > 0 {
 			sprite_color = c_white
 		}else{
@@ -305,8 +305,8 @@ function constructor_secret_item (_index, _width, _height) constructor {
 		var _size = 4;
 		var _size_new = height - _margin * _size;
 
-		var _spr = global.secret_items[index].sprite;
-		var _name = global.secret_items[index].name;
+		var _spr = global.array_secret_items[index].sprite;
+		var _name = global.array_secret_items[index].name;
 		var _count = o_player_controll.player.secret_items[index];
 		
 		draw_set_color(color);

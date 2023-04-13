@@ -13,6 +13,12 @@ function quest_reward(_player_array, _reward, _quest){
 		sprtie: _quest.sprite,
 		unlocked: _quest.unlocked,
 	}
+	
+	//TODO
+	var _reward_for_player = {
+		
+	}
+	
 	array_push(_player_array, _reward)
 	array_push(_array_quests,_quest_for_player)
 	instance_create_layer(global.VW / 2,50,"Instances", o_quest_ui, new quest_ui(_name, _sprite))

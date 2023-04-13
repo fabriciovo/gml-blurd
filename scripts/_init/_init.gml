@@ -3,7 +3,17 @@
 function init(){
 	gml_pragma("global", "init()");
 	
-	global.shop_items = {
+	enum ENUM_MATERIALS {
+		SPIKE,
+		FEATHER,
+		SHELL
+	}
+	
+	enum ENUM_SECRET_ITEMS {
+		SKY_STONE
+	}
+	
+	global.struct_shop_items = {
 		cake: {
 			key:"cake",
 			name:"Cake",
@@ -15,7 +25,7 @@ function init(){
 		}
 	}
 	
-	global.upgrade_items = {
+	global.struct_upgrade_items = {
 		speed_drink: {
 			key:"speed_drink",
 			name:"Speed Drink",
@@ -63,7 +73,7 @@ function init(){
 		},
 	}
 	
-	global.quests = {
+	global.struct_quests = {
 		five_coins: {
 			name:"Five Coins",
 			progress: {
@@ -80,8 +90,8 @@ function init(){
 				if _track_value >= progress.max_count {
 					quest_reward(
 					o_player_controll.player.shop_items,
-					global.shop_items.cake,
-					global.quests.five_coins)
+					global.struct_shop_items.cake,
+					global.struct_quests.five_coins)
 				}
 			}
 		},
@@ -101,8 +111,8 @@ function init(){
 				if _track_value >= progress.max_count {
 					quest_reward(
 					o_player_controll.player.upgrades,
-					global.upgrade_items.spike_head,
-					global.quests.new_challenge)
+					global.struct_upgrade_items.spike_head,
+					global.struct_quests.new_challenge)
 				}
 			}
 		},
@@ -122,8 +132,8 @@ function init(){
 				if _track_value >= progress.max_count {
 					quest_reward(
 					o_player_controll.player.upgrades,
-					global.upgrade_items.snail,
-					global.quests.new_challenge_2)
+					global.struct_upgrade_items.snail,
+					global.struct_quests.new_challenge_2)
 				}
 			}
 		},
@@ -143,8 +153,8 @@ function init(){
 				if _track_value >= progress.max_count {
 					quest_reward(
 					o_player_controll.player.upgrades,
-					global.upgrade_items.angry_bird,
-					global.quests.new_challenge_3)
+					global.struct_upgrade_items.angry_bird,
+					global.struct_quests.new_challenge_3)
 				}
 			}
 		},
@@ -164,14 +174,14 @@ function init(){
 				if _track_value >= progress.max_count {
 					quest_reward(
 					o_player_controll.player.upgrades,
-					global.upgrade_items.speed_drink,
-					global.quests.new_challenge_4)
+					global.struct_upgrade_items.speed_drink,
+					global.struct_quests.new_challenge_4)
 				}
 			}
 		}
 	}
 		
-	global.secret_items = [
+	global.array_secret_items = [
 		{
 			name:"Sky Stone",
 			description:"Open a portal to teleport you for bonus Stage",
@@ -195,14 +205,12 @@ function init(){
 					_player_craft_items[1] -= craft_items.feather
 					_player_craft_items[2] -= craft_items.shelled
 					_player_secret_items[0] += 1
-					
-				
 				}
 			}
 		}
 	]
 		
-	global.craft_bag = [
+	global.array_craft_bag = [
 		{
 			name:"Spike",
 			description: "",
@@ -223,15 +231,5 @@ function init(){
 		}
 	
 	]
-	
-	global.monsters = {
-		spike_head: {
-			name:"Spike Head",
-			description:"description",
-			spawn_timer: 1,
-			can_spawn: true,
-			level: 0,
-			number: -1
-		}
-	}
+
 }
