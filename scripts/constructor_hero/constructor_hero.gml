@@ -26,7 +26,7 @@ function constrtuctor_hero() constructor {
 		var _space  = keyboard_check_pressed(vk_space)
 		
 		if(_touch || _space) vsp = jump {
-			Apply_Gravity()
+			apply_gravity()
 		}
 		
 		if attack {

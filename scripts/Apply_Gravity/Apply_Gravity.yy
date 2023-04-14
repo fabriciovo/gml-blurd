@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Apply_Gravity",
+  "name": "apply_gravity",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

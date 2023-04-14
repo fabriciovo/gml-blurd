@@ -14,7 +14,7 @@ function constructor_monster(_level) constructor {
 		show_error("METHOD NOT IMPLEMENTED",true)
 	}
 	step_method = function(){
-		Apply_Gravity()
+		apply_gravity()
 		x += hsp
 	}
 	end_step_method = function(){

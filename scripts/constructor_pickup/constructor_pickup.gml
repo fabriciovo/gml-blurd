@@ -7,7 +7,7 @@ function constructor_pickup() constructor {
 	can_pickup = false;
 
 	step_method = function(){
-		Apply_Gravity()
+		apply_gravity()
 		
 		
 		if hsp <= 0 {

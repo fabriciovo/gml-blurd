@@ -22,6 +22,42 @@ function init(){
 			price: 1,
 			coins_per_second: 0.1,
 			sprite: s_coin,
+		},
+		milk: {
+			key:"milk",
+			name:"Milk",
+			level:1,
+			sprite_key: "s_item",
+			price: 5,
+			coins_per_second: 0.2,
+			sprite: s_coin,
+		},
+		chocolate: {
+			key:"chocolate",
+			name:"Chocolate",
+			level:1,
+			sprite_key: "s_item",
+			price: 22,
+			coins_per_second: 1,
+			sprite: s_coin,
+		},
+		candy: {
+			key:"chocolate",
+			name:"Chocolate",
+			level:1,
+			sprite_key: "s_item",
+			price: 22,
+			coins_per_second: 1,
+			sprite: s_coin,
+		},
+		ice_cream: {
+			key:"ice_cream",
+			name:"Ice Cream",
+			level:1,
+			sprite_key: "s_item",
+			price: 50,
+			coins_per_second: 1.5,
+			sprite: s_coin,
 		}
 	}
 	

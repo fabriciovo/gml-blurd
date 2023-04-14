@@ -3,6 +3,7 @@ switch(room){
 		room_goto_next()
 	break
 	case rm_game:
-		//pass
+
+
 	break
 }

@@ -1,4 +1,5 @@
-function Apply_Gravity(){
+
+function apply_gravity(){
 	vsp += grav
 	if(place_meeting(x,y+vsp,o_solid)){
 	

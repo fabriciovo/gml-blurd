@@ -10,7 +10,7 @@ if lose {
 	image_angle += 33
 }
 
-Apply_Gravity()
+apply_gravity()
 
 
 if y > global.VH {
