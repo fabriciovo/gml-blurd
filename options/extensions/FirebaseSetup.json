@@ -1,0 +1,14 @@
+{
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": {
+    "af7e8666-54d3-4cbd-b2a3-9ea5847d1e21": null,
+    "d898ff5d-783b-4206-bf9f-9fdcb8e7bf07": null,
+    "75639da0-a6d6-48e7-88d8-c81aa1f7ffff": null,
+    "f1646d22-9b39-40c6-95b7-0288f97d546f": null
+  },
+  "extensionId": {
+    "name": "FirebaseSetup",
+    "path": "extensions/FirebaseSetup/FirebaseSetup.yy"
+  },
+  "resourceVersion": "1.0"
+}

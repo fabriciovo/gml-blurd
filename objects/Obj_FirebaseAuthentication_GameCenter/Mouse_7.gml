@@ -1,2 +1,0 @@
-
-GameCenter_LocalPlayer_Authenticate()

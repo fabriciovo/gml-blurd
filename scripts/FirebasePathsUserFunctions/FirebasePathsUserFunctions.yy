@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "FirebasePathsUserFunctions",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Firebase Utils",
-    "path": "folders/Firebase Utils.yy",
+    "path": "folders/Packages/Firebase/Firebase Utils.yy",
   },
 }

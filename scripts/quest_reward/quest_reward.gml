@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function quest_reward(_player_array, _reward, _quest){
 	var _array_quests = o_player_controll.player.quests
+
 	var _name = _quest.name
 	var _sprite = _quest.sprite
 	
