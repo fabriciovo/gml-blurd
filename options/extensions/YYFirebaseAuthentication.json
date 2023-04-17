@@ -8,9 +8,6 @@
     },
     "04e841fc-69d6-4b67-9520-26032dc733fb": null
   },
-  "extensionId": {
-    "name": "YYFirebaseAuthentication",
-    "path": "extensions/YYFirebaseAuthentication/YYFirebaseAuthentication.yy"
-  },
+  "extensionId": null,
   "resourceVersion": "1.0"
 }

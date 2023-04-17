@@ -37,23 +37,21 @@ switch(async_load[?"type"])
 		var _path = async_load[?"path"]
 		var _value = async_load[?"value"]
 		var _json = json_decode(_value);
-		var _player =  o_player_controll.player;
+		var _player =  o_player_controll;
 		_player.coins = ds_map_find_value(_json, "coins");
 		_player.coins_per_second = ds_map_find_value(_json, "coins_per_second");
-		//_player.craft_items = json_parse(ds_map_find_value(_json, "craft_items"));
-		_player.quests = json_parse(ds_map_find_value(_json, "quests"));
-		//_player.secret_items = json_parse(ds_map_find_value(_json, "secret_items"));
-		//_player.shop_items = json_parse(ds_map_find_value(_json, "shop_items"));
 		_player.total_coins = ds_map_find_value(_json, "total_coins");
-		_player.track = json_parse( ds_map_find_value(_json, "track"));
+		_player.ds_shop_items = ds_map_find_value(_json, "shop_items");
+		//_player.craft_items = json_parse(ds_map_find_value(_json, "craft_items"));
+		//_player.quests = json_parse(ds_map_find_value(_json, "quests"));
+		//_player.secret_items = json_parse(ds_map_find_value(_json, "secret_items"));
+
+		//_player.total_coins = ds_map_find_value(_json, "total_coins");
+		//_player.track = json_parse( ds_map_find_value(_json, "track"));
 		//_player.upgrades = json_parse(ds_map_find_value(_json, "upgrades"));
-	
-		show_message(_player.upgrades)
 		ds_map_destroy(_json);
 		
 
-		
-			show_message(test)
 
 
 	break

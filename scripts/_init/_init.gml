@@ -15,55 +15,17 @@ function init(){
 	
 	global.struct_shop_items = {
 		cake: {
-			key:"cake",
-			name:"Cake",
+			name: "Cake",
 			level:1,
-			sprite_key: "s_item",
 			price: 1,
 			coins_per_second: 0.1,
-			sprite: s_coin,
+			sprite: s_item,
+			mult: 1.1
 		},
-		milk: {
-			key:"milk",
-			name:"Milk",
-			level:1,
-			sprite_key: "s_item",
-			price: 5,
-			coins_per_second: 0.2,
-			sprite: s_coin,
-		},
-		chocolate: {
-			key:"chocolate",
-			name:"Chocolate",
-			level:1,
-			sprite_key: "s_item",
-			price: 22,
-			coins_per_second: 1,
-			sprite: s_coin,
-		},
-		candy: {
-			key:"chocolate",
-			name:"Chocolate",
-			level:1,
-			sprite_key: "s_item",
-			price: 22,
-			coins_per_second: 1,
-			sprite: s_coin,
-		},
-		ice_cream: {
-			key:"ice_cream",
-			name:"Ice Cream",
-			level:1,
-			sprite_key: "s_item",
-			price: 50,
-			coins_per_second: 1.5,
-			sprite: s_coin,
-		}
 	}
 	
 	global.struct_upgrade_items = {
 		speed_drink: {
-			key:"speed_drink",
 			name:"Speed Drink",
 			level:0,
 			sprite: s_coin,
@@ -72,9 +34,9 @@ function init(){
 			spawn_timer: 1,
 			number:0,
 			type: "Power Up",
+			mult: 2
 		},
 		spike_head: {
-			key:"spike_head",
 			name:"Spike Head",
 			level:0,
 			price:1,
@@ -83,9 +45,9 @@ function init(){
 			spawn_timer: 1,
 			type:"Monster",
 			sprite: s_coin,
+			mult: 1.3
 		},
 		snail: {
-			key:"snail",
 			name:"Snail",
 			level:0,
 			sprite: s_coin,
@@ -94,9 +56,9 @@ function init(){
 			type:"Monster",
 			can_spawn: true,
 			spawn_timer: 1,
+			mult: 1.3
 		},
 		angry_bird: {
-			key:"angry_bird",
 			name:"Angry Bird",
 			level:0,
 			sprite: s_coin,
@@ -105,6 +67,7 @@ function init(){
 			type:"Monster",
 			can_spawn: true,
 			spawn_timer: 1,
+			mult: 1.3
 
 		},
 	}
@@ -125,7 +88,7 @@ function init(){
 				progress.count = _track_value
 				if _track_value >= progress.max_count {
 					quest_reward(
-					o_player_controll.player.shop_items,
+					o_player_controll.ds_shop_items,
 					global.struct_shop_items.cake,
 					global.struct_quests.five_coins)
 				}
@@ -267,5 +230,6 @@ function init(){
 		}
 	
 	]
+
 
 }

@@ -11,10 +11,12 @@ function create_items_shop(){
 	
 	var _y = _y + _sep;
 
-	var _list_items_size = array_length(o_player_controll.player.shop_items)
-	for (var _i = 0; _i < _list_items_size; _i++) {
-		var _item = o_player_controll.player.shop_items[_i]
-		instance_create_layer(_x,_y,_items_layer,o_shop_item, new constructor_shop_item(_item,_i,_w,_h));
+	var _list = o_player_controll.ds_shop_items
+	var _list_items_key = ds_map_keys_to_array(_list)
+	var _size = array_length(_list_items_key)
+	for (var _i = 0; _i < _size; _i++) {
+		var _key = _list_items_key[_i]
+		instance_create_layer(_x,_y,_items_layer,o_shop_item, new constructor_shop_item(_key,_w,_h));
 
 		_y += (_h + _sep);
 		
@@ -33,11 +35,12 @@ function create_upgrade_shop(){
 	var _h = 54;
 	var _x = 54;
 	
-	var _y = _y + _sep;
-	var _list_upgrades_size = array_length(o_player_controll.player.upgrades)
-	for (var _i = 0; _i < _list_upgrades_size; _i++) {
-	var _item = o_player_controll.player.upgrades[_i]
-	instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_item,_i,_w,_h));
+	var _list = o_player_controll.ds_upgrades
+	var _list_items_key = ds_map_keys_to_array(_list)
+	var _size = array_length(_list_items_key)
+	for (var _i = 0; _i < _size; _i++) {
+	var _key = _list_items_key[_i]
+	instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_key,_w,_h));
 
 	_y += (_h + _sep);
 		
@@ -141,11 +144,11 @@ var _value = layer_get_visible(_shop_layer)
 if _value == false {
 	create_items_shop()
 	layer_set_visible("Items", true)
-	instance_create_depth(70,global.VH - 150,0,o_btn_item, new btn_tab("Items", s_shop_icon_placeholder, create_items_shop,o_player_controll.player.shop_items))
-	instance_create_depth(110,global.VH - 150,0,o_btn_item, new btn_tab("Upgrades", s_shop_icon_placeholder,create_upgrade_shop,o_player_controll.player.upgrades))
-	instance_create_depth(150,global.VH - 150,0,o_btn_item, new btn_tab("Quest", s_shop_icon_placeholder, create_quest_panel,o_player_controll.player.quests))
-	instance_create_depth(190,global.VH - 150,0,o_btn_item, new btn_tab("Craft_Bag", s_shop_icon_placeholder, create_craft_bag,o_player_controll.player.craft_items))
-	instance_create_depth(230,global.VH - 150,0,o_btn_item, new btn_tab("Inventory", s_shop_icon_placeholder, create_secret_items,o_player_controll.player.secret_items))
+	instance_create_depth(70,global.VH - 150,0,o_btn_item, new btn_tab("Items", s_shop_icon_placeholder, create_items_shop,o_player_controll.ds_shop_items))
+	instance_create_depth(110,global.VH - 150,0,o_btn_item, new btn_tab("Upgrades", s_shop_icon_placeholder,create_upgrade_shop,o_player_controll.ds_upgrades))
+	//instance_create_depth(150,global.VH - 150,0,o_btn_item, new btn_tab("Quest", s_shop_icon_placeholder, create_quest_panel,o_player_controll.player.quests))
+	//instance_create_depth(190,global.VH - 150,0,o_btn_item, new btn_tab("Craft_Bag", s_shop_icon_placeholder, create_craft_bag,o_player_controll.player.craft_items))
+	//instance_create_depth(230,global.VH - 150,0,o_btn_item, new btn_tab("Inventory", s_shop_icon_placeholder, create_secret_items,o_player_controll.player.secret_items))
 }else{
 	instance_destroy(o_shop_item)
 	instance_destroy(o_btn_item)
