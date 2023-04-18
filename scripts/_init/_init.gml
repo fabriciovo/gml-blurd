@@ -38,6 +38,7 @@ function init(){
 			mult: 2
 		},
 		spike_head: {
+			key: "spike_head",
 			name:"Spike Head",
 			level:0,
 			price:1,
@@ -86,7 +87,9 @@ function init(){
 			unlocked: false,
 			condition: function(){
 				var _track_value = o_player_controll.ds_collectables[? "coins"].value
+				var _save_progress_value = o_player_controll.ds_quests[? "five_coins"].progress
 				progress.count = _track_value
+				_save_progress_value = _track_value
 				if _track_value >= progress.max_count {
 					var _reward_struct = variable_struct_get(global.struct_shop_items, "cake")
 					var _reward = { 
@@ -101,28 +104,40 @@ function init(){
 					"five_coins")
 				}
 			}
-		}
-		//new_challenge: {
-		//	name:"Ten Coins",
-		//	progress: {
-		//		text: "Collected Coins:",
-		//		count:0,
-		//		max_count:10
-		//	},
-		//	description: "",
-		//	sprite: s_item,
-		//	unlocked: false,
-		//	condition: function(){
-		//		var _track_value = o_player_controll.player.track.collectables.coins.value
-		//		progress.count = _track_value
-		//		if _track_value >= progress.max_count {
-		//			quest_reward(
-		//			o_player_controll.player.upgrades,
-		//			global.struct_upgrade_items.spike_head,
-		//			global.struct_quests.new_challenge)
-		//		}
-		//	}
-		//},
+		},
+		ten_coins: {
+			name:"Ten Coins",
+			progress: {
+				text: "Collected Coins:",
+				count:0,
+				max_count:10
+			},
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			condition: function(){
+				var _track_value = o_player_controll.ds_collectables[? "coins"].value
+				var _save_progress_value = o_player_controll.ds_quests[? "ten_coins"].progress
+				progress.count = _track_value
+				_save_progress_value = _track_value
+				if _track_value >= progress.max_count {
+					var _reward_struct = variable_struct_get(global.struct_upgrade_items, "spike_head")
+					var _reward = { 
+							level: 1,
+							price: _reward_struct.price,
+							type: _reward_struct.type,
+							number: _reward_struct.number,
+							value: 0
+						}
+					
+					quest_reward(
+					o_player_controll.ds_upgrades,
+					_reward_struct.key,
+					_reward,
+					"ten_coins")
+				}
+			}
+		},
 		//new_challenge_2: {
 		//	name:"Kill this Spikes",
 		//	progress: {
@@ -204,24 +219,17 @@ function init(){
 			},
 			craft: function() {
 				var _player_craft_items = o_player_controll.ds_craft_items
-				var _player_secret_items = o_player_controll.ds_secret_items
+				var _player_secret_items = o_player_controll.ds_secret_items		
 				
-				var _spike = ds_list_find_value(_player_craft_items,ENUM_MATERIALS.SPIKE)
-				var _feather = ds_list_find_value(_player_craft_items,ENUM_MATERIALS.FEATHER)
-				var _shell = ds_list_find_value(_player_craft_items,ENUM_MATERIALS.SHELL)
-				
-				var _sky_stone = ds_list_find_value(_player_secret_items, ENUM_SECRET_ITEMS.SKY_STONE)
-				
-				show_message(_feather)
-				
-				if _spike >= craft_items.spikes  
-				and _feather >= craft_items.feather  
-				and _shell >= craft_items.shell 
+
+				if _player_craft_items[| 0] >= craft_items.spikes  
+				and _player_craft_items[| 1] >= craft_items.feather  
+				and _player_craft_items[| 2] >= craft_items.shell 
 				{
-					_feather -= craft_items.spikes
-					_feather -= craft_items.feather
-					_shell -= craft_items.shell
-					_sky_stone += 1
+					_player_craft_items[| 0] -= craft_items.spikes
+					_player_craft_items[| 1] -= craft_items.feather
+					_player_craft_items[| 2] -= craft_items.shell
+					_player_secret_items[| 0] += 1
 				}
 			}
 		}

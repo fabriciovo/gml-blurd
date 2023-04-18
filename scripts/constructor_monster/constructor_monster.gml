@@ -34,7 +34,7 @@ function constructor_monster(_level) constructor {
 	}
 	
 	player_collision = function(){
-		var _monster = variable_struct_get(o_player_controll.player.track.monsters,_track_key)
+		var _monster = o_player_controll.ds_upgrades[? _track_key]
 		_monster.value++
 		
 		if level > 3 {

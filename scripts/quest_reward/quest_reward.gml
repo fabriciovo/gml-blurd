@@ -9,7 +9,7 @@ function quest_reward(_player_ds_list, _reward_key, _reward, _quest_key){
 	
 	_quest.unlocked = true
 	_player.ds_quests[? _quest_key].unlocked = true
-	show_message(_reward)
+
 	ds_map_add(_player_ds_list,_reward_key, _reward)
 	instance_create_layer(global.VW / 2,50,"Instances", o_quest_ui, new quest_ui(_name, _sprite))
 }
