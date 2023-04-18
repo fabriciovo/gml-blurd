@@ -84,7 +84,7 @@ function init(){
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				var _track_value = o_player_controll.player.track.collectables.coins.value
+				var _track_value = o_player_controll.ds_collectables[? "coins"].value
 				progress.count = _track_value
 				if _track_value >= progress.max_count {
 					quest_reward(
@@ -93,91 +93,91 @@ function init(){
 					global.struct_quests.five_coins)
 				}
 			}
-		},
-		new_challenge: {
-			name:"Ten Coins",
-			progress: {
-				text: "Collected Coins:",
-				count:0,
-				max_count:10
-			},
-			description: "",
-			sprite: s_item,
-			unlocked: false,
-			condition: function(){
-				var _track_value = o_player_controll.player.track.collectables.coins.value
-				progress.count = _track_value
-				if _track_value >= progress.max_count {
-					quest_reward(
-					o_player_controll.player.upgrades,
-					global.struct_upgrade_items.spike_head,
-					global.struct_quests.new_challenge)
-				}
-			}
-		},
-		new_challenge_2: {
-			name:"Kill this Spikes",
-			progress: {
-				text: "Spike Heads: ",
-				count:0,
-				max_count:10
-			},
-			description: "",
-			sprite: s_item,
-			unlocked: false,
-			condition: function(){
-				var _track_value = o_player_controll.player.track.monsters.spike_head.value
-				progress.count = _track_value
-				if _track_value >= progress.max_count {
-					quest_reward(
-					o_player_controll.player.upgrades,
-					global.struct_upgrade_items.snail,
-					global.struct_quests.new_challenge_2)
-				}
-			}
-		},
-		new_challenge_3: {
-			name:"New Challenges",
-			progress: {
-				text: "Spike Heads: ",
-				count:0,
-				max_count:50,
-			},
-			description: "",
-			sprite: s_item,
-			unlocked: false,
-			condition: function(){
-				var _track_value = o_player_controll.player.track.monsters.spike_head.value
-				progress.count = _track_value
-				if _track_value >= progress.max_count {
-					quest_reward(
-					o_player_controll.player.upgrades,
-					global.struct_upgrade_items.angry_bird,
-					global.struct_quests.new_challenge_3)
-				}
-			}
-		},
-		new_challenge_4: {
-			name:"More Speed",
-			progress: {
-				text: "Collect Coins: ",
-				count:0,
-				max_count: 200
-			},
-			description: "",
-			sprite: s_item,
-			unlocked: false,
-			condition: function(){
-				var _track_value = o_player_controll.player.track.collectables.coins.value
-				progress.count = _track_value
-				if _track_value >= progress.max_count {
-					quest_reward(
-					o_player_controll.player.upgrades,
-					global.struct_upgrade_items.speed_drink,
-					global.struct_quests.new_challenge_4)
-				}
-			}
 		}
+		//new_challenge: {
+		//	name:"Ten Coins",
+		//	progress: {
+		//		text: "Collected Coins:",
+		//		count:0,
+		//		max_count:10
+		//	},
+		//	description: "",
+		//	sprite: s_item,
+		//	unlocked: false,
+		//	condition: function(){
+		//		var _track_value = o_player_controll.player.track.collectables.coins.value
+		//		progress.count = _track_value
+		//		if _track_value >= progress.max_count {
+		//			quest_reward(
+		//			o_player_controll.player.upgrades,
+		//			global.struct_upgrade_items.spike_head,
+		//			global.struct_quests.new_challenge)
+		//		}
+		//	}
+		//},
+		//new_challenge_2: {
+		//	name:"Kill this Spikes",
+		//	progress: {
+		//		text: "Spike Heads: ",
+		//		count:0,
+		//		max_count:10
+		//	},
+		//	description: "",
+		//	sprite: s_item,
+		//	unlocked: false,
+		//	condition: function(){
+		//		var _track_value = o_player_controll.player.track.monsters.spike_head.value
+		//		progress.count = _track_value
+		//		if _track_value >= progress.max_count {
+		//			quest_reward(
+		//			o_player_controll.player.upgrades,
+		//			global.struct_upgrade_items.snail,
+		//			global.struct_quests.new_challenge_2)
+		//		}
+		//	}
+		//},
+		//new_challenge_3: {
+		//	name:"New Challenges",
+		//	progress: {
+		//		text: "Spike Heads: ",
+		//		count:0,
+		//		max_count:50,
+		//	},
+		//	description: "",
+		//	sprite: s_item,
+		//	unlocked: false,
+		//	condition: function(){
+		//		var _track_value = o_player_controll.player.track.monsters.spike_head.value
+		//		progress.count = _track_value
+		//		if _track_value >= progress.max_count {
+		//			quest_reward(
+		//			o_player_controll.player.upgrades,
+		//			global.struct_upgrade_items.angry_bird,
+		//			global.struct_quests.new_challenge_3)
+		//		}
+		//	}
+		//},
+		//new_challenge_4: {
+		//	name:"More Speed",
+		//	progress: {
+		//		text: "Collect Coins: ",
+		//		count:0,
+		//		max_count: 200
+		//	},
+		//	description: "",
+		//	sprite: s_item,
+		//	unlocked: false,
+		//	condition: function(){
+		//		var _track_value = o_player_controll.player.track.collectables.coins.value
+		//		progress.count = _track_value
+		//		if _track_value >= progress.max_count {
+		//			quest_reward(
+		//			o_player_controll.player.upgrades,
+		//			global.struct_upgrade_items.speed_drink,
+		//			global.struct_quests.new_challenge_4)
+		//		}
+		//	}
+		//}
 	}
 		
 	global.array_secret_items = [

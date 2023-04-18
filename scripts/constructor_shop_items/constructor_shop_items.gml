@@ -133,11 +133,10 @@ function constructor_upgrade_item(_key, _width, _height) constructor {
 
 }
 
-function constructor_quest_item(_item,_index, _width, _height) constructor {
+function constructor_quest_item(_key, _width, _height) constructor {
 	width = _width;
 	height = _height;
-	item = _item
-	index = _index;
+	item = variable_struct_get(global.struct_quests,_key)
 	hover = 0
 	l_click = 0
 	open_panel = false

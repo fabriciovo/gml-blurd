@@ -41,10 +41,7 @@ function constrtuctor_hero() constructor {
 			image_speed = .1
 			state = hero_sprite_state.jump
 		}
-		
-		//for (var _i = 0; _i <= 3; _i++) {
-		//	event_user(o_player_controll.player.upgrades[_i].number)
-		//}
+
 		
 		sprite_index = sprite_[state]
 	}
@@ -52,6 +49,7 @@ function constrtuctor_hero() constructor {
 	coin_collision_method = function() {
 		o_player_controll.coins += other.coin_value 
 		o_player_controll.total_coins += other.coin_value 
+		o_player_controll.ds_collectables[? "coins"].value++ 
 		instance_destroy(other)
 	} 
 
