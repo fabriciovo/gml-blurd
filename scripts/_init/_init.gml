@@ -197,21 +197,31 @@ function init(){
 			craft_items: {
 				spikes: 5,
 				feather: 5,
-				shelled: 5
+				shell: 5
 			},
 			func: function(){
 				room_goto(rm_bonus_stage_1)
 			},
 			craft: function() {
-				var _player_craft_items = o_player_controll.player.craft_items
-				var _player_secret_items = o_player_controll.player.secret_items
-				if _player_craft_items[0] >= craft_items.spikes  
-				and _player_craft_items[1] >= craft_items.feather  
-				and _player_craft_items[2] >= craft_items.shelled {
-					_player_craft_items[0] -= craft_items.spikes
-					_player_craft_items[1] -= craft_items.feather
-					_player_craft_items[2] -= craft_items.shelled
-					_player_secret_items[0] += 1
+				var _player_craft_items = o_player_controll.ds_craft_items
+				var _player_secret_items = o_player_controll.ds_secret_items
+				
+				var _spike = ds_list_find_value(_player_craft_items,ENUM_MATERIALS.SPIKE)
+				var _feather = ds_list_find_value(_player_craft_items,ENUM_MATERIALS.FEATHER)
+				var _shell = ds_list_find_value(_player_craft_items,ENUM_MATERIALS.SHELL)
+				
+				var _sky_stone = ds_list_find_value(_player_secret_items, ENUM_SECRET_ITEMS.SKY_STONE)
+				
+				show_message(_feather)
+				
+				if _spike >= craft_items.spikes  
+				and _feather >= craft_items.feather  
+				and _shell >= craft_items.shell 
+				{
+					_feather -= craft_items.spikes
+					_feather -= craft_items.feather
+					_shell -= craft_items.shell
+					_sky_stone += 1
 				}
 			}
 		}

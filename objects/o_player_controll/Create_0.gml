@@ -58,8 +58,12 @@ ds_shop_items = ds_map_create()
 ds_quests = ds_map_create()
 ds_upgrades = ds_map_create()
 ds_collectables = ds_map_create()
+ds_secret_items = ds_list_create()
+ds_craft_items = ds_list_create()
+
 ds_map_add(ds_collectables,"coins",{value:0})
-//ds_secret_items = ds_list_create()
-//ds_craft_items = ds_list_create()
+ds_map_add(ds_quests,"five_coins",{progress:0, unlocked: false})
+
+
 
 alarm[1] = 500

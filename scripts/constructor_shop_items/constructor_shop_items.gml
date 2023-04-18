@@ -193,10 +193,11 @@ function constructor_craft_bag_item(_index, _width, _height) constructor {
 	l_click = 0
 	open_panel = false
 	color = c_white
+	ds_list = o_player_controll.ds_craft_items
 
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
-		var _count = o_player_controll.player.craft_items[index];
+		var _count = ds_list_find_value(ds_list,index)
 		if _count > 0 {
 			color = c_white
 		}else{
@@ -204,39 +205,39 @@ function constructor_craft_bag_item(_index, _width, _height) constructor {
 		}
 	}
 	end_step_method = function(){
-		var _mouse_x = device_mouse_x_to_gui(0);
-		var _mouse_y = device_mouse_y_to_gui(0);
+		var _mouse_x = device_mouse_x_to_gui(0)
+		var _mouse_y = device_mouse_y_to_gui(0)
 
 
-		hover = point_in_rectangle(_mouse_x, _mouse_y, x,y , x + width, y + height);
+		hover = point_in_rectangle(_mouse_x, _mouse_y, x,y , x + width, y + height)
 		
 		l_click = mouse_check_button_pressed(mb_left)
 	}
 	
 	draw_gui_method = function(){
-		var _margin = 4;
-		var _scale = 2;
-		var _size = 4;
-		var _size_new = height - _margin * _size;
+		var _margin = 4
+		var _scale = 2
+		var _size = 4
+		var _size_new = height - _margin * _size
 
-		var _spr = global.array_craft_bag[index].sprite;
-		var _name = global.array_craft_bag[index].name;
-		var _count = o_player_controll.player.craft_items[index];
+		var _spr = global.array_craft_bag[index].sprite
+		var _name = global.array_craft_bag[index].name
+		var _count = ds_list_find_value(ds_list,index)
 
-		draw_set_color(color);
-		draw_set_alpha(0.4);
+		draw_set_color(color)
+		draw_set_alpha(0.4)
 
-		draw_rectangle(x,y,x + width, y + height, 0);
+		draw_rectangle(x,y,x + width, y + height, 0)
 
-		draw_set_alpha(1);
-		draw_set_color(c_white);
+		draw_set_alpha(1)
+		draw_set_color(c_white)
 
-		draw_rectangle(x , y , x + width, y + height,1);
+		draw_rectangle(x , y , x + width, y + height,1)
 
 		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 3 - 10, y + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
 
-		draw_set_font(fnt_shop_item);
-		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _count);
+		draw_set_font(fnt_shop_item)
+		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _count)
 	}
 	draw_gui_end_method = function(){}
 }
@@ -250,11 +251,11 @@ function constructor_secret_item (_index, _width, _height) constructor {
 	open_panel = false
 	color = c_white
 	sprite_color = c_black
-	
+	ds_list = o_player_controll.ds_secret_items
 
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
-		var _count = o_player_controll.player.secret_items[index];
+		var _count = ds_list_find_value(ds_list,index)
 		var _item = global.array_secret_items[index];
 		if _count > 0 {
 			sprite_color = c_white
@@ -289,7 +290,7 @@ function constructor_secret_item (_index, _width, _height) constructor {
 
 		var _spr = global.array_secret_items[index].sprite;
 		var _name = global.array_secret_items[index].name;
-		var _count = o_player_controll.player.secret_items[index];
+		var _count =  ds_list_find_value(ds_list,index)
 		
 		draw_set_color(color);
 		draw_set_alpha(0.4);
