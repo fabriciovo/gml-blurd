@@ -15,6 +15,7 @@ function init(){
 	
 	global.struct_shop_items = {
 		cake: {
+			key:"cake",
 			name: "Cake",
 			level:1,
 			price: 1,
@@ -87,10 +88,17 @@ function init(){
 				var _track_value = o_player_controll.ds_collectables[? "coins"].value
 				progress.count = _track_value
 				if _track_value >= progress.max_count {
+					var _reward_struct = variable_struct_get(global.struct_shop_items, "cake")
+					var _reward = { 
+							level: 1,
+							price: _reward_struct.price
+						}
+					
 					quest_reward(
 					o_player_controll.ds_shop_items,
-					global.struct_shop_items.cake,
-					global.struct_quests.five_coins)
+					_reward_struct.key,
+					_reward,
+					"five_coins")
 				}
 			}
 		}

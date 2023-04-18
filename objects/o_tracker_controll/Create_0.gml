@@ -6,10 +6,7 @@ if _player_quests_lenght == 0 exit
 var _keys = variable_struct_get_names(global.struct_quests);
 for (var _i = array_length(_keys)-1; _i >= 0; --_i) {
 	var _k = _keys[_i]
-	show_message(_k)
-	
 	var _quest = variable_struct_get(global.struct_quests, _k)
-	show_message(_quest)
 	for(var _n = 0; _n < _player_quests_lenght; _n++){
 		if(_player_quests_array[_n].name == _quest.name ){
 			_quest.unlocked = true
