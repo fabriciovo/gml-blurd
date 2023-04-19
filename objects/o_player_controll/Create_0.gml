@@ -62,8 +62,6 @@ ds_secret_items = ds_list_create()
 ds_craft_items = ds_list_create()
 
 ds_map_add(ds_collectables,"coins",{value:0})
-ds_map_add(ds_quests,"five_coins",{progress:0, unlocked: false})
-
 
 
 alarm[1] = 500
