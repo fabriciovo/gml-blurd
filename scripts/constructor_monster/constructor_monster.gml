@@ -1,13 +1,13 @@
-function constructor_monster(_level) constructor {	
-	level = _level
+function constructor_monster() constructor {	
+	level = -1
 	drop = []
 	grav = 0
 	vsp = 0
 	jump = 0
 	hsp = global.game_speed
 	grounded = false
-	_track_key = ""
-	
+	track_key = ""
+	level = 0
 	image_speed = 0
 	
 	create_method = function(){
@@ -34,7 +34,7 @@ function constructor_monster(_level) constructor {
 	}
 	
 	player_collision = function(){
-		var _monster = o_player_controll.ds_upgrades[? _track_key]
+		var _monster = o_player_controll.ds_upgrades[? track_key]
 		_monster.value++
 		
 		if level > 3 {
@@ -47,12 +47,19 @@ function constructor_monster(_level) constructor {
 	}
 
 }
-function constructor_monster_spike_head(_level) : constructor_monster(_level) constructor {
+function constructor_monster_spike_head() : constructor_monster() constructor {
 	sprite_index = s_spike_head
 	image_speed = 0
-	_track_key = "spike_head"
+	
+	
+
+	track_key = "spike_head"
+	level = o_player_controll.ds_upgrades[? track_key].level
+	
 	create_method = function(){
 		grav = 0.1
+		jump = -6
+		jump = -6
 		jump = -6
 		image_index = 0
 		alarm[0] = random(3) * (global.one_second / 2)
@@ -79,9 +86,12 @@ function constructor_monster_spike_head(_level) : constructor_monster(_level) co
 		}
 	}
 }
-function constructor_monster_snail(_level) : constructor_monster(_level) constructor {
+function constructor_monster_snail() : constructor_monster() constructor {
 	sprite_index = s_snail
-	_track_key = "snail"
+	
+
+	track_key = "snail"
+	level = o_player_controll.ds_upgrades[? track_key].level
 	create_method = function(){
 		hp = 3
 		grav = 0.2
@@ -135,7 +145,10 @@ function constructor_monster_angry_bird(_level) : constructor_monster(_level) co
 	sprite_index = s_fly
 	image_speed = 0
 	hsp = global.game_speed
-	_track_key = "angry_bird"
+	track_key = "angry_bird"
+	
+	level = o_player_controll.ds_upgrades[? track_key].level
+	
 	create_method = function(){
 		grav = 0.3
 		jump = -7

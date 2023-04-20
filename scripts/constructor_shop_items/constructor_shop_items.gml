@@ -194,11 +194,13 @@ function constructor_craft_bag_item(_index, _width, _height) constructor {
 	open_panel = false
 	color = c_white
 	ds_list = o_player_controll.ds_craft_items
+	ds_value = ds_list_find_value(ds_list,index)
+	
 
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
-		var _count = ds_list_find_value(ds_list,index)
-		if _count > 0 {
+		var _unlocked = ds_value.unlocked
+		if _unlocked {
 			color = c_white
 		}else{
 			color = c_black
@@ -207,8 +209,7 @@ function constructor_craft_bag_item(_index, _width, _height) constructor {
 	end_step_method = function(){
 		var _mouse_x = device_mouse_x_to_gui(0)
 		var _mouse_y = device_mouse_y_to_gui(0)
-
-
+		
 		hover = point_in_rectangle(_mouse_x, _mouse_y, x,y , x + width, y + height)
 		
 		l_click = mouse_check_button_pressed(mb_left)
@@ -222,7 +223,8 @@ function constructor_craft_bag_item(_index, _width, _height) constructor {
 
 		var _spr = global.array_craft_bag[index].sprite
 		var _name = global.array_craft_bag[index].name
-		var _count = ds_list_find_value(ds_list,index)
+		var _count = ds_value.count
+		var _unlocked = ds_value.unlocked
 
 		draw_set_color(color)
 		draw_set_alpha(0.4)
@@ -234,10 +236,12 @@ function constructor_craft_bag_item(_index, _width, _height) constructor {
 
 		draw_rectangle(x , y , x + width, y + height,1)
 
-		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 3 - 10, y + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
+		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 3 - 10, y + _margin + _size_new / 4,_scale,_scale,0,color,1);
 
-		draw_set_font(fnt_shop_item)
-		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _count)
+		if _unlocked {
+			draw_set_font(fnt_shop_item)
+			draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _count)
+		}
 	}
 	draw_gui_end_method = function(){}
 }
@@ -252,12 +256,15 @@ function constructor_secret_item (_index, _width, _height) constructor {
 	color = c_white
 	sprite_color = c_black
 	ds_list = o_player_controll.ds_secret_items
-
+	ds_value = ds_list_find_value(ds_list,index)
+	
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
-		var _count = ds_list_find_value(ds_list,index)
+		var _unlocked = ds_value.unlocked
+		var _count = ds_value.count
 		var _item = global.array_secret_items[index];
-		if _count > 0 {
+		
+		if _unlocked > 0 {
 			sprite_color = c_white
 		}else{
 			sprite_color = c_black
@@ -290,7 +297,8 @@ function constructor_secret_item (_index, _width, _height) constructor {
 
 		var _spr = global.array_secret_items[index].sprite;
 		var _name = global.array_secret_items[index].name;
-		var _count =  ds_list_find_value(ds_list,index)
+		var _count =  ds_value.count
+		var _unlocked =  ds_value.unlocked
 		
 		draw_set_color(color);
 		draw_set_alpha(0.4);
@@ -304,8 +312,10 @@ function constructor_secret_item (_index, _width, _height) constructor {
 
 		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 4 - 2, y + _size_new / 4,_scale,_scale,0,sprite_color,1);
 
-		draw_set_font(fnt_shop_item);
-		draw_text(x + _margin * 2 + _size_new, y , string(_count));
+		if _unlocked {
+			draw_set_font(fnt_shop_item);
+			draw_text(x + _margin * 2 + _size_new, y , string(_count));
+		}
 	}
 	
 	draw_gui_end_method = function(){

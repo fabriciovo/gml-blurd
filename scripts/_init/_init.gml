@@ -86,6 +86,10 @@ function init(){
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
+				var _k = ds_map_find_value(o_player_controll.ds_collectables, "coins");
+				var _s = ds_map_find_value(o_player_controll.ds_quests, "five_coins");
+				if is_undefined(_k) exit
+				if is_undefined(_s) exit
 				var _track_value = o_player_controll.ds_collectables[? "coins"].value
 				var _save_progress_value = o_player_controll.ds_quests[? "five_coins"].progress
 				progress.count = _track_value
@@ -116,6 +120,10 @@ function init(){
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
+				var _k = ds_map_find_value(o_player_controll.ds_collectables, "coins");
+				var _s = ds_map_find_value(o_player_controll.ds_quests, "ten_coins");
+				if is_undefined(_k) exit
+				if is_undefined(_s) exit
 				var _track_value = o_player_controll.ds_collectables[? "coins"].value
 				var _save_progress_value = o_player_controll.ds_quests[? "ten_coins"].progress
 				progress.count = _track_value
@@ -235,7 +243,7 @@ function init(){
 		}
 	]
 		
-	global.array_craft_bag = [
+	global.array_craft_bag = 	[
 		{
 			name:"Spike",
 			description: "",
@@ -256,6 +264,4 @@ function init(){
 		}
 	
 	]
-
-
 }

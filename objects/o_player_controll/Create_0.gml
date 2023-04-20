@@ -51,6 +51,9 @@
 
 #endregion
 
+
+first_login = false
+beta_tester = false
 coins = 0
 total_coins = 0
 coins_per_second = 0
@@ -60,8 +63,6 @@ ds_upgrades = ds_map_create()
 ds_collectables = ds_map_create()
 ds_secret_items = ds_list_create()
 ds_craft_items = ds_list_create()
-
-ds_map_add(ds_collectables,"coins",{value:0})
 
 
 alarm[1] = 500

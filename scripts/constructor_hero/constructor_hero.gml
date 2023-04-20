@@ -47,6 +47,11 @@ function constrtuctor_hero() constructor {
 	}
 	
 	coin_collision_method = function() {
+		var _list = ds_map_find_value(o_player_controll.ds_collectables, "coins")
+		if is_undefined(_list) {
+			ds_map_set(o_player_controll.ds_collectables,"coins",{value:0})
+		}
+		
 		o_player_controll.coins += other.coin_value 
 		o_player_controll.total_coins += other.coin_value 
 		o_player_controll.ds_collectables[? "coins"].value++ 

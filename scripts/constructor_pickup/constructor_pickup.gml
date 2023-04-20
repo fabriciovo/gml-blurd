@@ -34,7 +34,11 @@ function constructor_pickup_spike() : constructor_pickup() constructor {
 	sprite_index = s_item
 	image_blend = c_olive
 	left_button_method = function() {
-		o_player_controll.player.craft_items[0] += 1
+		var _item = o_player_controll.ds_craft_items[| 0]
+		if not _item.unlocked {
+			_item.unlocked = true
+		}
+		_item.count += 1
 		instance_destroy()
 	}
 }
@@ -43,7 +47,11 @@ function constructor_pickup_shell() : constructor_pickup() constructor {
 	sprite_index = s_item
 	image_blend = c_blue
 	left_button_method = function() {
-		o_player_controll.player.craft_items[1] += 1
+		var _item = o_player_controll.ds_craft_items[| 1]
+		if not _item.unlocked {
+			_item.unlocked = true
+		}
+		_item.count += 1
 		instance_destroy()
 	}
 }
@@ -52,7 +60,11 @@ function constructor_pickup_feather() : constructor_pickup() constructor {
 	sprite_index = s_item
 	image_blend = c_green
 	left_button_method = function() {
-		o_player_controll.player.craft_items[2] += 1
+		var _item = o_player_controll.ds_craft_items[| 2]
+		if not _item.unlocked {
+			_item.unlocked = true
+		}
+		_item.count += 1
 		instance_destroy()
 	}
 }
