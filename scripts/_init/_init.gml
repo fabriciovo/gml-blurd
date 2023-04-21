@@ -287,8 +287,8 @@ function init(){
 		//}
 	}
 		
-	global.array_secret_items = [
-		{
+	global.struct_secret_items = {
+		sky_stone: {
 			name:"Sky Stone",
 			description:"Open a portal to teleport you for bonus Stage",
 			count: 0,
@@ -306,18 +306,19 @@ function init(){
 				var _player_secret_items = o_player_controll.ds_secret_items		
 				
 
-				if _player_craft_items[| 0] >= craft_items.spikes  
-				and _player_craft_items[| 1] >= craft_items.feather  
-				and _player_craft_items[| 2] >= craft_items.shell 
+				if _player_craft_items[? "spike"].count >= craft_items.spikes  
+				and _player_craft_items[? "feather"].count >= craft_items.feather  
+				and _player_craft_items[? "shell"].count >= craft_items.shell 
 				{
-					_player_craft_items[| 0] -= craft_items.spikes
-					_player_craft_items[| 1] -= craft_items.feather
-					_player_craft_items[| 2] -= craft_items.shell
-					_player_secret_items[| 0] += 1
+					_player_craft_items[? "spike"].count -= craft_items.spikes
+					_player_craft_items[? "feather"].count -= craft_items.feather
+					_player_craft_items[? "shell"].count -= craft_items.shell
+					_player_secret_items[? "sky_stone"].count += 1
+					_player_secret_items[? "sky_stone"].unlocked = true
 				}
 			}
 		}
-	]
+	}
 		
 	global.struct_craft_bag = 	{
 		spike:{

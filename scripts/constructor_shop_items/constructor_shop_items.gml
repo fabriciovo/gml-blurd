@@ -246,23 +246,23 @@ function constructor_craft_bag_item(_key, _width, _height) constructor {
 	draw_gui_end_method = function(){}
 }
 
-function constructor_secret_item (_index, _width, _height) constructor {
+function constructor_secret_item (_key, _width, _height) constructor {
 	width = _width;
 	height = _height;
-	index = _index;
 	hover = 0
 	l_click = 0
 	open_panel = false
 	color = c_white
 	sprite_color = c_black
 	ds_list = o_player_controll.ds_secret_items
-	ds_value = ds_list_find_value(ds_list,index)
+	ds_value = ds_list[? _key]
+	global_value = global.struct_secret_items[$ _key]
 	
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
 		var _unlocked = ds_value.unlocked
 		var _count = ds_value.count
-		var _item = global.array_secret_items[index];
+
 		
 		if _unlocked > 0 {
 			sprite_color = c_white
@@ -272,10 +272,10 @@ function constructor_secret_item (_index, _width, _height) constructor {
 		
 		if hover and l_click {
 			if _count > 0 {
-				_item.count--;
-				_item.func()
+				global_value.count--;
+				global_value.func()
 			}else if _count == 0 {
-				_item.craft()
+				global_value.craft()
 			}
 		}
 	}
@@ -295,8 +295,8 @@ function constructor_secret_item (_index, _width, _height) constructor {
 		var _size = 4;
 		var _size_new = height - _margin * _size;
 
-		var _spr = global.array_secret_items[index].sprite;
-		var _name = global.array_secret_items[index].name;
+		var _spr = global_value.sprite;
+		var _name = global_value.name;
 		var _count =  ds_value.count
 		var _unlocked =  ds_value.unlocked
 		

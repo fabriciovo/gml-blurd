@@ -103,7 +103,7 @@ function create_craft_bag(){
 
 function create_secret_items(){
 		var _layer = layer_get_id("Inventory")
-		var _size = array_length(global.array_secret_items)
+		var _size = array_length(global.struct_secret_items)
 		var _margin = 24;
 		var _sep = 32;
 		var _cell_size = 60;
@@ -119,11 +119,14 @@ function create_secret_items(){
 		
 
 
-	for (var _i = 0; _i < _size; _i++ ){
-		var _x = _inv_x + (_sep + _cell_size) * _x;
-		var _y = _inv_y + (_sep + _cell_size) * _y;
-
-		instance_create_layer(_x, _y, _layer, o_shop_item, new constructor_secret_item(_i,80,80) );
+	var _list = o_player_controll.ds_secret_items
+	var _list_items_key = ds_map_keys_to_array(_list)
+	var _size = array_length(_list_items_key)-1
+	for (var _i = _size; _i >= 0; --_i) {
+		var _button_x = _inv_x + (_sep + _cell_size) * _x;
+		var _button_y = _inv_y + (_sep + _cell_size) * _y;
+		var _key = _list_items_key[_i]
+		instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new constructor_secret_item(_key,80,80));
 		
 		_x++;
 	
