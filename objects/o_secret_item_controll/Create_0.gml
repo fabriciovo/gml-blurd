@@ -31,12 +31,11 @@ for (var _i = 0; _i < _size; _i++) {
 	var _key = _list_items_key[_i]
 	var _player_map = o_player_controll.ds_craft_items
 	var _ds_map_value = ds_map_find_value(_player_map,_key);
-	show_message(_ds_map_value)
 	if is_undefined(_ds_map_value) {
 		ds_map_set(_player_map, _key, {unlocked: false, count:0});
 	}else{
 		var value = ds_map_find_value(_player_map,_key)
-		show_message(value)
+
 		global.struct_craft_bag[$ _key].unlocked = value.unlocked
 		global.struct_craft_bag[$ _key].count = value.count
 	}
@@ -50,12 +49,10 @@ for (var _i = 0; _i < _size; _i++) {
 	var _key = _list_items_key[_i]
 	var _player_map = o_player_controll.ds_secret_items
 	var _ds_map_value = ds_map_find_value(_player_map,_key);
-	show_message(_ds_map_value)
 	if is_undefined(_ds_map_value) {
-		ds_map_set(_player_map, _key, {unlocked: true, count:0});
+		ds_map_set(_player_map, _key, {unlocked: false, count:0});
 	}else{
 		var value = ds_map_find_value(_player_map,_key)
-		show_message(value)
 		global.struct_secret_items[$ _key].unlocked = value.unlocked
 		global.struct_secret_items[$ _key].count = value.count
 	}

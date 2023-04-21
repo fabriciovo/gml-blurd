@@ -264,7 +264,7 @@ function constructor_secret_item (_key, _width, _height) constructor {
 		var _count = ds_value.count
 
 		
-		if _unlocked > 0 {
+		if _unlocked {
 			sprite_color = c_white
 		}else{
 			sprite_color = c_black

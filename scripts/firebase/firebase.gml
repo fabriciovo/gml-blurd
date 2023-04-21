@@ -8,8 +8,8 @@ function firebase_create(){
 	_map[?"upgrades"] = json_encode(_player.ds_upgrades)
 	_map[?"quests"] = json_encode(_player.ds_quests)
 	_map[?"collectables"] = json_encode(_player.ds_collectables)
-	_map[?"secret_items"] = json_stringify(_player.ds_secret_items)
-	_map[?"craft_items"] = json_stringify(_player.ds_craft_items)
+	_map[?"secret_items"] = json_encode(_player.ds_secret_items)
+	_map[?"craft_items"] = json_encode(_player.ds_craft_items)
 	var _json = json_encode(_map)		
 	
 	ds_map_destroy(_map)
@@ -19,6 +19,7 @@ function firebase_create(){
 
 function firebase_load(){
 	FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Read()
+	room_goto(rm_firebase)
 }
 
 function firebase_update(){
@@ -31,11 +32,10 @@ function firebase_update(){
 	_map[?"upgrades"] = json_encode(_player.ds_upgrades)
 	_map[?"quests"] = json_encode(_player.ds_quests)
 	_map[?"collectables"] = json_encode(_player.ds_collectables)
-	_map[?"secret_items"] = json_stringify(_player.ds_secret_items)
-	_map[?"craft_items"] = json_stringify(_player.ds_craft_items)
+	_map[?"secret_items"] = json_encode(_player.ds_secret_items)
+	_map[?"craft_items"] = json_encode(_player.ds_craft_items)
 
 	var _json = json_encode(_map)		
-	show_message(_json)
 	ds_map_destroy(_map)
 
 	FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Update(_json);

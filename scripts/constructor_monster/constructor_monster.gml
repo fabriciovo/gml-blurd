@@ -153,7 +153,7 @@ function constructor_monster_snail() : constructor_monster() constructor {
 			}
 	}
 }
-function constructor_monster_angry_bird(_level) : constructor_monster(_level) constructor {
+function constructor_monster_angry_bird() : constructor_monster() constructor {
 	sprite_index = s_fly
 	image_speed = 0
 	hsp = global.game_speed

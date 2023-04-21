@@ -36,18 +36,21 @@ switch(async_load[?"type"])
 	case "FirebaseFirestore_Document_Read":
 		var _path = async_load[?"path"]
 		var _value = async_load[?"value"]
-		var _json = json_decode(_value);
+		var _json = json_parse(_value)
 		var _player =  o_player_controll;
-
-		_player.coins = ds_map_find_value(_json, "coins");
-		_player.coins_per_second = ds_map_find_value(_json, "coins_per_second");
-		_player.total_coins = ds_map_find_value(_json, "total_coins");
-		_player.ds_shop_items = json_decode(ds_map_find_value(_json, "shop_items"));
-		_player.ds_quests = json_decode(ds_map_find_value(_json, "quests"));
-		_player.ds_upgrades = json_decode(ds_map_find_value(_json, "upgrades"));
-		_player.ds_craft_items = json_decode(ds_map_find_value(_json, "craft_items"))
-		_player.ds_secret_items = json_decode(ds_map_find_value(_json, "secret_items"));
-		ds_map_destroy(_json);
+		
+		//single value
+		_player.coins = real(_json.coins);
+		_player.coins_per_second = real(_json.coins_per_second);
+		_player.total_coins = real(_json.total_coins);
+		
+		//maps
+		json_add_to_ds_map(_json.shop_items,o_player_controll.ds_shop_items)
+		json_add_to_ds_map(_json.collectables,o_player_controll.ds_collectables)
+		json_add_to_ds_map(_json.quests,o_player_controll.ds_quests)
+		json_add_to_ds_map(_json.upgrades,o_player_controll.ds_upgrades)
+		json_add_to_ds_map( _json.craft_items,o_player_controll.ds_craft_items)
+		json_add_to_ds_map(_json.secret_items,o_player_controll.ds_secret_items)
 		
 	break
 	

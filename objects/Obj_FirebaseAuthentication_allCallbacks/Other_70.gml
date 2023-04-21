@@ -29,13 +29,12 @@ switch(async_load[?"type"])
 			
 	case "FirebaseAuthentication_SignIn_Email":
 		firebase_load();
-		room_goto(rm_game);
+		room_goto(rm_firebase);
 	break
 	
 	case "FirebaseAuthentication_SignUp_Email":
 		firebase_create();
-
-		room_goto(rm_game);
+		room_goto(rm_firebase);
 	break
 		
 			
