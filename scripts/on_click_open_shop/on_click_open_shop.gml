@@ -83,11 +83,14 @@ function create_craft_bag(){
 		var _x = 0;
 		var _y = 0;
 		
-	for (var _i = 0; _i < 3; _i++ ){
+	var _list = o_player_controll.ds_craft_items
+	var _list_items_key = ds_map_keys_to_array(_list)
+	var _size = array_length(_list_items_key)-1
+	for (var _i = _size; _i >= 0; --_i) {
 		var _button_x = _inv_x + (_sep + _cell_size) * _x;
 		var _button_y = _inv_y + (_sep + _cell_size) * _y;
-
-		instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new constructor_craft_bag_item(_i,40,40));
+		var _key = _list_items_key[_i]
+		instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new constructor_craft_bag_item(_key,40,40));
 		
 		_x++;
 	
@@ -137,8 +140,8 @@ var _value = layer_get_visible(_shop_layer)
 var ds_shop_items_size = ds_map_size(o_player_controll.ds_shop_items)
 var ds_upgrades_size = ds_map_size(o_player_controll.ds_upgrades)
 var ds_quest_size = ds_map_size(o_player_controll.ds_quests)
-var ds_craft_items_size = ds_list_find_value(o_player_controll.ds_craft_items,0).unlocked == true ? 1 : 0
-var ds_secret_items_size = ds_list_find_value(o_player_controll.ds_secret_items,0).unlocked == true ? 1 : 0
+var ds_craft_items_size = ds_map_size(o_player_controll.ds_craft_items)
+var ds_secret_items_size = ds_map_size(o_player_controll.ds_secret_items)
 
 if _value == false {
 	create_items_shop()

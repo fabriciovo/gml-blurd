@@ -19,7 +19,7 @@ function init(){
 			name: "Cake",
 			level:1,
 			price: 1,
-			coins_per_second: 0.1,
+			coins_per_second: 200000,
 			sprite: s_item,
 			mult: 1.1
 		},
@@ -50,6 +50,7 @@ function init(){
 			mult: 1.3
 		},
 		snail: {
+			key:"snail",
 			name:"Snail",
 			level:0,
 			sprite: s_coin,
@@ -61,6 +62,7 @@ function init(){
 			mult: 1.3
 		},
 		angry_bird: {
+			key:"angry_bird",
 			name:"Angry Bird",
 			level:0,
 			sprite: s_coin,
@@ -143,6 +145,80 @@ function init(){
 					_reward_struct.key,
 					_reward,
 					"ten_coins")
+				}
+			}
+		},
+		new_challenges: {
+			name:"Ten Coins",
+			progress: {
+				text: "Collected Coins:",
+				count:0,
+				max_count:10
+			},
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			condition: function(){
+				var _k = ds_map_find_value(o_player_controll.ds_upgrades, "spike_head");
+				var _s = ds_map_find_value(o_player_controll.ds_quests, "new_challenges");
+				if is_undefined(_k) exit
+				if is_undefined(_s) exit
+				var _track_value = o_player_controll.ds_upgrades[? "spike_head"].value
+				var _save_progress_value = o_player_controll.ds_quests[? "new_challenges"].progress
+				progress.count = _track_value
+				_save_progress_value = _track_value
+				if _track_value >= progress.max_count {
+					var _reward_struct = variable_struct_get(global.struct_upgrade_items, "snail")
+					var _reward = { 
+							level: 1,
+							price: _reward_struct.price,
+							type: _reward_struct.type,
+							number: _reward_struct.number,
+							value: 0
+						}
+					
+					quest_reward(
+					o_player_controll.ds_upgrades,
+					_reward_struct.key,
+					_reward,
+					"new_challenges")
+				}
+			}
+		},
+		new_challenges_2: {
+			name:"Ten Coins",
+			progress: {
+				text: "Collected Coins:",
+				count:0,
+				max_count:10
+			},
+			description: "",
+			sprite: s_item,
+			unlocked: false,
+			condition: function(){
+				var _k = ds_map_find_value(o_player_controll.ds_upgrades, "snail");
+				var _s = ds_map_find_value(o_player_controll.ds_quests, "new_challenges_2");
+				if is_undefined(_k) exit
+				if is_undefined(_s) exit
+				var _track_value = o_player_controll.ds_upgrades[? "spike_head"].value
+				var _save_progress_value = o_player_controll.ds_quests[? "new_challenges_2"].progress
+				progress.count = _track_value
+				_save_progress_value = _track_value
+				if _track_value >= progress.max_count {
+					var _reward_struct = variable_struct_get(global.struct_upgrade_items, "angry_bird")
+					var _reward = { 
+							level: 1,
+							price: _reward_struct.price,
+							type: _reward_struct.type,
+							number: _reward_struct.number,
+							value: 0
+						}
+					
+					quest_reward(
+					o_player_controll.ds_upgrades,
+					_reward_struct.key,
+					_reward,
+					"new_challenges_2")
 				}
 			}
 		},
@@ -243,25 +319,24 @@ function init(){
 		}
 	]
 		
-	global.array_craft_bag = 	[
-		{
+	global.struct_craft_bag = 	{
+		spike:{
 			name:"Spike",
 			description: "",
 			sprite: s_item,
 			count: 0,
 		},
-		{
+		feather: {
 			name:"Bird Feather",
 			description: "",
 			sprite: s_item,
 			count: 0,
 		},
-		{
+		shell: {
 			name:"Snail Hull",
 			description: "",
 			sprite: s_item,
 			count: 0,
 		}
-	
-	]
+	}
 }

@@ -38,22 +38,17 @@ switch(async_load[?"type"])
 		var _value = async_load[?"value"]
 		var _json = json_decode(_value);
 		var _player =  o_player_controll;
+
 		_player.coins = ds_map_find_value(_json, "coins");
 		_player.coins_per_second = ds_map_find_value(_json, "coins_per_second");
 		_player.total_coins = ds_map_find_value(_json, "total_coins");
-		_player.ds_shop_items = ds_map_find_value(_json, "shop_items");
-		//_player.craft_items = json_parse(ds_map_find_value(_json, "craft_items"));
-		//_player.quests = json_parse(ds_map_find_value(_json, "quests"));
-		//_player.secret_items = json_parse(ds_map_find_value(_json, "secret_items"));
-
-		//_player.total_coins = ds_map_find_value(_json, "total_coins");
-		//_player.track = json_parse( ds_map_find_value(_json, "track"));
-		//_player.upgrades = json_parse(ds_map_find_value(_json, "upgrades"));
+		_player.ds_shop_items = json_decode(ds_map_find_value(_json, "shop_items"));
+		_player.ds_quests = json_decode(ds_map_find_value(_json, "quests"));
+		_player.ds_upgrades = json_decode(ds_map_find_value(_json, "upgrades"));
+		_player.ds_craft_items = json_decode(ds_map_find_value(_json, "craft_items"))
+		_player.ds_secret_items = json_decode(ds_map_find_value(_json, "secret_items"));
 		ds_map_destroy(_json);
 		
-
-
-
 	break
 	
 	case "FirebaseFirestore_Document_Listener":

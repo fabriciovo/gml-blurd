@@ -185,16 +185,16 @@ function constructor_quest_item(_key, _width, _height) constructor {
    draw_gui_end_method = function(){}
 }
 
-function constructor_craft_bag_item(_index, _width, _height) constructor {
+function constructor_craft_bag_item(_key, _width, _height) constructor {
 	width = _width;
 	height = _height;
-	index = _index;
 	hover = 0
 	l_click = 0
 	open_panel = false
 	color = c_white
 	ds_list = o_player_controll.ds_craft_items
-	ds_value = ds_list_find_value(ds_list,index)
+	ds_value = ds_list[? _key]
+	global_value = global.struct_craft_bag[$ _key]
 	
 
 	step_method = function(){
@@ -221,8 +221,8 @@ function constructor_craft_bag_item(_index, _width, _height) constructor {
 		var _size = 4
 		var _size_new = height - _margin * _size
 
-		var _spr = global.array_craft_bag[index].sprite
-		var _name = global.array_craft_bag[index].name
+		var _spr = global_value.sprite
+		var _name = global_value.name
 		var _count = ds_value.count
 		var _unlocked = ds_value.unlocked
 

@@ -1,6 +1,19 @@
 function firebase_create(){
-	var _player = o_player_controll.player
-	var _json = json_stringify(_player)
+	var _map = ds_map_create()
+	var _player = o_player_controll
+	_map[?"total_coins"] = _player.total_coins
+	_map[?"coins"] = _player.coins
+	_map[?"coins_per_second"] = _player.coins_per_second
+	_map[?"shop_items"] = json_encode(_player.ds_shop_items)
+	_map[?"upgrades"] = json_encode(_player.ds_upgrades)
+	_map[?"quests"] = json_encode(_player.ds_quests)
+	_map[?"collectables"] = json_encode(_player.ds_collectables)
+	_map[?"secret_items"] = json_stringify(_player.ds_secret_items)
+	_map[?"craft_items"] = json_stringify(_player.ds_craft_items)
+	var _json = json_encode(_map)		
+	
+	ds_map_destroy(_map)
+	
 	FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Set(_json)
 }
 
@@ -14,16 +27,15 @@ function firebase_update(){
 	_map[?"total_coins"] = _player.total_coins
 	_map[?"coins"] = _player.coins
 	_map[?"coins_per_second"] = _player.coins_per_second
-	_map[?"shop_items"] = _player.ds_shop_items
-	//_map[?"upgrades"] = _player.upgrades
-	//_map[?"shop_items"] = json_stringify(_player.shop_items)
-	//_map[?"craft_items"] = json_stringify(_player.craft_items)
-	//_map[?"quests"] = json_stringify(_player.quests)
-	//_map[?"secret_items"] = json_stringify(_player.secret_items)		
-	//_map[?"track"] = json_stringify(_player.track)
+	_map[?"shop_items"] = json_encode(_player.ds_shop_items)
+	_map[?"upgrades"] = json_encode(_player.ds_upgrades)
+	_map[?"quests"] = json_encode(_player.ds_quests)
+	_map[?"collectables"] = json_encode(_player.ds_collectables)
+	_map[?"secret_items"] = json_stringify(_player.ds_secret_items)
+	_map[?"craft_items"] = json_stringify(_player.ds_craft_items)
 
 	var _json = json_encode(_map)		
-	
+	show_message(_json)
 	ds_map_destroy(_map)
 
 	FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Update(_json);

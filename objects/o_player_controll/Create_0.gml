@@ -61,8 +61,8 @@ ds_shop_items = ds_map_create()
 ds_quests = ds_map_create()
 ds_upgrades = ds_map_create()
 ds_collectables = ds_map_create()
-ds_secret_items = ds_list_create()
-ds_craft_items = ds_list_create()
+ds_secret_items = ds_map_create()
+ds_craft_items = ds_map_create()
 
 
 alarm[1] = 500
