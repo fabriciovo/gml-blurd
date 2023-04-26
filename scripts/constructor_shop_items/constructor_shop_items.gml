@@ -345,17 +345,16 @@ function constructor_upgrade_item(_key, _width, _height) constructor {
 }
 
 function constructor_upgrade_unlockable(_key, _width, _height) : constructor_upgrade_item(_key, _width, _height) constructor {
-	item = variable_struct_get(global.struct_upgrade_items, _key)
-	
+	item = o_player_controll.ds_upgrades[? _key]
+	global_item = variable_struct_get(global.struct_upgrade_items,_key)
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
-		color = c_grey
-		if level == 1 exit
-		color = hover ? c_green : c_blue
 		var _player = o_player_controll
+		if item.level == 1 exit
+		color = hover ? c_green : c_blue
 		if hover and l_click and _player.coins >= item.price {
-			level++;
-			item.reward()
+			item.level++;
+			global_item.reward()
 		}
 	}
 
