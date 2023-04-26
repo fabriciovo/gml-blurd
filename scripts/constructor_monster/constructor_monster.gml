@@ -50,8 +50,6 @@ function constructor_monster() constructor {
 function constructor_monster_spike_head() : constructor_monster() constructor {
 	sprite_index = s_spike_head
 	image_speed = 0
-	
-	
 
 	track_key = "spike_head"
 	level = o_player_controll.ds_upgrades[? track_key].level
@@ -59,11 +57,8 @@ function constructor_monster_spike_head() : constructor_monster() constructor {
 	create_method = function(){
 		grav = 0.1
 		jump = -6
-		jump = -6
-		jump = -6
 		image_index = 0
 		alarm[0] = random(3) * (global.one_second / 2)
-		
 		
 		if level > 3 {
 			array_push(drop, constructor_pickup_spike);
@@ -89,7 +84,6 @@ function constructor_monster_spike_head() : constructor_monster() constructor {
 function constructor_monster_snail() : constructor_monster() constructor {
 	sprite_index = s_snail
 	
-
 	track_key = "snail"
 	level = o_player_controll.ds_upgrades[? track_key].level
 	create_method = function(){

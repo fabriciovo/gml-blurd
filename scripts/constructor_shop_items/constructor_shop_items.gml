@@ -68,75 +68,12 @@ function constructor_shop_item(_key, _width, _height) constructor {
 	draw_gui_end_method = function(){}
 }
 
-function constructor_upgrade_item(_key, _width, _height) constructor {
-	width = _width;
-	height = _height;
-	global_upgrade = variable_struct_get(global.struct_upgrade_items,_key)
-	item = o_player_controll.ds_upgrades[? _key]
-	hover = 0
-	l_click = 0
-	open_panel = false
-	color = c_green
-
-	
-	step_method = function(){
-		if !object_exists(o_player_controll) exit
-
-		color = hover ? c_green : c_blue
-		var _player = o_player_controll
-		if hover and l_click and _player.coins >= item.price {
-			_player.coins -= item.price 
-			item.level++
-			item.price += item.price * global_upgrade.mult
-		}
-		
-
-	}
-	end_step_method = function(){
-		var _mouse_x = device_mouse_x_to_gui(0);
-		var _mouse_y = device_mouse_y_to_gui(0);
-
-
-		hover = point_in_rectangle(_mouse_x, _mouse_y, x,y , x + width, y + height);
-		
-		l_click = mouse_check_button_pressed(mb_left)
-	}
-	
-	draw_gui_method = function(){
-		var _margin = 4;
-		var _scale = 2;
-		var _size = 4;
-		var _size_new = height - _margin * _size;
-
-		var _spr = global_upgrade.sprite;
-		var _name = global_upgrade.name;
-
-		draw_set_color(color);
-		draw_set_alpha(0.4);
-
-		draw_rectangle(x,y,x + width, y + height, 0);
-
-		draw_set_alpha(1);
-		draw_set_color(c_white);
-
-		draw_rectangle(x , y , x + width, y + height,1);
-
-		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 3 - 10, y + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
-
-		draw_set_font(fnt_shop_item);
-		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _name);
-		draw_text(x + _margin * 19 + _size_new, y + _margin + 2, "Lvl: " + string(item.level));
-		draw_text(x + _margin * 2 + _size_new, y + _margin + 20, "Price: " + string(item.price));
-		draw_text(x + _margin * 26 + _size_new, y + _margin + 20, "Type: " + string(global_upgrade.type));
-	}
-	draw_gui_end_method = function(){}
-
-}
 
 function constructor_quest_item(_key, _width, _height) constructor {
 	width = _width;
 	height = _height;
-	item = variable_struct_get(global.struct_quests,_key)
+	key = _key
+	item = variable_struct_get(global.struct_quests,key)
 	hover = 0
 	l_click = 0
 	open_panel = false
@@ -166,6 +103,7 @@ function constructor_quest_item(_key, _width, _height) constructor {
 		var _spr = item.sprite;
 		var _name = item.name;
         var _progress = item.progress;
+		var _progress_count = o_player_controll.ds_quests[? key].progress;
 		draw_set_color(color);
 		draw_set_alpha(0.4);
 
@@ -180,7 +118,7 @@ function constructor_quest_item(_key, _width, _height) constructor {
 
 		draw_set_font(fnt_shop_item);
 		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _name);
-		draw_text(x + _margin * 2 + _size_new, y + _margin + 20, _progress.text + string(_progress.count) + " / " + string(_progress.max_count));
+		draw_text(x + _margin * 2 + _size_new, y + _margin + 20, _progress.text + string(_progress_count) + " / " + string(_progress.max_count));
 	}
    draw_gui_end_method = function(){}
 }
@@ -339,4 +277,86 @@ function constructor_secret_item (_key, _width, _height) constructor {
 			
 		}
 	}
+}
+	
+function constructor_upgrade_item(_key, _width, _height) constructor {
+	width = _width;
+	height = _height;
+	global_upgrade = variable_struct_get(global.struct_upgrade_items,_key)
+	item = o_player_controll.ds_upgrades[? _key]
+	hover = 0
+	l_click = 0
+	open_panel = false
+	color = c_green
+
+	
+	step_method = function(){
+		if !object_exists(o_player_controll) exit
+
+		color = hover ? c_green : c_blue
+		var _player = o_player_controll
+		if hover and l_click and _player.coins >= item.price {
+			_player.coins -= item.price 
+			item.level++
+			item.price += item.price * global_upgrade.mult
+		}
+		
+
+	}
+	end_step_method = function(){
+		var _mouse_x = device_mouse_x_to_gui(0);
+		var _mouse_y = device_mouse_y_to_gui(0);
+
+
+		hover = point_in_rectangle(_mouse_x, _mouse_y, x,y , x + width, y + height);
+		
+		l_click = mouse_check_button_pressed(mb_left)
+	}
+	
+	draw_gui_method = function(){
+		var _margin = 4;
+		var _scale = 2;
+		var _size = 4;
+		var _size_new = height - _margin * _size;
+
+		var _spr = global_upgrade.sprite;
+		var _name = global_upgrade.name;
+
+		draw_set_color(color);
+		draw_set_alpha(0.4);
+
+		draw_rectangle(x,y,x + width, y + height, 0);
+
+		draw_set_alpha(1);
+		draw_set_color(c_white);
+
+		draw_rectangle(x , y , x + width, y + height,1);
+
+		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 3 - 10, y + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
+
+		draw_set_font(fnt_shop_item);
+		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _name);
+		draw_text(x + _margin * 19 + _size_new, y + _margin + 2, "Lvl: " + string(item.level));
+		draw_text(x + _margin * 2 + _size_new, y + _margin + 20, "Price: " + string(item.price));
+		draw_text(x + _margin * 26 + _size_new, y + _margin + 20, "Type: " + string(global_upgrade.type));
+	}
+	draw_gui_end_method = function(){}
+
+}
+
+function constructor_upgrade_unlockable(_key, _width, _height) : constructor_upgrade_item(_key, _width, _height) constructor {
+	item = variable_struct_get(global.struct_upgrade_items, _key)
+	
+	step_method = function(){
+		if !object_exists(o_player_controll) exit
+		color = c_grey
+		if level == 1 exit
+		color = hover ? c_green : c_blue
+		var _player = o_player_controll
+		if hover and l_click and _player.coins >= item.price {
+			level++;
+			item.reward()
+		}
+	}
+
 }

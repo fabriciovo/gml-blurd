@@ -14,20 +14,47 @@ function init(){
 	}
 	
 	global.struct_shop_items = {
-		cake: {
-			key:"cake",
-			name: "Cake",
+		candy: {
+			key:"candy",
+			name: "Candy",
 			level:1,
 			price: 1,
-			coins_per_second: 200000,
-			sprite: s_item,
-			mult: 1.1
+			coins_per_second: 0.10,
+			sprite: s_candy,
+			mult: 1.1,
+		},
+		chocolate: {
+			key:"chocolate",
+			name: "Chocolate",
+			level:1,
+			price: 4,
+			coins_per_second: 0.5,
+			sprite: s_candy,
+			mult: 3.3,
+		},
+		energy_drink: {
+			key:"energy_drink",
+			name: "Energy Drink",
+			level:1,
+			price: 10,
+			coins_per_second: 1,
+			sprite: s_candy,
+			mult: 2.33,
+		},
+		ice_cream: {
+			key:"ice_cream",
+			name: "Ice Cream",
+			level:1,
+			price: 20,
+			coins_per_second: 3,
+			sprite: s_candy,
+			mult: 4.21,
 		},
 	}
 	
 	global.struct_upgrade_items = {
-		speed_drink: {
-			name:"Speed Drink",
+		energy_drink: {
+			name:"Energy Drink",
 			level:0,
 			sprite: s_coin,
 			price: 5,
@@ -72,7 +99,32 @@ function init(){
 			can_spawn: true,
 			spawn_timer: 1,
 			mult: 1.3
-
+		},
+		unlock_angry_birds: {
+			key:"unlock_angry_birds",
+			name:"Unlock new Monsters",
+			level:0,
+			sprite: s_coin,
+			number:2,
+			price: 10,
+			type:"Unlockable",
+			mult: 0,
+			reward: function(){
+				var _reward_struct = variable_struct_get(global.struct_upgrade_items, "angry_bird")
+				var _reward = { 
+						level: 1,
+						price: _reward_struct.price,
+						type: _reward_struct.type,
+						number: _reward_struct.number,
+						value: 0
+					}
+					
+				item_reward(
+				o_player_controll.ds_upgrades,
+				_reward_struct.key,
+				_reward,
+				"new_challenges_2")
+			}
 		},
 	}
 	
@@ -81,23 +133,19 @@ function init(){
 			name:"Five Coins",
 			progress: {
 				text: "Collect Coins: ",
-				count:0,
 				max_count:5
 			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				var _k = ds_map_find_value(o_player_controll.ds_collectables, "coins");
-				var _s = ds_map_find_value(o_player_controll.ds_quests, "five_coins");
-				if is_undefined(_k) exit
-				if is_undefined(_s) exit
-				var _track_value = o_player_controll.ds_collectables[? "coins"].value
-				var _save_progress_value = o_player_controll.ds_quests[? "five_coins"].progress
-				progress.count = _track_value
-				_save_progress_value = _track_value
-				if _track_value >= progress.max_count {
-					var _reward_struct = variable_struct_get(global.struct_shop_items, "cake")
+				var _track_value = ds_map_find_value(o_player_controll.ds_collectables, "coins");
+				var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, "five_coins");
+				if is_undefined(_track_value) exit
+				if is_undefined(_save_progress_value) exit
+				_save_progress_value.progress = _track_value.value
+				if _save_progress_value.progress >= progress.max_count {
+					var _reward_struct = variable_struct_get(global.struct_shop_items, "candy")
 					var _reward = { 
 							level: 1,
 							price: _reward_struct.price
@@ -122,22 +170,17 @@ function init(){
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				var _k = ds_map_find_value(o_player_controll.ds_collectables, "coins");
-				var _s = ds_map_find_value(o_player_controll.ds_quests, "ten_coins");
-				if is_undefined(_k) exit
-				if is_undefined(_s) exit
-				var _track_value = o_player_controll.ds_collectables[? "coins"].value
-				var _save_progress_value = o_player_controll.ds_quests[? "ten_coins"].progress
-				progress.count = _track_value
-				_save_progress_value = _track_value
-				if _track_value >= progress.max_count {
-					var _reward_struct = variable_struct_get(global.struct_upgrade_items, "spike_head")
+				var _track_value = ds_map_find_value(o_player_controll.ds_collectables, "coins");
+				var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, "ten_coins");
+				if is_undefined(_track_value) exit
+				if is_undefined(_save_progress_value) exit
+				_save_progress_value.progress = _track_value.value
+				if _save_progress_value.progress >= progress.max_count {
+					var _reward_struct = variable_struct_get(global.struct_upgrade_items, "unlock_angry_birds")
 					var _reward = { 
-							level: 1,
+							level: 0,
 							price: _reward_struct.price,
 							type: _reward_struct.type,
-							number: _reward_struct.number,
-							value: 0
 						}
 					
 					quest_reward(
@@ -152,22 +195,18 @@ function init(){
 			name:"Ten Coins",
 			progress: {
 				text: "Collected Coins:",
-				count:0,
 				max_count:10
 			},
 			description: "",
 			sprite: s_item,
 			unlocked: false,
 			condition: function(){
-				var _k = ds_map_find_value(o_player_controll.ds_upgrades, "spike_head");
-				var _s = ds_map_find_value(o_player_controll.ds_quests, "new_challenges");
-				if is_undefined(_k) exit
-				if is_undefined(_s) exit
-				var _track_value = o_player_controll.ds_upgrades[? "spike_head"].value
-				var _save_progress_value = o_player_controll.ds_quests[? "new_challenges"].progress
-				progress.count = _track_value
-				_save_progress_value = _track_value
-				if _track_value >= progress.max_count {
+				var _track_value = ds_map_find_value(o_player_controll.ds_upgrades, "spike_head");
+				var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, "new_challenges");
+				if is_undefined(_track_value) exit
+				if is_undefined(_save_progress_value) exit
+				_save_progress_value.progress = _track_value.value
+				if _save_progress_value.progress >= progress.max_count {
 					var _reward_struct = variable_struct_get(global.struct_upgrade_items, "snail")
 					var _reward = { 
 							level: 1,
@@ -202,9 +241,8 @@ function init(){
 				if is_undefined(_s) exit
 				var _track_value = o_player_controll.ds_upgrades[? "spike_head"].value
 				var _save_progress_value = o_player_controll.ds_quests[? "new_challenges_2"].progress
-				progress.count = _track_value
 				_save_progress_value = _track_value
-				if _track_value >= progress.max_count {
+				if _save_progress_value >= progress.max_count {
 					var _reward_struct = variable_struct_get(global.struct_upgrade_items, "angry_bird")
 					var _reward = { 
 							level: 1,
@@ -222,69 +260,6 @@ function init(){
 				}
 			}
 		},
-		//new_challenge_2: {
-		//	name:"Kill this Spikes",
-		//	progress: {
-		//		text: "Spike Heads: ",
-		//		count:0,
-		//		max_count:10
-		//	},
-		//	description: "",
-		//	sprite: s_item,
-		//	unlocked: false,
-		//	condition: function(){
-		//		var _track_value = o_player_controll.player.track.monsters.spike_head.value
-		//		progress.count = _track_value
-		//		if _track_value >= progress.max_count {
-		//			quest_reward(
-		//			o_player_controll.player.upgrades,
-		//			global.struct_upgrade_items.snail,
-		//			global.struct_quests.new_challenge_2)
-		//		}
-		//	}
-		//},
-		//new_challenge_3: {
-		//	name:"New Challenges",
-		//	progress: {
-		//		text: "Spike Heads: ",
-		//		count:0,
-		//		max_count:50,
-		//	},
-		//	description: "",
-		//	sprite: s_item,
-		//	unlocked: false,
-		//	condition: function(){
-		//		var _track_value = o_player_controll.player.track.monsters.spike_head.value
-		//		progress.count = _track_value
-		//		if _track_value >= progress.max_count {
-		//			quest_reward(
-		//			o_player_controll.player.upgrades,
-		//			global.struct_upgrade_items.angry_bird,
-		//			global.struct_quests.new_challenge_3)
-		//		}
-		//	}
-		//},
-		//new_challenge_4: {
-		//	name:"More Speed",
-		//	progress: {
-		//		text: "Collect Coins: ",
-		//		count:0,
-		//		max_count: 200
-		//	},
-		//	description: "",
-		//	sprite: s_item,
-		//	unlocked: false,
-		//	condition: function(){
-		//		var _track_value = o_player_controll.player.track.collectables.coins.value
-		//		progress.count = _track_value
-		//		if _track_value >= progress.max_count {
-		//			quest_reward(
-		//			o_player_controll.player.upgrades,
-		//			global.struct_upgrade_items.speed_drink,
-		//			global.struct_quests.new_challenge_4)
-		//		}
-		//	}
-		//}
 	}
 		
 	global.struct_secret_items = {

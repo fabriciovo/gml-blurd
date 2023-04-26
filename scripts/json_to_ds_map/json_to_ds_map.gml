@@ -9,9 +9,7 @@ function json_add_to_ds_map(_j,_map) {
 	
     for(var i = 0; i < _size; i++) {
         _key = _keys[i]
-		show_message(_key)
         _value = _json[$ _key]
-		show_message(_value)
         ds_map_add(_map, _key, _value);
 
     }
