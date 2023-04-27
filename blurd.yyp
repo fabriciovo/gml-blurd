@@ -210,6 +210,7 @@
     {"id":{"name":"on_click_signin","path":"scripts/on_click_signin/on_click_signin.yy",},},
     {"id":{"name":"s_item","path":"sprites/s_item/s_item.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
+    {"id":{"name":"player_file","path":"scripts/player_file/player_file.yy",},},
     {"id":{"name":"constructor_powerup","path":"scripts/constructor_powerup/constructor_powerup.yy",},},
     {"id":{"name":"o_title","path":"objects/o_title/o_title.yy",},},
     {"id":{"name":"FirebaseREST_refreshTokenOnPath","path":"scripts/FirebaseREST_refreshTokenOnPath/FirebaseREST_refreshTokenOnPath.yy",},},

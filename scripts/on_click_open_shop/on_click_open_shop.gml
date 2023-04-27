@@ -43,7 +43,7 @@ function create_upgrade_shop(){
 	//TODO check type of item
 	if (_list[? _key].type == "Unlockable"){
 		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_unlockable(_key,_w,_h));
-	}else {
+	} else {
 		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_key,_w,_h));
 	}
 

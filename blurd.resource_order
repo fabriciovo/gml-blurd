@@ -156,6 +156,7 @@
     {"name":"on_click_signin","order":1,"path":"scripts/on_click_signin/on_click_signin.yy",},
     {"name":"s_item","order":4,"path":"sprites/s_item/s_item.yy",},
     {"name":"rm_game","order":2,"path":"rooms/rm_game/rm_game.yy",},
+    {"name":"player_file","order":14,"path":"scripts/player_file/player_file.yy",},
     {"name":"constructor_powerup","order":13,"path":"scripts/constructor_powerup/constructor_powerup.yy",},
     {"name":"FirebaseREST_refreshTokenOnPath","order":6,"path":"scripts/FirebaseREST_refreshTokenOnPath/FirebaseREST_refreshTokenOnPath.yy",},
     {"name":"Obj_FirebaseREST_Listener_Once_Authentication","order":1,"path":"objects/Obj_FirebaseREST_Listener_Once_Authentication/Obj_FirebaseREST_Listener_Once_Authentication.yy",},

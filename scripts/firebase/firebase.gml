@@ -13,13 +13,13 @@ function firebase_create(){
 	var _json = json_encode(_map)		
 	
 	ds_map_destroy(_map)
-	
+		
 	FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Set(_json)
+	FirebaseAuthentication_GetIdToken()
 }
 
 function firebase_load(){
-	FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Read()
-	room_goto(rm_firebase)
+	FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Read
 }
 
 function firebase_update(){
@@ -37,6 +37,8 @@ function firebase_update(){
 
 	var _json = json_encode(_map)		
 	ds_map_destroy(_map)
+	
+	
 
 	FirebaseFirestore("Users").Child("user: " + string(FirebaseAuthentication_GetUID())).Update(_json);
 
