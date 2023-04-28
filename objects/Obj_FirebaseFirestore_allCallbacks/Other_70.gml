@@ -36,7 +36,7 @@ switch(async_load[?"type"])
 	break
 
 	case "FirebaseFirestore_Document_Read":
-		show_message("FirebaseFirestore_Document_Set")
+		show_message("FirebaseFirestore_Document_Read")
 		var _path = async_load[?"path"]
 		var _value = async_load[?"value"]
 		show_message(_path)

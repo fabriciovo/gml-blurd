@@ -13,13 +13,19 @@ function firebase_create(){
 	var _json = json_encode(_map)		
 	
 	ds_map_destroy(_map)
-		
-	FirebaseFirestore("Users").Child(FirebaseAuthentication_GetUID()).Set(_json)
+	
+	show_message(FirebaseAuthentication_GetUID())
+	show_message(string(FirebaseAuthentication_GetUID()))
+	
+	FirebaseFirestore("Users").Child(string(FirebaseAuthentication_GetUID())).Set(_json)
 	room_goto(rm_game)
 }
 
-function firebase_firestore_read(){
-	FirebaseFirestore("Users").Child(FirebaseAuthentication_GetUID()).Read()
+function firebase_firestore_read(){	
+	show_message(FirebaseAuthentication_GetUID())
+	show_message(string(FirebaseAuthentication_GetUID()))
+	
+	FirebaseFirestore("Users").Child(string(FirebaseAuthentication_GetUID())).Read()
 	room_goto(rm_game)
 }
 
@@ -40,7 +46,7 @@ function firebase_update(){
 	ds_map_destroy(_map)
 	
 
-	FirebaseFirestore("Users").Child(FirebaseAuthentication_GetUID()).Update(_json)
+	FirebaseFirestore("Users").Child(string(FirebaseAuthentication_GetUID())).Update(_json)
 
 }
 
