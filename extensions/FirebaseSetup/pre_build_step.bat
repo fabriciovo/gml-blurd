@@ -1,29 +1,46 @@
-echo off
+@echo off
+set Utils="%~dp0\scriptUtils.bat"
 
-echo "############################## FIREBASE CONFIGURATION ##############################"
-echo "We are currently configuring the firebase using your private key files"
-echo "####################################################################################"
 
-if "%YYPLATFORM_name%" == "Android" (
+:: ######################################################################################
+:: Script Logic
 
-    if not exist "%YYEXTOPT_FirebaseSetup_jsonFile%" (
-        echo "########################## FIREBASE CONFIGURATION (ERROR) ##########################"
-        echo "The path to google-services.json file was not configured correctly."
-        echo "####################################################################################"
-        exit 1
-    )
+:: Always init the script
+call %Utils% scriptInit
 
-    xcopy /y "%YYEXTOPT_FirebaseSetup_jsonFile%" "%YYprojectDir%\extensions\FirebaseSetup\AndroidSource\ProjectFiles\"
-)
+:: Version locks
+call %Utils% optionGetValue "versionStable" RUNTIME_VERSION_STABLE
+call %Utils% optionGetValue "versionBeta" RUNTIME_VERSION_BETA
+call %Utils% optionGetValue "versionDev" RUNTIME_VERSION_DEV
+call %Utils% optionGetValue "versionLTS" RUNTIME_VERSION_LTS
 
-if "%YYPLATFORM_name%" == "iOS" (
+:: Checks IDE and Runtime versions
+call %Utils% versionLockCheck "%YYruntimeVersion%" %RUNTIME_VERSION_STABLE% %RUNTIME_VERSION_BETA% %RUNTIME_VERSION_DEV% %RUNTIME_VERSION_LTS%
 
-    if not exist "%YYEXTOPT_FirebaseSetup_plistFile%" (
-        echo "########################## FIREBASE CONFIGURATION (ERROR) ##########################"
-	    echo "The path to GoogleServices-Info.plist file was not configured correctly."
-        echo "####################################################################################"
-        exit 1
-    )
+call :setup%YYPLATFORM_name% "%~dp0"
 
-    xcopy /y "%YYEXTOPT_FirebaseSetup_plistFile%" "%YYprojectDir%\extensions\FirebaseSetup\iOSProjectFiles\"
-)
+exit %errorlevel%
+
+:: ######################################################################################
+:: Script Functions
+
+:setupAndroid
+    echo "Copying Android Firebase credentials into your project."
+    call %Utils% optionGetValue "jsonFile" CREDENTIAL_FILE
+
+    :: Resolve the credentials file path and copy it to the Android ProjectFiles folder
+    call %Utils% pathResolveExisting "%YYprojectDir%" "%CREDENTIAL_FILE%" FILE_PATH
+    call %Utils% itemCopyTo "%FILE_PATH%" "%~1\AndroidSource\ProjectFiles\google-services.json"
+exit /b %errorlevel%
+
+:setupIOS
+    echo "Copying iOS Firebase credentials into your project."
+    call %Utils% optionGetValue "plistFile" CREDENTIAL_FILE
+
+    :: Resolve the credentials file path and copy it to the iOS ProjectFiles folder
+    call %Utils% pathResolveExisting "%YYprojectDir%" "%CREDENTIAL_FILE%" FILE_PATH
+    call %Utils% itemCopyTo "%FILE_PATH%" "%~1\iOSProjectFiles\GoogleService-Info.plist"
+exit /b %errorlevel%
+
+:setupHTML5
+exit /b %errorlevel%

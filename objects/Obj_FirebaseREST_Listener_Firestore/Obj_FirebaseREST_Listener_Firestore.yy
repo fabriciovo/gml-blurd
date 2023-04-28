@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/Packages/Firebase/Firestore/Firebase REST API Library (Don't Touch)/Listeners Firestore/Tools/Objects.yy",
+    "path": "folders/Packages/Firebase/Firestore/Firebase Firestore/Extensions/Firebase REST API Library (Don't Touch)/Listeners Firestore/Tools/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": true,

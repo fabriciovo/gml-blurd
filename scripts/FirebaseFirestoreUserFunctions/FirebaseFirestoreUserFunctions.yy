@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Firebase Firestore",
-    "path": "folders/Packages/Firebase/Firestore/Firebase REST API Library (Don't Touch)/Firebase Firestore.yy",
+    "path": "folders/Packages/Firebase/Firestore/Firebase Firestore/Extensions/Firebase REST API Library (Don't Touch)/Firebase Firestore.yy",
   },
 }

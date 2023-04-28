@@ -25,12 +25,12 @@ switch(async_load[?"type"])
 {
 	case "FirebaseAuthentication_SignInWithCustomToken":
 		var user_raw = async_load[?"value"]
+		firebase_firestore_read()
 		
 	break
 			
 	case "FirebaseAuthentication_SignIn_Email":
 		var user_raw = async_load[?"value"]
-		show_message(user_raw)
 		firebase_firestore_read()
 	break
 	
@@ -106,7 +106,10 @@ switch(async_load[?"type"])
 		
 	
 	case "FirebaseAuthentication_GetIdToken":
-
+		show_message("FirebaseAuthentication_GetIdToken")
+		value = async_load[? "value"]
+		show_message(value)
+		write_player_info(value)
 	break
 	
 	
@@ -147,8 +150,6 @@ switch(async_load[?"type"])
 	
 	case "FirebaseAuthentication_IdTokenListener":
 		var token = async_load[?"value"]
-		show_message("FirebaseAuthentication_IdTokenListener")
-		show_message(token)
 	break
 }		
 

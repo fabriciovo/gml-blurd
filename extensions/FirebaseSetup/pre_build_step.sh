@@ -1,31 +1,48 @@
 #!/bin/bash
 
-set echo off
+sed -i -e 's/\\r$//' "$(dirname "$0")/scriptUtils.sh"
+chmod +x "$(dirname "$0")/scriptUtils.sh"
+source "$(dirname "$0")/scriptUtils.sh"
 
-echo "####################### FIREBASE CONFIGURATION #######################"
-echo "We are currently configuring the firebase using your private key files"
-echo "######################################################################"
+# ######################################################################################
+# Script Functions
 
-if [[ "${YYPLATFORM_name}" == "Android" ]]; then
+setupAndroid() {
+    echo "Copying Android Firebase credentials into your project."
+    optionGetValue "jsonFile" CREDENTIAL_FILE
 
-    if [[ ! -f "${YYEXTOPT_FirebaseSetup_jsonFile}" ]]; then
-        echo "########################## FIREBASE CONFIGURATION (ERROR) ##########################"
-        echo "The path to google-services.json file was not configured correctly."
-        echo "####################################################################################"
-        exit 1
-    fi
+    # Resolve the credentials file path and copy it to the Android ProjectFiles folder
+    pathResolveExisting "$YYprojectDir" "$CREDENTIAL_FILE" FILE_PATH
+    itemCopyTo "${FILE_PATH}" "$1/AndroidSource/ProjectFiles/google-services.json"
+}
 
-    mkdir -p "${YYprojectDir}/extensions/FirebaseSetup/AndroidSource/ProjectFiles/" && cp -rf "${YYEXTOPT_FirebaseSetup_jsonFile}" "${YYprojectDir}/extensions/FirebaseSetup/AndroidSource/ProjectFiles/"
+setupiOS() {
+    echo "Copying iOS Firebase credentials into your project."
+    optionGetValue "jsonFile" CREDENTIAL_FILE
 
-elif [[ "${YYPLATFORM_name}" == "iOS" ]]; then
+    # Resolve the credentials file path and copy it to the iOS ProjectFiles folder
+    pathResolveExisting "$YYprojectDir" "$CREDENTIAL_FILE" FILE_PATH
+    itemCopyTo "${FILE_PATH}" "$1/iOSProjectFiles/GoogleService-Info.plist"
+}
 
-    if [[ ! -f "${YYEXTOPT_FirebaseSetup_plistFile}" ]]; then
-        echo "########################## FIREBASE CONFIGURATION (ERROR) ##########################"
-	    echo "The path to GoogleServices-Info.plist file was not configured correctly."
-        echo "####################################################################################"
-        exit 1
-    fi
+setupHTML5() {
+    echo "Building for HTML5 no extra setup required"
+}
 
-    mkdir -p "${YYprojectDir}/extensions/FirebaseSetup/iOSProjectFiles/" && cp -rf "${YYEXTOPT_FirebaseSetup_plistFile}" "${YYprojectDir}/extensions/FirebaseSetup/iOSProjectFiles/"
-fi
+# ######################################################################################
+# Script Logic
+
+# Always init the script
+scriptInit
+
+# Version locks
+optionGetValue "versionStable" RUNTIME_VERSION_STABLE
+optionGetValue "versionBeta" RUNTIME_VERSION_BETA
+optionGetValue "versionDev" RUNTIME_VERSION_DEV
+optionGetValue "versionLTS" RUNTIME_VERSION_LTS
+
+# Version lock
+versionLockCheck "$YYruntimeVersion" $RUNTIME_VERSION_STABLE $RUNTIME_VERSION_BETA $RUNTIME_VERSION_RED $RUNTIME_VERSION_LTS
+
+setup$YYPLATFORM_name "$(dirname "$0")"
 

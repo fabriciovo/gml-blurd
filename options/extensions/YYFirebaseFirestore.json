@@ -8,6 +8,9 @@
     },
     "d0bc7dea-7df6-4506-8c8a-78f04b930a4e": null
   },
-  "extensionId": null,
+  "extensionId": {
+    "name": "YYFirebaseFirestore",
+    "path": "extensions/YYFirebaseFirestore/YYFirebaseFirestore.yy"
+  },
   "resourceVersion": "1.0"
 }

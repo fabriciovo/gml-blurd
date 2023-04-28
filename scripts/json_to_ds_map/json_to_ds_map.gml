@@ -11,6 +11,5 @@ function json_add_to_ds_map(_j,_map) {
         _key = _keys[i]
         _value = _json[$ _key]
         ds_map_add(_map, _key, _value);
-
     }
 }

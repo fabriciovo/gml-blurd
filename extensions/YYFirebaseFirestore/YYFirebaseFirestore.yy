@@ -4,7 +4,7 @@
   "name": "YYFirebaseFirestore",
   "androidactivityinject": "",
   "androidclassname": "YYFirebaseFirestore",
-  "androidcodeinjection": "\r\n<YYAndroidGradleDependencies>\r\n        implementation platform('com.google.firebase:firebase-bom:29.3.1')\r\n        implementation 'com.google.firebase:firebase-firestore'\r\n</YYAndroidGradleDependencies>\r\n\r\n<YYAndroidTopLevelGradleBuildscriptDependencies>\r\n        classpath 'com.google.gms:google-services:4.3.14'  // Google Services plugin\r\n</YYAndroidTopLevelGradleBuildscriptDependencies>\r\n\r\n<YYAndroidGradleEnd>\r\n       apply plugin: 'com.google.gms.google-services'\r\n</YYAndroidGradleEnd>\r\n\r\n<YYAndroidGradleAndroid>\r\n    compileOptions {\r\n        sourceCompatibility 1.8\r\n        targetCompatibility 1.8}\r\n</YYAndroidGradleAndroid>\r\n",
+  "androidcodeinjection": "\r\n<YYAndroidGradleDependencies>\r\n        implementation 'com.google.firebase:firebase-firestore'\r\n</YYAndroidGradleDependencies>\r\n",
   "androidinject": "",
   "androidmanifestinject": "",
   "androidPermissions": [],
@@ -16,7 +16,7 @@
   "date": "2021-08-27T23:33:55.4551561-03:00",
   "description": "",
   "exportToGame": true,
-  "extensionVersion": "2.0.0",
+  "extensionVersion": "2.3.1",
   "files": [
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"FirebaseFirestore.ext","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"FirebaseFirestore_SDK","argCount":0,"args":[
@@ -35,7 +35,7 @@
         {"name":"FirebaseFirestore_SDK","path":"extensions/YYFirebaseFirestore/YYFirebaseFirestore.yy",},
       ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
-  "gradleinject": "\r\n        implementation platform('com.google.firebase:firebase-bom:29.3.1')\r\n        implementation 'com.google.firebase:firebase-firestore'\r\n",
+  "gradleinject": "\r\n        implementation 'com.google.firebase:firebase-firestore'\r\n",
   "hasConvertedCodeInjection": true,
   "helpfile": "",
   "HTML5CodeInjection": "",
@@ -44,7 +44,7 @@
   "installdir": "",
   "iosCocoaPodDependencies": "",
   "iosCocoaPods": "\r\npod 'Firebase/Firestore','8.4.0'\r\n",
-  "ioscodeinjection": "\r\n<YYIosCocoaPods>\r\npod 'Firebase/Firestore','8.4.0'\r\n</YYIosCocoaPods>\r\n\r\n<YYIosBuildSettingsInjection>\r\n      IPHONEOS_DEPLOYMENT_TARGET = 10;\r\n</YYIosBuildSettingsInjection>\r\n",
+  "ioscodeinjection": "\r\n<YYIosCocoaPods>\r\npod 'Firebase/Firestore','8.4.0'\r\n</YYIosCocoaPods>\r\n\r\n",
   "iosdelegatename": "",
   "iosplistinject": "",
   "iosProps": true,
@@ -65,8 +65,8 @@
   "optionsFile": "options.json",
   "packageId": "",
   "parent": {
-    "name": "Firestore",
-    "path": "folders/Packages/Firebase/Firestore.yy",
+    "name": "Extensions",
+    "path": "folders/Packages/Firebase/Firestore/Firebase Firestore/Extensions.yy",
   },
   "productId": "",
   "sourcedir": "",

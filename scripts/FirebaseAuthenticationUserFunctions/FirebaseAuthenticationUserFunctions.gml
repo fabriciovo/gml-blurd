@@ -32,7 +32,6 @@ function RESTFirebaseAuthentication_RequestIDToken_FromCache()
 	{
 		var map = ds_map_secure_load(Firebase_REST_FILE)
 		var refreshToken = map[?"refreshToken"]
-		show_message(refreshToken)
 		if(ds_map_exists(map,"UserData"))
 			YYFirebaseUserData = map[?"UserData"] 
 		
