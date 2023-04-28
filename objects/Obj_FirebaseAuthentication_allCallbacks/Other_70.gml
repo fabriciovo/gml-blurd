@@ -24,22 +24,19 @@ if(async_load[?"status"] == 200)//400 is error
 switch(async_load[?"type"])
 {
 	case "FirebaseAuthentication_SignInWithCustomToken":
-		show_message("FirebaseAuthentication_SignInWithCustomToken")
 		var user_raw = async_load[?"value"]
-		show_message(user_raw)
-		firebase_load();
-	
-		room_goto(rm_firebase);
+		
 	break
 			
 	case "FirebaseAuthentication_SignIn_Email":
-		firebase_load();
-		room_goto(rm_firebase);
+		var user_raw = async_load[?"value"]
+		show_message(user_raw)
+		firebase_firestore_read()
 	break
 	
 	case "FirebaseAuthentication_SignUp_Email":
+		var user_raw = async_load[?"value"]
 		firebase_create();
-		room_goto(rm_firebase);
 	break
 		
 			
@@ -150,6 +147,8 @@ switch(async_load[?"type"])
 	
 	case "FirebaseAuthentication_IdTokenListener":
 		var token = async_load[?"value"]
+		show_message("FirebaseAuthentication_IdTokenListener")
+		show_message(token)
 	break
 }		
 

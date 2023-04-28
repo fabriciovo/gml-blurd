@@ -10,6 +10,7 @@ if(async_load[?"result"] != "")
 	if(async_load[?"id"] == request_password)
 	{
 		var password = async_load[?"result"]
+		write_player_info(email,password)
 		FirebaseAuthentication_SignIn_Email(email,password)
 	}
 }

@@ -1,5 +1,5 @@
 function constructor_monster() constructor {	
-	level = -1
+	level = 0
 	drop = []
 	grav = 0
 	vsp = 0
@@ -7,9 +7,7 @@ function constructor_monster() constructor {
 	hsp = global.game_speed
 	grounded = false
 	track_key = ""
-	level = 0
 	image_speed = 0
-	
 	create_method = function(){
 		show_error("METHOD NOT IMPLEMENTED",true)
 	}
@@ -28,11 +26,9 @@ function constructor_monster() constructor {
 	event_method = function(){
 		show_error("METHOD NOT IMPLEMENTED",true)
 	}
-	
 	alarm_method = function(){
 		show_error("METHOD NOT IMPLEMENTED",true)
 	}
-	
 	player_collision = function(){
 		var _monster = o_player_controll.ds_upgrades[? track_key]
 		_monster.value++
@@ -45,7 +41,6 @@ function constructor_monster() constructor {
 		
 		instance_destroy()
 	}
-
 }
 function constructor_monster_spike_head() : constructor_monster() constructor {
 	sprite_index = s_spike_head

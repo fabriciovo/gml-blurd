@@ -34,21 +34,25 @@ function FirebaseREST_HTTP_Failed_Firestore()
 	
 	FirebaseREST_asyncCall_Firestore()
 	
-	/*
+	
 	switch(event)
 	{
 		default:
 			FirebaseREST_asyncCall_Firestore()
 		break
-		
-	    case "FirebaseFirestore_Collection_Read":
-		case "FirebaseFirestore_Collection_Listener":
-		case "FirebaseFirestore_Collection_Query":
-		case "FirebaseFirestore_Document_Read":
-		case "FirebaseFirestore_Document_Listener":
+		//case "FirebaseFirestore_Document_Read":
+		//break
+		//case "FirebaseFirestore_Document_Set":
+		//break
+		//case "FirebaseFirestore_Document_Update":
+		//break
+		//case "FirebaseFirestore_Collection_Listener":
+		//case "FirebaseFirestore_Collection_Query":
+		//case "FirebaseFirestore_Collection_Read":
+		//case "FirebaseFirestore_Document_Listener":
 	        FirebaseREST_asyncCall_Firestore(undefined)
 	    break
 	}
-	*/
+	
 	
 }

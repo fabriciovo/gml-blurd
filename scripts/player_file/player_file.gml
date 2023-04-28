@@ -1,23 +1,21 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
-function write_player_info(_email, _password){
+function write_player_info(_refresh_token){
 	ini_open("user.ini");
-	ini_write_string("email","player", _email);
-	ini_write_string("password","player", _password);
+	ini_write_string("refresh_token","player", _refresh_token);
 	ini_close();
 }
 
 function read_player_info(){
-	if (file_exists("user.ini")) {
-		ini_open("user.ini")
-		var _email = ini_read_string("email", "player","email");
-		var _password = ini_read_string("password", "player","password");
-		ini_close();
+	ini_open("user.ini")
+	var _refresh_token = ini_read_string("refresh_token","player","token");
+	ini_close();
 
-		if (_email != "" and _password != "") {
-		    //FirebaseAuthentication_SignInWithCustomToken(global.aceess_token);
-		}
+	if _refresh_token != "" {
+		FirebaseAuthentication_SignInWithCustomToken(_refresh_token)
+	}else{
+		room_goto(rm_title)
 	}
 }
 

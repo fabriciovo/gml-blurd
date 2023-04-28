@@ -27,15 +27,20 @@ switch(async_load[?"type"])
 {
 	case "FirebaseFirestore_Document_Set":
 		var path = async_load[?"path"]
+		show_message("FirebaseFirestore_Document_Set")
 	break
 
 	case "FirebaseFirestore_Document_Update":
+		show_message("FirebaseFirestore_Document_Update")
 		var path = async_load[?"path"]
 	break
 
 	case "FirebaseFirestore_Document_Read":
+		show_message("FirebaseFirestore_Document_Set")
 		var _path = async_load[?"path"]
 		var _value = async_load[?"value"]
+		show_message(_path)
+		show_message(_value)
 		var _json = json_parse(_value)
 		var _player =  o_player_controll;
 		
@@ -51,7 +56,6 @@ switch(async_load[?"type"])
 		json_add_to_ds_map(_json.upgrades,o_player_controll.ds_upgrades)
 		json_add_to_ds_map( _json.craft_items,o_player_controll.ds_craft_items)
 		json_add_to_ds_map(_json.secret_items,o_player_controll.ds_secret_items)
-		
 	break
 	
 	case "FirebaseFirestore_Document_Listener":

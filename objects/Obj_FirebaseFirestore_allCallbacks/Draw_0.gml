@@ -9,7 +9,7 @@ with(Obj_FirebaseREST_Listener_Firestore)
 	if(variable_global_exists("YYFirebaseIdToken"))
 	{
 		var urlHide = string_replace(url,YYFirebaseIdToken,"token")
-		draw_text(10,50+a*20,string(id) + ": " + string(alarm[0]) + " -> " + urlHide)
+		draw_text(10,50+a*20,string(id) + ": " + string(alarm[0]) + "\n -> " + urlHide)
 	}
 	else
 		draw_text(10,50+a*20,string(id) + ": " + string(alarm[0]) + " -> " + url)
