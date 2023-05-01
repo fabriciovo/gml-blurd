@@ -14,9 +14,6 @@
     "ea14e0c8-8004-4d4e-aaca-b07869416335": null,
     "7ccb0b44-2b38-4a6f-a85e-68de8fc6ec5e": null
   },
-  "extensionId": {
-    "name": "FirebaseSetup",
-    "path": "extensions/FirebaseSetup/FirebaseSetup.yy"
-  },
+  "extensionId": null,
   "resourceVersion": "1.0"
 }

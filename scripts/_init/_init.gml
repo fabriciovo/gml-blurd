@@ -14,42 +14,8 @@ function init(){
 	}
 	
 	global.struct_shop_items = {
-		candy: {
-			key:"candy",
-			name: "Candy",
-			level:1,
-			price: 1,
-			coins_per_second: 0.10,
-			sprite: s_candy,
-			mult: 1.1,
-		},
-		chocolate: {
-			key:"chocolate",
-			name: "Chocolate",
-			level:1,
-			price: 4,
-			coins_per_second: 0.5,
-			sprite: s_candy,
-			mult: 3.3,
-		},
-		energy_drink: {
-			key:"energy_drink",
-			name: "Energy Drink",
-			level:1,
-			price: 10,
-			coins_per_second: 1,
-			sprite: s_candy,
-			mult: 2.33,
-		},
-		ice_cream: {
-			key:"ice_cream",
-			name: "Ice Cream",
-			level:1,
-			price: 20,
-			coins_per_second: 3,
-			sprite: s_candy,
-			mult: 4.21,
-		},
+		candy: new constructor_food("Candy","candy",s_candy,1,0.10,1.1,1),
+		ice_cream: new constructor_food("Ice Cream","ice_cream",s_ice_cream,1,0.10,1.1,1)
 	}
 	
 	global.struct_upgrade_items = {
