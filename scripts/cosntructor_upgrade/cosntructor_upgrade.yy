@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "constructor_shop_items",
+  "name": "cosntructor_upgrade",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

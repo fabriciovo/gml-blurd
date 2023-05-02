@@ -1,8 +1,8 @@
-function constructor_shop_item(_key, _width, _height) constructor {
+function constructor_food_item(_key, _width, _height) constructor {
 	width = _width;
 	height = _height;
-	global_item = variable_struct_get(global.struct_shop_items,_key)
-	item = o_player_controll.ds_shop_items[? _key]
+	global_item = variable_struct_get(global.struct_foods,_key)
+	item = o_player_controll.ds_foods[? _key]
 	hover = 0
 	l_click = 0
 	open_panel = false
@@ -344,7 +344,7 @@ function constructor_upgrade_item(_key, _width, _height) constructor {
 
 }
 
-function constructor_upgrade_unlockable(_key, _width, _height) : constructor_upgrade_item(_key, _width, _height) constructor {
+function constructor_upgrade_item_unlockable(_key, _width, _height) : constructor_upgrade_item(_key, _width, _height) constructor {
 	item = o_player_controll.ds_upgrades[? _key]
 	global_item = variable_struct_get(global.struct_upgrade_items,_key)
 	step_method = function(){
@@ -354,7 +354,7 @@ function constructor_upgrade_unlockable(_key, _width, _height) : constructor_upg
 		color = hover ? c_green : c_blue
 		if hover and l_click and _player.coins >= item.price {
 			item.level++;
-			global_item.reward()
+			global_item.function_food_reward()
 		}
 	}
 

@@ -1,5 +1,5 @@
 /// @description 
-ds_map_destroy(ds_shop_items);
+ds_map_destroy(ds_foods);
 ds_map_destroy(ds_quests);
 ds_map_destroy(ds_collectables);
 ds_map_destroy(ds_upgrades);

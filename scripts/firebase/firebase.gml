@@ -4,7 +4,7 @@ function firebase_create(){
 	_map[?"total_coins"] = _player.total_coins
 	_map[?"coins"] = _player.coins
 	_map[?"coins_per_second"] = _player.coins_per_second
-	_map[?"shop_items"] = json_encode(_player.ds_shop_items)
+	_map[?"foods"] = json_encode(_player.ds_foods)
 	_map[?"upgrades"] = json_encode(_player.ds_upgrades)
 	_map[?"quests"] = json_encode(_player.ds_quests)
 	_map[?"collectables"] = json_encode(_player.ds_collectables)
@@ -28,7 +28,7 @@ function firebase_firestore_load(_value){
 	_player.total_coins = real(_json.total_coins);
 		
 	//maps
-	json_add_to_ds_map(_json.shop_items,o_player_controll.ds_shop_items)
+	json_add_to_ds_map(_json.foods,o_player_controll.ds_foods)
 	json_add_to_ds_map(_json.collectables,o_player_controll.ds_collectables)
 	json_add_to_ds_map(_json.quests,o_player_controll.ds_quests)
 	json_add_to_ds_map(_json.upgrades,o_player_controll.ds_upgrades)
@@ -48,7 +48,7 @@ function firebase_update(){
 	_map[?"total_coins"] = _player.total_coins
 	_map[?"coins"] = _player.coins
 	_map[?"coins_per_second"] = _player.coins_per_second
-	_map[?"shop_items"] = json_encode(_player.ds_shop_items)
+	_map[?"foods"] = json_encode(_player.ds_foods)
 	_map[?"upgrades"] = json_encode(_player.ds_upgrades)
 	_map[?"quests"] = json_encode(_player.ds_quests)
 	_map[?"collectables"] = json_encode(_player.ds_collectables)

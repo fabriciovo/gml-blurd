@@ -3,6 +3,7 @@ var _list_items_values = ds_map_values_to_array(_list)
 if _list_items_values == undefined exit
 
 var _monster_array = array_filter(_list_items_values, find_type)
+
 var _monster_array_size = array_length(_monster_array)
 if _monster_array_size == 0 exit
 

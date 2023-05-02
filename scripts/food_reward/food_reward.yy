@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "item_reward",
+  "name": "food_reward",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
