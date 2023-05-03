@@ -23,11 +23,16 @@ function init(){
 		spike_head: new constructor_upgrade("Spike Head","spike_head",s_spike_head,1,0,"Monster",1.3,0),
 		snail: new constructor_upgrade("Snail","snail",s_snail,1,0,"Monster",1.3,0),
 		angry_bird: new constructor_upgrade("Angry Bird","angry_bird",s_snail,1,0,"Monster",1.3,0),
-		unlock_ice_cream: new constructor_upgrade_unlockable("Unlock new Food","unlock_ice_cream", s_chocolate,1, 2, "Unlockable",2,0,global.struct_foods.ice_cream),
+		unlock_ice_cream: new constructor_upgrade_unlockable("Unlock new Food","unlock_ice_cream", s_chocolate,100, 2, "Unlockable",2,0,global.struct_foods.ice_cream),
+		unlock_spike_head: new constructor_upgrade_unlockable("Unlock new Food","unlock_spike_head", s_chocolate,150, 2, "Unlockable",2,0,spike_head),
+		unlock_snail: new constructor_upgrade_unlockable("Unlock new Food","unlock_snail", s_chocolate,150, 2, "Unlockable",2, snail),
+		unlock_angry_bird: new constructor_upgrade_unlockable("Unlock new Food","unlock_angry_bird", s_chocolate,150, 2, "Unlockable",2,0,angry_bird),
 	}
 	
 	global.struct_quests = {
-		five_coins: new quest_five_coins()
+		five_coins: new quest_five_coins(),
+		ten_coins: new quest_ten_coins(),
+		monsters: new quest_monsters(),
 	}
 }
 		

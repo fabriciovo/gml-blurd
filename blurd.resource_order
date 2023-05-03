@@ -188,7 +188,7 @@
     {"name":"Obj_FirebaseAuthentication_allCallbacks","order":3,"path":"objects/Obj_FirebaseAuthentication_allCallbacks/Obj_FirebaseAuthentication_allCallbacks.yy",},
     {"name":"s_blurd_jump","order":1,"path":"sprites/s_blurd_jump/s_blurd_jump.yy",},
     {"name":"o_shop_item","order":4,"path":"objects/o_shop_item/o_shop_item.yy",},
-    {"name":"food_reward","order":2,"path":"scripts/food_reward/food_reward.yy",},
+    {"name":"unlockable_reward","order":2,"path":"scripts/unlockable_reward/unlockable_reward.yy",},
     {"name":"s_shop_container","order":2,"path":"sprites/s_shop_container/s_shop_container.yy",},
     {"name":"on_click_signin","order":1,"path":"scripts/on_click_signin/on_click_signin.yy",},
     {"name":"s_item","order":4,"path":"sprites/s_item/s_item.yy",},

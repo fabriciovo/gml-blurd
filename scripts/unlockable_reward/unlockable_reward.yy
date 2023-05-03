@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "food_reward",
+  "name": "unlockable_reward",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

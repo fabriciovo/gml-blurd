@@ -38,8 +38,8 @@ function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _t
 	type = _type
 	mult = _mult
 	
-	function_food_reward = function(){		
-		food_reward(
+	function_unlockable_reward = function(){		
+		unlockable_reward(
 		o_player_controll.ds_foods,
 		reward)
 	

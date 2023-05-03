@@ -246,7 +246,7 @@
     {"id":{"name":"s_blurd_jump","path":"sprites/s_blurd_jump/s_blurd_jump.yy",},},
     {"id":{"name":"o_shop_item","path":"objects/o_shop_item/o_shop_item.yy",},},
     {"id":{"name":"show_shop_btn","path":"scripts/show_shop_btn/show_shop_btn.yy",},},
-    {"id":{"name":"food_reward","path":"scripts/food_reward/food_reward.yy",},},
+    {"id":{"name":"unlockable_reward","path":"scripts/unlockable_reward/unlockable_reward.yy",},},
     {"id":{"name":"s_shop_container","path":"sprites/s_shop_container/s_shop_container.yy",},},
     {"id":{"name":"on_click_signin","path":"scripts/on_click_signin/on_click_signin.yy",},},
     {"id":{"name":"s_item","path":"sprites/s_item/s_item.yy",},},

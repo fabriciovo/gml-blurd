@@ -346,6 +346,8 @@ function constructor_upgrade_item(_key, _width, _height) constructor {
 
 function constructor_upgrade_item_unlockable(_key, _width, _height) : constructor_upgrade_item(_key, _width, _height) constructor {
 	item = o_player_controll.ds_upgrades[? _key]
+	
+	//todo CREATE STRUCT FOR UNLOCKABLE ITEMS
 	global_item = variable_struct_get(global.struct_upgrade_items,_key)
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
