@@ -106,6 +106,7 @@
     {"name":"FirebaseREST_Firestore_path_isCollection","order":14,"path":"scripts/FirebaseREST_Firestore_path_isCollection/FirebaseREST_Firestore_path_isCollection.yy",},
     {"name":"Obj_FirebaseREST_Listener_On_firestore_collection","order":2,"path":"objects/Obj_FirebaseREST_Listener_On_firestore_collection/Obj_FirebaseREST_Listener_On_firestore_collection.yy",},
     {"name":"FirebaseREST_Firestore_jsonDecode","order":12,"path":"scripts/FirebaseREST_Firestore_jsonDecode/FirebaseREST_Firestore_jsonDecode.yy",},
+    {"name":"constructor_quest","order":17,"path":"scripts/constructor_quest/constructor_quest.yy",},
     {"name":"Font_YoYo_50","order":2,"path":"fonts/Font_YoYo_50/Font_YoYo_50.yy",},
     {"name":"o_monster_spawn","order":1,"path":"objects/o_monster_spawn/o_monster_spawn.yy",},
     {"name":"on_click_open_shop","order":4,"path":"scripts/on_click_open_shop/on_click_open_shop.yy",},

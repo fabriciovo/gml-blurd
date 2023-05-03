@@ -144,6 +144,7 @@
     {"id":{"name":"o_bonus_stage_controller","path":"objects/o_bonus_stage_controller/o_bonus_stage_controller.yy",},},
     {"id":{"name":"Obj_FirebaseREST_Listener_On_firestore_collection","path":"objects/Obj_FirebaseREST_Listener_On_firestore_collection/Obj_FirebaseREST_Listener_On_firestore_collection.yy",},},
     {"id":{"name":"FirebaseREST_Firestore_jsonDecode","path":"scripts/FirebaseREST_Firestore_jsonDecode/FirebaseREST_Firestore_jsonDecode.yy",},},
+    {"id":{"name":"constructor_quest","path":"scripts/constructor_quest/constructor_quest.yy",},},
     {"id":{"name":"Font_YoYo_50","path":"fonts/Font_YoYo_50/Font_YoYo_50.yy",},},
     {"id":{"name":"o_monster_spawn","path":"objects/o_monster_spawn/o_monster_spawn.yy",},},
     {"id":{"name":"on_click_open_shop","path":"scripts/on_click_open_shop/on_click_open_shop.yy",},},

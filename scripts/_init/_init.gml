@@ -23,68 +23,11 @@ function init(){
 		spike_head: new constructor_upgrade("Spike Head","spike_head",s_spike_head,1,0,"Monster",1.3,0),
 		snail: new constructor_upgrade("Snail","snail",s_snail,1,0,"Monster",1.3,0),
 		angry_bird: new constructor_upgrade("Angry Bird","angry_bird",s_snail,1,0,"Monster",1.3,0),
-		unlock_ice_cream: new constructor_upgrade_unlockable(
-		"Unlock new Food",
-		"unlock_ice_cream", s_chocolate,1, 2, "Unlockable",2,0,global.struct_foods.ice_cream ),
+		unlock_ice_cream: new constructor_upgrade_unlockable("Unlock new Food","unlock_ice_cream", s_chocolate,1, 2, "Unlockable",2,0,global.struct_foods.ice_cream),
 	}
 	
 	global.struct_quests = {
-		five_coins: {
-			name:"Five Coins",
-			progress: {
-				text: "Collect Coins: ",
-				max_count:5
-			},
-			description: "",
-			sprite: s_item,
-			unlocked: false,
-			condition: function(){
-				var _track_value = ds_map_find_value(o_player_controll.ds_collectables, "coins");
-				var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, "five_coins");
-				if is_undefined(_track_value) exit
-				if is_undefined(_save_progress_value) exit
-				_save_progress_value.progress = _track_value.value
-				if _save_progress_value.progress >= progress.max_count {
-					var _reward_struct = variable_struct_get(global.struct_foods, "candy")
-					var _reward = { 
-							level: 1,
-							price: _reward_struct.price
-						}
-					
-					quest_reward(
-					o_player_controll.ds_foods,
-					_reward_struct.key,
-					_reward,
-					"five_coins")
-				}
-			}
-		},
-		ten_coins: {
-			name:"Ten Coins",
-			progress: {
-				text: "Collected Coins:",
-				count:0,
-				max_count:10
-			},
-			description: "",
-			sprite: s_item,
-			unlocked: false,
-			condition: function(){
-				var _track_value = ds_map_find_value(o_player_controll.ds_collectables, "coins");
-				var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, "ten_coins");
-				if is_undefined(_track_value) exit
-				if is_undefined(_save_progress_value) exit
-				_save_progress_value.progress = _track_value.value
-				if _save_progress_value.progress >= progress.max_count {
-					var _reward_struct = variable_struct_get(global.struct_upgrade_items, "unlock_ice_cream")
-					var _reward = _reward_struct.function_reward()
-					quest_reward(
-					o_player_controll.ds_upgrades,
-					_reward.key,
-					_reward,
-					"ten_coins")
-			}
-		}
+		five_coins: new quest_five_coins()
 	}
 }
 		
@@ -141,4 +84,3 @@ function init(){
 			count: 0,
 		}
 	}
-}
