@@ -51,12 +51,12 @@ function quest_ten_coins() : constructor_quest() constructor {
 
 	function_condition = function(){
 		var _track_value = ds_map_find_value(o_player_controll.ds_collectables, "coins");
-		var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, "five_coins");
+		var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, "ten_coins");
 		if is_undefined(_track_value) exit
 		if is_undefined(_save_progress_value) exit
 		_save_progress_value.progress = _track_value.value
 		if _save_progress_value.progress >= progress.max_count {
-				var _reward_struct = variable_struct_get(global.struct_foods, "candy")
+				var _reward_struct = variable_struct_get(global.struct_foods, "ice_cream")
 				
 				quest_reward(
 				o_player_controll.ds_foods,
@@ -71,20 +71,20 @@ function quest_monsters() : constructor_quest() constructor {
 	key = "new_challenges"
 	progress = {
 		text:  "Upgrade your Candy: ",
-		max_count: 10
+		max_count: 15
 	}
 
 	function_condition = function(){
 		var _track_value = ds_map_find_value(o_player_controll.ds_collectables, "coins");
-		var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, "five_coins");
+		var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, key);
 		if is_undefined(_track_value) exit
 		if is_undefined(_save_progress_value) exit
 		_save_progress_value.progress = _track_value.value
 		if _save_progress_value.progress >= progress.max_count {
-				var _reward_struct = variable_struct_get(global.struct_foods, "candy")
+				var _reward_struct = variable_struct_get(global.struct_upgrade_unlockable, "unlock_chocolate")
 				
 				quest_reward(
-				o_player_controll.ds_foods,
+				o_player_controll.ds_upgrades,
 				_reward_struct,
 			    key)
 		}

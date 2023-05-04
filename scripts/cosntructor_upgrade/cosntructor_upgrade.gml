@@ -27,7 +27,7 @@ function constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,
 	
 }
 
-function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _type, _mult,_level, _reward): constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,_level) constructor {
+function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _type, _mult,_level,_reward_type, _reward): constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,_level) constructor {
 	reward = _reward;
 	name = _name
 	key = _key
@@ -37,11 +37,23 @@ function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _t
 	number = _number
 	type = _type
 	mult = _mult
-	
+	reward_type = _reward_type
 	function_unlockable_reward = function(){		
+		var _player_ds_list = o_player_controll
+		switch(reward_type){
+			case "food":
+				_player_ds_list = o_player_controll.ds_foods
+			break
+			case "upgrade":
+				_player_ds_list = o_player_controll.ds_upgrades
+			break
+		
+		
+		}
+
 		unlockable_reward(
-		o_player_controll.ds_foods,
+		_player_ds_list,
 		reward)
-	
+
 	}
 }

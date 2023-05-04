@@ -2,8 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function quest_reward(_player_ds_list, _reward_struct, _quest_key){
 	var _player = o_player_controll
-
+	show_message(_quest_key)
 	var _quest = variable_struct_get(global.struct_quests, _quest_key)
+	show_message(_quest)
 	var _name = _quest.name
 	var _sprite = _quest.sprite
 	
