@@ -36,7 +36,9 @@ function init(){
 	global.struct_quests = {
 		five_coins: new quest_five_coins(),
 		ten_coins: new quest_ten_coins(),
-		new_challenges: new quest_monsters(),
+		chocolate: new quest_chocolate(),
+		monsters: new quest_monsters(),
+		
 	}
 }
 		

@@ -21,7 +21,8 @@ function constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,
 			mult: mult,
 			level: level,
 			type: type,
-			number: number
+			number: number,
+			value: 0
 		}
 	}
 	
@@ -53,7 +54,7 @@ function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _t
 
 		unlockable_reward(
 		_player_ds_list,
-		reward)
+		reward.function_reward())
 
 	}
 }

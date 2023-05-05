@@ -66,11 +66,11 @@ function quest_ten_coins() : constructor_quest() constructor {
 	}
 }
 
-function quest_monsters() : constructor_quest() constructor {
-	name = "New Challenges"
-	key = "new_challenges"
+function quest_chocolate() : constructor_quest() constructor {
+	name = "Unlock Chocolate"
+	key = "chocolate"
 	progress = {
-		text:  "Upgrade your Candy: ",
+		text:  "Collected Coins: ",
 		max_count: 15
 	}
 
@@ -87,6 +87,31 @@ function quest_monsters() : constructor_quest() constructor {
 				o_player_controll.ds_upgrades,
 				_reward_struct,
 			    key)
+		}
+	}
+}
+
+function quest_monsters() : constructor_quest() constructor {
+	name = "New Challenges"
+	key = "monsters"
+	progress = {
+		text:  "Collected Coins: ",
+		max_count: 20
+	}
+
+	function_condition = function(){
+		var _track_value = ds_map_find_value(o_player_controll.ds_collectables, "coins");
+		var _save_progress_value = ds_map_find_value(o_player_controll.ds_quests, key);
+		if is_undefined(_track_value) exit
+		if is_undefined(_save_progress_value) exit
+		_save_progress_value.progress = _track_value.value
+		if _save_progress_value.progress >= progress.max_count {
+			var _reward_struct = variable_struct_get(global.struct_upgrade_unlockable, "unlock_spike_head")
+				
+			quest_reward(
+			o_player_controll.ds_upgrades,
+			_reward_struct,
+			key)
 		}
 	}
 }
