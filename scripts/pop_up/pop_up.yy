@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "constructor_hero",
+  "name": "pop_up",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Constructors",
-    "path": "folders/Scripts/Constructors.yy",
+    "name": "Utils",
+    "path": "folders/Scripts/Utils.yy",
   },
 }

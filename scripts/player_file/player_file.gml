@@ -1,21 +1,19 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-
-function write_player_info(_refresh_token){
-	ini_open("user.ini");
-	ini_write_string("refresh_token","player", _refresh_token);
-	ini_close();
-}
-
 function read_player_info(){
-	ini_open("user.ini")
-	var _refresh_token = ini_read_string("refresh_token","player","token");
-	ini_close();
+    //ini_open("FirebaseRESTAPI.data")
+    //    var map = ds_map_secure_load("FirebaseRESTAPI.data")
 
-	if _refresh_token != "" {
-		FirebaseAuthentication_SignInWithCustomToken(_refresh_token)
-	}else{
-		room_goto(rm_title)
-	}
+    //    var refreshToken = map[?"UserData"]
+
+    //    var aa = json_parse(refreshToken)
+    //    show_message(aa)
+    //    show_message(aa.users)
+    //    show_message(aa.users[0].passwordHash)
+    //ini_close();
+
+    //if aa.users[0].passwordHash != "" {
+    //    FirebaseAuthentication_SignIn_Email(aa.users[0].email, aa.users[0].passwordHash)
+    //}else{
+    //    room_goto(rm_title)
+    //}
 }
 

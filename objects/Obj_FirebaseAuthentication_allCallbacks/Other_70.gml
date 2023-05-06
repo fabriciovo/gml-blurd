@@ -107,7 +107,6 @@ switch(async_load[?"type"])
 	
 	case "FirebaseAuthentication_GetIdToken":
 		value = async_load[? "value"]
-		write_player_info(value)
 	break
 	
 	

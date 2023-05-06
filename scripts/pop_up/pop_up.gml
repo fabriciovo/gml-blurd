@@ -1,6 +1,6 @@
-function quest_ui(_name, _sprite) constructor{
+function pop_up(_name, _sprite = undefined) constructor{
 	name = _name
-	sprite_ = _sprite
+	sprite = _sprite
 	
 	create_method = function(){
 		alarm[0] = global.one_second * 2	
@@ -26,8 +26,9 @@ function quest_ui(_name, _sprite) constructor{
 		draw_rectangle(_x , 50 , _x + _width, 50 + _height,1);
 
 
-		draw_sprite_ext(sprite_, 0, _x + _margin + _size_new / 3 - 10, 50 + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
-		
+		if sprite {
+			draw_sprite_ext(sprite, 0, _x + _margin + _size_new / 3 - 10, 50 + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
+		}
 
 		draw_set_font(fnt_shop_item);
 		draw_text_ext_color(_x + _margin * 2 + _size_new, 50 + _margin + 2, "Quest Completed!",5,_width,c_gray, c_gray, c_navy, c_navy, .5);
