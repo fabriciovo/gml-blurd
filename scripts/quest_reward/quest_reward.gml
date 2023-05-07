@@ -1,8 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function quest_reward(_player_ds_list, _reward_struct, _quest_key){
+	show_message("quest_reward")
 	var _player = o_player_controll
-	var _quest = variable_struct_get(global.struct_quests, _quest_key)
+	var _quest = variable_struct_get(o_tracker_controll.struct_quests, _quest_key)
 	var _name = _quest.name
 	var _sprite = _quest.sprite
 	

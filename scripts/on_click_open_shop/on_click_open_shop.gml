@@ -63,7 +63,7 @@ function create_quest_panel(){
 	var _x = 54;
 	
 	var _y = _y + _sep;
-	var _keys = variable_struct_get_names(global.struct_quests);
+	var _keys = variable_struct_get_names(o_tracker_controll.struct_quests);
 	for (var _i = array_length(_keys)-1; _i >= 0; --_i) {
 		var _key = _keys[_i];
 		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_quest_item(_key,_w,_h));

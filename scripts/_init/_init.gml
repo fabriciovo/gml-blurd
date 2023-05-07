@@ -36,16 +36,9 @@ function init(){
 		unlock_angry_bird: new constructor_upgrade_unlockable("Unlock new Food","unlock_angry_bird", s_energy_drink,1, 2, "Unlockable",2,0,"upgrade", global.struct_upgrade_items.angry_bird),
 	}
 	 
-	global.struct_quests = {
-		five_coins: new quest_five_coins(),
-		ten_coins: new quest_ten_coins(),
-		chocolate: new quest_unlock_chocolate(),
-		ice_cream: new quest_unlock_ice_cream(),
-		spike_head: new quest_unlock_spike_head(),
-	}
-}
-		
-	global.struct_secret_items = {
+
+	
+		global.struct_secret_items = {
 		sky_stone: {
 			name:"Sky Stone",
 			description:"Open a portal to teleport you for bonus Stage",
@@ -98,3 +91,7 @@ function init(){
 			count: 0,
 		}
 	}
+	
+}
+		
+
