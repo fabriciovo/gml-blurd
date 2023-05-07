@@ -2,7 +2,6 @@ struct_quests = {
 	five_coins: new quest_five_coins(),
 	ten_coins: new quest_ten_coins(),
 	chocolate: new quest_unlock_chocolate(),
-	ice_cream: new quest_unlock_ice_cream(),
 	spike_head: new quest_unlock_spike_head(),
 }
 

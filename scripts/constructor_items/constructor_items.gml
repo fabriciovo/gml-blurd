@@ -1,6 +1,7 @@
 function constructor_food_item(_key, _width, _height) constructor {
 	width = _width;
 	height = _height;
+	show_message(_key)
 	global_item = variable_struct_get(global.struct_foods,_key)
 	item = o_player_controll.ds_foods[? _key]
 	hover = 0
