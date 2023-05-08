@@ -43,7 +43,7 @@ function init(){
 			name:"Sky Stone",
 			description:"Open a portal to teleport you for bonus Stage",
 			count: 0,
-			sprite: s_item,
+			sprite: s_sky_stone,
 			craft_items: {
 				spikes: 5,
 				feather: 5,
@@ -75,19 +75,19 @@ function init(){
 		spike:{
 			name:"Spike",
 			description: "",
-			sprite: s_item,
+			sprite: s_spike_pickup,
 			count: 0,
 		},
 		feather: {
 			name:"Bird Feather",
 			description: "",
-			sprite: s_item,
+			sprite: s_feather_pickup,
 			count: 0,
 		},
 		shell: {
 			name:"Snail Hull",
 			description: "",
-			sprite: s_item,
+			sprite: s_shell_pickup,
 			count: 0,
 		}
 	}

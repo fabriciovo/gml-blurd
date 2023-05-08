@@ -21,7 +21,7 @@ function constructor_pickup() constructor {
 }
 
 function constructor_pickup_apple() : constructor_pickup() constructor {
-	sprite_index = s_item
+	sprite_index = s_apple_pickup
 	
 	left_button_method = function() {
 		o_player_controll.coins += 10
@@ -31,7 +31,7 @@ function constructor_pickup_apple() : constructor_pickup() constructor {
 }
 
 function constructor_pickup_spike() : constructor_pickup() constructor {
-	sprite_index = s_item
+	sprite_index = s_spike_pickup
 	image_blend = c_olive
 	left_button_method = function() {
 		var _item = o_player_controll.ds_craft_items[? "spike"]
@@ -44,7 +44,7 @@ function constructor_pickup_spike() : constructor_pickup() constructor {
 }
 
 function constructor_pickup_shell() : constructor_pickup() constructor {
-	sprite_index = s_item
+	sprite_index = s_shell_pickup
 	image_blend = c_blue
 	left_button_method = function() {
 		var _item = o_player_controll.ds_craft_items[? "shell"]
@@ -57,7 +57,7 @@ function constructor_pickup_shell() : constructor_pickup() constructor {
 }
 
 function constructor_pickup_feather() : constructor_pickup() constructor {
-	sprite_index = s_item
+	sprite_index = s_feather_pickup
 	image_blend = c_green
 	left_button_method = function() {
 		var _item = o_player_controll.ds_craft_items[? "feather"]

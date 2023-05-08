@@ -11,7 +11,7 @@ function constructor_quest() constructor {
 	}
 
 	description = ""
-	sprite = s_item
+	sprite = noone
 	unlocked = false
 	
 	function_condition = function(){
@@ -38,6 +38,7 @@ function quest_five_coins() : constructor_quest() constructor {
 	global_struct = global.struct_foods
 	global_struct_key = "candy"
 	ds_player_list = o_player_controll.ds_foods
+	sprite = s_five_coins
 	progress = {
 		text:  "Collected Coins: ",
 		max_count: 5
@@ -51,7 +52,7 @@ function quest_ten_coins() : constructor_quest() constructor {
 	ds_player_list = o_player_controll.ds_foods
 	global_struct = global.struct_foods
 	global_struct_key = "ice_cream"
-	
+	sprite = s_ten_coins
 	progress = {
 		text:  "Collected Coins: ",
 		max_count: 10
@@ -65,6 +66,7 @@ function quest_unlock_chocolate() : constructor_quest() constructor {
 	global_struct = global.struct_upgrade_unlockable
 	global_struct_key = "unlock_chocolate"
 	ds_player_list = o_player_controll.ds_upgrades
+	sprite = s_unlock_chocolate
 	progress = {
 		text:  "Collected Coins: ",
 		max_count: 15
@@ -78,6 +80,7 @@ function quest_unlock_spike_head() : constructor_quest() constructor {
 	global_struct = global.struct_upgrade_unlockable
 	global_struct_key = "unlock_spike_head"
 	ds_player_list = o_player_controll.ds_upgrades
+	sprite = s_unlock_spike_head
 	progress = {
 		text:  "Collected Coins: ",
 		max_count: 50

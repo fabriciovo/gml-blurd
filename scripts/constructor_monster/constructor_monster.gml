@@ -21,7 +21,7 @@ function constructor_monster() constructor {
 		}
 	}
 	destroy_method = function(){
-		instance_create_layer(x,y,"Instances",o_particle, new Particles(s_effect_placeholder))
+		instance_create_layer(x,y,"Instances",o_particle, new Particles(s_explosion))
 	}
 	event_method = function(){
 		show_error("METHOD NOT IMPLEMENTED",true)
