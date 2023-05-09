@@ -8,7 +8,7 @@ function btn_tab(_layer_name,_sprite, _func, _size) constructor {
 	hover = 0
 	l_click = 0
 	color = c_white
-	scale = 1
+	scale = 2
 	
 	left_click_method = function(){
 		if size == 0 exit
@@ -20,8 +20,8 @@ function btn_tab(_layer_name,_sprite, _func, _size) constructor {
 		func()
 	}
 	
-	step_method = function(){ if 
-		size == 0 exit
+	step_method = function(){ 
+		if size == 0 exit
 		color = hover ? c_green : c_white
 		if hover and l_click {
 			left_click_method()
@@ -35,17 +35,16 @@ function btn_tab(_layer_name,_sprite, _func, _size) constructor {
 		var _spr_width = sprite_get_width(sprite) * scale;
 		var _spr_height = sprite_get_height(sprite) * scale;
 		
-		hover = point_in_rectangle(_mouse_x, _mouse_y, x - _spr_width/2, y - _spr_height/2, x + _spr_width/2, y + _spr_height/2);
+		hover = point_in_rectangle(_mouse_x, _mouse_y, x - _spr_width / 2, y - _spr_height/ 2, x + _spr_width/ 2, y + _spr_height/ 2);
 		l_click = mouse_check_button_pressed(mb_left)
 	}
 	
 	draw_gui_method = function(){
 		if size == 0 exit
-		var _margin = 4;
-		var _size = 4;
+		var _margin = 3;
+		var _size = size;
 		var _size_new = _margin * _size;
 
-		draw_sprite_ext(s_shop_icon_placeholder, 0, x + _margin + _size_new / 3 - 10, y + _margin + _size_new / 4,scale,scale,0,color,1);
-		
+		draw_sprite_ext(s_bag_btn, 0, x + _size_new, y, scale,scale,0,color,1);
 	}
 }
