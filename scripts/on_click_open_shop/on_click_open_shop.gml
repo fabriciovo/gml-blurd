@@ -1,5 +1,5 @@
 function create_items_shop(){
-	var _items_layer = layer_get_id("Items")	
+	var _items_layer = layer_get_id("Foods")	
 	var _sep = 4;
 
 	var _x = 0;
