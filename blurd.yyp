@@ -11,6 +11,7 @@
     {"id":{"name":"s_five_coins","path":"sprites/s_five_coins/s_five_coins.yy",},"order":0,},
     {"id":{"name":"Obj_FirebaseREST_Listener_Once_Firestore","path":"objects/Obj_FirebaseREST_Listener_Once_Firestore/Obj_FirebaseREST_Listener_Once_Firestore.yy",},"order":0,},
     {"id":{"name":"Spr_YoYo_button","path":"sprites/Spr_YoYo_button/Spr_YoYo_button.yy",},"order":0,},
+    {"id":{"name":"s_blurd_title","path":"sprites/s_blurd_title/s_blurd_title.yy",},"order":0,},
     {"id":{"name":"FirebaseSetup","path":"extensions/FirebaseSetup/FirebaseSetup.yy",},"order":3,},
     {"id":{"name":"s_ten_coins","path":"sprites/s_ten_coins/s_ten_coins.yy",},"order":1,},
     {"id":{"name":"Obj_FirebaseFirestore_Collection_Query_EndAt","path":"objects/Obj_FirebaseFirestore_Collection_Query_EndAt/Obj_FirebaseFirestore_Collection_Query_EndAt.yy",},"order":0,},
@@ -129,6 +130,7 @@
     {"id":{"name":"o_login_controll","path":"objects/o_login_controll/o_login_controll.yy",},"order":4,},
     {"id":{"name":"rm_signin","path":"rooms/rm_signin/rm_signin.yy",},"order":0,},
     {"id":{"name":"FirebaseREST_Firestore_path_isDocument","path":"scripts/FirebaseREST_Firestore_path_isDocument/FirebaseREST_Firestore_path_isDocument.yy",},"order":0,},
+    {"id":{"name":"juice","path":"scripts/juice/juice.yy",},"order":6,},
     {"id":{"name":"Obj_FirebaseFirestore_Document_Set","path":"objects/Obj_FirebaseFirestore_Document_Set/Obj_FirebaseFirestore_Document_Set.yy",},"order":0,},
     {"id":{"name":"FirebaseREST_asyncCall_Authentication","path":"scripts/FirebaseREST_asyncCall_Authentication/FirebaseREST_asyncCall_Authentication.yy",},"order":0,},
     {"id":{"name":"FirebaseREST_firestore_fieldReference","path":"scripts/FirebaseREST_firestore_fieldReference/FirebaseREST_firestore_fieldReference.yy",},"order":0,},
@@ -330,6 +332,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/YoYo Extensions Assets/Sprites.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Transitions","folderPath":"folders/Objects/Transitions.yy","order":15,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Transitions","folderPath":"folders/Sprites/Transitions.yy","order":22,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Title","folderPath":"folders/Sprites/Title.yy","order":23,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
