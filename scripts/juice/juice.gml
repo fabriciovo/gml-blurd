@@ -10,13 +10,13 @@ function juice() {
 	
 	scaling_speed = .1;
 		
-	step_method = function(){
+	juice_step_method = function(){
 		x_scale = lerp(x_scale, x_scale_target, scaling_speed);
 		y_scale = lerp(y_scale, y_scale_target, scaling_speed);
 		
 	}
 	
-	draw_method = function(_x,_y){
+	juice_draw_method = function(_x,_y){
 		draw_sprite_ext(sprite_index, image_index,_x,_y,
 		image_xscale * x_scale,
 		image_yscale * y_scale, image_angle,image_blend,image_alpha);

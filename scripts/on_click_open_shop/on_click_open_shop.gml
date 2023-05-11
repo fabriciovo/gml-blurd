@@ -154,7 +154,7 @@ if _value == false {
 	create_items_shop()
 	layer_set_visible("Foods", true)
 	instance_create_depth(62,global.VH -  135,0,o_btn_item,  new btn_tab("Foods", s_food_btn, create_items_shop,ds_foods_size))
-	instance_create_depth(112,global.VH - 135,0,o_btn_item, new btn_tab("Upgrades", s_upgrade_btn,create_upgrade_shop,ds_upgrades_size))
+	instance_create_depth(110,global.VH - 135,0,o_btn_item, new btn_tab("Upgrades", s_upgrade_btn,create_upgrade_shop,ds_upgrades_size))
 	instance_create_depth(146,global.VH - 135,0,o_btn_item, new btn_tab("Quest", s_quest_btn, create_quest_panel,ds_quest_size))
 	instance_create_depth(192,global.VH - 135,0,o_btn_item, new btn_tab("Craft_Bag", s_craft_bag_btn, create_craft_bag,ds_craft_items_size))
 	instance_create_depth(242,global.VH - 135,0,o_btn_item, new btn_tab("Inventory", s_secret_items_btn, create_secret_items,1))

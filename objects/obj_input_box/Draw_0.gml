@@ -1,0 +1,2 @@
+/// @description Draw
+input_box_draw(xOffset,yOffset,boxSprite,autoHeight,fillInactiveCol,fillActiveCol,borderInactiveCol,borderActiveCol,textInactiveCol,textActiveCol,highlightCol,highlightAlpha,hideVbarXOffset,hideVbarYOffset);
