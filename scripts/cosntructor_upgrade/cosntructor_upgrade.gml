@@ -26,6 +26,10 @@ function constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,
 		}
 	}
 	
+	event_step = function(){
+	
+	}
+	
 }
 
 function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _type, _mult,_level,_reward_type, _reward): constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,_level) constructor {

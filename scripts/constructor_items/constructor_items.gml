@@ -39,14 +39,13 @@ function constructor_food_item(_key, _width, _height) constructor {
 	
 	draw_gui_method = function(){
 		var _margin = 4;
-		var _scale = 2;
-		var _size = 4;
-		var _size_new = height - _margin * _size;
+		var _scale = 2.5;
+		var _size_new = height - _margin;
 
 		var _spr = global_item.sprite;
 		var _name = global_item.name;
 
-		draw_set_color(color);
+		draw_set_color(c_green);
 		draw_set_alpha(0.4);
 
 		draw_rectangle(x  - 5 ,y,x + width, y + height, 0);
@@ -56,14 +55,18 @@ function constructor_food_item(_key, _width, _height) constructor {
 
 		draw_rectangle(x - 5 , y , x + width, y + height,1);
 
-		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 3 - 10, y + _margin + _size_new / 4,_scale,_scale,0,c_white,1);
+		draw_sprite_ext(_spr, 0, x + _margin + _size_new / 3 - 20, y + _margin + _size_new / 4 - 5,_scale,_scale,0,c_white,1);
 
 		
 		draw_set_font(fnt_shop_item);
-		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _name);
-		draw_text(x + _margin * 19 + _size_new, y + _margin + 2, "Lvl: " + string(item.level));
-		draw_text(x + _margin * 2 + _size_new, y + _margin + 20, "Price: " + string(item.price));
-		draw_text(x + _margin * 19 + _size_new, y + _margin + 20, "CpS: " + string(global_item.coins_per_second));
+
+		draw_text(x + _margin * sprite_get_width(_spr) - 20, y + _margin / 2, _name);
+		draw_text(x + _margin * sprite_get_width(_spr) - 5, y + _margin + 20, "lvl:" + string(item.level));
+		draw_text(x + _margin * sprite_get_width(_spr) + 20 + _size_new,y + _margin + 20,  string(global_item.coins_per_second) + "cps");
+		draw_text(x + _margin * sprite_get_width(_spr) + _size_new + 100,y + _margin / 2, string(item.price));
+		draw_sprite_ext(s_coin, 0, x + _margin * sprite_get_width(_spr) + _size_new + 113,y + _margin / 2 + 4, 1.2,1.2,0,c_white,1);
+		draw_text(x + _margin * sprite_get_width(_spr) + _size_new + 100,y + _margin / 2 + 20, "Buy " + string(132));
+		
 	}
 	draw_gui_end_method = function(){}
 }

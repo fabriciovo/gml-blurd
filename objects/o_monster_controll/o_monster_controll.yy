@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_monster_spawn",
+  "name": "o_monster_controll",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -34,7 +34,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Monsters",
-    "path": "folders/Objects/Monsters.yy",
+    "name": "Game",
+    "path": "folders/Objects/Game.yy",
   },
 }
