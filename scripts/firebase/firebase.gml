@@ -16,7 +16,8 @@ function firebase_create(){
 	
 	FirebaseFirestore("Users").Child(string(FirebaseAuthentication_GetUID())).Set(_json)
 	FirebaseAuthentication_GetIdToken()
-	room_goto(rm_game)
+	instance_create_layer(x,y,"Instances",o_transition, new constructor_transition(s_trans_sq,rm_game))
+
 }
 function firebase_firestore_load(_value){
 	var _json = json_parse(_value)
@@ -34,7 +35,8 @@ function firebase_firestore_load(_value){
 	json_add_to_ds_map(_json.upgrades,o_player_controll.ds_upgrades)
 	json_add_to_ds_map(_json.craft_items,o_player_controll.ds_craft_items)
 	json_add_to_ds_map(_json.secret_items,o_player_controll.ds_secret_items)
-	room_goto(rm_game)
+	instance_create_layer(x,y,"Instances",o_transition, new constructor_transition(s_trans_sq,rm_game))
+
 }
 
 function firebase_firestore_read(){	
