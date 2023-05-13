@@ -8,6 +8,8 @@ function constructor_monster() constructor {
 	grounded = false
 	track_key = ""
 	image_speed = 0
+	image_xscale = 1.2
+	image_yscale = 1.2
 	create_method = function(){
 		show_error("METHOD NOT IMPLEMENTED",true)
 	}
@@ -36,7 +38,7 @@ function constructor_monster() constructor {
 		if level > 3 {
 			var _drop_size = array_length(drop);
 			var _drop_index = random_range(0, _drop_size);
-			instance_create_layer(x,y,"Instances",o_pickup,new drop[_drop_index]())
+			instance_create_layer(x,y - 20, "Instances",o_pickup,new drop[_drop_index]())
 		}
 		
 		instance_destroy()
@@ -135,7 +137,7 @@ function constructor_monster_snail() : constructor_monster() constructor {
 			if level > 3 {
 				var _drop_size = array_length(drop);
 				var _drop_index = random_range(0, _drop_size);
-				instance_create_layer(x,y,"Instances",o_pickup,new drop[_drop_index]())
+				instance_create_layer(x,y ,"Instances",o_pickup,new drop[_drop_index]())
 			}
 				//instance_create_layer(x,y,"Instances",o_pickup, new Apple())
 				instance_destroy()
@@ -145,6 +147,7 @@ function constructor_monster_snail() : constructor_monster() constructor {
 function constructor_monster_angry_bird() : constructor_monster() constructor {
 	sprite_index = s_fly
 	image_speed = 0
+
 	hsp = global.game_speed
 	track_key = "angry_bird"
 	

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Particles",
+  "name": "f_format_number",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
