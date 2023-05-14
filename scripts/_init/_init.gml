@@ -14,7 +14,7 @@ function init(){
 	}
 	
 	global.struct_foods = {
-		candy: new constructor_food("Candy","candy",s_candy,1,0.10,1.1,0),
+		candy: new constructor_food("Candy","candy",s_candy,1,5000,1.1,0),
 		ice_cream: new constructor_food("Ice Cream","ice_cream",s_ice_cream,1,0.10,1.1,0),
 		chocolate: new constructor_food("Chocolate","chocolate",s_chocolate,1,0.10,1.1,0),
 		energy_drink: new constructor_food("Chocolate","chocolate",s_energy_drink,1,0.10,1.1,0),

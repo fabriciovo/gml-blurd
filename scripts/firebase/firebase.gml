@@ -1,21 +1,21 @@
 function firebase_create(){
-	var _map = ds_map_create()
-	var _player = o_player_controll
-	_map[?"total_coins"] = _player.total_coins
-	_map[?"coins"] = _player.coins
-	_map[?"coins_per_second"] = _player.coins_per_second
-	_map[?"foods"] = json_encode(_player.ds_foods)
-	_map[?"upgrades"] = json_encode(_player.ds_upgrades)
-	_map[?"quests"] = json_encode(_player.ds_quests)
-	_map[?"collectables"] = json_encode(_player.ds_collectables)
-	_map[?"secret_items"] = json_encode(_player.ds_secret_items)
-	_map[?"craft_items"] = json_encode(_player.ds_craft_items)
-	var _json = json_encode(_map)		
+	//var _map = ds_map_create()
+	//var _player = o_player_controll
+	//_map[?"total_coins"] = _player.total_coins
+	//_map[?"coins"] = _player.coins
+	//_map[?"coins_per_second"] = _player.coins_per_second
+	//_map[?"foods"] = json_encode(_player.ds_foods)
+	//_map[?"upgrades"] = json_encode(_player.ds_upgrades)
+	//_map[?"quests"] = json_encode(_player.ds_quests)
+	//_map[?"collectables"] = json_encode(_player.ds_collectables)
+	//_map[?"secret_items"] = json_encode(_player.ds_secret_items)
+	//_map[?"craft_items"] = json_encode(_player.ds_craft_items)
+	//var _json = json_encode(_map)		
 	
-	ds_map_destroy(_map)
+	//ds_map_destroy(_map)
 	
-	FirebaseFirestore("Users").Child(string(FirebaseAuthentication_GetUID())).Set(_json)
-	FirebaseAuthentication_GetIdToken()
+	//FirebaseFirestore("Users").Child(string(FirebaseAuthentication_GetUID())).Set(_json)
+	//FirebaseAuthentication_GetIdToken()
 	instance_create_layer(x,y,"Instances",o_transition, new constructor_transition(s_trans_sq,rm_game))
 
 }
@@ -40,7 +40,6 @@ function firebase_firestore_load(_value){
 }
 
 function firebase_firestore_read(){	
-	FirebaseAuthentication_GetIdToken()
 	FirebaseFirestore("Users").Child(string(FirebaseAuthentication_GetUID())).Read()
 }
 
@@ -62,3 +61,16 @@ function firebase_update(){
 	FirebaseFirestore("Users").Child(string(FirebaseAuthentication_GetUID())).Update(_json)
 }
 
+function firebase_save_date(){
+	var _current_datetime = date_current_datetime();
+    var _current_date = date_date_string(_current_datetime)
+	
+	var _map = ds_map_create()
+	_map[?"game_signup"] = _current_date
+	
+	var _json = json_encode(_map)		
+	ds_map_destroy(_map)
+
+	
+	FirebaseFirestore("Users").Child(string(FirebaseAuthentication_GetUID())).Update(_json)
+}

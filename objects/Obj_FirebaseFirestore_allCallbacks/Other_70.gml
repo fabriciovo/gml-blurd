@@ -27,7 +27,6 @@ switch(async_load[?"type"])
 {
 	case "FirebaseFirestore_Document_Set":
 		var path = async_load[?"path"]
-		firebase_create()
 	break
 
 	case "FirebaseFirestore_Document_Update":

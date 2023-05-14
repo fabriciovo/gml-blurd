@@ -7,17 +7,34 @@ function constructor_pickup() constructor {
 	vsp = -4
 	hsp = random_range(.25,3)
 	can_pickup = false;
+	timer = 0
+	grounded = false
+	depth = 0
+	event_create = function() {
+		juice();	
+		apply_scaling_method(0.8,1.7,1,1)
+	}
 
 	step_method = function(){
-		apply_gravity()
-		
+		juice_step_method()
+		if not grounded {
+			apply_gravity()
+		} else {
+			y = y + sin(timer * 0.03) * 0.5
+			timer++
+		}
 		
 		if hsp <= 0 {
 			hsp = 0
 		}else {
 			hsp -= .1;
-			x+=hsp
+			x += hsp
 		}
+
+	}
+	
+	event_draw = function(){
+		juice_draw_method(x,y)
 	}
 	
 }

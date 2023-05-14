@@ -25,18 +25,52 @@ switch(async_load[?"type"])
 {
 	case "FirebaseAuthentication_SignInWithCustomToken":
 		var user_raw = async_load[?"value"]
-		firebase_firestore_read()
 		
 	break
 			
 	case "FirebaseAuthentication_SignIn_Email":
-		var user_raw = async_load[?"value"]
-		firebase_firestore_read()
+		user_raw = async_load[?"value"]
+		var decoded_user = json_parse(user_raw)
+		show_message(decoded_user.users[0])
+		show_message(decoded_user.users[0].email)
+		show_message(decoded_user.users[0].lastRefreshAt)
+		show_message(decoded_user.users[0].lastLoginAt)
+		show_debug_message(decoded_user.users[0].lastLoginAt)
+
+		//// Assumindo que você já tem o valor do campo `lastLoginAt`
+		//var lastLoginAt = decoded_user.users[0].lastLoginAt; // Exemplo de valor em milissegundos
+		//// Converter o valor em milissegundos para componentes de data e hora
+		//var dt = new Date(lastLoginAt);
+		//var year = date_get_year(dt);
+		//var month = date_get_month(dt);
+		//var day = date_get_day(dt);
+		//var hour = date_get_hour(dt);
+		//var minute = date_get_minute(dt);
+		//var second = date_get_second(dt);
+
+		//// Criar uma data válida no GameMaker
+		//var lastLoginDate = date_create_datetime(year, month, day, hour, minute, second);
+		//show_message("Last Login Date: " + string(lastLoginDate));
+		//show_message("Last Login Date: " + string(lastLoginDate));
+		//show_message("Last Refresh At: " + string(decoded_user.users[0].lastRefreshAt));
+		
+		
+
+		//if (date_compare_date(lastLoginAt, decoded_user.users[0].lastRefreshAt) == -1)
+		//    show_message("date1 is earlier than date2");
+		//else if (date_compare_date(lastLoginAt, decoded_user.users[0].lastRefreshAt) == 1)
+		//    show_message("date2 is earlier than date1");
+		//else
+		//    show_message("date1 and date2 are the same");
+		instance_create_layer(x,y,"Instances",o_transition, new constructor_transition(s_trans_sq,rm_firestore_loading))
+		//firebase_firestore_read()
 	break
 	
 	case "FirebaseAuthentication_SignUp_Email":
 		var user_raw = async_load[?"value"]
-		firebase_create();
+		//firebase_create();
+		instance_create_layer(x,y,"Instances",o_transition, new constructor_transition(s_trans_sq,rm_firestore_loading))
+		//firebase_firestore_read()
 	break
 		
 			

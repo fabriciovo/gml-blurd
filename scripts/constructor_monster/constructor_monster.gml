@@ -34,13 +34,15 @@ function constructor_monster() constructor {
 	player_collision = function(){
 		var _monster = o_player_controll.ds_upgrades[? track_key]
 		_monster.value++
-		
-		if level > 3 {
-			var _drop_size = array_length(drop);
-			var _drop_index = random_range(0, _drop_size);
-			instance_create_layer(x,y - 20, "Instances",o_pickup,new drop[_drop_index]())
+	
+		if level > 10 { 
+			var _chance = level / 100
+			if f_random_chance(_chance) {
+				var _drop_size = array_length(drop);
+				var _drop_index = random_range(0, _drop_size);
+				instance_create_layer(x,y - 20, "Instances",o_pickup,new drop[_drop_index]())
+			}
 		}
-		
 		instance_destroy()
 	}
 }
@@ -57,10 +59,10 @@ function constructor_monster_spike_head() : constructor_monster() constructor {
 		image_index = 0
 		alarm[0] = random(3) * (global.one_second / 2)
 		
-		if level > 3 {
-			array_push(drop, constructor_pickup_spike);
+		if level > 10 {
+			array_push(drop, constructor_pickup_apple);
 		}
-		if level > 5 {
+		if level > 50 {
 			array_push(drop, constructor_pickup_spike);
 		}
 
@@ -91,10 +93,10 @@ function constructor_monster_snail() : constructor_monster() constructor {
 		image_index = 0
 		alarm[0] = random(2) * (global.one_second / 2)
 		
-		if level > 3 {
+		if level > 10 {
 			array_push(drop, constructor_pickup_apple);
 		}
-		if level > 5 {
+		if level > 50 {
 			array_push(drop, constructor_pickup_shell);
 		}
 	}
