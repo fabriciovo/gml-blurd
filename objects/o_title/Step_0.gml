@@ -1,4 +1,4 @@
-if room == rm_firestore_loading {
+if room == rm_game || room == rm_firestore_loading {
 	instance_destroy()
 }
 if room == rm_title {

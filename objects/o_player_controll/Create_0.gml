@@ -57,6 +57,7 @@ beta_tester = false
 coins = 0
 total_coins = 0
 coins_per_second = 0
+coins_out_game = 0
 ds_foods = ds_map_create()
 ds_quests = ds_map_create()
 ds_upgrades = ds_map_create()

@@ -27,6 +27,8 @@ switch(async_load[?"type"])
 {
 	case "FirebaseFirestore_Document_Set":
 		var path = async_load[?"path"]
+		show_message("FirebaseFirestore_Document_Set")
+		
 	break
 
 	case "FirebaseFirestore_Document_Update":
@@ -36,7 +38,8 @@ switch(async_load[?"type"])
 	case "FirebaseFirestore_Document_Read":
 		var path = async_load[?"path"]
 		value = async_load[?"value"]
-		firebase_firestore_load(value)
+		show_message("FirebaseFirestore_Document_Read")
+		firebase_load(value)
 	break
 	
 	case "FirebaseFirestore_Document_Listener":

@@ -45,7 +45,7 @@ function FirebaseREST_HTTP_Failed_Firestore()
 		//case "FirebaseFirestore_Collection_Listener":
 		//case "FirebaseFirestore_Collection_Query":
 		case "FirebaseFirestore_Document_Read":
-			o_firestore_loading.alarm[0] = 500
+			firebase_create()
 		break
 		//case "FirebaseFirestore_Document_Listener":
 	    //    FirebaseREST_asyncCall_Firestore(undefined)

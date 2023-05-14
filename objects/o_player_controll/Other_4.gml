@@ -1,4 +1,7 @@
 if room == rm_game {
+	if coins_out_game > 0 {
+		instance_create_layer(room_width / 2, room_height / 2, "Instances", o_coins_out_game)
+	}
 	alarm[0] = global.one_second
 	//TODO - Change objects for functions	
 	instance_create_layer(x-30,y,"Instances",o_player, new constrtuctor_hero_blurd())
