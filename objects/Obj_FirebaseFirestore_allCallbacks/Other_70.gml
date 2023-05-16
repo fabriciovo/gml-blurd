@@ -38,7 +38,6 @@ switch(async_load[?"type"])
 	case "FirebaseFirestore_Document_Read":
 		var path = async_load[?"path"]
 		value = async_load[?"value"]
-		show_message("FirebaseFirestore_Document_Read")
 		firebase_load(value)
 	break
 	

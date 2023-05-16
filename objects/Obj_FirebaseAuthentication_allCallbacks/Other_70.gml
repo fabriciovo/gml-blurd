@@ -30,41 +30,13 @@ switch(async_load[?"type"])
 			
 	case "FirebaseAuthentication_SignIn_Email":
 		user_raw = async_load[?"value"]
-	
 		//var decoded_user = json_parse(user_raw)
 		//show_message(decoded_user.users[0])
 		//show_message(decoded_user.users[0].email)
 		//show_message(decoded_user.users[0].lastRefreshAt)
 		//show_message(decoded_user.users[0].lastLoginAt)
 		//show_debug_message(decoded_user.users[0].lastLoginAt)
-		//var timestamp = decoded_user.users[0].lastLoginAt; // Valor do timestamp
 
-		//// Converter o timestamp para segundos dividindo por 1000
-		//var timestampSeconds = timestamp div 1000;
-
-		//// Extrair os componentes da data
-		//var seconds = timestampSeconds mod 60;
-		//var minutes = (timestampSeconds div 60) mod 60;
-		//var hours = (timestampSeconds div 3600) mod 24;
-		//var days = (timestampSeconds div 86400) mod 31; // Aproximação para o número máximo de dias em um mês
-		//var months = (timestampSeconds div 2678400) mod 12; // Aproximação para o número máximo de meses em um ano
-		//var years = (timestampSeconds div 31536000); // Aproximação para o número máximo de segundos em um ano
-
-		//// Adicionar os valores extraídos aos valores de referência
-		//var baseYear = 1970; // Ano de referência para a época UNIX
-		//years += baseYear;
-		//months += 1; // Adicionar 1 ao mês para obter valores de 1 a 12
-
-		//// Exibir os componentes da data
-		//show_message("Ano: " + string(years));
-		//show_message("Mês: " + string(months));
-		//show_message("Dia: " + string(days));
-		//show_message("Hora: " + string(hours));
-		//show_message("Minutos: " + string(minutes));
-		//show_message("Segundos: " + string(seconds));
-		
-
-		//firebase_firestore_read()
 		firebase_read()
 	break
 	

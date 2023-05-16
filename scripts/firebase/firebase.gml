@@ -11,7 +11,7 @@ function firebase_create(){
 	_map[?"collectables"] = json_encode(_player.ds_collectables)
 	_map[?"secret_items"] = json_encode(_player.ds_secret_items)
 	_map[?"craft_items"] = json_encode(_player.ds_craft_items)
-
+	_map[?"last_date_time"] = date_datetime_string(date_current_datetime())
 	var _json = json_encode(_map)		
 	
 	ds_map_destroy(_map)
@@ -23,13 +23,17 @@ function firebase_create(){
 function firebase_load(_value){
 	var _json = json_parse(_value)
 	var _player =  o_player_controll;
-		
+
 	//single value
 	_player.coins = real(_json.coins);
 	_player.coins_per_second = real(_json.coins_per_second);
 	_player.total_coins = real(_json.total_coins);	
-	_player.coins_out_game = 150;	
-	
+	var _last_date_time =  f_string_to_date(_json.last_date_time);
+	var _current_date = date_current_datetime()
+	var _offline_hours = date_hour_span(_last_date_time,_current_date)
+
+	_player.coins_out_game = _offline_hours * _player.coins_per_second;	
+
 	//maps
 	json_add_to_ds_map(_json.foods,o_player_controll.ds_foods)
 	json_add_to_ds_map(_json.collectables,o_player_controll.ds_collectables)
@@ -56,6 +60,7 @@ function firebase_update(){
 	_map[?"collectables"] = json_encode(_player.ds_collectables)
 	_map[?"secret_items"] = json_encode(_player.ds_secret_items)
 	_map[?"craft_items"] = json_encode(_player.ds_craft_items)
+	_map[?"last_date_time"] = date_datetime_string(date_current_datetime())
 	var _json = json_encode(_map)		
 	ds_map_destroy(_map)
 
