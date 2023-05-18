@@ -28,11 +28,7 @@ function firebase_load(_value){
 	_player.coins = real(_json.coins);
 	_player.coins_per_second = real(_json.coins_per_second);
 	_player.total_coins = real(_json.total_coins);	
-	var _last_date_time =  f_string_to_date(_json.last_date_time);
-	var _current_date = date_current_datetime()
-	var _offline_hours = date_hour_span(_last_date_time,_current_date)
-
-	_player.coins_out_game = _offline_hours * _player.coins_per_second;	
+	_player.last_date_time = _json.last_date_time
 
 	//maps
 	json_add_to_ds_map(_json.foods,o_player_controll.ds_foods)
