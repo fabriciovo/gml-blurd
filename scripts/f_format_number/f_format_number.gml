@@ -1,30 +1,18 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function f_format_number(a_number){
-	var _text = string(a_number);
+
 	
-	var _type_numbers = {
-		"G": 1000000000,
-		"F": 100000000,
-		"E": 10000000,
-		"D": 1000000,
-		"C": 100000,
-		"B": 10000,
-		"A": 1000,
-	}
+	var _sufix = ["", "k", "M", "B", "T", "Q"];
+    var _sufixo_index = 0;
+    
+	
 
-	var _keys = variable_struct_get_names(_type_numbers);
-	for (var _i = array_length(_keys)-1; _i >= 0; --_i) {
-	    var _k = _keys[_i];
-	    var _item = variable_struct_get(_type_numbers, _k);
-
-		if(a_number >= _item){
-			_text = string_format(a_number,2,2) + _k;
-			break;
-		}else{
-			_text = string_format(a_number,1,2)
-		}
-		
-	}
-	return _text;
+	
+    while (a_number >= 1000)
+    {
+        a_number /= 1000;
+        _sufixo_index++;
+    }
+    
+    return string_format(a_number, 1, 2 ) + _sufix[_sufixo_index];
+	
 }
