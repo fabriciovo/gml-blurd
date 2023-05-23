@@ -77,7 +77,7 @@ function constructor_quest_item(_key, _width, _height) constructor {
 	width = _width;
 	height = _height;
 	key = _key
-	item = variable_struct_get(o_tracker_controll.struct_quests,key)
+	item = variable_struct_get(o_quest_controll.struct_quests,key)
 	hover = 0
 	l_click = 0
 	open_panel = false
@@ -96,6 +96,10 @@ function constructor_quest_item(_key, _width, _height) constructor {
 		var _mouse_y = device_mouse_y_to_gui(0);
 		hover = point_in_rectangle(_mouse_x, _mouse_y, x,y , x + width, y + height);
 		l_click = mouse_check_button_pressed(mb_left)
+		
+		if l_click {
+			instance_create_layer(x,y,"Instances",o_modal, new constructor_modal(200,200, key))
+		}
 	}
 	
 	draw_gui_method = function(){
@@ -124,7 +128,8 @@ function constructor_quest_item(_key, _width, _height) constructor {
 		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _name);
 		draw_text(x + _margin * 2 + _size_new, y + _margin + 20, _progress.text + string(_progress_count) + " / " + string(_progress.max_count));
 	}
-   draw_gui_end_method = function(){}
+	draw_gui_end_method = function(){
+	}
 }
 
 function constructor_craft_bag_item(_key, _width, _height) constructor {
