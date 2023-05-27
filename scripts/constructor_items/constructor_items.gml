@@ -345,8 +345,8 @@ function constructor_upgrade_item(_key, _width, _height) constructor {
 		draw_set_font(fnt_shop_item);
 		draw_text(x + _margin * 2 + _size_new, y + _margin + 2, _name);
 		draw_text(x + _margin * 19 + _size_new, y + _margin + 2, "Lvl: " + string(item.level));
-		draw_text(x + _margin * 2 + _size_new, y + _margin + 20, "Price: " + f_format_number(item.price));
-		draw_text(x + _margin * 26 + _size_new, y + _margin + 20, "Type: " + string(global_upgrade.type));
+		draw_text(x + _margin * 2 + _size_new, y + _margin + 20,  f_format_number(item.price));
+		draw_text(x + _margin * 26 + _size_new, y + _margin + 20,  string(global_upgrade.type));
 	}
 	draw_gui_end_method = function(){}
 

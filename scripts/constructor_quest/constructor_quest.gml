@@ -31,6 +31,8 @@ function constructor_quest() constructor {
 	}
 }
 
+
+//Start quest
 function quest_collect_five_coins() : constructor_quest() constructor {
 	name = "Collect Five Coins"
 	key = "collect_five_coins"
@@ -46,15 +48,31 @@ function quest_collect_five_coins() : constructor_quest() constructor {
 	}
 }
 
+function quest_new_adventure_begins() : constructor_quest() constructor {
+	name = "A new adventure begins!"
+	key = "new_adventure_begins"
+	track_key = "coins"
+	global_struct = global.struct_upgrade_unlockable
+	global_struct_key = "unlock_spike_head"
+	ds_player_list = o_player_controll.ds_upgrades
+	sprite = s_unlock_spike_head
+	description = "It's time to prepare to your new adventure!"
+	progress = {
+		text:  "Collected Coins: ",
+		max_count: 50
+	}
+}
+
+
 function quest_monster_hunter() : constructor_quest() constructor {
 	name = "Monster Hunt"
 	key = "monster_hunt"
-	track_key = "monsters"	
+	track_key = "monster"	
 	global_struct = global.struct_upgrade_unlockable
-	global_struct_key = "candy"
+	global_struct_key = "unlock_chocolate"
 	ds_player_list = o_player_controll.ds_upgrades
 	sprite = s_apple_pickup
-	description = "Defeat 20 monsters in the Grass Land stage to unlock a special reward."
+	description = "Defeat 20 monsters to unlock a special reward."
 	progress = {
 		text:  "Defeated Monsters: ",
 		max_count: 20
@@ -66,9 +84,10 @@ function quest_quick_harvest() : constructor_quest() constructor {
 	key = "quick_harvest"
 	track_key =  "coins"
 	ds_player_list = o_player_controll.ds_foods
-	global_struct = global.struct_foods
-	global_struct_key = "ice_cream"
+	global_struct = global.struct_upgrade_unlockable
+	global_struct_key = "unlock_ice_cream"
 	sprite = s_ten_coins
+	description= "Collect 50 coins in a single stage without letting any monsters escape."
 	progress = {
 		text:  "Collected Coins: ",
 		max_count: 10
@@ -92,27 +111,15 @@ function quest_exploration_mission() : constructor_quest() constructor {
 function quest_strategic_elimination() : constructor_quest() constructor {
 	name = "Strategic Elimination"
 	key = "strategic_elimination"
-	track_key = "coins"
+	track_key = "strategic_elimination"
 	global_struct = global.struct_upgrade_unlockable
-	global_struct_key = "unlock_spike_head"
+	global_struct_key = "unlock_snail"
 	ds_player_list = o_player_controll.ds_upgrades
 	sprite = s_unlock_spike_head
-	progress = {
-		text:  "Collected Coins: ",
-		max_count: 50
-	}
-}
-
-function quest_unlock_spike_head() : constructor_quest() constructor {
-	name = "Unlock Spike Head"
-	key = "unlock_spike_head"
-	track_key = "coins"
-	global_struct = global.struct_upgrade_unlockable
-	global_struct_key = "unlock_spike_head"
-	ds_player_list = o_player_controll.ds_upgrades
-	sprite = s_unlock_spike_head
+	description = "Eliminate 10 monsters without collecting any coins."
 	progress = {
 		text:  "Collected Coins: ",
 		max_count: 10
 	}
 }
+

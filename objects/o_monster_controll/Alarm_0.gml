@@ -20,4 +20,4 @@ for(var _i = 0; _i < _list_items_values_size; _i++) {
 	}
 }
 
-alarm[0] = random_range(1,5) * global.one_second
+alarm[0] = 10
