@@ -77,7 +77,7 @@ function constructor_quest_item(_key, _width, _height) constructor {
 	width = _width;
 	height = _height;
 	key = _key
-	item = variable_struct_get(o_quest_controll.struct_quests,key)
+	item = variable_struct_get(o_quest_controll_update.struct_quests,key)
 	hover = 0
 	l_click = 0
 	open_panel = false

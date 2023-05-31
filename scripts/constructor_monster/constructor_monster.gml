@@ -31,10 +31,7 @@ function constructor_monster() constructor {
 	alarm_method = function(){
 		show_error("METHOD NOT IMPLEMENTED",true)
 	}
-	player_collision = function(){
-		var _monster = o_player_controll.ds_upgrades[? track_key]
-		_monster.value++
-	
+	player_collision = function(){	
 		if level > 10 { 
 			var _chance = level / 100
 			if f_random_chance(_chance) {
@@ -66,6 +63,11 @@ function constructor_monster_spike_head() : constructor_monster() constructor {
 			array_push(drop, constructor_pickup_spike);
 		}
 
+	}
+	
+	player_collision = function(){
+		o_player_controll.ds_tracker[? "monsters"].spike_head++ 
+		o_player_controll.ds_tracker[? "monsters"].eliminations++ 
 	}
 	
 	alarm_method = function(){
@@ -133,9 +135,8 @@ function constructor_monster_snail() : constructor_monster() constructor {
 		}
 		
 		if hp <= 0 {
-		var _monster = o_player_controll.ds_upgrades[? track_key]
-			_monster.value++
-		
+			o_player_controll.ds_tracker[? "monsters"].snail++ 
+			o_player_controll.ds_tracker[? "monsters"].eliminations++ 
 			if level > 3 {
 				var _drop_size = array_length(drop);
 				var _drop_index = random_range(0, _drop_size);
@@ -168,6 +169,12 @@ function constructor_monster_angry_bird() : constructor_monster() constructor {
 			array_push(drop, constructor_pickup_feather);
 		}
 	}
+	
+	player_collision = function(){
+		o_player_controll.ds_tracker[? "monsters"].angry_bird++ 
+		o_player_controll.ds_tracker[? "monsters"].eliminations++ 
+	}
+	
 	
 	alarm_method = function(){
 		vsp = jump

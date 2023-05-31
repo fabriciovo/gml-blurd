@@ -3,7 +3,8 @@ function firebase_create(){
 	var _player = o_player_controll
 	
 	//init tracker values
-	ds_map_set(o_player_controll.ds_tracker,"coins",{value:0})
+	ds_map_set(o_player_controll.ds_quests,"five_coins",{key:"five_coins", progress:0, unlocked: true, complete: false})
+	ds_map_set(o_player_controll.ds_tracker,"collectables",{coins:0})
 	ds_map_set(o_player_controll.ds_tracker,"monsters",{eliminations:0,
 		spike_head:0, snail:0, angry_bird:0})
 	ds_map_set(o_player_controll.ds_tracker,"quick_harvest",{eliminations:0,

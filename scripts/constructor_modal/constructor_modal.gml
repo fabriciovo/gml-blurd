@@ -4,7 +4,7 @@ function constructor_modal(_width, _height, _key) constructor {
 	width = _width;
 	height = _height;
 	key = _key
-	item = variable_struct_get(o_quest_controll.struct_quests,key)
+	item = variable_struct_get(o_quest_controll_update.struct_quests,key)
 	hover = 0
 	l_click = 0
 	open_panel = false
