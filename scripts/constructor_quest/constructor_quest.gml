@@ -44,6 +44,7 @@ function quest_collect_five_coins() : constructor_quest() constructor {
 		max_count: 5
 	}
 	unlocked = true
+	complete = false
 	track_value = o_player_controll.ds_tracker[? "collectables"].coins;
 	save_progress_value = o_player_controll.ds_quests[?"five_coins"];
 	
