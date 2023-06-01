@@ -16,6 +16,15 @@ function constructor_quest() constructor {
 	track_value = noone
 	save_progress_value = noone
 	
+	basic_struct = function(){
+		return {
+			key: key,
+			progress:0, 
+			complete: false
+		}
+	} 
+	
+	
 	function_condition = function(){
 
 		save_progress_value.progress = track_value
@@ -34,6 +43,7 @@ function constructor_quest() constructor {
 //Start quest
 function quest_collect_five_coins() : constructor_quest() constructor {
 	name = "Collect Five Coins"
+	key = "five_coins"
 	global_struct = global.struct_foods
 	global_struct_key = "candy"
 	ds_player_list = o_player_controll.ds_foods
@@ -43,11 +53,9 @@ function quest_collect_five_coins() : constructor_quest() constructor {
 		text:  "Collected Coins ",
 		max_count: 5
 	}
-	unlocked = true
 	complete = false
 	track_value = o_player_controll.ds_tracker[? "collectables"].coins;
 	save_progress_value = o_player_controll.ds_quests[?"five_coins"];
-	
 		
 	function_condition = function(){
 		save_progress_value.progress =  o_player_controll.ds_tracker[? "collectables"].coins
@@ -56,7 +64,7 @@ function quest_collect_five_coins() : constructor_quest() constructor {
 			quest_reward(
 			ds_player_list,
 			_reward_struct,
-			"five_coins")
+			key)
 		}
 	}
 }

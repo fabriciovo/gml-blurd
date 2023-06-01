@@ -20,12 +20,9 @@ function constructor_food_item(_key, _width, _height) constructor {
 				item.level++
 				item.price += item.price * global_item.mult
 			}
-			
 		}else {
 			color = c_red	
 		}
-
-
 	}
 	end_step_method = function(){
 		var _mouse_x = device_mouse_x_to_gui(0);

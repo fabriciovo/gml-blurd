@@ -6,10 +6,13 @@ function quest_reward(_player_ds_list, _reward_struct, _quest_key){
 	var _name = _quest.name
 	var _sprite = _quest.sprite
 	
-	_quest.unlocked = true
 	_quest.complete = true
-	_player.ds_quests[? _quest_key].unlocked = true
-	_player.ds_quests[? _quest_key].complete = true
+
+	ds_map_add(_player.ds_quests_completed,_quest_key,_quest.basic_struct());
+
+	ds_map_delete(_player.ds_quests, _quest_key);
+	
+
 	
 	ds_map_add(_player_ds_list,_reward_struct.key, _reward_struct.function_reward())	
 	instance_create_layer(global.VW / 2,50,"Instances", o_pop_up, new pop_up(_name, _sprite))

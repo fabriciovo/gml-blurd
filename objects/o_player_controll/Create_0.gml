@@ -61,6 +61,7 @@ coins_out_game = 0
 last_date_time = ""
 ds_foods = ds_map_create()
 ds_quests = ds_map_create()
+ds_quests_completed = ds_map_create()
 ds_upgrades = ds_map_create()
 ds_tracker = ds_map_create()
 ds_secret_items = ds_map_create()
