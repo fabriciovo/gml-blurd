@@ -21,6 +21,7 @@ function firebase_create(){
 	_map[?"tracker"] = json_encode(_player.ds_tracker)
 	_map[?"secret_items"] = json_encode(_player.ds_secret_items)
 	_map[?"craft_items"] = json_encode(_player.ds_craft_items)
+	_map[?"quests_completed"] = json_encode(_player.ds_quests_completed)
 	_map[?"last_date_time"] = date_datetime_string(date_current_datetime())
 	var _json = json_encode(_map)		
 	
@@ -47,6 +48,7 @@ function firebase_load(_value){
 	json_add_to_ds_map(_json.upgrades,o_player_controll.ds_upgrades)
 	json_add_to_ds_map(_json.craft_items,o_player_controll.ds_craft_items)
 	json_add_to_ds_map(_json.secret_items,o_player_controll.ds_secret_items)
+	json_add_to_ds_map(_json.quests_completed,o_player_controll.ds_quests_completed)
 	instance_create_layer(x,y,"Instances",o_transition, new constructor_transition(s_trans_sq,rm_game))
 }
 
@@ -66,6 +68,7 @@ function firebase_update(){
 	_map[?"tracker"] = json_encode(_player.ds_tracker)
 	_map[?"secret_items"] = json_encode(_player.ds_secret_items)
 	_map[?"craft_items"] = json_encode(_player.ds_craft_items)
+	_map[?"quests_completed"] = json_encode(_player.ds_quests_completed)
 	_map[?"last_date_time"] = date_datetime_string(date_current_datetime())
 	var _json = json_encode(_map)		
 	ds_map_destroy(_map)
