@@ -64,7 +64,7 @@ function constructor_food_item(_key, _width, _height) constructor {
 		draw_text(x + _margin * sprite_get_width(_spr) + _size_new + 80,y + _margin / 2, f_format_number(item.price));
 		draw_sprite_ext(s_coin, 0, x + _margin * string_length(string(item.price)) + _size_new + 90,y + _margin / 2 + 4, 1.2,1.2,0,c_white,1);
 		//buy
-		draw_text(x + _margin * sprite_get_width(_spr) + _size_new + 60,y + _margin / 2 + 20, "Buy " + string(132));
+		//draw_text(x + _margin * sprite_get_width(_spr) + _size_new + 60,y + _margin / 2 + 20, "Buy " + string(132));
 		
 	}
 	draw_gui_end_method = function(){}
@@ -422,6 +422,7 @@ function constructor_upgrade_item_unlockable(_key, _width, _height) : constructo
 		if hover and l_click and _player.coins >= item.price {
 			item.level++;
 			global_upgrade.function_unlockable_reward()
+			update_upgrade_shop()
 		}
 	}
 	

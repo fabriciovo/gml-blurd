@@ -9,11 +9,7 @@ function constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,
 	number = _number
 	type = _type
 	mult = _mult
-	
-	can_spawn = true
-	spawn_timer = 1
-	
-	
+		
 	function_reward = function(){
 		return {
 			key: key,
@@ -52,13 +48,13 @@ function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _t
 			case "upgrade":
 				_player_ds_list = o_player_controll.ds_upgrades
 			break
-		
-		
+			case "quest":
+				_player_ds_list = o_player_controll.ds_quests
+			break
 		}
 
 		unlockable_reward(
 		_player_ds_list,
 		reward.function_reward())
-
 	}
 }

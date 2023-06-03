@@ -6,6 +6,15 @@ struct_upgrade_items = {
 }
 	
 struct_upgrade_unlockable = {
+	unlock_ice_cream: new constructor_upgrade_unlockable("Unlock Ice Cream","unlock_ice_cream", s_ice_cream,1, 2, "Unlockable",2,0,"food",global.struct_foods.ice_cream),
+	unlock_energy_drink: new constructor_upgrade_unlockable("Unlock Energy Drink","unlock_energy_drink", s_energy_drink,1, 2, "Unlockable",2,0,"food",global.struct_foods.energy_drink),
+	unlock_chocolate: new constructor_upgrade_unlockable("Unlock Chocolate","unlock_chocolate", s_chocolate,1, 2, "Unlockable",2,0,"food",global.struct_foods.chocolate),
+	unlock_spike_head: new constructor_upgrade_unlockable("Unlock Spike Head","unlock_spike_head",s_spike_head,1, 2, "Unlockable",2,0,"upgrade",global.struct_upgrade_items.spike_head),
+	unlock_snail: new constructor_upgrade_unlockable("Unlock Snail","unlock_snail", s_snail, 1, 2, "Unlockable",2,0, "upgrade",global.struct_upgrade_items.snail),
+	unlock_angry_bird: new constructor_upgrade_unlockable("Unlock Angry Bird","unlock_angry_bird", s_energy_drink,1, 2, "Unlockable",2,0,"upgrade", global.struct_upgrade_items.angry_bird),
+}
+
+struct_upgrade_quest = {
 	unlock_ice_cream: new constructor_upgrade_unlockable("Unlock new Food","unlock_ice_cream", s_ice_cream,1, 2, "Unlockable",2,0,"food",global.struct_foods.ice_cream),
 	unlock_energy_drink: new constructor_upgrade_unlockable("Unlock new Food","unlock_energy_drink", s_energy_drink,1, 2, "Unlockable",2,0,"food",global.struct_foods.energy_drink),
 	unlock_chocolate: new constructor_upgrade_unlockable("Unlock new Food","unlock_chocolate", s_chocolate,1, 2, "Unlockable",2,0,"food",global.struct_foods.chocolate),

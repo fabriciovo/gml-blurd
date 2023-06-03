@@ -6,6 +6,6 @@ draw_set_color(c_white)
 var a = 0
 with(Obj_FirebaseREST_Listener_Authentication)
 {
-    draw_text(10,50+a*20,string(id) + ": " + string(alarm[0]) + " -> " + url)
+    //draw_text(10,50+a*20,string(id) + ": " + string(alarm[0]) + " -> " + url)
 	a ++
 }

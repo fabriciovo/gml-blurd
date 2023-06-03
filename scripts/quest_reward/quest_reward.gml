@@ -12,7 +12,6 @@ function quest_reward(_player_ds_list, _reward_struct, _quest_key){
 
 	ds_map_delete(_player.ds_quests, _quest_key);
 	
-
 	
 	ds_map_add(_player_ds_list,_reward_struct.key, _reward_struct.function_reward())	
 	instance_create_layer(global.VW / 2,50,"Instances", o_pop_up, new pop_up(_name, _sprite))

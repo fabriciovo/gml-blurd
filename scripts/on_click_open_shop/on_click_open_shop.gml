@@ -38,7 +38,7 @@ function create_upgrade_shop(){
 	var _size = array_length(_list_items_key)
 	for (var _i = 0; _i < _size; _i++) {
 	var _key = _list_items_key[_i]
-	//TODO check type of item
+
 	if (_list[? _key].type == "Unlockable"){
 		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item_unlockable(_key,_w,_h));
 	} else {
@@ -182,4 +182,7 @@ layer_set_visible(_shop_layer, !_value)
 
 }
 
-
+function update_upgrade_shop(){
+instance_destroy(o_shop_item)
+create_upgrade_shop()
+}

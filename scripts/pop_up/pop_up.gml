@@ -1,6 +1,7 @@
-function pop_up(_name, _sprite = undefined) constructor{
+function pop_up(_name, _sprite = undefined, _text = "Quest Completed!") constructor{
 	name = _name
 	sprite = _sprite
+	text = _text
 	
 	create_method = function(){
 		alarm[0] = global.one_second * 2	
@@ -31,7 +32,7 @@ function pop_up(_name, _sprite = undefined) constructor{
 		}
 
 		draw_set_font(fnt_shop_item);
-		draw_text_ext_color(_x + _margin * 2 + _size_new, 50 + _margin + 2, "Quest Completed!",5,_width,c_gray, c_gray, c_navy, c_navy, .5);
+		draw_text_ext_color(_x + _margin * 2 + _size_new, 50 + _margin + 2, text,5,_width,c_gray, c_gray, c_navy, c_navy, .5);
 		draw_set_font(fnt_shop_item);
 		draw_text(_x + _margin * 2 + _size_new, 70 + _margin + 2, name);
 	

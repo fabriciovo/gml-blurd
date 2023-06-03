@@ -152,6 +152,7 @@
     {"id":{"name":"Obj_FirebaseFirestore_Document_Set","path":"objects/Obj_FirebaseFirestore_Document_Set/Obj_FirebaseFirestore_Document_Set.yy",},"order":0,},
     {"id":{"name":"o_upgrade_controll","path":"objects/o_upgrade_controll/o_upgrade_controll.yy",},"order":6,},
     {"id":{"name":"FirebaseREST_asyncCall_Authentication","path":"scripts/FirebaseREST_asyncCall_Authentication/FirebaseREST_asyncCall_Authentication.yy",},"order":0,},
+    {"id":{"name":"add_quest","path":"scripts/add_quest/add_quest.yy",},"order":1,},
     {"id":{"name":"FirebaseREST_firestore_fieldReference","path":"scripts/FirebaseREST_firestore_fieldReference/FirebaseREST_firestore_fieldReference.yy",},"order":0,},
     {"id":{"name":"constructor_hat","path":"scripts/constructor_hat/constructor_hat.yy",},"order":1,},
     {"id":{"name":"rm_firestore_loading","path":"rooms/rm_firestore_loading/rm_firestore_loading.yy",},"order":4,},

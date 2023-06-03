@@ -68,6 +68,7 @@ function constructor_monster_spike_head() : constructor_monster() constructor {
 	player_collision = function(){
 		o_player_controll.ds_tracker[? "monsters"].spike_head++ 
 		o_player_controll.ds_tracker[? "monsters"].eliminations++ 
+		instance_destroy()
 	}
 	
 	alarm_method = function(){
@@ -135,14 +136,15 @@ function constructor_monster_snail() : constructor_monster() constructor {
 		}
 		
 		if hp <= 0 {
-			o_player_controll.ds_tracker[? "monsters"].snail++ 
-			o_player_controll.ds_tracker[? "monsters"].eliminations++ 
+
 			if level > 3 {
 				var _drop_size = array_length(drop);
 				var _drop_index = random_range(0, _drop_size);
 				instance_create_layer(x,y ,"Instances",o_pickup,new drop[_drop_index]())
 			}
 				//instance_create_layer(x,y,"Instances",o_pickup, new Apple())
+				o_player_controll.ds_tracker[? "monsters"].snail++ 
+				o_player_controll.ds_tracker[? "monsters"].eliminations++ 
 				instance_destroy()
 			}
 	}
@@ -173,6 +175,7 @@ function constructor_monster_angry_bird() : constructor_monster() constructor {
 	player_collision = function(){
 		o_player_controll.ds_tracker[? "monsters"].angry_bird++ 
 		o_player_controll.ds_tracker[? "monsters"].eliminations++ 
+		instance_destroy()
 	}
 	
 	
