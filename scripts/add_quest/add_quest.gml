@@ -1,8 +1,12 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function add_quest(_quest_key){
+
 	var _player = o_player_controll
+	show_message( o_quest_controll_update.struct_quests[$ _quest_key])
 	var _quest = o_quest_controll_update.struct_quests[$ _quest_key]
+	
+	show_message(_quest_key)
 	var _name = _quest.name
 	var _sprite = _quest.sprite
 	

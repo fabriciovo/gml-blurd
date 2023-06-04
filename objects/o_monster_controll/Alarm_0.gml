@@ -16,6 +16,16 @@ for(var _i = 0; _i < _list_items_values_size; _i++) {
 				new constructor_monster_spike_head())
 			}
 		break;
+		case "snail":
+			if f_random_chance(.1) {
+				instance_create_layer(
+				o_spawn_point.x,
+				o_spawn_point.y,
+				"Instances", 
+				o_monster, 
+				new constructor_monster_snail())
+			}
+		break;
 		}
 	}
 }

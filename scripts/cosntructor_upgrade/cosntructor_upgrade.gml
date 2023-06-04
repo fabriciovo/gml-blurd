@@ -58,3 +58,16 @@ function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _t
 		reward.function_reward())
 	}
 }
+
+function constructor_upgrade_food_cps(_name, _key, _sprite, _type, _price) constructor {
+	name = _name
+	key = _key
+	level = 0
+	sprite = _sprite
+	price = _price
+	type = _type
+
+	function_unlockable_reward = function(){		
+		o_player_controll.ds_foods[? key].coins_per_second *= 2;
+	}
+}

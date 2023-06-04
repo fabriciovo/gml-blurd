@@ -36,8 +36,6 @@ function constructor_quest() constructor {
 	}
 }
 
-
-//Start quest
 function quest_collect_five_coins() : constructor_quest() constructor {
 	name = "Collect Five Coins"
 	key = "five_coins"
@@ -81,12 +79,12 @@ function quest_unlock_new_food_1() : constructor_quest() constructor {
 		max_count: 80
 	}
 
-	save_progress_value = o_player_controll.ds_quests[?"unlock_new_food_1"];
+
 		
 	function_condition = function(){
 		if complete exit
-		save_progress_value.progress =  o_player_controll.ds_tracker[? "collectables"].coins
-		if save_progress_value.progress >= progress.max_count {
+		 o_player_controll.ds_quests[?"unlock_new_food_1"].progress =  o_player_controll.ds_tracker[? "collectables"].coins
+		if o_player_controll.ds_quests[?"unlock_new_food_1"].progress >= progress.max_count {
 			var _reward_struct = variable_struct_get(global_struct, global_struct_key)
 			quest_reward(
 			ds_player_list,
@@ -109,12 +107,12 @@ function quest_unlock_new_food_2() : constructor_quest() constructor {
 		max_count: 170
 	}
 
-	save_progress_value = o_player_controll.ds_quests[?"unlock_new_food_2"];
+
 		
 	function_condition = function(){
 		if complete exit
-		save_progress_value.progress =  o_player_controll.ds_tracker[? "collectables"].coins
-		if save_progress_value.progress >= progress.max_count {
+		 o_player_controll.ds_quests[?"unlock_new_food_2"].progress =  o_player_controll.ds_tracker[? "collectables"].coins
+		if o_player_controll.ds_quests[?"unlock_new_food_2"].progress >= progress.max_count {
 			var _reward_struct = variable_struct_get(global_struct, global_struct_key)
 			quest_reward(
 			ds_player_list,
@@ -147,6 +145,8 @@ function quest_new_adventure_begins() : constructor_quest() constructor {
 			ds_player_list,
 			_reward_struct,
 			key)
+			add_quest("unlock_new_food_1");
+			add_quest("unlock_new_food_2");
 		}
 	}
 }
@@ -178,48 +178,4 @@ function quest_monster_hunter() : constructor_quest() constructor {
 	}
 }
 	
-
-//function quest_quick_harvest() : constructor_quest() constructor {
-//	name = "Quick Harvest"
-//	key = "quick_harvest"
-//	track_key =  "coins"
-//	ds_player_list = o_player_controll.ds_foods
-//	global_struct = global.struct_upgrade_unlockable
-//	global_struct_key = "unlock_ice_cream"
-//	sprite = s_ten_coins
-//	description= "Collect 50 coins in a single stage without letting any monsters escape."
-//	progress = {
-//		text:  "Collected Coins: ",
-//		max_count: 10
-//	}
-//}
-
-//function quest_exploration_mission() : constructor_quest() constructor {
-//	name = "Exploration Mission"
-//	key ="exploration_mission"
-//	track_key = "coins"
-//	global_struct = global.struct_upgrade_unlockable
-//	global_struct_key = "unlock_chocolate"
-//	ds_player_list = o_player_controll.ds_upgrades
-//	sprite = s_unlock_chocolate
-//	progress = {
-//		text:  "Collected Coins: ",
-//		max_count: 15
-//	}
-//}
-
-//function quest_strategic_elimination() : constructor_quest() constructor {
-//	name = "Strategic Elimination"
-//	key = "strategic_elimination"
-//	track_key = "strategic_elimination"
-//	global_struct = global.struct_upgrade_unlockable
-//	global_struct_key = "unlock_snail"
-//	ds_player_list = o_player_controll.ds_upgrades
-//	sprite = s_unlock_spike_head
-//	description = "Eliminate 10 monsters without collecting any coins."
-//	progress = {
-//		text:  "Collected Coins: ",
-//		max_count: 10
-//	}
-//}
 

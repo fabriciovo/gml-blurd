@@ -20,6 +20,7 @@
     {"id":{"name":"s_hero_collision","path":"sprites/s_hero_collision/s_hero_collision.yy",},"order":0,},
     {"id":{"name":"Spr_YoYo_Background","path":"sprites/Spr_YoYo_Background/Spr_YoYo_Background.yy",},"order":0,},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},"order":0,},
+    {"id":{"name":"f_add_upgrade_cps_food","path":"scripts/f_add_upgrade_cps_food/f_add_upgrade_cps_food.yy",},"order":0,},
     {"id":{"name":"o_powerup_controll","path":"objects/o_powerup_controll/o_powerup_controll.yy",},"order":0,},
     {"id":{"name":"json_to_ds_map","path":"scripts/json_to_ds_map/json_to_ds_map.yy",},"order":0,},
     {"id":{"name":"Obj_FirebaseFirestore_Collection_Query_options_value","path":"objects/Obj_FirebaseFirestore_Collection_Query_options_value/Obj_FirebaseFirestore_Collection_Query_options_value.yy",},"order":0,},
@@ -364,6 +365,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Font","folderPath":"folders/YoYo Extensions Assets/Font.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/YoYo Extensions Assets/Objects.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/YoYo Extensions Assets/Sprites.yy","order":0,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Upgrades","folderPath":"folders/Scripts/Upgrades.yy","order":5,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},

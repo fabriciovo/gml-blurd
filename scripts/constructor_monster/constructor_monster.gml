@@ -136,8 +136,9 @@ function constructor_monster_snail() : constructor_monster() constructor {
 		}
 		
 		if hp <= 0 {
+			
 
-			if level > 3 {
+			if level > 10 {
 				var _drop_size = array_length(drop);
 				var _drop_index = random_range(0, _drop_size);
 				instance_create_layer(x,y ,"Instances",o_pickup,new drop[_drop_index]())

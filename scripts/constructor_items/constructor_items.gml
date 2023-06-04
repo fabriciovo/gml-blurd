@@ -18,7 +18,12 @@ function constructor_food_item(_key, _width, _height) constructor {
 				_player.coins -= item.price 
 				_player.coins_per_second += global_item.coins_per_second
 				item.level++
-				item.price += item.price * global_item.mult
+				item.price += item.price * 0.2
+				
+				if item.level % 50 == 0 {
+					f_add_upgrade_cps_food(item)
+				}
+				
 			}
 		}else {
 			color = c_red	
@@ -183,7 +188,6 @@ function constructor_quest_complete_item(_key, _width, _height) constructor {
 	draw_gui_end_method = function(){
 	}
 }
-
 
 function constructor_craft_bag_item(_key, _width, _height) constructor {
 	width = _width;
