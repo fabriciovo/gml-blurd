@@ -61,7 +61,6 @@ function quest_collect_five_coins() : constructor_quest() constructor {
 			_reward_struct,
 			key)
 			add_quest("new_adventure_begins");
-			add_quest("monster_hunt");
 		}
 	}
 }
@@ -107,8 +106,6 @@ function quest_unlock_new_food_2() : constructor_quest() constructor {
 		max_count: 170
 	}
 
-
-		
 	function_condition = function(){
 		if complete exit
 		 o_player_controll.ds_quests[?"unlock_new_food_2"].progress =  o_player_controll.ds_tracker[? "collectables"].coins
@@ -147,13 +144,15 @@ function quest_new_adventure_begins() : constructor_quest() constructor {
 			key)
 			add_quest("unlock_new_food_1");
 			add_quest("unlock_new_food_2");
+			add_quest("monster_hunt_1");
+			add_quest("monster_hunt_2");
 		}
 	}
 }
 
-function quest_monster_hunter() : constructor_quest() constructor {
+function quest_monster_hunt_1() : constructor_quest() constructor {
 	name = "Monster Hunt"
-	key = "monster_hunt"
+	key = "monster_hunt_1"
 	track_key = "monster"	
 	global_struct = global.struct_upgrade_unlockable
 	global_struct_key = "unlock_snail"
@@ -167,8 +166,35 @@ function quest_monster_hunter() : constructor_quest() constructor {
 		
 	function_condition = function(){
 		if complete exit
-		o_player_controll.ds_quests[?"monster_hunt"].progress = o_player_controll.ds_tracker[? "monsters"].eliminations
-		if o_player_controll.ds_quests[?"monster_hunt"].progress >= progress.max_count {
+		o_player_controll.ds_quests[?"monster_hunt_1"].progress = o_player_controll.ds_tracker[? "monsters"].eliminations
+		if o_player_controll.ds_quests[?"monster_hunt_1"].progress >= progress.max_count {
+			var _reward_struct = variable_struct_get(global_struct, global_struct_key)
+			quest_reward(
+			ds_player_list,
+			_reward_struct,
+			key)
+		}
+	}
+}
+	
+function quest_monster_hunt_2() : constructor_quest() constructor {
+	name = "Monster Hunt"
+	key = "monster_hunt_2"
+	track_key = "monster"	
+	global_struct = global.struct_upgrade_unlockable
+	global_struct_key = "unlock_angry_bird"
+	ds_player_list = o_player_controll.ds_upgrades
+	sprite = s_apple_pickup
+	description = "Defeat 20 snails to unlock a special reward."
+	progress = {
+		text:  "Defeated Monsters: ",
+		max_count: 20
+	}
+		
+	function_condition = function(){
+		if complete exit
+		o_player_controll.ds_quests[?"monster_hunt_2"].progress = o_player_controll.ds_tracker[? "monsters"].snail
+		if o_player_controll.ds_quests[?"monster_hunt_2"].progress >= progress.max_count {
 			var _reward_struct = variable_struct_get(global_struct, global_struct_key)
 			quest_reward(
 			ds_player_list,

@@ -14,36 +14,37 @@ function init(){
 	}
 	
 	global.struct_foods = {
-		candy: new constructor_food("Candy","candy",s_candy,5,1,1.1,0),
-		ice_cream: new constructor_food("Ice Cream","ice_cream",s_ice_cream,10,5,1.2,0),
-		chocolate: new constructor_food("Chocolate","chocolate",s_chocolate,50,25,1.3,0),
-		energy_drink: new constructor_food("Energy Drink","energy_drink",s_energy_drink,80,40,2.1,0),
+		candy: new constructor_food("Candy","candy",s_candy,5,1,0),
+		ice_cream: new constructor_food("Ice Cream","ice_cream",s_ice_cream,10,5,0),
+		chocolate: new constructor_food("Chocolate","chocolate",s_chocolate,50,25,0),
+		energy_drink: new constructor_food("Energy Drink","energy_drink",s_energy_drink,80,40,0),
 	}
 	
 	global.struct_upgrade_items = {
-		energy_drink: new constructor_upgrade("Energy Drink","energy_drink",s_energy_drink,5,0,"Power Up",2,0),
-		spike_head: new constructor_upgrade("Spike Head","spike_head",s_spike_head,1,0,"Monster",1.3,0),
+		energy_drink: new constructor_upgrade("Energy Drink","energy_drink",s_energy_drink,5,0,"Power Up",0),
+		spike_head: new constructor_upgrade("Spike Head","spike_head",s_spike_head,1,0,"Monster",0),
 		snail: new constructor_upgrade("Snail","snail",s_snail,1,0,"Monster",1.3,0),
-		angry_bird: new constructor_upgrade("Angry Bird","angry_bird",s_snail,1,0,"Monster",1.3,0),
+		angry_bird: new constructor_upgrade("Angry Bird","angry_bird",s_snail,1,0,"Monster",0),
 	}
 	
 	
 	global.struct_upgrade_unlockable = {
-		unlock_ice_cream: new constructor_upgrade_unlockable("Unlock Ice Cream","unlock_ice_cream", s_ice_cream,60, 2, "Unlockable",2,0,"food",global.struct_foods.ice_cream),
-		unlock_energy_drink: new constructor_upgrade_unlockable("Unlock Energy Drink","unlock_energy_drink", s_energy_drink,300, 2, "Unlockable",2,0,"food",global.struct_foods.energy_drink),
-		unlock_chocolate: new constructor_upgrade_unlockable("Unlock Chocolate","unlock_chocolate", s_chocolate,160, 2, "Unlockable",2,0,"food",global.struct_foods.chocolate),
-		unlock_spike_head: new constructor_upgrade_unlockable("Unlock Spike Head","unlock_spike_head",s_spike_head,50, 2, "Unlockable",2,0,"upgrade",global.struct_upgrade_items.spike_head),
-		unlock_snail: new constructor_upgrade_unlockable("Unlock Snail","unlock_snail", s_snail, 100, 2, "Unlockable",2,0, "upgrade",global.struct_upgrade_items.snail),
-		unlock_angry_bird: new constructor_upgrade_unlockable("Unlock Angry Bird","unlock_angry_bird", s_energy_drink,150, 2, "Unlockable",2,0,"upgrade", global.struct_upgrade_items.angry_bird),
+		unlock_ice_cream: new constructor_upgrade_unlockable("Unlock Ice Cream","unlock_ice_cream", s_ice_cream,60, 2, "Unlockable",2,"food",global.struct_foods.ice_cream),
+		unlock_energy_drink: new constructor_upgrade_unlockable("Unlock Energy Drink","unlock_energy_drink", s_energy_drink,300, 2, "Unlockable",2,"food",global.struct_foods.energy_drink),
+		unlock_chocolate: new constructor_upgrade_unlockable("Unlock Chocolate","unlock_chocolate", s_chocolate,160, 2, "Unlockable",2,"food",global.struct_foods.chocolate),
+		unlock_spike_head: new constructor_upgrade_unlockable("Unlock Spike Head","unlock_spike_head",s_spike_head,50, 2, "Unlockable",2,"upgrade",global.struct_upgrade_items.spike_head),
+		unlock_snail: new constructor_upgrade_unlockable("Unlock Snail","unlock_snail", s_snail, 100, 2, "Unlockable",2,"upgrade",global.struct_upgrade_items.snail),
+		unlock_angry_bird: new constructor_upgrade_unlockable("Unlock Angry Bird","unlock_angry_bird", s_energy_drink,150, 2, "Unlockable",2,"upgrade", global.struct_upgrade_items.angry_bird),
 	}
 	
 	global.struct_upgrade_unlockable = {
-		unlock_ice_cream: new constructor_upgrade_unlockable("Unlock Ice Cream","unlock_ice_cream", s_ice_cream,60, 2, "Unlockable",2,0,"food",global.struct_foods.ice_cream),
-		unlock_energy_drink: new constructor_upgrade_unlockable("Unlock Energy Drink","unlock_energy_drink", s_energy_drink,300, 2, "Unlockable",2,0,"food",global.struct_foods.energy_drink),
-		unlock_chocolate: new constructor_upgrade_unlockable("Unlock Chocolate","unlock_chocolate", s_chocolate,160, 2, "Unlockable",2,0,"food",global.struct_foods.chocolate),
-		unlock_spike_head: new constructor_upgrade_unlockable("Unlock Spike Head","unlock_spike_head",s_spike_head,50, 2, "Unlockable",2,0,"upgrade",global.struct_upgrade_items.spike_head),
-		unlock_snail: new constructor_upgrade_unlockable("Unlock Snail","unlock_snail", s_snail, 100, 2, "Unlockable",2,0, "upgrade",global.struct_upgrade_items.snail),
-		unlock_angry_bird: new constructor_upgrade_unlockable("Unlock Angry Bird","unlock_angry_bird", s_energy_drink,150, 2, "Unlockable",2,0,"upgrade", global.struct_upgrade_items.angry_bird),
+		unlock_ice_cream: new constructor_upgrade_unlockable("Unlock Ice Cream","unlock_ice_cream", s_ice_cream,60, 2, "Unlockable",2,"food",global.struct_foods.ice_cream),
+		unlock_energy_drink: new constructor_upgrade_unlockable("Unlock Energy Drink","unlock_energy_drink", s_energy_drink,300, 2, "Unlockable",2,"food",global.struct_foods.energy_drink),
+		unlock_chocolate: new constructor_upgrade_unlockable("Unlock Chocolate","unlock_chocolate", s_chocolate,160, 2, "Unlockable",2,"food",global.struct_foods.chocolate),
+		unlock_spike_head: new constructor_upgrade_unlockable("Unlock Spike Head","unlock_spike_head",s_spike_head,50, 2, "Unlockable",2,"upgrade",global.struct_upgrade_items.spike_head),
+		unlock_snail: new constructor_upgrade_unlockable("Unlock Snail","unlock_snail", s_snail, 100, 2, "Unlockable",2,"upgrade",global.struct_upgrade_items.snail),
+		unlock_angry_bird: new constructor_upgrade_unlockable("Unlock Angry Bird","unlock_angry_bird", s_energy_drink,150, 2, "Unlockable",2,"upgrade", global.struct_upgrade_items.angry_bird),
+		upgrade_candy: new constructor_upgrade_food_cps("Candy", "candy", s_candy, "Food Upgrade", 5)
 	}
 	
 	global.struct_secret_items = {

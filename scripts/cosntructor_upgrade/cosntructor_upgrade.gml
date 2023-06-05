@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,_level) constructor {
+function constructor_upgrade(_name, _key, _sprite,_price, _number, _type,_level) constructor {
 	name = _name
 	key = _key
 	level = _level
@@ -8,13 +8,12 @@ function constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,
 	price = _price
 	number = _number
 	type = _type
-	mult = _mult
+
 		
 	function_reward = function(){
 		return {
 			key: key,
 			price: price,
-			mult: mult,
 			level: level,
 			type: type,
 			number: number,
@@ -28,7 +27,7 @@ function constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,
 	
 }
 
-function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _type, _mult,_level,_reward_type, _reward): constructor_upgrade(_name, _key, _sprite,_price, _number, _type, _mult,_level) constructor {
+function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _type,_level,_reward_type, _reward): constructor_upgrade(_name, _key, _sprite,_price, _number, _type,_level) constructor {
 	reward = _reward;
 	name = _name
 	key = _key
@@ -37,7 +36,6 @@ function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _t
 	price = _price
 	number = _number
 	type = _type
-	mult = _mult
 	reward_type = _reward_type
 	function_unlockable_reward = function(){		
 		var _player_ds_list = o_player_controll

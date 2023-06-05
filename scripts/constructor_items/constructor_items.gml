@@ -2,6 +2,7 @@ function constructor_food_item(_key, _width, _height) constructor {
 	width = _width;
 	height = _height;
 	global_item = variable_struct_get(global.struct_foods,_key)
+	key = _key
 	item = o_player_controll.ds_foods[? _key]
 	hover = 0
 	l_click = 0
@@ -21,7 +22,7 @@ function constructor_food_item(_key, _width, _height) constructor {
 				item.price += item.price * 0.2
 				
 				if item.level % 50 == 0 {
-					f_add_upgrade_cps_food(item)
+					f_add_upgrade_cps_food(key)
 				}
 				
 			}
@@ -364,7 +365,7 @@ function constructor_upgrade_item(_key, _width, _height) constructor {
 		if hover and l_click and _player.coins >= item.price {
 			_player.coins -= item.price 
 			item.level++
-			item.price += item.price * global_upgrade.mult
+			item.price += item.price * 0.2
 		}
 		
 
