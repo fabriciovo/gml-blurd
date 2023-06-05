@@ -1,2 +1,0 @@
-/// @description Reset
-drawInput = defaultText;

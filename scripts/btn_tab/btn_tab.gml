@@ -10,6 +10,17 @@ function btn_tab(_layer_name,_sprite, _func, _size) constructor {
 	color = c_white
 	scale = 2
 	
+	event_create = function(){ 
+		
+		screenWidth = window_get_width();
+		screenHeight = window_get_height();
+
+		btn_height = sprite_get_height(54);
+		spaceBetweenItem = 5 ;
+
+		scr_scrollable_set_First_Item_Position(obj_scrollable , 0);
+	}
+	
 	left_click_method = function(){
 		if size == 0 exit
 		if !layer_get_visible("Shop") exit
@@ -37,6 +48,15 @@ function btn_tab(_layer_name,_sprite, _func, _size) constructor {
 		
 		hover = point_in_rectangle(_mouse_x, _mouse_y, x - _spr_width / 2, y - _spr_height/ 2, x + _spr_width/ 2, y + _spr_height/ 2);
 		l_click = mouse_check_button_pressed(mb_left)
+	}
+	
+	event_draw = function() {
+		for(i = 1 ; i < 50 ; i++){
+			yy = (((btn_height / 2)+spaceBetweenItem) * i) + scr_scrollable_get_scroll_data(obj_scrollable);
+			draw_sprite(spr_btn,0,screenWidth/2, yy  );
+		}
+
+		scr_scrollable_set_Last_Item_Position(obj_scrollable , yy + (btn_height / 2) );
 	}
 	
 	draw_gui_method = function(){
