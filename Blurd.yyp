@@ -95,6 +95,7 @@
     {"id":{"name":"s_quest_icon","path":"sprites/s_quest_icon/s_quest_icon.yy",},"order":3,},
     {"id":{"name":"FriebaseREST_Firestore_urlUpdateMask","path":"scripts/FriebaseREST_Firestore_urlUpdateMask/FriebaseREST_Firestore_urlUpdateMask.yy",},"order":0,},
     {"id":{"name":"mouse","path":"scripts/mouse/mouse.yy",},"order":0,},
+    {"id":{"name":"obj_scrollable_test","path":"objects/obj_scrollable_test/obj_scrollable_test.yy",},"order":2,},
     {"id":{"name":"Obj_FirebaseFirestore_allCallbacks","path":"objects/Obj_FirebaseFirestore_allCallbacks/Obj_FirebaseFirestore_allCallbacks.yy",},"order":0,},
     {"id":{"name":"o_monster","path":"objects/o_monster/o_monster.yy",},"order":0,},
     {"id":{"name":"o_player_bonus","path":"objects/o_player_bonus/o_player_bonus.yy",},"order":0,},

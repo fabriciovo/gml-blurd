@@ -24,11 +24,8 @@ function create_items_shop(){
 
 function create_upgrade_shop(){
 	
-	screenWidth = window_get_width();
-	screenHeight = window_get_height();
 
-	btn_height = sprite_get_height(54);
-	spaceBetweenItem = 5 ;
+	var spaceBetweenItem = 5 ;
 
 	scr_scrollable_set_First_Item_Position(obj_scrollable , 0);
 	
@@ -36,7 +33,7 @@ function create_upgrade_shop(){
 	var _sep = 6;
 
 	var _x = 0;
-	var _y = 120;
+	var _y = 0;
 
 	var _w = 256;
 	var _h = 54;
@@ -45,19 +42,21 @@ function create_upgrade_shop(){
 	var _list = o_player_controll.ds_upgrades
 	var _list_items_key = ds_map_keys_to_array(_list)
 	var _size = array_length(_list_items_key)
+	
+	
 	for (var _i = 0; _i < _size; _i++) {
-	var _key = _list_items_key[_i]
+		var _key = _list_items_key[_i]
+	
+		_y += (_h + _sep) + scr_scrollable_get_scroll_data(obj_scrollable);
 
-	if (_list[? _key].type == "Unlockable"){
-		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item_unlockable(_key,_w,_h));
-	} else {
-		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_key,_w,_h));
+		if (_list[? _key].type == "Unlockable"){
+			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item_unlockable(_key,_w,_h));
+		} else {
+			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_key,_w,_h));
+		}	
 	}
-
-
-	_y += (_h + _sep);
-		
-	}
+	
+	scr_scrollable_set_Last_Item_Position(obj_scrollable , _y + (_h / 2) );
 }
 
 function create_quest_panel(){
