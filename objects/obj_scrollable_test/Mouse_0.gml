@@ -1,1 +1,0 @@
-flickVelY = 0;

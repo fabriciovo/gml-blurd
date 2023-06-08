@@ -1,1 +1,0 @@
-flickVelY = event_data[?"diffY"];

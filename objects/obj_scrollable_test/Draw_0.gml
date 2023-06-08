@@ -1,1 +1,0 @@
-draw_sprite(s_bag_icon,0,x,y)

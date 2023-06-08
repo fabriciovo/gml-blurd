@@ -42,18 +42,15 @@ function create_upgrade_shop(){
 	var _list = o_player_controll.ds_upgrades
 	var _list_items_key = ds_map_keys_to_array(_list)
 	var _size = array_length(_list_items_key)
-	
-	
+
 	for (var _i = 0; _i < _size; _i++) {
 		var _key = _list_items_key[_i]
-	
-		_y += (_h + _sep) + scr_scrollable_get_scroll_data(obj_scrollable);
-
 		if (_list[? _key].type == "Unlockable"){
 			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item_unlockable(_key,_w,_h));
 		} else {
 			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_key,_w,_h));
 		}	
+		_y += (_h + _sep) + scr_scrollable_get_scroll_data(obj_scrollable);
 	}
 	
 	scr_scrollable_set_Last_Item_Position(obj_scrollable , _y + (_h / 2) );
@@ -165,6 +162,8 @@ function create_secret_items(){
 }
 
 function on_click_open_shop(){
+instance_create_layer(x,y,"Shop",obj_scrollable)
+instance_create_layer(x,y,"Shop",obj_buttons)
 var _shop_layer = layer_get_id("Shop")
 var _value = layer_get_visible(_shop_layer)
 var ds_foods_size = ds_map_size(o_player_controll.ds_foods)
@@ -184,6 +183,7 @@ if _value == false {
 }else{
 	instance_destroy(o_shop_item)
 	instance_destroy(o_btn_item)
+	instance_destroy(obj_scrollable)
 }
 	
 layer_set_visible(_shop_layer, !_value)
