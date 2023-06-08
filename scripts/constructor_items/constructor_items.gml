@@ -346,7 +346,7 @@ function constructor_secret_item (_key, _width, _height) constructor {
 	}
 }
 	
-function constructor_upgrade_item(_key, _width, _height) constructor {
+function constructor_upgrade_item(_key, _width, _height, _i) constructor {
 	width = _width;
 	height = _height;
 	global_upgrade = variable_struct_get(global.struct_upgrade_items,_key)
@@ -355,7 +355,7 @@ function constructor_upgrade_item(_key, _width, _height) constructor {
 	l_click = 0
 	open_panel = false
 	color = c_green
-
+	i = _i
 	
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
@@ -387,7 +387,7 @@ function constructor_upgrade_item(_key, _width, _height) constructor {
 
 		var _spr = global_upgrade.sprite;
 		var _name = global_upgrade.name;
-
+		
 		draw_set_color(color);
 		draw_set_alpha(0.4);
 
@@ -410,9 +410,9 @@ function constructor_upgrade_item(_key, _width, _height) constructor {
 
 }
 
-function constructor_upgrade_item_unlockable(_key, _width, _height) : constructor_upgrade_item(_key, _width, _height) constructor {
+function constructor_upgrade_item_unlockable(_key, _width, _height,_i) : constructor_upgrade_item(_key, _width, _height,_i) constructor {
 	item = o_player_controll.ds_upgrades[? _key]
-	
+	i = _i
 	global_upgrade = variable_struct_get(global.struct_upgrade_unlockable,_key)
 	
 	step_method = function(){

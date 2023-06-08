@@ -23,12 +23,7 @@ function create_items_shop(){
 }
 
 function create_upgrade_shop(){
-	
 
-	var spaceBetweenItem = 5 ;
-
-	scr_scrollable_set_First_Item_Position(obj_scrollable , 0);
-	
 	var _upgrade_layer = layer_get_id("Upgrades")
 	var _sep = 6;
 
@@ -46,14 +41,13 @@ function create_upgrade_shop(){
 	for (var _i = 0; _i < _size; _i++) {
 		var _key = _list_items_key[_i]
 		if (_list[? _key].type == "Unlockable"){
-			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item_unlockable(_key,_w,_h));
+			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item_unlockable(_key,_w,_h,_i));
 		} else {
-			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_key,_w,_h));
+			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_key,_w,_h,_i));
 		}	
-		_y += (_h + _sep) + scr_scrollable_get_scroll_data(obj_scrollable);
 	}
-	
-	scr_scrollable_set_Last_Item_Position(obj_scrollable , _y + (_h / 2) );
+	instance_create_layer(x,y,"Shop",obj_scrollable)
+	instance_create_layer(x,y,"Shop",o_upgrades)
 }
 
 function create_quest_panel(){
@@ -126,6 +120,7 @@ function create_craft_bag(){
 }
 
 function create_secret_items(){
+	
 		var _layer = layer_get_id("Inventory")
 		var _size = array_length(global.struct_secret_items)
 		var _margin = 24;
@@ -162,8 +157,8 @@ function create_secret_items(){
 }
 
 function on_click_open_shop(){
-instance_create_layer(x,y,"Shop",obj_scrollable)
-instance_create_layer(x,y,"Shop",obj_buttons)
+
+
 var _shop_layer = layer_get_id("Shop")
 var _value = layer_get_visible(_shop_layer)
 var ds_foods_size = ds_map_size(o_player_controll.ds_foods)
@@ -184,6 +179,7 @@ if _value == false {
 	instance_destroy(o_shop_item)
 	instance_destroy(o_btn_item)
 	instance_destroy(obj_scrollable)
+	instance_destroy(o_upgrades)
 }
 	
 layer_set_visible(_shop_layer, !_value)
