@@ -1,5 +1,5 @@
 
-scr_scrollable_set_First_Item_Position(obj_scrollable , 0);
+scr_scrollable_set_First_Item_Position(obj_scrollable , 120);
 //var _screen_width = window_get_width();
 
 //var _list = o_player_controll.ds_upgrades

@@ -12,13 +12,8 @@ function btn_tab(_layer_name,_sprite, _func, _size) constructor {
 	
 	event_create = function(){ 
 		
-		screenWidth = window_get_width();
-		screenHeight = window_get_height();
 
-		btn_height = sprite_get_height(54);
-		spaceBetweenItem = 5 ;
 
-		scr_scrollable_set_First_Item_Position(obj_scrollable , 0);
 	}
 	
 	left_click_method = function(){

@@ -16,14 +16,13 @@ function create_items_shop(){
 	var _size = array_length(_list_items_key)
 	for (var _i = 0; _i < _size; _i++) {
 		var _key = _list_items_key[_i]
-		instance_create_layer(_x,_y,_items_layer,o_shop_item, new constructor_food_item(_key,_w,_h));
+		instance_create_layer(_x,_y,_items_layer,o_shop_item, new constructor_food_item(_key,_w,_h,_i));
 		_y += (_h + _sep);
 	}
 	
 }
 
 function create_upgrade_shop(){
-
 	var _upgrade_layer = layer_get_id("Upgrades")
 	var _sep = 6;
 
@@ -46,8 +45,7 @@ function create_upgrade_shop(){
 			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_key,_w,_h,_i));
 		}	
 	}
-	instance_create_layer(x,y,"Shop",obj_scrollable)
-	instance_create_layer(x,y,"Shop",o_upgrades)
+
 }
 
 function create_quest_panel(){
@@ -74,13 +72,13 @@ function create_quest_panel(){
 
 	for(var _i = 0; _i < _list_quest_values_size; _i++) {
 		var _quest = _list_quest_values[_i];
-		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_quest_item(_quest,_w,_h));
+		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_quest_item(_quest,_w,_h,_i));
 		_y += (_h + _sep);
 	}
 
 	for(var _i = 0; _i < _list_quest_completed_values_size; _i++) {
 		var _quest = _list_quest_completed_values[_i];
-		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_quest_complete_item(_quest.key,_w,_h));
+		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_quest_complete_item(_quest.key,_w,_h,_i));
 		_y += (_h + _sep);
 	}
 	
@@ -108,7 +106,7 @@ function create_craft_bag(){
 		var _button_x = _inv_x + (_sep + _cell_size) * _x;
 		var _button_y = _inv_y + (_sep + _cell_size) * _y;
 		var _key = _list_items_key[_i]
-		instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new constructor_craft_bag_item(_key,40,40));
+		instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new constructor_craft_bag_item(_key,40,40,_i));
 		
 		_x++;
 	
@@ -145,7 +143,7 @@ function create_secret_items(){
 		var _button_x = _inv_x + (_sep + _cell_size) * _x;
 		var _button_y = _inv_y + (_sep + _cell_size) * _y;
 		var _key = _list_items_key[_i]
-		instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new constructor_secret_item(_key,80,80));
+		instance_create_layer(_button_x, _button_y, _layer, o_shop_item, new constructor_secret_item(_key,80,80,_i));
 		
 		_x++;
 	
@@ -175,6 +173,8 @@ if _value == false {
 	instance_create_depth(192,global.VH - 135,0,o_btn_item, new btn_tab("Craft_Bag", s_craft_bag_btn, create_craft_bag,ds_craft_items_size))
 	instance_create_depth(242,global.VH - 135,0,o_btn_item, new btn_tab("Inventory", s_secret_items_btn, create_secret_items,1))
 	//instance_create_depth(286,global.VH - 135,0,o_btn_item, new btn_tab("Inventory", s_secret_items_btn, create_secret_items,1))
+	instance_create_layer(x,y,"Shop",obj_scrollable)
+	instance_create_layer(x,y,"Shop",o_upgrades)
 }else{
 	instance_destroy(o_shop_item)
 	instance_destroy(o_btn_item)

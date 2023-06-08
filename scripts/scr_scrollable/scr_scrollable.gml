@@ -6,7 +6,7 @@ function scr_scrollable_set_First_Item_Position(object_scrollable , FirstItemPos
 
 function scr_scrollable_set_Last_Item_Position(object_scrollable , LastItemPosition){
 	if(object_scrollable.scrollBottom == noone){
-		object_scrollable.scrollBottom = LastItemPosition - global.VH ;
+		object_scrollable.scrollBottom = LastItemPosition - window_get_height() + 144;
 	}
 }
 

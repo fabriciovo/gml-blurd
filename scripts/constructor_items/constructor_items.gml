@@ -1,4 +1,5 @@
-function constructor_food_item(_key, _width, _height) constructor {
+function constructor_food_item(_key, _width, _height,_i) constructor {
+	i = _i
 	width = _width;
 	height = _height;
 	global_item = variable_struct_get(global.struct_foods,_key)
@@ -11,6 +12,13 @@ function constructor_food_item(_key, _width, _height) constructor {
 		
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
+		
+		if y <= 120 {
+			visible = false
+		}else {
+			visible = true
+		}
+		
 		var _player = o_player_controll
 		
 		if _player.coins >= item.price  {
@@ -76,7 +84,8 @@ function constructor_food_item(_key, _width, _height) constructor {
 	draw_gui_end_method = function(){}
 }
 
-function constructor_quest_item(_quest, _width, _height) constructor {
+function constructor_quest_item(_quest, _width, _height,_i) constructor {
+	i = _i
 	width = _width;
 	height = _height;
 	key = _quest.key
@@ -89,6 +98,13 @@ function constructor_quest_item(_quest, _width, _height) constructor {
 
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
+		
+		if y <= 120 {
+			visible = false
+		}else {
+			visible = true
+		}
+		
 		if item.unlocked {
 			color = c_green
 		}else {
@@ -136,7 +152,8 @@ function constructor_quest_item(_quest, _width, _height) constructor {
 	}
 }
 
-function constructor_quest_complete_item(_key, _width, _height) constructor {
+function constructor_quest_complete_item(_key, _width, _height,_i) constructor {
+	i = _i
 	width = _width;
 	height = _height;
 	key = _key
@@ -147,7 +164,11 @@ function constructor_quest_complete_item(_key, _width, _height) constructor {
 	color = c_green
 
 	step_method = function(){
-
+		if y <= 120 {
+			visible = false
+		}else {
+			visible = true
+		}
 	}
 	
 	end_step_method = function(){
@@ -190,7 +211,8 @@ function constructor_quest_complete_item(_key, _width, _height) constructor {
 	}
 }
 
-function constructor_craft_bag_item(_key, _width, _height) constructor {
+function constructor_craft_bag_item(_key, _width, _height,_i) constructor {
+	i = _i
 	width = _width;
 	height = _height;
 	hover = 0
@@ -251,7 +273,8 @@ function constructor_craft_bag_item(_key, _width, _height) constructor {
 	draw_gui_end_method = function(){}
 }
 
-function constructor_secret_item (_key, _width, _height) constructor {
+function constructor_secret_item (_key, _width, _height,_i) constructor {
+	i = _i
 	width = _width;
 	height = _height;
 	hover = 0
@@ -347,6 +370,7 @@ function constructor_secret_item (_key, _width, _height) constructor {
 }
 	
 function constructor_upgrade_item(_key, _width, _height, _i) constructor {
+	i = _i
 	width = _width;
 	height = _height;
 	global_upgrade = variable_struct_get(global.struct_upgrade_items,_key)
@@ -359,6 +383,14 @@ function constructor_upgrade_item(_key, _width, _height, _i) constructor {
 	
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
+
+		if y <= 100 {
+			visible = false
+		}else if y >= 454 {
+			visible = false
+		}else {
+			visible = true
+		}
 
 		color = hover ? c_green : c_blue
 		var _player = o_player_controll
@@ -418,6 +450,16 @@ function constructor_upgrade_item_unlockable(_key, _width, _height,_i) : constru
 	step_method = function(){
 		if !object_exists(o_player_controll) exit
 		var _player = o_player_controll
+		
+		if y <= 119 {
+			visible = false
+		}else if y >= 454 {
+			visible = false
+		}else {
+			visible = true
+		}
+		
+		
 		
 		if item.level == 1 {
 			color = c_gray
