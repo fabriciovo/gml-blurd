@@ -1,1 +1,1 @@
-o_player_controll.coins += o_player_controll.coins_out_game
+o_player_controller.coins += o_player_controller.coins_out_game

@@ -62,8 +62,8 @@ function init(){
 				room_goto(rm_bonus_stage_1)
 			},
 			craft: function() {
-				var _player_craft_items = o_player_controll.ds_craft_items
-				var _player_secret_items = o_player_controll.ds_secret_items		
+				var _player_craft_items = o_player_controller.ds_craft_items
+				var _player_secret_items = o_player_controller.ds_secret_items		
 				
 
 				if _player_craft_items[? "spike"].count >= craft_items.spikes  

@@ -1,1 +1,0 @@
-draw_sprite_ext(s_shop_background,0,global.VW / 2, global.VH / 2,10,15,image_angle,image_blend,image_alpha)

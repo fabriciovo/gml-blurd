@@ -48,7 +48,7 @@ function constructor_monster_spike_head() : constructor_monster() constructor {
 	image_speed = 0
 
 	track_key = "spike_head"
-	level = o_player_controll.ds_upgrades[? track_key].level
+	level = o_player_controller.ds_upgrades[? track_key].level
 	
 	create_method = function(){
 		grav = 0.1
@@ -66,8 +66,8 @@ function constructor_monster_spike_head() : constructor_monster() constructor {
 	}
 	
 	player_collision = function(){
-		o_player_controll.ds_tracker[? "monsters"].spike_head++ 
-		o_player_controll.ds_tracker[? "monsters"].eliminations++ 
+		o_player_controller.ds_tracker[? "monsters"].spike_head++ 
+		o_player_controller.ds_tracker[? "monsters"].eliminations++ 
 		instance_destroy()
 	}
 	
@@ -87,7 +87,7 @@ function constructor_monster_snail() : constructor_monster() constructor {
 	sprite_index = s_snail
 	
 	track_key = "snail"
-	level = o_player_controll.ds_upgrades[? track_key].level
+	level = o_player_controller.ds_upgrades[? track_key].level
 	create_method = function(){
 		hp = 3
 		grav = 0.2
@@ -144,8 +144,8 @@ function constructor_monster_snail() : constructor_monster() constructor {
 				instance_create_layer(x,y ,"Instances",o_pickup,new drop[_drop_index]())
 			}
 				//instance_create_layer(x,y,"Instances",o_pickup, new Apple())
-				o_player_controll.ds_tracker[? "monsters"].snail++ 
-				o_player_controll.ds_tracker[? "monsters"].eliminations++ 
+				o_player_controller.ds_tracker[? "monsters"].snail++ 
+				o_player_controller.ds_tracker[? "monsters"].eliminations++ 
 				instance_destroy()
 			}
 	}
@@ -157,7 +157,7 @@ function constructor_monster_angry_bird() : constructor_monster() constructor {
 	hsp = global.game_speed
 	track_key = "angry_bird"
 	
-	level = o_player_controll.ds_upgrades[? track_key].level
+	level = o_player_controller.ds_upgrades[? track_key].level
 	
 	create_method = function(){
 		grav = 0.3
@@ -174,8 +174,8 @@ function constructor_monster_angry_bird() : constructor_monster() constructor {
 	}
 	
 	player_collision = function(){
-		o_player_controll.ds_tracker[? "monsters"].angry_bird++ 
-		o_player_controll.ds_tracker[? "monsters"].eliminations++ 
+		o_player_controller.ds_tracker[? "monsters"].angry_bird++ 
+		o_player_controller.ds_tracker[? "monsters"].eliminations++ 
 		instance_destroy()
 	}
 	

@@ -1,4 +1,4 @@
-var _list = o_player_controll.ds_quests
+var _list = o_player_controller.ds_quests
 var _list_items_values = ds_map_values_to_array(_list)
 var _list_items_values_size = array_length(_list_items_values)
 

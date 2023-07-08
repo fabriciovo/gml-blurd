@@ -38,16 +38,16 @@ function constructor_upgrade_unlockable(_name, _key, _sprite,_price, _number, _t
 	type = _type
 	reward_type = _reward_type
 	function_unlockable_reward = function(){		
-		var _player_ds_list = o_player_controll
+		var _player_ds_list = o_player_controller
 		switch(reward_type){
 			case "food":
-				_player_ds_list = o_player_controll.ds_foods
+				_player_ds_list = o_player_controller.ds_foods
 			break
 			case "upgrade":
-				_player_ds_list = o_player_controll.ds_upgrades
+				_player_ds_list = o_player_controller.ds_upgrades
 			break
 			case "quest":
-				_player_ds_list = o_player_controll.ds_quests
+				_player_ds_list = o_player_controller.ds_quests
 			break
 		}
 
@@ -66,6 +66,6 @@ function constructor_upgrade_food_cps(_name, _key, _sprite, _type, _price) const
 	type = _type
 
 	function_unlockable_reward = function(){		
-		o_player_controll.ds_foods[? key].coins_per_second *= 2;
+		o_player_controller.ds_foods[? key].coins_per_second *= 2;
 	}
 }

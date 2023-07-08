@@ -4,22 +4,23 @@ function constructor_food_item(_key, _width, _height,_i) constructor {
 	height = _height;
 	global_item = variable_struct_get(global.struct_foods,_key)
 	key = _key
-	item = o_player_controll.ds_foods[? _key]
+	item = o_player_controller.ds_foods[? _key]
 	hover = 0
 	l_click = 0
 	open_panel = false
 	color = c_green
-		
+	yy = 0
 	step_method = function(){
-		if !object_exists(o_player_controll) exit
+		y = yy
+		if !object_exists(o_player_controller) exit
 		
-		if y <= 120 {
+		if y < 120 {
 			visible = false
 		}else {
 			visible = true
 		}
 		
-		var _player = o_player_controll
+		var _player = o_player_controller
 		
 		if _player.coins >= item.price  {
 			color = hover ? c_green : c_blue
@@ -97,7 +98,7 @@ function constructor_quest_item(_quest, _width, _height,_i) constructor {
 	color = c_green
 
 	step_method = function(){
-		if !object_exists(o_player_controll) exit
+		if !object_exists(o_player_controller) exit
 		
 		if y <= 120 {
 			visible = false
@@ -219,13 +220,13 @@ function constructor_craft_bag_item(_key, _width, _height,_i) constructor {
 	l_click = 0
 	open_panel = false
 	color = c_white
-	ds_list = o_player_controll.ds_craft_items
+	ds_list = o_player_controller.ds_craft_items
 	ds_value = ds_list[? _key]
 	global_value = global.struct_craft_bag[$ _key]
 	
 
 	step_method = function(){
-		if !object_exists(o_player_controll) exit
+		if !object_exists(o_player_controller) exit
 		var _unlocked = ds_value.unlocked
 		if _unlocked {
 			color = c_white
@@ -282,12 +283,12 @@ function constructor_secret_item (_key, _width, _height,_i) constructor {
 	open_panel = false
 	color = c_white
 	sprite_color = c_black
-	ds_list = o_player_controll.ds_secret_items
+	ds_list = o_player_controller.ds_secret_items
 	ds_value = ds_list[? _key]
 	global_value = global.struct_secret_items[$ _key]
 	
 	step_method = function(){
-		if !object_exists(o_player_controll) exit
+		if !object_exists(o_player_controller) exit
 		var _unlocked = ds_value.unlocked
 		var _count = ds_value.count
 
@@ -374,15 +375,16 @@ function constructor_upgrade_item(_key, _width, _height, _i) constructor {
 	width = _width;
 	height = _height;
 	global_upgrade = variable_struct_get(global.struct_upgrade_items,_key)
-	item = o_player_controll.ds_upgrades[? _key]
+	item = o_player_controller.ds_upgrades[? _key]
 	hover = 0
 	l_click = 0
 	open_panel = false
 	color = c_green
-	i = _i
-	
+	i = _i	
+	yy = 0
 	step_method = function(){
-		if !object_exists(o_player_controll) exit
+		y = yy
+		if !object_exists(o_player_controller) exit
 
 		if y <= 100 {
 			visible = false
@@ -393,7 +395,7 @@ function constructor_upgrade_item(_key, _width, _height, _i) constructor {
 		}
 
 		color = hover ? c_green : c_blue
-		var _player = o_player_controll
+		var _player = o_player_controller
 		if hover and l_click and _player.coins >= item.price {
 			_player.coins -= item.price 
 			item.level++
@@ -443,13 +445,14 @@ function constructor_upgrade_item(_key, _width, _height, _i) constructor {
 }
 
 function constructor_upgrade_item_unlockable(_key, _width, _height,_i) : constructor_upgrade_item(_key, _width, _height,_i) constructor {
-	item = o_player_controll.ds_upgrades[? _key]
+	item = o_player_controller.ds_upgrades[? _key]
 	i = _i
 	global_upgrade = variable_struct_get(global.struct_upgrade_unlockable,_key)
-	
+	yy = 0
 	step_method = function(){
-		if !object_exists(o_player_controll) exit
-		var _player = o_player_controll
+		y = yy
+		if !object_exists(o_player_controller) exit
+		var _player = o_player_controller
 		
 		if y <= 119 {
 			visible = false

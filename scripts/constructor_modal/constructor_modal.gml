@@ -11,7 +11,7 @@ function constructor_modal(_width, _height, _key) constructor {
 	color = c_green
 
 	event_step = function(){
-		if !object_exists(o_player_controll) exit
+		if !object_exists(o_player_controller) exit
 		if item.unlocked {
 			color = c_green
 		}else {

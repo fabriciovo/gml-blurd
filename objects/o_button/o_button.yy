@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_spawn_point",
+  "name": "o_button",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -25,7 +25,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enviroment",
-    "path": "folders/Objects/Enviroment.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
 }

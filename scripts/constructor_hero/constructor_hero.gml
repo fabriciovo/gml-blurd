@@ -60,9 +60,9 @@ function constrtuctor_hero() constructor {
 	}
 	
 	coin_collision_method = function() {
-		o_player_controll.coins += other.coin_value 
-		o_player_controll.total_coins += other.coin_value 
-		o_player_controll.ds_tracker[? "collectables"].coins++ 
+		o_player_controller.coins += other.coin_value 
+		o_player_controller.total_coins += other.coin_value 
+		o_player_controller.ds_tracker[? "collectables"].coins++ 
 		instance_destroy(other)
 	} 
 

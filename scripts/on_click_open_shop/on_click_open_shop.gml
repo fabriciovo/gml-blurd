@@ -11,7 +11,7 @@ function create_items_shop(){
 	
 	var _y = _y + _sep;
 
-	var _list = o_player_controll.ds_foods
+	var _list = o_player_controller.ds_foods
 	var _list_items_key = ds_map_keys_to_array(_list)
 	var _size = array_length(_list_items_key)
 	for (var _i = 0; _i < _size; _i++) {
@@ -19,7 +19,6 @@ function create_items_shop(){
 		instance_create_layer(_x,_y,_items_layer,o_shop_item, new constructor_food_item(_key,_w,_h,_i));
 		_y += (_h + _sep);
 	}
-	
 }
 
 function create_upgrade_shop(){
@@ -33,7 +32,7 @@ function create_upgrade_shop(){
 	var _h = 54;
 	var _x = 54;
 	
-	var _list = o_player_controll.ds_upgrades
+	var _list = o_player_controller.ds_upgrades
 	var _list_items_key = ds_map_keys_to_array(_list)
 	var _size = array_length(_list_items_key)
 
@@ -45,7 +44,6 @@ function create_upgrade_shop(){
 			instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_upgrade_item(_key,_w,_h,_i));
 		}	
 	}
-
 }
 
 function create_quest_panel(){
@@ -61,8 +59,8 @@ function create_quest_panel(){
 	
 	var _y = _y + _sep;
 	
-	var _quest_list = o_player_controll.ds_quests
-	var _quest_completed_list = o_player_controll.ds_quests_completed
+	var _quest_list = o_player_controller.ds_quests
+	var _quest_completed_list = o_player_controller.ds_quests_completed
 
 	var _list_quest_values = ds_map_values_to_array(_quest_list)
 	var _list_quest_values_size = array_length(_list_quest_values)
@@ -81,7 +79,6 @@ function create_quest_panel(){
 		instance_create_layer(_x,_y,_upgrade_layer,o_shop_item, new constructor_quest_complete_item(_quest.key,_w,_h,_i));
 		_y += (_h + _sep);
 	}
-	
 }
 
 function create_craft_bag(){
@@ -99,7 +96,7 @@ function create_craft_bag(){
 		var _x = 0;
 		var _y = 0;
 		
-	var _list = o_player_controll.ds_craft_items
+	var _list = o_player_controller.ds_craft_items
 	var _list_items_key = ds_map_keys_to_array(_list)
 	var _size = array_length(_list_items_key)-1
 	for (var _i = _size; _i >= 0; --_i) {
@@ -115,10 +112,10 @@ function create_craft_bag(){
 			_y++;
 		}
 	}	
+
 }
 
 function create_secret_items(){
-	
 		var _layer = layer_get_id("Inventory")
 		var _size = array_length(global.struct_secret_items)
 		var _margin = 24;
@@ -136,7 +133,7 @@ function create_secret_items(){
 		
 
 
-	var _list = o_player_controll.ds_secret_items
+	var _list = o_player_controller.ds_secret_items
 	var _list_items_key = ds_map_keys_to_array(_list)
 	var _size = array_length(_list_items_key)-1
 	for (var _i = _size; _i >= 0; --_i) {
@@ -156,30 +153,25 @@ function create_secret_items(){
 
 function on_click_open_shop(){
 
-
 var _shop_layer = layer_get_id("Shop")
 var _value = layer_get_visible(_shop_layer)
-var ds_foods_size = ds_map_size(o_player_controll.ds_foods)
-var ds_upgrades_size = ds_map_size(o_player_controll.ds_upgrades)
-var ds_craft_items_size = ds_map_size(o_player_controll.ds_craft_items)
+var ds_foods_size = ds_map_size(o_player_controller.ds_foods)
+var ds_upgrades_size = ds_map_size(o_player_controller.ds_upgrades)
+var ds_craft_items_size = ds_map_size(o_player_controller.ds_craft_items)
 
 
 if _value == false {
 	create_items_shop()
 	layer_set_visible("Foods", true)
-	instance_create_depth(62,global.VH -  135,0,o_btn_item,  new btn_tab("Foods", s_food_btn, create_items_shop,ds_foods_size))
-	instance_create_depth(110,global.VH - 135,0,o_btn_item, new btn_tab("Upgrades", s_upgrade_btn,create_upgrade_shop,ds_upgrades_size))
-	instance_create_depth(146,global.VH - 135,0,o_btn_item, new btn_tab("Quest", s_quest_btn, create_quest_panel,1))
-	instance_create_depth(192,global.VH - 135,0,o_btn_item, new btn_tab("Craft_Bag", s_craft_bag_btn, create_craft_bag,ds_craft_items_size))
-	instance_create_depth(242,global.VH - 135,0,o_btn_item, new btn_tab("Inventory", s_secret_items_btn, create_secret_items,1))
+	//instance_create_depth(62,global.VH -  135,0,o_btn_item,  new btn_tab("Foods", s_food_btn, create_items_shop,ds_foods_size))
+	//instance_create_depth(110,global.VH - 135,0,o_btn_item, new btn_tab("Upgrades", s_upgrade_btn,create_upgrade_shop,ds_upgrades_size))
+	//instance_create_depth(146,global.VH - 135,0,o_btn_item, new btn_tab("Quest", s_quest_btn, create_quest_panel,1))
+	//instance_create_depth(192,global.VH - 135,0,o_btn_item, new btn_tab("Craft_Bag", s_craft_bag_btn, create_craft_bag,ds_craft_items_size))
+	//instance_create_depth(242,global.VH - 135,0,o_btn_item, new btn_tab("Inventory", s_secret_items_btn, create_secret_items,1))
 	//instance_create_depth(286,global.VH - 135,0,o_btn_item, new btn_tab("Inventory", s_secret_items_btn, create_secret_items,1))
-	instance_create_layer(x,y,"Shop",obj_scrollable)
-	instance_create_layer(x,y,"Shop",o_upgrades)
+
 }else{
 	instance_destroy(o_shop_item)
-	instance_destroy(o_btn_item)
-	instance_destroy(obj_scrollable)
-	instance_destroy(o_upgrades)
 }
 	
 layer_set_visible(_shop_layer, !_value)

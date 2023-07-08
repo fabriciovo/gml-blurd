@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function add_quest(_quest_key){
 
-	var _player = o_player_controll
+	var _player = o_player_controller
 	var _quest = o_quest_controll_update.struct_quests[$ _quest_key]
 	
 	var _name = _quest.name
