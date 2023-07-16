@@ -1,1 +1,0 @@
-monster_collision_method()

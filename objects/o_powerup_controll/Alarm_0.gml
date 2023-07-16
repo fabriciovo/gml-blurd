@@ -1,1 +1,0 @@
-powerup_states.speed_drink.reset_speed = true;

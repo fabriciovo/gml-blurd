@@ -1,6 +1,3 @@
-if room == rm_game {
-	var _bkg_layer_id = layer_get_id("Backgrounds_1");
-	var _bkg_id = layer_background_get_id(_bkg_layer_id);
-	layer_background_speed(_bkg_id,global.game_speed)
-}
-
+surface_resize(application_surface, window_get_width(), window_get_height());
+var _camera = camera_create_view(0,0, window_get_width() / 2, window_get_height() / 2,0, o_player, -1,-1,  window_get_width() /2 , window_get_height() / 2)
+view_set_camera(0, _camera);

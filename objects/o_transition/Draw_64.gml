@@ -1,1 +1,0 @@
-event_draw_gui()

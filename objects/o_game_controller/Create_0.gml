@@ -1,8 +1,5 @@
-global.game_speed = -1
-global.max_game_speed = -9
-global.one_second = game_get_speed(gamespeed_fps)
-global.VW = view_wport[0]
-global.VH = view_hport[0]
-global.Spawn_VH = view_hport[3]
-global.Spawn_VW = view_wport[3]
+var _camera = camera_create_view(0,0, RES.WIDTH, RES.HEIGHT,0, o_player, -1,-1, RES.WIDTH /2 ,RES.HEIGHT / 2)
+view_enabled = true;
+view_visible[0] = true;
 
+view_set_camera(0, _camera);

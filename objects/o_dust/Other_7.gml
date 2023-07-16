@@ -1,1 +1,0 @@
-event_animation_end()

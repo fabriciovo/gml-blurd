@@ -1,1 +1,0 @@
-alarm_attack_reset()
