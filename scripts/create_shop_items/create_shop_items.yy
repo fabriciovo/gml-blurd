@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_shop_items",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Shop",
-    "path": "folders/Scripts/Shop.yy",
+  "$GMScript":"",
+  "%Name":"create_shop_items",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_shop_items",
+  "parent":{
+    "name":"Shop",
+    "path":"folders/Scripts/Shop.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

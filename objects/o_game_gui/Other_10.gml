@@ -1,9 +1,9 @@
 /// @description Create Food Shop
 var _margin = 10;
 var _sep = 8;
-var _w = 120;
-var _h = 36;
-var _x = window_get_width() / 2;
+var _w = 120 + (window_get_width() / 3);
+var _h = 36 + (window_get_height() / 8);
+var _x = window_get_width() -_w - _margin;
 var _y = _sep;
 
 var _title_h = 12;

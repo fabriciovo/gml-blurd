@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "add_to_map",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Shop",
-    "path": "folders/Scripts/Shop.yy",
+  "$GMScript":"",
+  "%Name":"add_to_map",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_to_map",
+  "parent":{
+    "name":"Shop",
+    "path":"folders/Scripts/Shop.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

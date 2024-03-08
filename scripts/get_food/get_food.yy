@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_food",
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Shop",
-    "path": "folders/Scripts/Shop.yy",
+  "$GMScript":"",
+  "%Name":"get_food",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_food",
+  "parent":{
+    "name":"Shop",
+    "path":"folders/Scripts/Shop.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

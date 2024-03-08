@@ -1,0 +1,15 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"s_test_bkg","order":1,"path":"sprites/s_test_bkg/s_test_bkg.yy",},
+    {"name":"create_shop_items","order":2,"path":"scripts/create_shop_items/create_shop_items.yy",},
+    {"name":"s_solid","order":3,"path":"sprites/s_solid/s_solid.yy",},
+    {"name":"o_player","order":1,"path":"objects/o_player/o_player.yy",},
+    {"name":"s_floor","order":2,"path":"sprites/s_floor/s_floor.yy",},
+    {"name":"o_solid","order":2,"path":"objects/o_solid/o_solid.yy",},
+    {"name":"o_button_shop_item","order":1,"path":"objects/o_button_shop_item/o_button_shop_item.yy",},
+    {"name":"rm_game_operagx","order":2,"path":"rooms/rm_game_operagx/rm_game_operagx.yy",},
+    {"name":"rm_game","order":1,"path":"rooms/rm_game/rm_game.yy",},
+    {"name":"get_food","order":1,"path":"scripts/get_food/get_food.yy",},
+  ],
+}
