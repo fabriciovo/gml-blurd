@@ -19,6 +19,7 @@
 		c_menu_scroll += _wheel
 		
 		c_menu_scroll = clamp(c_menu_scroll, -c_menu_height,0)
+		
 		with o_button_shop_item {
 			y = ystart + other.c_menu_scroll;
 		}
