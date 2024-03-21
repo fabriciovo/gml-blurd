@@ -46,7 +46,7 @@
     {"id":{"name":"add_to_map","path":"scripts/add_to_map/add_to_map.yy",},},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},},
     {"id":{"name":"s_floor","path":"sprites/s_floor/s_floor.yy",},},
-    {"id":{"name":"o_game_controller","path":"objects/o_game_controller/o_game_controller.yy",},},
+    {"id":{"name":"o_game_camera","path":"objects/o_game_camera/o_game_camera.yy",},},
     {"id":{"name":"o_solid","path":"objects/o_solid/o_solid.yy",},},
     {"id":{"name":"_init","path":"scripts/_init/_init.yy",},},
     {"id":{"name":"o_button_shop_item","path":"objects/o_button_shop_item/o_button_shop_item.yy",},},

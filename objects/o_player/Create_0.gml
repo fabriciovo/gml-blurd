@@ -1,4 +1,4 @@
-jump_force = -8
+jump_force = -4
 grav = .2
 vspd = 0
 
